@@ -1,0 +1,799 @@
+{
+  "books": [
+    {
+      "img": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1494333138i/33385229.jpg",
+      "title": "They Both Die At The End",
+      "author": "Adam Silvera",
+      "price": 10.0,
+      "rating": 4.5,
+      "genres": ["Fiction", "Young adult", "Contemporary", "LGBTQ+"],
+      "summary": "Mateo and Rufus are total strangers, but, for different reasons, they're both looking to make a new friend on their End Day. The good news: There's an app for that. It's called the Last Friend, and through it, Rufus and Mateo are about to meet up for one last great adventure—to live a lifetime in a single day."
+    },
+    {
+      "img": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1597695864l/54493401.jpg",
+      "title": "Project Hail Mary",
+      "author": "Andy Weir",
+      "price": 15.99,
+      "rating": 4.7,
+      "genres": ["Fiction", "Science Fiction"],
+      "summary": "Ryland Grace wakes up disoriented on a spaceship drifting millions of miles from Earth, with no memory of how he got there or what his mission is. As he reconstructs his fragmented memories, he discovers that he is the sole crew member on a desperate mission to save the sun from mysteriously diminishing."
+    },
+    {
+      "img": "https://bookaddictslb.com/wp-content/uploads/2024/01/murder-on-the-orient-express_cover.webp",
+      "title": "Murder on the Orient Express",
+      "author": "Agatha Christie",
+      "price": 7.99,
+      "rating": 4.8,
+      "genres": ["Fiction", "Mystery", "Classic"],
+      "summary": "Just after midnight, a snowdrift stops the luxurious Orient Express on its journey from Istanbul to London. The opulent train is now isolated, and an American tycoon lies dead in his compartment, stabbed multiple times. Poirot, a renowned detective aboard the train, volunteers to solve the murder before the train resumes its journey."
+    },
+    {
+      "img": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1558525179i/41045102.jpg",
+      "title": "Circe",
+      "author": "Madeline Miller",
+      "price": 12.5,
+      "rating": 4.2,
+      "genres": ["Fiction", "Historical Fiction", "Mythology"],
+      "summary": "In the timeless world of Greek myth, Circe, the daughter of a powerful Titan and a nymph, is cast out to a deserted island for defying the gods. With her knowledge of herbs and forbidden magic, Circe transforms her exile into a kingdom, ruling over fantastical creatures and encountering famous heroes and mythical beings from Odysseus to Jason."
+    },
+    {
+      "img": "https://m.media-amazon.com/images/I/81kONtZsITL._AC_UF1000,1000_QL80_.jpg",
+      "title": "The Song of Achilles",
+      "author": "Madeline Miller",
+      "price": 15.99,
+      "rating": 4.6,
+      "genres": ["Fiction", "Historical Fiction", "Mythology", "LGBTQ+"],
+      "summary": "Achilles, the fierce warrior of Greek myth, is young, handsome, and gifted. Patroclus is an awkward young prince ostracized by his family. Their fates are intertwined when Patroclus is exiled to Achilles' court. What starts as a friendship blossoms into a love that will endure through life and death."
+    },
+    {
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJJnCDiZq4uGPNAm1D9z-l5LD0R_5_P5dFLA&s",
+      "title": "Intermezzo",
+      "author": "Sally Rooney",
+      "price": 12.0,
+      "rating": 4.2,
+      "genres": ["Fiction", "Contemporary", "Romance"],
+      "summary": "Two former lovers, a writer and an editor, reconnect after several years apart. As they reminisce and explore their current lives, they must grapple with unresolved feelings and the possibility of rekindling their relationship."
+    },
+    {
+      "img": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.amazon.com%2FPalace-Peacock-Editions-Wilson-Harris%2Fdp%2F0571368042&psig=AOvVaw0YCHTU97ElrBL_4LP-d9gj&ust=1730550271526000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCKj16KKQu4kDFQAAAAAdAAAAABAE",
+      "title": "Palace of the Peacock",
+      "author": "Wilson Harris",
+      "price": 18.95,
+      "rating": 4.1,
+      "genres": ["Fiction", "Postcolonial Literature", "Magical Realism"],
+      "summary": "Set in the Guyanese rainforest, Palace of the Peacock explores themes of identity, memory, and the relationship between the human world and the natural world. The narrative is fragmented and dreamlike, challenging readers to actively participate in the creation of meaning."
+    },
+    {
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEKtncdUWw1zRK5_GvrCcwvm0N3S4hvzoMfQ&s",
+      "title": "The Dispossessed",
+      "author": "Ursula K. Le Guin",
+      "price": 14.99,
+      "rating": 4.2,
+      "genres": ["Fiction", "Science Fiction", "Utopian", "Dystopian"],
+      "summary": "Shevek, a physicist from the anarchist moon of Anarres, travels to the capitalist world of Urras. There, he encounters a society with stark contrasts to his own, facing challenges that force him to question his ideals and the possibility of utopia."
+    },
+    {
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8OG7kERgd2bLZBmFTmephwxClLcWPd8p6kg&s",
+      "title": "The Lying Life of Adults",
+      "author": "Elena Ferrante",
+      "price": 16.99,
+      "rating": 4.3,
+      "genres": ["Fiction", "Coming-of-Age", "Family"],
+      "summary": "Giovanna, a twelve-year-old girl in Naples, becomes obsessed with the disappearance of her beloved father"
+    },
+    {
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqCQbTJK-p7Cu5l9ydp3dtBOg5QzbBGpy8LA&s",
+      "title": "Pride and Prejudice",
+      "author": "Jane Austen",
+      "price": 7.99,
+      "rating": 4.2,
+      "genres": ["Fiction", "Classic", "Romance"],
+      "summary": "In the quiet English countryside, the wealthy Mr. Bingley and his sisters arrive at a new estate. Mrs. Bennet, determined to find suitable husbands for her five daughters, sets her sights on Mr. Bingley for her eldest, Jane. However, misunderstandings and social barriers complicate the course of romance."
+    },
+    {
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSn5xkKB1ByJI59VpGEBBkkFRN0_FJ9COkr2g&s",
+      "title": "To Kill a Mockingbird",
+      "author": "Harper Lee",
+      "price": 9.99,
+      "rating": 4.3,
+      "genres": ["Fiction", "Classic", "Coming-of-Age", "Historical Fiction"],
+      "summary": "Scout Finch, a young girl growing up in the Deep South during the Great Depression, observes the trial of a black man accused of assaulting a white woman. Through her innocent eyes, we witness the complexities of racism and prejudice in a segregated society."
+    },
+    {
+      "img": "https://m.media-amazon.com/images/I/71rpa1-kyvL._AC_UF1000,1000_QL80_.jpg",
+      "title": "1984",
+      "author": "George Orwell",
+      "price": 8.99,
+      "rating": 4.2,
+      "genres": ["Dystopian", "Fiction", "Science Fiction"],
+      "summary": "Set in a totalitarian state, 1984 follows the life of Winston Smith, a low-ranking government employee who begins to question the oppressive regime and its constant surveillance."
+    },
+    {
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoOE0_-MSgEYqEFUISl6zhzzBSNK5qbuuGzg&s",
+      "title": "The Great Gatsby",
+      "author": "F. Scott Fitzgerald",
+      "price": 9.99,
+      "rating": 4.0,
+      "genres": ["Fiction", "Classic", "Historical Fiction"],
+      "summary": "Set in the Jazz Age, the novel explores themes of wealth, class, love, and the American Dream through the eyes of Nick Carraway, who is drawn into the opulent world of his mysterious neighbor, Jay Gatsby."
+    },
+    {
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqoc1ax4A5Osy7vxNSSRsEVNxFh39M1dtYTg&s",
+      "title": "The Lord of the Rings",
+      "author": "J.R.R. Tolkien",
+      "price": 29.99,
+      "rating": 4.5,
+      "genres": ["Fantasy", "Fiction"],
+      "summary": "A young hobbit, Frodo Baggins, inherits a simple ring and finds himself embroiled in a perilous quest to destroy it in the fires of Mount Doom, before the Dark Lord Sauron reclaims it."
+    },
+    {
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQr0L5lXV64xQHwT4EUtI9KdW_WGLRIrsHLQ&s",
+      "title": "Where the Crawdads Sing",
+      "author": "Delia Owens",
+      "price": 13.99,
+      "rating": 4.4,
+      "genres": ["Fiction", "Mystery", "Coming-of-Age"],
+      "summary": "A quiet girl, raised alone in the marsh, becomes a suspect in the murder of a popular boy. As the story unfolds, we learn about her life, her love for nature, and the secrets she harbors."
+    },
+    {
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQs4EEPYbDupdhm2d_x7wTPWn8oNarNvC5fFw&s",
+      "title": "It Ends With Us",
+      "author": "Colleen Hoover",
+      "price": 12.99,
+      "rating": 4.3,
+      "genres": ["Contemporary", "Romance", "Tragedy"],
+      "summary": "A love story between Lily and Ryle, a neurosurgeon, is complicated by Lily's past and the toxic patterns she struggles to break free from."
+    },
+    {
+      "img": "https://m.media-amazon.com/images/I/61R+Cpm+HxL._AC_UF1000,1000_QL80_.jpg",
+      "title": "The Silent Patient",
+      "author": "Alex Michaelides",
+      "price": 14.99,
+      "rating": 4.2,
+      "genres": ["Psychological Thriller", "Mystery"],
+      "summary": "Alia, a famous painter, stops speaking after a shocking act of violence. Theo Faber, a forensic psychotherapist, becomes obsessed with understanding her silence and unraveling the truth behind the tragedy."
+    },
+    {
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ40lkQ4PjA06cwGZcN0UC-r5qi8RF9GxCBgg&s",
+      "title": "The Guest List",
+      "author": "Lucy Foley",
+      "price": 15.99,
+      "rating": 4.1,
+      "genres": ["Mystery", "Thriller", "Fiction"],
+      "summary": "A glamorous wedding on a remote island turns deadly when a storm cuts off all escape routes and a shocking murder takes place."
+    },
+    {
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQV74f7L_VZ0DSmiiUkx78QfjroqpbalnFYfA&s",
+      "title": "The Seven Husbands of Evelyn Hugo",
+      "author": "Taylor Jenkins Reid",
+      "price": 14.99,
+      "rating": 4.5,
+      "genres": ["Fiction", "Historical Fiction", "Romance"],
+      "summary": "Aging Hollywood star Evelyn Hugo chooses a young, unknown journalist to reveal the truth about her glamorous life, her seven marriages, and the secrets she's kept for decades."
+    },
+    {
+      "img": "https://m.media-amazon.com/images/I/818wSuWyOgL._AC_UF1000,1000_QL80_.jpg",
+      "title": "Dune",
+      "author": "Frank Herbert",
+      "price": 12.99,
+      "rating": 4.4,
+      "genres": ["Fiction", "Science Fiction", "Fantasy"],
+      "summary": "Set on the desert planet Arrakis, Dune follows the story of Paul Atreides, a young noble whose family is given control of the planet. As he navigates political intrigue, ecological challenges, and a powerful drug called Spice, Paul's destiny intertwines with the fate of the universe."
+    },
+    {
+      "img": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1404613595i/13.jpg",
+      "title": "The Hitchhiker's Guide to the Galaxy",
+      "author": "Douglas Adams",
+      "price": 8.99,
+      "rating": 4.2,
+      "genres": ["Fiction", "Science Fiction", "Comedy", "Satire"],
+      "summary": "Arthur Dent, an ordinary man, finds his life turned upside down when Earth is demolished to make way for a hyperspace bypass. With the help of his eccentric friend Ford Prefect, he embarks on a hilarious and often absurd journey through the cosmos."
+    },
+    {
+      "img": "https://m.media-amazon.com/images/I/71un2hI4mcL._AC_UF1000,1000_QL80_.jpg",
+      "title": "The Hunger Games",
+      "author": "Suzanne Collins",
+      "price": 9.99,
+      "rating": 4.3,
+      "genres": ["Dystopian", "Fiction", "Young Adult"],
+      "summary": "In the dystopian nation of Panem, two teenagers from District 12, Katniss Everdeen and Peeta Mellark, are selected to compete in the annual Hunger Games, a televised event where young tributes fight to the death."
+    },
+    {
+      "img": "https://m.media-amazon.com/images/I/81ANaVZk5LL._AC_UF1000,1000_QL80_.jpg",
+      "title": "Atomic Habits",
+      "author": "James Clear",
+      "price": 16.99,
+      "rating": 4.4,
+      "genres": ["Non-Fiction", "Self-Help", "Personal Development"],
+      "summary": "A practical guide to building good habits and breaking bad ones, focusing on small, incremental changes that lead to significant results."
+    },
+    {
+      "img": "https://m.media-amazon.com/images/I/716E6dQ4BXL._AC_UF1000,1000_QL80_.jpg",
+      "title": "Sapiens: A Brief History of Humankind",
+      "author": "Yuval Noah Harari",
+      "price": 15.99,
+      "rating": 4.4,
+      "genres": ["Non-Fiction", "History", "Science"],
+      "summary": "A sweeping history of humankind from the Stone Age to the Information Age, exploring our species' unique abilities and their impact on the world."
+    },
+    {
+      "img": "https://m.media-amazon.com/images/I/61Q43BBSXbL._AC_UF1000,1000_QL80_.jpg",
+      "title": "Think and Grow Rich",
+      "author": "Napoleon Hill",
+      "price": 9.99,
+      "rating": 4.1,
+      "genres": ["Non-Fiction", "Self-Help", "Business"],
+      "summary": "A classic self-help book that explores the principles of success, including thought, desire, faith, and persistence."
+    },
+    {
+      "img": "https://m.media-amazon.com/images/I/61157LApbuL._AC_UF1000,1000_QL80_.jpg",
+      "title": "Man's Search for Meaning",
+      "author": "Viktor Frankl",
+      "price": 9.99,
+      "rating": 4.6,
+      "genres": ["Non-Fiction", "Psychology", "Philosophy"],
+      "summary": "A memoir of Viktor Frankl's experiences as a prisoner in Nazi concentration camps and his exploration of the human will to survive and find meaning in even the most horrific circumstances."
+    },
+    {
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQia709FZmSJOrkNH54TqEm981pKrhnIlW7lA&s",
+      "title": "Quiet: The Power of Introverts in a World That Can't Stop Talking",
+      "author": "Susan Cain",
+      "price": 14.99,
+      "rating": 4.0,
+      "genres": ["Non-Fiction", "Psychology"],
+      "summary": "An exploration of the strengths and challenges faced by introverted individuals, advocating for a better understanding and appreciation of quiet personalities."
+    },
+    {
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThSKyGmD1rHZeACJPfIWsSdsxe7hqIvX4wMg&s",
+      "title": "The Fault in Our Stars",
+      "author": "John Green",
+      "price": 12.99,
+      "rating": 4.5,
+      "genres": ["Fiction", "Young Adult", "Romance"],
+      "summary": "A heart-wrenching love story between two teenagers, Hazel Grace Lancaster and Augustus Waters, who meet in a cancer support group and navigate the complexities of life, love, and loss."
+    },
+    {
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTde17-MtPHyhMyieXWXrzN-kb8l9vdVaA6cw&s",
+      "title": "Divergent",
+      "author": "Veronica Roth",
+      "price": 12.99,
+      "rating": 4.1,
+      "genres": ["Fiction", "Young Adult", "Dystopian", "Science Fiction"],
+      "summary": "In a future Chicago divided into five factions, Beatrice Prior discovers that she doesn't fit into any of them and must choose a new path that could lead to danger and rebellion."
+    },
+
+    {
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-XewEIDM-yCiLLSynORoahhkJwn0CiHT7qg&s",
+      "title": "The Midnight Library",
+      "author": "Matt Haig",
+      "genre": ["Fiction", "Fantasy", "Philosophy"],
+      "price": 15.99,
+      "rating": 4.2,
+      "summary": "A heartwarming and philosophical novel about a woman who has the chance to explore infinite possibilities of her life."
+    },
+    {
+      "img": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1584633432l/50623864.jpg",
+      "title": "The Invisible Life of Addie Larue",
+      "author": "V.E. Schwab",
+      "genre": ["Fiction", "Historical Fiction", "Fantasy"],
+      "price": 14.99,
+      "rating": 4.3,
+      "summary": "A historical fantasy novel about a woman cursed with immortality, who spends centuries longing for connection."
+    },
+    {
+      "img": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1636978687l/58784475._SY475_.jpg",
+      "title": "Tomorrow, and Tomorrow, and Tomorrow",
+      "author": "Gabrielle Zevin",
+      "genre": ["Contemporary", "Fiction"],
+      "price": 16.99,
+      "rating": 4.5,
+      "summary": "A heartwarming story about two lifelong friends who create video games together."
+    },
+    {
+      "img": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1639384101l/57693427.jpg",
+      "title": "The Night Shift",
+      "author": "Alex Finlay",
+      "genre": ["Fiction", "Thriller", "Mystery"],
+      "price": 14.99,
+      "rating": 4.1,
+      "summary": "A suspenseful thriller that follows a group of night shift workers who become entangled in a dangerous mystery."
+    },
+    {
+      "img": "https://thecirclebookshop.com/cdn/shop/files/9780140449266_681cad61-69e9-433b-9a99-140f5077d4ce_500x500_crop_center.jpg?v=1722661698",
+      "title": "The Count of Monte Cristo",
+      "author": "Alexandre Dumas",
+      "genre": ["Fiction", "Historical Fiction", "Adventure"],
+      "price": 12.99,
+      "rating": 4.5,
+      "summary": "A classic tale of revenge and redemption, where a wrongly imprisoned man escapes and returns to seek justice against those who betrayed him."
+    },
+    {
+      "img": "https://thecirclebookshop.com/cdn/shop/files/9781250095251_a391872a-f1cc-4e62-a977-34ef9e03c543_500x500_crop_center.jpg?v=1722652040",
+      "title": "Caraval",
+      "author": "Stephanie Garber",
+      "genre": ["Fantasy", "Young Adult", "Romance"],
+      "price": 10.99,
+      "rating": 4.3,
+      "summary": "A magical and dangerous competition where Scarlett Dragna must navigate a treacherous world to find her sister and win the game."
+    },
+    {
+      "img": "https://thecirclebookshop.com/cdn/shop/files/9781250095312_1eacbe70-9361-490d-99a6-51042ede8293.jpg?v=1722652043",
+      "title": "Legendary",
+      "author": "Stephanie Garber",
+      "genre": ["Fantasy", "Young Adult", "Romance"],
+      "price": 11.99,
+      "rating": 4.4,
+      "summary": "Tella Dragna enters Caraval to uncover dangerous secrets about her mother and makes a deal with the mysterious and deadly Prince of Hearts."
+    },
+    {
+      "img": "https://thecirclebookshop.com/cdn/shop/files/9781250157669_0695eda6-7873-4249-b165-137eee326464_500x500_crop_center.jpg?v=1722652048",
+      "title": "Finale",
+      "author": "Stephanie Garber",
+      "genre": ["Fantasy", "Young Adult", "Romance"],
+      "price": 12.99,
+      "rating": 4.2,
+      "summary": "The final game unfolds, where sisters Scarlett and Tella must fight for their lives and find love, balancing hope and heartbreak."
+    },
+    {
+      "img": "https://thecirclebookshop.com/cdn/shop/files/9781250268402_03166f29-76a8-49c8-be21-6765bfa45477_500x500_crop_center.jpg?v=1722654525",
+      "title": "Once Upon a Broken Heart",
+      "author": "Stephanie Garber",
+      "genre": ["Fantasy", "Young Adult", "Romance"],
+      "price": 11.99,
+      "rating": 4.5,
+      "summary": "Evangeline Fox makes a dangerous bargain with the Prince of Hearts to mend her broken heart, thrusting her into a world of magic and curses."
+    },
+    {
+      "img": "https://thecirclebookshop.com/cdn/shop/files/9781250879530_6de2d1e5-aa9a-4dba-984e-ac761eadbc40_500x500_crop_center.jpg?v=1722642333",
+      "title": "The Ballad of Never After",
+      "author": "Stephanie Garber",
+      "genre": ["Fantasy", "Young Adult", "Romance"],
+      "price": 12.99,
+      "rating": 4.6,
+      "summary": "Evangeline must navigate her feelings for the cursed Prince of Hearts while unraveling deadly secrets that could change the fate of their world."
+    },
+    {
+      "img": "https://cdn.shopify.com/s/files/1/0571/2130/8868/files/9781250324061_e737fc04-2f57-46d8-99b0-2fa5329f2285_800x800.jpg?v=1722652033",
+      "title": "A Curse for True Love",
+      "author": "Stephanie Garber",
+      "genre": ["Fantasy", "Young Adult", "Romance"],
+      "price": 13.99,
+      "rating": 4.7,
+      "summary": "The epic conclusion to Evangeline and Jacks' story, where curses, betrayals, and true love converge in a race against destiny."
+    },
+    {
+      "img": "https://m.media-amazon.com/images/I/818MpKHb55L._SY342_.jpg",
+      "title": "The Goldfinch",
+      "author": "Donna Tartt",
+      "genre": ["Fiction", "Literary Fiction", "Mystery"],
+      "price": 14.99,
+      "rating": 4.1,
+      "summary": "A young boy’s life changes forever when a tragedy leaves him with a priceless painting and a web of intrigue spanning years."
+    },
+    {
+      "img": "https://cdn.shopify.com/s/files/1/0571/2130/8868/files/9781853260001_cdf60316-082d-4f32-bea1-721ed5d2c287_800x800.jpg?v=1722630812",
+      "title": "Pride and Prejudice",
+      "author": "Jane Austen",
+      "genre": ["Fiction", "Classic", "Romance"],
+      "price": 9.99,
+      "rating": 4.8,
+      "summary": "The witty and spirited Elizabeth Bennet navigates society, family, and her feelings for the seemingly arrogant Mr. Darcy."
+    },
+    {
+      "img": "https://thecirclebookshop.com/cdn/shop/files/9780434020485_217eba63-2df7-4ff2-8119-d9d1c0d11161_500x500_crop_center.jpg?v=1723539388",
+      "title": "To Kill a Mockingbird",
+      "author": "Harper Lee",
+      "genre": ["Fiction", "Classic", "Historical Fiction"],
+      "price": 8.99,
+      "rating": 4.9,
+      "summary": "A powerful exploration of racial injustice in the American South, seen through the eyes of a young girl named Scout Finch."
+    },
+    {
+      "img": "https://thecirclebookshop.com/cdn/shop/files/9781840221886_ce461d8e-627c-4577-a4e7-96155af7a1a6_500x500_crop_center.jpg?v=1722649363",
+      "title": "The Great Gatsby",
+      "author": "F. Scott Fitzgerald",
+      "genre": ["Fiction", "Classic", "Historical Fiction"],
+      "price": 10.49,
+      "rating": 4.4,
+      "summary": "The story of the mysterious Jay Gatsby and his love for Daisy Buchanan, set in the opulence of the Roaring Twenties."
+    },
+    {
+      "img": "https://thecirclebookshop.com/cdn/shop/files/9780241984758_96436c26-cd7a-4918-885b-749076c15637_500x500_crop_center.jpg?v=1723539455",
+      "title": "The Catcher in the Rye",
+      "author": "J.D. Salinger",
+      "genre": ["Fiction", "Classic", "Coming of Age"],
+      "price": 9.49,
+      "rating": 4.2,
+      "summary": "Holden Caulfield's rebellious journey through New York City, dealing with loss, isolation, and the complexities of adulthood."
+    },
+    {
+      "img": "https://thecirclebookshop.com/cdn/shop/files/9780722532935_bf85c8b5-6ea3-401a-9abb-bc2602b0a58a_500x500_crop_center.jpg?v=1722638540",
+      "title": "The Alchemist",
+      "author": "Paulo Coelho",
+      "genre": ["Fiction", "Philosophical", "Adventure"],
+      "price": 11.99,
+      "rating": 4.6,
+      "summary": "A young shepherd named Santiago travels from Spain to Egypt in search of treasure, discovering his personal legend along the way."
+    },
+    {
+      "img": "https://m.media-amazon.com/images/I/61eL2DVRpSL._SY445_SX342_.jpg",
+      "title": "The Night Circus",
+      "author": "Erin Morgenstern",
+      "genre": ["Fantasy", "Magical Realism", "Romance"],
+      "price": 12.49,
+      "rating": 4.3,
+      "summary": "An enchanting circus that appears without warning becomes the stage for a magical duel between two young magicians, whose destinies are intertwined."
+    },
+    {
+      "img": "https://thecirclebookshop.com/cdn/shop/files/9780575081505_39825e29-f4b2-4a4f-be88-c784b1cd4e45_500x500_crop_center.jpg?v=1722662092",
+      "title": "Dune",
+      "author": "Frank Herbert",
+      "genre": ["Science Fiction", "Fantasy", "Adventure"],
+      "price": 13.99,
+      "rating": 4.6,
+      "summary": "Set in the distant future, young Paul Atreides navigates political intrigue and mysticism on the desert planet Arrakis, the only source of the universe’s most valuable substance."
+    },
+    {
+      "img": "https://thecirclebookshop.com/cdn/shop/files/9781840221985_d6cff5f5-8a84-49ef-a625-3c8d7348d6b0_500x500_crop_center.jpg?v=1722649385",
+      "title": "Jane Eyre",
+      "author": "Charlotte Brontë",
+      "genre": ["Fiction", "Classic", "Romance"],
+      "price": 10.99,
+      "rating": 4.5,
+      "summary": "The story of an orphaned young woman who becomes a governess, finding love and independence despite the hardships and secrets of Thornfield Hall."
+    },
+    {
+      "img": "https://thecirclebookshop.com/cdn/shop/files/9780007591862_09d590d4-7c5e-4cdf-99ac-9b0abe5783c5_500x500_crop_center.jpg?v=1722630209",
+      "title": "The Hobbit",
+      "author": "J.R.R. Tolkien",
+      "genre": ["Fantasy", "Adventure", "Classic"],
+      "price": 11.49,
+      "rating": 4.7,
+      "summary": "Bilbo Baggins, a simple hobbit, is swept into an epic quest to reclaim the lost Dwarf Kingdom of Erebor from the dragon Smaug."
+    },
+    {
+      "img": "https://thecirclebookshop.com/cdn/shop/files/9780099590088_bd9929e4-7eb6-442a-8faa-27186ad5e69f_500x500_crop_center.jpg?v=1722655364",
+      "title": "Sapiens: A Brief History of Humankind",
+      "author": "Yuval Noah Harari",
+      "genre": ["Non-Fiction", "History", "Anthropology"],
+      "price": 14.99,
+      "rating": 4.6,
+      "summary": "An exploration of the history of humankind, from the Stone Age to the modern era, examining how biology and culture have shaped our world."
+    },
+    {
+      "img": "https://thecirclebookshop.com/cdn/shop/files/9780399590528_4d4bd868-b4c1-482e-9706-12acec879e83_500x500_crop_center.jpg?v=1722642992",
+      "title": "Educated",
+      "author": "Tara Westover",
+      "genre": ["Non-Fiction", "Memoir", "Biography"],
+      "price": 13.99,
+      "rating": 4.7,
+      "summary": "A memoir of a woman who grows up in a strict and abusive household in rural Idaho but eventually escapes to learn about the wider world through education."
+    },
+    {
+      "img": "https://thecirclebookshop.com/cdn/shop/files/9780340733509_4c50d3cb-c974-4ee4-a09b-e56b17f15b5d_500x500_crop_center.jpg?v=1722619810",
+      "title": "The Power of Now",
+      "author": "Eckhart Tolle",
+      "genre": ["Non-Fiction", "Spirituality", "Philosophy"],
+      "price": 12.49,
+      "rating": 4.6,
+      "summary": "A spiritual guide that emphasizes the importance of living in the present moment to find peace and enlightenment, drawing from various spiritual traditions."
+    },
+    {
+      "img": "https://thecirclebookshop.com/cdn/shop/files/9780241982976_f5c69ec6-0e7b-4738-a391-9f703c57f9d1_500x500_crop_center.jpg?v=1722661151",
+      "title": "Becoming",
+      "author": "Michelle Obama",
+      "genre": ["Non-Fiction", "Memoir", "Biography"],
+      "price": 17.99,
+      "rating": 4.9,
+      "summary": "The former First Lady shares the experiences that shaped her, from her childhood in Chicago to her years in the White House."
+    },
+    {
+      "img": "https://thecirclebookshop.com/cdn/shop/files/9780062641540_06448023-340f-487b-8e2b-ecb2d2283db3_500x500_crop_center.jpg?v=1722636106",
+      "title": "The Subtle Art of Not Giving a F*ck",
+      "author": "Mark Manson",
+      "genre": ["Non-Fiction", "Self-Help", "Psychology"],
+      "price": 15.49,
+      "rating": 4.4,
+      "summary": "A counterintuitive approach to living a good life, encouraging readers to embrace challenges and focus on what truly matters."
+    },
+    {
+      "img": "https://thecirclebookshop.com/cdn/shop/files/9780141043029_3b8de252-8398-49e1-a506-956723cdbd1c_500x500_crop_center.jpg?v=1722648338",
+      "title": "Outliers: The Story of Success",
+      "author": "Malcolm Gladwell",
+      "genre": ["Non-Fiction", "Psychology", "Business"],
+      "price": 13.49,
+      "rating": 4.5,
+      "summary": "An analysis of the factors that contribute to high levels of success, from culture and family to timing and opportunities."
+    },
+    {
+      "img": "https://thecirclebookshop.com/cdn/shop/files/9781509877027_1f6e1f43-2c5e-4f2f-9fce-52bf9a83a1b0_500x500_crop_center.jpg?v=1722639438",
+      "title": "The Immortal Life of Henrietta Lacks",
+      "author": "Rebecca Skloot",
+      "genre": ["Non-Fiction", "Biography", "Science"],
+      "price": 10.99,
+      "rating": 4.6,
+      "summary": "The true story of Henrietta Lacks, whose cells were used for scientific breakthroughs without her consent, exploring the ethical issues of scientific research."
+    },
+    {
+      "img": "https://m.media-amazon.com/images/I/41OkDqkKg9L._SY445_SX342_.jpg",
+      "title": "Quiet: The Power of Introverts in a World That Can't Stop Talking",
+      "author": "Susan Cain",
+      "genre": ["Non-Fiction", "Psychology", "Self-Help"],
+      "price": 14.49,
+      "rating": 4.7,
+      "summary": "A compelling argument about the value of introverts, how society undervalues them, and why the world needs their unique skills and perspectives."
+    },
+    {
+      "img": "https://m.media-amazon.com/images/I/41JlwBaLskL._SY445_SX342_.jpg",
+      "title": "The Body: A Guide for Occupants",
+      "author": "Bill Bryson",
+      "genre": ["Non-Fiction", "Science", "Humor"],
+      "price": 16.49,
+      "rating": 4.5,
+      "summary": "A fascinating tour of the human body, exploring how it works and the marvels and mysteries of our biological makeup."
+    },
+    {
+      "img": "https://thecirclebookshop.com/cdn/shop/files/9781471407277_11192274-9ea0-42f9-9acc-cd1a7fd07e6c_500x500_crop_center.jpg?v=1722629755",
+      "title": "The Cruel Prince",
+      "author": "Holly Black",
+      "genre": ["Fiction", "Fantasy", "Young Adult", "Romance"],
+      "price": 10.99,
+      "rating": 4.4,
+      "summary": "Jude, a mortal girl, is swept into the dangerous and seductive world of Faerie, where she must defy and outmaneuver cruel faeries to find her place at the High Court."
+    },
+    {
+      "img": "https://thecirclebookshop.com/cdn/shop/files/9781471407352_16744512-3686-403d-b964-92c43dbc9bce_500x500_crop_center.jpg?v=1722629784",
+      "title": "The Wicked King",
+      "author": "Holly Black",
+      "genre": ["Fiction", "Fantasy", "Young Adult", "Romance"],
+      "price": 11.99,
+      "rating": 4.5,
+      "summary": "As the power dynamics of the Faerie world shift, Jude must stay one step ahead of her enemies and her own emotions as she navigates the politics of the High Court."
+    },
+    {
+      "img": "https://thecirclebookshop.com/cdn/shop/files/9781471407598_08527883-cc21-487b-80b8-0ac8a5756f53_500x500_crop_center.jpg?v=1722629773",
+      "title": "The Queen of Nothing",
+      "author": "Holly Black",
+      "genre": ["Fiction", "Fantasy", "Young Adult", "Romance"],
+      "price": 12.99,
+      "rating": 4.3,
+      "summary": "Exiled and betrayed, Jude returns to the Faerie realm to reclaim her power, confront old enemies, and battle for her future in a final showdown."
+    },
+    {
+      "img": "https://thecirclebookshop.com/cdn/shop/files/9781471409981_874fe76f-f13f-4641-928c-34525ec46cbb_500x500_crop_center.jpg?v=1722629742",
+      "title": "How the King of Elfhame Learned to Hate Stories",
+      "author": "Holly Black",
+      "genre": ["Fiction", "Fantasy", "Young Adult", "Short Stories"],
+      "price": 13.49,
+      "rating": 4.6,
+      "summary": "A beautifully illustrated collection of tales following Cardan, the High King of Elfhame, as he recalls pivotal moments from his past and reflects on the love and hatred that shaped him."
+    }
+  ],
+  "menu": [
+    {
+      "img": "",
+      "name": "Espresso",
+      "description": "A rich, concentrated coffee beverage",
+      "price": 3.5,
+      "categories": ["Drink", "Hot", "Coffee"]
+    },
+    {
+      "img": "",
+      "name": "Americano",
+      "description": "Espresso diluted with hot water",
+      "price": 3.0,
+      "categories": ["Drink", "Hot", "Coffee"]
+    },
+    {
+      "img": "",
+      "name": "Latte",
+      "description": "Espresso with steamed milk and foam",
+      "price": 4.0,
+      "categories": ["Drink", "Hot", "Coffee"]
+    },
+    {
+      "img": "",
+      "name": "Cappuccino",
+      "description": "Espresso with steamed milk and foam, with more foam than a latte",
+      "price": 4.5,
+      "categories": ["Drink", "Hot", "Coffee"]
+    },
+    {
+      "img": "",
+      "name": "Mocha",
+      "description": "Espresso, steamed milk, chocolate syrup, and foam",
+      "price": 4.5,
+      "categories": ["Drink", "Hot", "Coffee"]
+    },
+    {
+      "img": "",
+      "name": "Hot Chocolate",
+      "description": "Rich, creamy hot chocolate",
+      "price": 3.5,
+      "categories": ["Drink", "Hot", "Coffee"]
+    },
+    {
+      "img": "",
+      "name": "Iced Coffee",
+      "description": "Cold brewed coffee over ice",
+      "price": 3.0,
+      "categories": ["Drink", "Cold", "Coffee"]
+    },
+    {
+      "img": "",
+      "name": "Iced Latte",
+      "description": "Espresso with cold milk and foam over ice",
+      "price": 4.0,
+      "categories": ["Drink", "Cold", "Coffee"]
+    },
+    {
+      "img": "iced-tea.jpg",
+      "name": "Iced Tea",
+      "description": "Refreshing iced tea",
+      "price": 2.5,
+      "categories": ["Drink", "Cold", "Tea"]
+    },
+    {
+      "img": "",
+      "name": "Lemonade",
+      "description": "Classic lemonade",
+      "price": 2.0,
+      "categories": ["Drink", "Cold"]
+    },
+    {
+      "img": "",
+      "name": "Plain Croissant",
+      "description": "Flaky, buttery croissant",
+      "price": 2.5,
+      "categories": ["Food", "Pastry"]
+    },
+    {
+      "img": "",
+      "name": "Almond Croissant",
+      "description": "Croissant filled with almond paste and topped with sliced almonds",
+      "price": 3.0,
+      "categories": ["Food", "Pastry"]
+    },
+    {
+      "img": "",
+      "name": "Chocolate Croissant",
+      "description": "Croissant filled with dark chocolate",
+      "price": 2.75,
+      "categories": ["Food", "Pastry"]
+    },
+    {
+      "img": "",
+      "name": "Pain au Chocolat",
+      "description": "Croissant filled with dark chocolate",
+      "price": 2.75,
+      "categories": ["Food", "Pastry"]
+    },
+    {
+      "img": "",
+      "name": "Blueberry Muffin",
+      "description": "Moist muffin with blueberries",
+      "price": 2.0,
+      "categories": ["Food", "Baked Goods"]
+    },
+    {
+      "img": "",
+      "name": "Glazed Donut",
+      "description": "Classic glazed donut",
+      "price": 1.5,
+      "categories": ["Food", "Donut"]
+    },
+    {
+      "img": "",
+      "name": "Cranberry Scone",
+      "description": "Buttery scone with cranberries",
+      "price": 2.25,
+      "categories": ["Food", "Baked Goods"]
+    },
+    {
+      "img": "",
+      "name": "Chocolate Chip Cookie",
+      "description": "Chewy chocolate chip cookie",
+      "price": 1.0,
+      "categories": ["Food", "Baked Goods"]
+    },
+    {
+      "img": "",
+      "name": "Pride and Prejudice",
+      "description": "A delicate blend of Earl Grey tea, honey, and lemon",
+      "price": 4.5,
+      "categories": ["Drink", "Special", "Cold", "Tea"]
+    },
+    {
+      "img": "",
+      "name": "Wonderland",
+      "description": "A cozy blend of espresso, steamed milk, and cinnamon, topped with a sprinkle of cinnamon",
+      "price": 4.5,
+      "categories": ["Drink", "Special", "Hot", "Coffee"]
+    },
+    {
+      "img": "",
+      "name": "The Alchemist",
+      "description": "A rich, dark roast coffee inspired by the journey of self-discovery. Bold and flavorful, with a hint of caramel.",
+      "price": 4.5,
+      "categories": ["Drink", "Hot", "Coffee", "Special"]
+    },
+    {
+      "img": "",
+      "name": "The Mortal Instruments",
+      "description": "A mysterious blend of dark roast coffee with hints of vanilla and almond, perfect for a night of shadowhunting. Topped with whipped cream and a dusting of cocoa powder.",
+      "price": 4.75,
+      "categories": ["Drink", "Hot", "Coffee", "Special"]
+    },
+    {
+      "img": "",
+      "name": "Caraval",
+      "description": "A magical blend of espresso, steamed milk, and lavender syrup, topped with a sprinkle of edible glitter. A truly enchanting drink.",
+      "price": 5.25,
+      "categories": ["Drink", "Hot", "Coffee", "Special"]
+    },
+    {
+      "img": "",
+      "name": "Enchanted Butterbeer",
+      "description": "A magical blend of creamy butterscotch, vanilla, and a hint of pumpkin spice, topped with whipped cream and a sprinkle of cinnamon sugar. A truly enchanting drink.",
+      "price": 5.5,
+      "categories": ["Drink", "Special", "Hot"]
+    }
+  ],
+  "merch": [
+    {
+      "name": "Harry Potter Wand Replica",
+      "description": "A high-quality replica of a wand from the Harry Potter series.",
+      "img": "",
+      "price": 39.99
+    },
+    {
+      "name": "Hogwarts House Robe",
+      "description": "A cozy robe featuring the crest of your favorite Hogwarts house.",
+      "img": "",
+      "price": 49.99
+    },
+    {
+      "name": "Marauder's Map Print",
+      "description": "A high-quality print of the iconic Marauder's Map.",
+      "img": "",
+      "price": 19.99
+    },
+    {
+      "name": "Six of Crows Inspired Deck of Cards",
+      "description": "A deck of cards featuring the iconic characters and symbols from the Six of Crows duology.",
+      "img": "",
+      "price": 14.99
+    },
+    {
+      "name": "Grishaverse Enamel Pins",
+      "description": "A set of enamel pins featuring the symbols of the different Grisha powers.",
+      "img": "",
+      "price": 19.99
+    },
+    {
+      "name": "Shadowhunter Stele Necklace",
+      "description": "A delicate necklace featuring the iconic Shadowhunter stele symbol.",
+      "img": "",
+      "price": 24.99
+    },
+
+    {
+      "name": "Lightning Bolt Necklace",
+      "description": "A necklace featuring the iconic lightning bolt symbol of Percy Jackson.",
+      "img": "",
+      "price": 19.99
+    },
+    {
+      "name": "Camp Half-Blood T-Shirt",
+      "description": "A t-shirt with the Camp Half-Blood logo and a variety of camp-themed designs.",
+      "img": "",
+      "price": 14.99
+    },
+    {
+      "name": "Harry Potter Tote Bag",
+      "description": "A spacious and durable tote bag. Perfect for carrying books, groceries, or any other essentials.",
+      "img": "",
+      "price": 19.99
+    }
+  ]
+}
