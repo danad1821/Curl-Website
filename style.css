@@ -23,7 +23,7 @@ body {
 .backgroudCurves:nth-child(1) {
   position: absolute;
   max-width: 50%;
-  right: 20vw;
+  right: 22vw;
 }
 .vectorCurve {
   position: relative;
@@ -31,10 +31,11 @@ body {
 }
 #aboutUsCurve {
   position: absolute;
+  max-width: 95%;
 }
 #aboutUsVector {
   position: absolute;
-  left: 65vw;
+  left: 60vw;
   bottom: -70vh;
 }
 .sectionsContent {
@@ -55,6 +56,8 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  align-self: flex-end;
+  margin-right: 3%;
 }
 .firstSection > div > h1 {
   font-family: "New Class", sans-serif;
@@ -74,34 +77,36 @@ body {
   padding: 9px 12px;
 }
 #girlSitting {
-  max-width: 45%;
+  max-width: 40%;
+  margin-left: 3%;
 }
 .secondSection {
   margin-top: 12%;
   margin-left: 10%;
-  margin-right: 5%;
+  margin-right: 0%;
   height: 65vh;
   max-width: 100%;
+  justify-content: flex-end;
 }
 .secondSection > div {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
-  min-width: 75%;
+  /* min-width: 75%; */
 }
-.secondSection > div > img {
+.secondSection >  img {
   max-height: 60%;
-  margin: 0 4%;
+  margin: 0 3%;
 }
-.secondSection > div > div {
+.secondSection > div{
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  min-width: 70%;
+  max-width: 70%;
 }
-.secondSection > div > div > p {
+.secondSection > div > p {
   /* max-width: 85%; */
   text-align: center;
   font-size: 24px;
@@ -120,6 +125,10 @@ body {
   padding: 6px 12px;
   border: none;
 }
-.secondSection > img {
+#readingCat {
   align-self: flex-end;
+  max-height: 85%;
+}
+.besellingBooksSection{
+  
 }
