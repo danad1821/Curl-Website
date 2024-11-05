@@ -347,6 +347,7 @@ li a {
   
   .center-nav {
     justify-content: center;
+    width: 100%; /* Ensures center-nav takes the full width for centering */
   }
   
   .Logo {
