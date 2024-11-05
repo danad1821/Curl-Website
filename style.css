@@ -129,6 +129,54 @@ body {
   align-self: flex-end;
   max-height: 85%;
 }
+/* Bestselling books section */
 .besellingBooksSection{
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.bookCarousel{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.booksDisplay{
+  background-color: #F1EAE4;
+  border-radius: 88px;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  padding: 30px 60px;
+  margin-top: 5%;
+}
+.arrows{
+  width: 74px;
+  height: 64px;
+  z-index: 1;
+}
+.bookCard{
+  display: flex;
+  flex-direction: column;
+}
+.bookImg{
+  width: 256px;
+  height: 365px;
+  border-radius: 40px;
+  margin-bottom: 5%;
+}
+.innerBookDiv{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+#leftArrow{
+  margin-right: -30px;
+}
+#rightArrow{
+  margin-left: -30px;
 }
