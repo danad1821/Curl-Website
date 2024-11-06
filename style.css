@@ -129,20 +129,10 @@ li a {
   right: 22vw;
 }
 
-.vectorCurve {
-  position: relative;
-  bottom: -35vh;
-}
-
 #aboutUsCurve {
   position: absolute;
   max-width: 95%;
-}
-
-#aboutUsVector {
-  position: absolute;
-  left: 60vw;
-  bottom: -70vh;
+  top: 35vh;
 }
 
 .sectionsContent {
@@ -285,8 +275,8 @@ li a {
 }
 
 .arrows{
-  width: 74px;
-  height: 64px;
+  width: 65px;
+  height: 55px;
   z-index: 1;
 }
 
@@ -296,8 +286,8 @@ li a {
 }
 
 .bookImg{
-  width: 256px;
-  height: 365px;
+  width: 220px;
+  height: 320px;
   border-radius: 40px;
   margin-bottom: 5%;
 }
@@ -322,6 +312,10 @@ li a {
   align-items: center;
   justify-content: center;
   gap: 5px;
+}
+
+.pinkAddBtn{
+  font-size: 16px;
 }
 
 .heartIcon{
