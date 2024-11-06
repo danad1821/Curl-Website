@@ -1,17 +1,30 @@
 $(document).ready(function () {
+  let bestsellers=[]
   $.ajax({
     url: "data.json",
     type: "GET",
     dataType: "json",
     success: function (data) {
-      displayBestSellingBooks(data.books);
+      getBestsellers(data)
+      displayBestSellingBooks(bestsellers);
     },
     error: function (error) {},
   });
 
+  function getBestsellers(data){
+    for(const book of data.books){
+      if(book.genres.includes("Bestseller")){
+        bestsellers.push(book);
+      }
+    }
+  }
+
+  let startBooks=0;
+  let endBooks=3;
   let booksDisplay = $("#booksDisplay");
   function displayBestSellingBooks(data) {
-    for (let i = 0; i < 4; i++) {
+    booksDisplay.html("")
+    for (let i = startBooks; i <= endBooks; i++) {
       let bookDiv = $("<div>");
       bookDiv.addClass("bookCard");
       let bookImg = $("<img>");
@@ -28,4 +41,14 @@ $(document).ready(function () {
       booksDisplay.append(bookDiv)
     }
   }
+  $("#leftArrow").click(()=>{
+    startBooks=(startBooks-4 +bestsellers.length)%bestsellers.length;
+    endBooks=(endBooks-4 +bestsellers.length)%bestsellers.length;
+    displayBestSellingBooks(bestsellers)
+  })
+  $("#rightArrow").click(()=>{
+    startBooks=(startBooks+4)%bestsellers.length;
+    endBooks=(endBooks+4)%bestsellers.length;
+    displayBestSellingBooks(bestsellers)
+  })
 });
