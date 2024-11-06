@@ -1,68 +1,127 @@
-    .navdiv {
-        display: flex;
-        align-items: center;
-        padding: 10px 20px;
-        box-sizing: border-box;
-        width: 100%;
+*{
+    text-decoration: none;
+}
+/* Navbar Container */
+.navbar {
+    width: 100%;
+}
+
+.navdiv {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+/* Logo */
+.Logo img {
+    width: 200px; /* Adjusted for better responsiveness */
+    height: auto;
+}
+
+/* Center Navigation */
+.center-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    gap: 20px; /* Adds space between each menu item */
+    margin: 0 20px; /* Adds space on both sides of center-nav */
+}
+
+.center-nav li {
+    list-style: none;
+}
+
+.center-nav li a {
+    color: black;
+    font-size: 18px;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+/* Right Section */
+.right-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.SignIn {
+    background-color: #f1eae4;
+    border-radius: 20px;
+    border: none;
+    padding: 6px 16px;
+}
+
+.SignIn a {
+    color: black;
+    text-decoration: none;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    list-style: none;
+    margin-top: 10px;
+}
+
+#icon {
+    margin-right: 5px;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    /* Medium laptops */
+    .Logo img {
+        width: 150px;
     }
-    
-    .Logo {
-        width: 250px; /* Adjust width as needed */
-        height: auto;
-        margin-left: 20px;
-        flex-shrink: 0;
+
+    .center-nav li a {
+        font-size: 16px;
     }
-    
-    .center-nav {
-        display: flex;
-        flex-grow: 1;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    li {
-        list-style: none;
-        display: inline-block;
-    }
-    
-    li a {
-        color: black;
-        font-size: 18px;
-        text-decoration: none;
-        margin-right: 20px;
-    }
-    
-    #nav {
-        font-size: 18px;
-    }
-    
-    .right-section {
-        display: flex;
-        align-items: center;
-        margin-left: auto; /* Moves right-section to the far right */
-    }
-    
+
     .SignIn {
-        background-color: #f1eae4;
-        border-radius: 20px;
-        border: none;
-        padding: 6px 16px;
-        margin-right: 15px;
-        margin-top: -12px;
+        padding: 5px 14px;
     }
-    
-    .SignIn a {
-        color: black;
-        text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    /* Small laptops and tablets */
+    .Logo img {
+        width: 120px;
     }
-    
-    .icons {
-        display: flex;
+
+    .center-nav {
+        order: 2; /* Keep the nav in the center on smaller screens */
+        justify-content: center;
+    }
+
+    .navdiv {
+        flex-direction: column;
         align-items: center;
-        gap: 10px; /* Adjust spacing between icons */
     }
-    
-    #icon {
-        margin-right: 0;
+
+    .center-nav li a {
+        font-size: 14px;
     }
-    
+}
+
+@media (max-width: 480px) {
+    /* Mobile-sized screens */
+    .Logo img {
+        width: 100px;
+    }
+
+    .center-nav,
+    .right-section {
+        display: none; /* Hide non-essential items for small screens */
+    }
+
+    .SignIn {
+        padding: 4px 10px;
+    }
+}
