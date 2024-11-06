@@ -1,0 +1,67 @@
+    .navdiv {
+        display: flex;
+        align-items: center;
+        padding: 10px 20px;
+        box-sizing: border-box;
+        width: 100%;
+    }
+    
+    .Logo {
+        width: 250px; /* Adjust width as needed */
+        height: auto;
+        margin-left: 20px;
+        flex-shrink: 0;
+    }
+    
+    .center-nav {
+        display: flex;
+        flex-grow: 1;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    li {
+        list-style: none;
+        display: inline-block;
+    }
+    
+    li a {
+        color: black;
+        font-size: 18px;
+        text-decoration: none;
+        margin-right: 20px;
+    }
+    
+    #nav {
+        font-size: 18px;
+    }
+    
+    .right-section {
+        display: flex;
+        align-items: center;
+        margin-left: auto; /* Moves right-section to the far right */
+    }
+    
+    .SignIn {
+        background-color: #f1eae4;
+        border-radius: 20px;
+        border: none;
+        padding: 6px 16px;
+        margin-right: 15px;
+    }
+    
+    .SignIn a {
+        color: black;
+        text-decoration: none;
+    }
+    
+    .icons {
+        display: flex;
+        align-items: center;
+        gap: 10px; /* Adjust spacing between icons */
+    }
+    
+    #icon {
+        margin-right: 0;
+    }
+    
