@@ -258,6 +258,13 @@ li a {
   align-items: center;
 }
 
+.besellingBooksSection>p{
+  text-align: center;
+  font-size: 24px;
+  width: 40%;
+  margin: 1.5% 0;
+}
+
 .bookCarousel{
   display: flex;
   flex-direction: row;
@@ -275,7 +282,6 @@ li a {
   justify-content: center;
   gap: 50px;
   padding: 30px 60px;
-  margin-top: 5%;
 }
 
 .arrows{
