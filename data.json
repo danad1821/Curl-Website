@@ -620,7 +620,7 @@
       "categories": ["Drink", "Cold", "Coffee"]
     },
     {
-      "img": "",
+      "img": "productImages/Iced Latte.png",
       "name": "Iced Latte",
       "description": "Espresso with cold milk and foam over ice",
       "price": 4.0,
@@ -662,6 +662,13 @@
       "categories": ["Food", "Pastry"]
     },
     {
+      "img": "productImages/Fruit croissant.png",
+      "name": "Fruit Croissant",
+      "description": "Croissant filled with figs",
+      "price": 2.75,
+      "categories": ["Food", "Pastry"]
+    },
+    {
       "img": "",
       "name": "Pain au Chocolat",
       "description": "Croissant filled with dark chocolate",
@@ -695,6 +702,13 @@
       "description": "Chewy chocolate chip cookie",
       "price": 1.0,
       "categories": ["Food", "Baked Goods"]
+    },
+    {
+      "img": "productImages/Carrot Cake.png",
+      "name": "Carrot Cake",
+      "description": "A spice cake with carrots.",
+      "price": 2.75,
+      "categories": ["Food", "Pastry"]
     },
     {
       "img": "",
