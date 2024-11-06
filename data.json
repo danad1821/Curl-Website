@@ -782,5 +782,82 @@
       "img": "",
       "price": 19.99
     }
+  ],
+  "quotes":[
+    {
+      "content": "I am not afraid of storms, for I am learning how to sail my ship.",
+      "author": "Louisa May Alcott",
+      "book": "Little Women"
+    },
+    {
+      "content": "It's the possibility of having a dream come true that makes life interesting.",
+      "author": "Paulo Coelho",
+      "book": "The Alchemist"
+    },
+    {
+      "content": "Anything worth dying for is certainly worth living for.",
+      "author": "Joseph Heller",
+      "book": "Catch-22"
+    },
+    {
+      "content": "It is only with the heart that one can see rightly; what is essential is invisible to the eye.",
+      "author": "Antoine de Saint-Exupéry",
+      "book": "The Little Prince"
+    },
+    {
+      "content": "Too much sanity may be madness — and maddest of all: to see life as it is, and not as it should be!",
+      "author": "Miguel de Cervantes Saavedra",
+      "book": "Don Quixote"
+    },
+    {
+      "content": "That's the thing about books. They let you travel without moving your feet.",
+      "author": "Jhumpa Lahiri",
+      "book": "The Namesake"
+    },
+    {
+      "content": "I am not proud, but I am happy; and happiness blinds, I think, more than pride.",
+      "author": "Alexandre Dumas",
+      "book": "The Count of Monte Cristo"
+    },
+    {
+      "content": "All human wisdom is contained in these two words - Wait and Hope.",
+      "author": "Alexandre Dumas",
+      "book": "The Count of Monte Cristo"
+    },
+    {
+      "content": "There are two ways of seeing: with the body and with the soul. The body's sight can sometimes forget, but the soul remembers forever.",
+      "author": "Alexandre Dumas",
+      "book": "The Count of Monte Cristo"
+    },
+    {
+      "content": "I have always had more dread of a pen, a bottle of ink, and a sheet of paper than of a sword or pistol.",
+      "author": "Alexandre Dumas",
+      "book": "The Count of Monte Cristo"
+    },
+    {
+      "content": "The simple things are also the most extraordinary things, and only the wise can see them.",
+      "author": "Paulo Coelho",
+      "book": "The Alchemist"
+    },
+    {
+      "content": "All the world is made of faith, and trust, and pixie dust.",
+      "author": "J.M. Barrie",
+      "book": "Peter Pan"
+    },
+    {
+      "content": "Every person has the power to change their fate if they are brave enough to fight for what they desire more than anything.",
+      "author": "Stephanie Garber",
+      "book": "Caraval"
+    },
+    {
+      "content": "Hope is a powerful thing. Some say it’s a different breed of magic altogether. Elusive, difficult to hold on to. But not much is needed.",
+      "author": "Stephanie Garber",
+      "book": "Caraval"
+    },
+    {
+      "content": "Pure and complete sorrow is as impossible as pure and complete joy.",
+      "author": "Leo Tolstoy",
+      "book": "War and Peace"
+    } 
   ]
 }

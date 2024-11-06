@@ -1,34 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Curl</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
-      rel="stylesheet"
-    />
-    <link href="https://fonts.cdnfonts.com/css/new-class" rel="stylesheet" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    
-    <nav class="navbar">
-      <div class="navdiv">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Curl</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+  <link href="https://fonts.cdnfonts.com/css/new-class" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <nav class="navbar">
+    <div class="navdiv">
       <div class="Logo">
-          <img src="designImages/Logo[1].png" alt="Curl_Logo" class="Logo">
+        <img src="designImages/Logo[1].png" alt="Curl_Logo" class="Logo">
       </div>
-  
+
       <div class="list">
-          <ul class="center-nav">
+        <ul class="center-nav">
           <li id="nav"> <b> <a href="#"> Home </a> </b> </li>
           <li id="nav"> <a href="#"> About us </a> </li>
           <li id="nav"> <a href="#"> Menu </a> </li>
@@ -36,156 +31,173 @@
           <li id="nav"> <a href="#"> Merch </a> </li>
           <li id="nav"> <a href="#"> Events </a> </li>
           <li id="nav"> <a href="#"> Community </a> </li>
-          </ul>
+        </ul>
       </div>
-  
-      <div class="right-section">
-          <button class="SignIn" id="signInBtn"> <a href="#"> Sign in </a> </button>
-          <ul class="icons">
 
-            <li id="icon">
-              <div class="search-container">
-                <!-- Input for the search -->
-                <input type="text" placeholder="Search..." class="search-input">
-                
-                <!-- Close Icon (X button, initially hidden) -->
-                <a href="#" class="close-icon" id="close-icon">
-                  <svg width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M6 18L18 6M6 6l12 12" />
-                  </svg>
-                </a>
-              </div>
-              
-              <!-- Search Icon (initially visible) -->
-              <a href="#" class="search-icon" id="search-icon">
-                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M11 3a8 8 0 1 0 0 16 8 8 0 1 0 0-16z"></path>
-                  <path d="m21 21-4.35-4.35"></path>
+      <div class="right-section">
+        <button class="SignIn" id="signInBtn"> <a href="#"> Sign in </a> </button>
+        <ul class="icons">
+
+          <li id="icon">
+            <div class="search-container">
+              <!-- Input for the search -->
+              <input type="text" placeholder="Search..." class="search-input">
+
+              <!-- Close Icon (X button, initially hidden) -->
+              <a href="#" class="close-icon" id="close-icon">
+                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round"
+                  stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6 18L18 6M6 6l12 12" />
                 </svg>
               </a>
-            </li>            
-          
-          <li id="icon">
-              <a href="#">
-              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+            </div>
+
+            <!-- Search Icon (initially visible) -->
+            <a href="#" class="search-icon" id="search-icon">
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round"
+                stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11 3a8 8 0 1 0 0 16 8 8 0 1 0 0-16z"></path>
+                <path d="m21 21-4.35-4.35"></path>
               </svg>
-              </a>
+            </a>
+          </li>
+
+          <li id="icon">
+            <a href="#">
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round"
+                stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                </path>
+              </svg>
+            </a>
           </li>
           <li id="icon">
-              <a href="#">
-              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M9 20a1 1 0 1 0 0 2 1 1 0 1 0 0-2z"></path>
-                  <path d="M20 20a1 1 0 1 0 0 2 1 1 0 1 0 0-2z"></path>
-                  <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+            <a href="#">
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round"
+                stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 20a1 1 0 1 0 0 2 1 1 0 1 0 0-2z"></path>
+                <path d="M20 20a1 1 0 1 0 0 2 1 1 0 1 0 0-2z"></path>
+                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
               </svg>
-              </a>
+            </a>
           </li>
-          </ul>
+        </ul>
       </div>
-      </div>
+    </div>
   </nav>
 
   <div id="signInModal" class="modal">
     <div class="modal-content">
-        <span class="close">&times;</span>
-        <h2>Sign In</h2>
-        <form>
-            <label for="username">Username</label>
-            <input type="text" id="username" name="username" required>
+      <span class="close">&times;</span>
+      <h2>Sign In</h2>
+      <form>
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" required>
 
-            <label for="password">Password</label>
-            <input type="password" id="password" name="password" required>
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required>
 
-            <button type="submit">Sign In</button>
-        </form>
+        <button type="submit">Sign In</button>
+      </form>
     </div>
-</div>
-    
-    <div class="twoSections">
-      <div class="backgroudS1">
-        <img
-          src="designImages/Smoke in hompage.png"
-          class="backgroudCurves"
-          alt=""
-        />
-        <img
-          src="designImages/Group 143.png"
-          class="backgroudCurves"
-          id="aboutUsCurve"
-          alt=""
-        />
-      </div>
-      <div class="sectionsContent">
-        <section class="firstSection">
-          <img src="designImages/Girl Sitting.png" id="girlSitting" alt="" />
-          <div>
-            <h1>Curl</h1>
-            <p>A <b>good</b> book is always paired with <i>great</i> coffee.</p>
-            <button>Order Now</button>
-          </div>
-        </section>
-        <section class="secondSection">
-          <img src="designImages/Meow.png" alt="" />
-          <div>
-            <h2 class="sectionHeader">About Us</h2>
-            <p>
-              A book and coffee shop to bring the community and book lovers
-              together with a love for pets, so don’t forget to bring your pet
-              with you!
-            </p>
-            <button class="homePageBtn">View More</button>
-          </div>
-          <img src="designImages/Cat with book.png" alt="" id="readingCat" />
-        </section>
-      </div>
+  </div>
+
+  <div class="twoSections">
+    <div class="backgroudS1">
+      <img src="designImages/Smoke in hompage.png" class="backgroudCurves" alt="" />
+      <img src="designImages/Group 143.png" class="backgroudCurves" id="aboutUsCurve" alt="" />
     </div>
-    <section class="besellingBooksSection">
-      <h2 class="sectionHeader">Bestselling Books</h2>
-      <p>
-        You can find our best selling books here to enjoy and rely on as a great
-        recommendation.
-      </p>
-      <div class="carousel slide bookCarousel" id="bookCarousel" >
-        <button class="carousel-control-prev" data-bs-slide="prev" id="leftArrow" data-bs-target="#bookCarousel">
-          <img
-            src="designImages/ArrowLeft.png"
-            class="arrows "
-            alt=""
-          />
-        </button>
-        <div class="booksDisplay carousel-inner" id="booksDisplay">
+    <div class="sectionsContent">
+      <section class="firstSection">
+        <img src="designImages/Girl Sitting.png" id="girlSitting" alt="" />
+        <div>
+          <h1>Curl</h1>
+          <p>A <b>good</b> book is always paired with <i>great</i> coffee.</p>
+          <button>Order Now</button>
         </div>
-        <button class="carousel-control-next" data-bs-slide="next" id="rightArrow" data-bs-target="#bookCarousel">
-          <img
-            src="designImages/ArrowRight.png"
-            class="arrows"
-            alt=""
-          />
-        </button>
+      </section>
+      <section class="secondSection">
+        <img src="designImages/Meow.png" alt="" />
+        <div>
+          <h2 class="sectionHeader">About Us</h2>
+          <p>
+            A book and coffee shop to bring the community and book lovers
+            together with a love for pets, so don’t forget to bring your pet
+            with you!
+          </p>
+          <button class="homePageBtn">View More</button>
+        </div>
+        <img src="designImages/Cat with book.png" alt="" id="readingCat" />
+      </section>
+    </div>
+  </div>
+  <section class="besellingBooksSection">
+    <h2 class="sectionHeader">Bestselling Books</h2>
+    <p>
+      You can find our best selling books here to enjoy and rely on as a great
+      recommendation.
+    </p>
+    <div class="carousel slide bookCarousel" id="bookCarousel">
+      <button class="carousel-control-prev" data-bs-slide="prev" id="leftArrow" data-bs-target="#bookCarousel">
+        <img src="designImages/ArrowLeft.png" class="arrows " alt="" />
+      </button>
+      <div class="booksDisplay carousel-inner" id="booksDisplay">
       </div>
-    </section>
-    <section class="fortuneSection">
-      <h2 class="sectionHeader">Fortune of the Day</h2>
-    </section>
-    <section class="eventsSection">
-      <img
-        src="designImages/Events_illustration.png"
-        alt="Events_illustration"
-        id="eventillu"
-      />
-    </section>
-    <section class="menuSection"></section>
-    <section class="merchSection"></section>
-    <section class="communitySection"></section>
-    <section class="reviewsSection"></section>
-    <footer></footer>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
-    <script src="main.js"></script>
-  </body>
+      <button class="carousel-control-next" data-bs-slide="next" id="rightArrow" data-bs-target="#bookCarousel">
+        <img src="designImages/ArrowRight.png" class="arrows" alt="" />
+      </button>
+    </div>
+  </section>
+  <section class="fortuneSection">
+    <h2 class="sectionHeader">Fortune of the Day</h2>
+    <div id="fortune-container">
+      <div id="cookie-structure">
+        <img src="designImages\FortuneCookie\Crumbs-of-fortune-cookie.png" alt="Crumbs" id="crumbs">
+        <img src="designImages\FortuneCookie\Open-fortune-cookie.png" alt="Ribbon" id="ribbon">
+        <div id="background-cookies">
+          <img src="designImages\FortuneCookie\Right.png" alt="Cookie" id="right-cookie">
+          <img src="designImages\FortuneCookie\Left.png" alt="Cookie" id="left-cookie">
+        </div>
+      </div>
+      <!-- <div class="fortune-text">
+          <p>There are only two days in the year that nothing can be done...</p>
+          <p>- The 14th Dalai Lama</p>
+          <button>Give Me Another Fortune</button>
+        </div> -->
+    </div>
+  </section>
+  <section class="eventsSection">
+    <img src="designImages/Events_illustration.png" alt="Events_illustration" id="eventillu" />
+  </section>
+  <section class="menuSection">
+    <div id="menu-header">
+      <h2 class="sectionHeader">Our Menu</h2>
+      <p>With a mouth watering smell and an even better taste, browse our variety of drinks, pastries, and sweets.</p>
+    </div>
+    <div id="menu">
+
+    </div>
+    <button><a href="">View Menu</a></button>
+  </section>
+  <section class="merchSection"></section>
+  <section class="communitySection">
+    <div id="community">
+      <h2 class="sectionHeader">Community</h2>
+      <p>You’ll find your book lovers here to discuss the latest happenings.</p>
+      <div>
+        <button class="communityButton"><a href="">Join a Room</a></button>
+        <button class="communityButton"><a href="">Create a Room</a></button>
+      </div>
+    </div>
+  </section>
+  <section class="reviewsSection"></section>
+  <footer></footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <script src="main.js"></script>
+</body>
+
 </html>

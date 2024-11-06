@@ -535,3 +535,143 @@ body {
 #eventillu{
   width: 100%;
 }
+
+
+
+/* COMMUNITY SECTION STYLES */
+
+#community
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* height: 345px; */
+  height: 245px;
+  background-color: #E9B9B9;
+  margin-bottom: 500px;
+}
+
+#community div{
+  flex-direction: row;
+}
+
+#community h2{
+  margin-bottom: 20px;
+}
+
+#community p{
+  margin-bottom: 0;
+  font-size:20px;
+  width: 450px;
+  text-align: center;
+}
+
+.communityButton{
+  background-color: #F1EAE4;
+  color: #37474F;
+  width: 180px;
+  height: 39px;
+  border-radius: 159px;
+  border: none;
+  margin: 20px;
+  margin-bottom: 0;
+}
+
+.communityButton a{
+  text-decoration: none;
+  color: #37474F;
+  font-weight: 800;
+}
+
+/* FORTUNE OF THE DAY SECTION */
+.fortuneSection
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 100px;
+}
+#cookie-structure{
+  display: flex;
+  justify-content: center;
+}
+
+#ribbon, #crumbs{
+  position: absolute;
+
+}
+
+/* #right-cookie, #left-cookie{
+  position: absolute;
+} */
+
+#left-cookie{
+  left: 17%;
+}
+
+#right-cookie{
+  right: 7%;
+}
+
+
+#ribbon{
+  z-index: 2;
+  width: 80%;
+}
+
+#crumbs{
+  z-index: 3;
+  margin-top: 6%;
+  margin-left: 10%;
+  width: 65%;
+}
+
+#background-cookies{
+  z-index: 1;
+  display: flex;
+  /* justify-content: space-around; */
+}
+
+/* MENU STYLES */
+.menuSection{
+  margin-top: 100px;
+  margin-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#menu-header{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#menu-header p{
+  width: 670px;
+  font-size: 20px;
+  text-align: center;
+}
+
+#menu{
+  background-color: #F1EAE4;
+  height: 330px;
+  width: 100%;
+}
+
+.menuSection button{
+  background-color: #E9B9B9;
+  border-radius: 159px;
+  width: 150px;
+  height: 39px;
+  border: none;
+  margin-top: 20px;
+}
+
+.menuSection button a{
+  color: #F1EAE4;
+  font-weight: 800;
+  text-decoration: none;
+}
