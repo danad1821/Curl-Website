@@ -65,7 +65,44 @@ $(document).ready(function () {
   })
 });
 
-document.getElementById("header").innerHTML = fetch("navbar.html")
-  .then(response => response.text())
-  .then(data => document.getElementById("header").innerHTML = data)
-  .catch(error => console.error('Error loading header:', error));
+// Get the modal, button, and close elements
+const modal = document.getElementById("signInModal");
+const btn = document.getElementById("signInBtn");
+const closeBtn = document.querySelector(".close");
+
+// Show the modal when "Sign In" button is clicked
+btn.addEventListener("click", (event) => {
+    event.preventDefault(); // Prevent default link behavior
+    modal.classList.add("show"); // Show modal with transition
+});
+
+// Hide the modal when the close button is clicked
+closeBtn.addEventListener("click", () => {
+    modal.classList.remove("show"); // Hide modal with transition
+});
+
+// Hide the modal when clicking outside the modal content
+window.addEventListener("click", (event) => {
+    if (event.target === modal) {
+        modal.classList.remove("show"); // Hide modal when clicking outside
+    }
+});
+
+const searchContainer = document.querySelector('.search-container');
+const searchInput = document.querySelector('.search-input');
+const searchIcon = document.querySelector('#search-icon');
+const closeIcon = document.querySelector('#close-icon');
+
+searchIcon.addEventListener('click', function(e) {
+    e.preventDefault();
+    searchContainer.classList.add('focused');    // Expand the container
+    searchInput.focus();                         // Focus the input field
+});
+
+closeIcon.addEventListener('click', function(e) {
+    e.preventDefault();
+    searchContainer.classList.remove('focused'); // Collapse the container
+    searchInput.value = '';                      // Clear the input field
+    searchInput.blur();                          // Remove focus from the input
+});
+

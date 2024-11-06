@@ -24,7 +24,7 @@
     <nav class="navbar">
       <div class="navdiv">
       <div class="Logo">
-          <img src="designImages/Logo.png" alt="Curl_Logo" class="Logo">
+          <img src="designImages/Logo[1].png" alt="Curl_Logo" class="Logo">
       </div>
   
       <div class="list">
@@ -40,16 +40,31 @@
       </div>
   
       <div class="right-section">
-          <button class="SignIn"> <a href="#"> Sign in </a> </button>
+          <button class="SignIn" id="signInBtn"> <a href="#"> Sign in </a> </button>
           <ul class="icons">
-          <li id="icon">
-              <a href="#">
-              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+
+            <li id="icon">
+              <div class="search-container">
+                <!-- Input for the search -->
+                <input type="text" placeholder="Search..." class="search-input">
+                
+                <!-- Close Icon (X button, initially hidden) -->
+                <a href="#" class="close-icon" id="close-icon">
+                  <svg width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </a>
+              </div>
+              
+              <!-- Search Icon (initially visible) -->
+              <a href="#" class="search-icon" id="search-icon">
+                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path d="M11 3a8 8 0 1 0 0 16 8 8 0 1 0 0-16z"></path>
                   <path d="m21 21-4.35-4.35"></path>
-              </svg>
+                </svg>
               </a>
-          </li>
+            </li>            
+          
           <li id="icon">
               <a href="#">
               <svg width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -70,6 +85,22 @@
       </div>
       </div>
   </nav>
+
+  <div id="signInModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Sign In</h2>
+        <form>
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit">Sign In</button>
+        </form>
+    </div>
+</div>
     
     <div class="twoSections">
       <div class="backgroudS1">
