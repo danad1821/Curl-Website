@@ -146,20 +146,23 @@
         You can find our best selling books here to enjoy and rely on as a great
         recommendation.
       </p>
-      <div class="bookCarousel">
-        <img
-          src="designImages/ArrowLeft.png"
-          class="arrows"
-          id="leftArrow"
-          alt=""
-        />
-        <div class="booksDisplay" id="booksDisplay"></div>
-        <img
-          src="designImages/ArrowRight.png"
-          class="arrows"
-          id="rightArrow"
-          alt=""
-        />
+      <div class="carousel slide bookCarousel" id="bookCarousel" >
+        <button class="carousel-control-prev" data-bs-slide="prev" id="leftArrow" data-bs-target="#bookCarousel">
+          <img
+            src="designImages/ArrowLeft.png"
+            class="arrows "
+            alt=""
+          />
+        </button>
+        <div class="booksDisplay carousel-inner" id="booksDisplay">
+        </div>
+        <button class="carousel-control-next" data-bs-slide="next" id="rightArrow" data-bs-target="#bookCarousel">
+          <img
+            src="designImages/ArrowRight.png"
+            class="arrows"
+            alt=""
+          />
+        </button>
       </div>
     </section>
     <section class="fortuneSection">
