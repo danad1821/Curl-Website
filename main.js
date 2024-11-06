@@ -44,12 +44,24 @@ $(document).ready(function () {
   $("#leftArrow").click(()=>{
     startBooks=(startBooks-4 +bestsellers.length)%bestsellers.length;
     endBooks=(endBooks-4 +bestsellers.length)%bestsellers.length;
-    displayBestSellingBooks(bestsellers)
+    booksDisplay.children().css({"position": 'relative'})
+    booksDisplay.children().animate({ left: '-=110%' }, 1000, 'swing', () => {
+      // Update content after animation completes
+      displayBestSellingBooks(bestsellers);
+      booksDisplay.children().css({"position": 'relative', "left": '+110%'})
+      booksDisplay.children().animate({ left: '-=110%' }, 1000, 'swing')
+    });
   })
   $("#rightArrow").click(()=>{
     startBooks=(startBooks+4)%bestsellers.length;
     endBooks=(endBooks+4)%bestsellers.length;
-    displayBestSellingBooks(bestsellers)
+    booksDisplay.children().css({"position": 'relative'})
+    booksDisplay.children().animate({ right: '-=110%' }, 1000, 'swing', () => {
+      // Update content after animation completes
+      displayBestSellingBooks(bestsellers);
+      booksDisplay.children().css({"position": 'relative', "right": '+110%'})
+      booksDisplay.children().animate({ right: '-=110%' }, 1000, 'swing')
+    });
   })
 });
 

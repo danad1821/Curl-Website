@@ -138,10 +138,10 @@ body {
       padding: 4px 10px;
   }
 }
-
+/* welcome and about us  */
 .twoSections {
   position: relative;
-  margin-bottom: 15%;
+  margin-bottom: 5%;
 }
 
 .backgroudS1 {
@@ -156,14 +156,16 @@ body {
 
 .backgroudCurves:nth-child(1) {
   position: absolute;
-  max-width: 50%;
+  max-width: 45%;
   right: 22vw;
 }
 
 #aboutUsCurve {
   position: absolute;
   max-width: 95%;
-  top: 35vh;
+  height: 120dvh;
+  width: 100dvw;
+  top: 30vh;
 }
 
 .sectionsContent {
@@ -177,22 +179,24 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-evenly;
   margin-top: 3%;
+}
+
+.firstSection{
+  justify-content: center;
 }
 
 .firstSection > div {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  align-self: flex-end;
+  justify-content: space-between;
   margin-right: 3%;
 }
 
 .firstSection > div > h1 {
   font-family: "New Class", sans-serif;
-  font-size: 300px;
+  font-size: 250px;
   font-weight: 300;
 }
 
@@ -212,11 +216,9 @@ body {
 
 #girlSitting {
   max-width: 40%;
-  margin-left: 3%;
 }
 
 .secondSection {
-  margin-top: 12%;
   margin-left: 10%;
   margin-right: 0%;
   height: 65vh;
@@ -233,7 +235,7 @@ body {
 }
 
 .secondSection >  img {
-  max-height: 60%;
+  max-height: 70%;
   margin: 0 3%;
 }
 
@@ -260,7 +262,7 @@ body {
 
 .homePageBtn {
   color: #F1EAE4;
-  font-size: 24px;
+  font-size: 18px;
   background-color: #e9b9b9;
   border-radius: 159px;
   padding: 6px 12px;
@@ -268,8 +270,8 @@ body {
 }
 
 #readingCat {
-  align-self: flex-end;
-  max-height: 85%;
+  /* align-self: flex-end; */
+  max-height: 90%;
 }
 
 /* Bestselling books section */
@@ -303,6 +305,9 @@ body {
   justify-content: center;
   gap: 50px;
   padding: 30px 60px;
+  max-height: min-content;
+  max-width: 95%;
+  position: relative;
 }
 
 .arrows{

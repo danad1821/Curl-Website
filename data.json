@@ -141,7 +141,7 @@
       "author": "Taylor Jenkins Reid",
       "price": 14.99,
       "rating": 4.5,
-      "genres": ["Fiction", "Historical Fiction", "Romance", "Bestseller"],
+      "genres": ["Fiction", "Historical Fiction", "Romance"],
       "summary": "Aging Hollywood star Evelyn Hugo chooses a young, unknown journalist to reveal the truth about her glamorous life, her seven marriages, and the secrets she's kept for decades."
     },
     {
@@ -509,7 +509,7 @@
       "img": "https://thecirclebookshop.com/cdn/shop/files/9781471407277_11192274-9ea0-42f9-9acc-cd1a7fd07e6c_500x500_crop_center.jpg?v=1722629755",
       "title": "The Cruel Prince",
       "author": "Holly Black",
-      "genres": ["Fiction", "Fantasy", "Young Adult", "Romance"],
+      "genres": ["Fiction", "Fantasy", "Young Adult", "Romance", "Bestseller"],
       "price": 10.99,
       "rating": 4.4,
       "summary": "Jude, a mortal girl, is swept into the dangerous and seductive world of Faerie, where she must defy and outmaneuver cruel faeries to find her place at the High Court."
