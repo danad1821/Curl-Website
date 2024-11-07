@@ -735,6 +735,9 @@ body {
   #readingCat{
     max-width: 32%;
   }
+  .besellingBooksSection>p{
+    width: 60%;
+  }
 }
 @media (max-width: 950px){
   .secondSection{

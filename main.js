@@ -1,5 +1,11 @@
 $(document).ready(function () {
   let bestsellers = [];
+  let booksDisplay = $("#booksDisplay");
+  let bookC=$(".bookCard")[0]
+  let numberOfDisplayedBooks=Math.floor(booksDisplay.width()/190);
+  let startBooks = 0;
+  let endBooks = numberOfDisplayedBooks-1;
+
   $.ajax({
     url: "data.json",
     type: "GET",
@@ -23,12 +29,11 @@ $(document).ready(function () {
     interval: 1000,
     touch: true
   })
-  let startBooks = 0;
-  let endBooks = 3;
-  let booksDisplay = $("#booksDisplay");
+
+  
   // creates the carousel items which will be display when a user presses the prev or next btn
   function displayBestSellingBooks(data) {
-    let numOfSections = Math.floor(bestsellers.length / 4);
+    let numOfSections = Math.ceil(bestsellers.length / numberOfDisplayedBooks);
     console.log(numOfSections);
     for (let j = 0; j <= numOfSections; j++) {
       let section = $("<div>");
@@ -57,11 +62,14 @@ $(document).ready(function () {
         bookDiv.append(innerDiv);
         section.append(bookDiv);
       }
-      startBooks = startBooks + 4;
-      endBooks = endBooks + 4;
+      startBooks = startBooks + numberOfDisplayedBooks;
+      endBooks = endBooks + numberOfDisplayedBooks;
       booksDisplay.append(section);
     }
   }
+
+
+
 });
 
 // Get the modal, button, and close elements
