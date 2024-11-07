@@ -16,7 +16,7 @@ body {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  z-index: 2;
+  z-index: 5;
 }
 
 .navdiv {
@@ -328,7 +328,7 @@ body {
   max-width: 95%;
   height: 120dvh;
   width: 100dvw;
-  top: 30vh;
+  top: 35vh;
 }
 
 .sectionsContent {
@@ -355,19 +355,20 @@ body {
   align-items: center;
   justify-content: space-between;
   margin-right: 3%;
+  max-width: 40%;
 }
 
 .firstSection > div > h1 {
   font-family: "New Class", sans-serif;
-  font-size: 250px;
+  font-size: 16dvw;
   font-weight: 300;
 }
 
 .firstSection > div > p {
   font-size: 24px;
-  max-width: 60%;
+  max-width: 70%;
   text-align: center;
-  margin-top: -80px;
+  margin-top: -50px;
 }
 
 .firstSection > div > button {
@@ -382,7 +383,7 @@ body {
 }
 
 .secondSection {
-  margin-left: 10%;
+  margin-left: 11.5%;
   margin-right: 0%;
   height: 65vh;
   max-width: 100%;
@@ -411,12 +412,12 @@ body {
 }
 
 .secondSection > div > p {
-  max-width: 85%;
+  max-width: 80%;
   text-align: center;
   font-size: 24px;
   margin: 5px 0;
 }
-
+/* common styling for section headers */
 .sectionHeader {
   font-weight: 700;
   font-size: 35px;
@@ -433,8 +434,7 @@ body {
 }
 
 #readingCat {
-  /* align-self: flex-end; */
-  max-height: 90%;
+  max-height: 110%;
 }
 
 /* Bestselling books section */
@@ -474,6 +474,9 @@ body {
   height: 55px;
   z-index: 1;
   cursor: pointer;
+}
+.arrows:hover{
+  opacity: 1;
 }
 .carousel-control-next, .carousel-control-prev {
   opacity: 1;
@@ -674,4 +677,84 @@ body {
   color: #F1EAE4;
   font-weight: 800;
   text-decoration: none;
+}
+
+/* adjusting welcome and about us section for responsiveness on tablet/ laptop and desktop */
+@media (max-width: 1090px) {
+  .firstSection > div > p{
+    margin-top: -45px;
+    max-width: 80%;
+  }
+  #girlSitting{
+    max-width: 45%;
+    margin-left: 10px;
+  }
+  .sectionHeader{
+    font-size: 30px;
+  }
+  p{
+    font-size: 20px;
+  }
+  .secondSection >  img {
+    max-height: 40%;
+  }
+  #readingCat{
+    max-height: 70%;
+  }
+  .secondSection > div > p{
+    max-width: 95%;
+  }
+  .secondSection{
+    height: 73vh;
+  }
+}
+@media (max-width: 1040px){
+  #aboutUsCurve{
+    top:25vh;
+  }
+  .secondSection > div > p{
+    font-size: 20px;
+  }
+}
+@media (max-width: 980px){
+  .secondSection{
+    height: 77vh;
+  }
+  #meowImage{
+    width: 15%;
+  }
+  #readingCat{
+    max-width: 32%;
+  }
+}
+@media (max-width: 950px){
+  .secondSection{
+    /* margin-top: 5%; */
+    margin-left: 10.5%;
+  }
+}
+@media (max-width: 920px){
+  
+  .firstSection > div > p{
+    margin-top: -45px;
+    max-width: 90%;
+  }
+}
+@media (max-width: 900px){
+  .secondSection{
+    /* margin-top: 7%; */
+    /* margin-left: 11%; */
+  }
+}
+@media (max-width: 855px){
+  .homePageBtn{
+    font-size: 14px;
+  }
+  .firstSection{
+     margin-top: 5%;
+  }
+  .secondSection{
+    margin-top: 2%;
+    margin-left: 11%;
+  }
 }
