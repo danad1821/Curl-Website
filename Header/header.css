@@ -16,21 +16,19 @@
     width: 100%;
 }
 
-/* Logo */
 .Logo img {
-    width: 100px; /* Adjusted for better responsiveness */
+    width: 100px;
     height: auto;
     margin-left: 2px;
 }
 
-/* Center Navigation */
 .center-nav {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-grow: 1;
-    gap: 20px; /* Adds space between each menu item */
-    margin: 0 20px; /* Adds space on both sides of center-nav */
+    gap: 20px;
+    margin: 0 20px;
 }
 
 .center-nav li {
@@ -44,7 +42,6 @@
     margin-right: 10px;
 }
 
-/* Right Section */
 .right-section {
     display: flex;
     align-items: center;
@@ -64,7 +61,6 @@
     text-decoration: none;
 }
 
-/* Modal styling */
 .modal {
     display: none; /* Hidden by default */
     position: fixed;
@@ -73,15 +69,14 @@
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.6); /* Darker, semi-transparent background */
+    background-color: rgba(0, 0, 0, 0.6);
     justify-content: center;
     align-items: center;
     opacity: 0; /* Initially hidden */
     pointer-events: none; /* Prevent interaction until shown */
-    transition: opacity 0.4s ease, pointer-events 0s 0.4s; /* Fade-in with delay for smooth opening */
+    transition: opacity 0.4s ease, pointer-events 0s 0.4s;
 }
 
-/* Modal content */
 .modal-content {
     background-color: #f1eae4;
     padding: 30px;
@@ -90,23 +85,22 @@
     max-width: 90%;
     text-align: center;
     opacity: 0; /* Initially hidden */
-    transform: translateY(-50px); /* Start slightly above */
-    transition: transform 0.4s ease, opacity 0.4s ease; /* Slide & fade effects */
+    transform: translateY(-50px);
+    transition: transform 0.4s ease, opacity 0.4s ease;
 }
 
 /* When the modal is shown */
 .modal.show {
     display: flex;
-    opacity: 1; /* Fade-in effect */
-    pointer-events: all; /* Enable interactions */
+    opacity: 1;
+    pointer-events: all;
 }
 
 .modal.show .modal-content {
-    transform: translateY(0); /* Slide in from above */
-    opacity: 1; /* Fade in content */
+    transform: translateY(0);
+    opacity: 1;
 }
 
-/* Close button styling */
 .close {
     color: #aaa;
     font-size: 30px;
@@ -121,7 +115,6 @@
     color: #000;
 }
 
-/* Form styling */
 .modal-content h2 {
     font-size: 24px;
     margin-bottom: 20px;
@@ -157,40 +150,36 @@
     background-color: #455a64;
 }
 
-/* Search container */
 .search-container {
     display: flex;
     align-items: center;
     background-color: transparent;
     border-radius: 20px;
     padding: 5px;
-    width: 0;                   /* Start collapsed */
+    width: 0;
     overflow: hidden;
-    opacity: 0;                 /* Start hidden */
+    opacity: 0;
     transition: width 0.4s ease, opacity 0.2s ease, background-color 0.4s ease;
     border: 2px solid transparent;
     margin-left: 15px;
 }
 
-/* Expanded and visible state */
-.search-container.focused {
-    width: 200px;               /* Expanded width */
-    background-color: #fff;
-    opacity: 1;                 /* Make visible */
+.search-container.focused { 
+    width: 200px;
+    background-color: #f1eae4;
+    opacity: 1;/* Make visible */
 }
 
-/* Search input styling */
 .search-input {
     border: none;
     outline: none;
     padding: 5px;
     font-size: 16px;
     width: 100%;
-    background-color: #fff;
+    background-color: #f1eae4;
     border-radius: 20px;
 }
 
-/* Search icon styles */
 .search-icon {
     display: inline-block;
     cursor: pointer;
@@ -198,29 +187,26 @@
 }
 
 .search-container.focused ~ .search-icon {
-    opacity: 0;                 /* Fade out when input is focused */
-    pointer-events: none;       /* Prevent clicking when hidden */
+    opacity: 0;
+    pointer-events: none;
 }
 
 
-/* Hide the search icon when focused */
 .search-container.focused .search-icon {
     display: none;
 }
 
-/* Close icon styles */
 .close-icon {
     cursor: pointer;
     color: #000;
     margin-left: 10px;
-    display: none;              /* Hidden initially */
+    display: none;/* Hidden initially */
 }
 
 .search-container.focused .close-icon {
-    display: block;             /* Show close icon when expanded */
+    display: block;
 }
 
-/* Icons list styling */
 .icons {
     display: flex;
     align-items: center;
@@ -229,7 +215,6 @@
     margin-top: 10px;
 }
 
-/* Wrapper for positioning the search icon and search container */
 #icon {
     position: relative;
     display: flex;
@@ -238,10 +223,107 @@
     margin-right: 10px;
 }
 
+#search-results {
+    list-style-type: none;
+    padding: 0;
+    margin-top: -15px;
+    margin-left: 60%;
+    max-height: 200px;
+    overflow-y: auto;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    width: 30%;
+    z-index: 999;
+}
 
-/* Responsive Styles */
+.search-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    background-color: #f9f9f9;
+    transition: background-color 0.3s ease;
+}
+
+.search-item:hover {
+    background-color: #f1f1f1;
+}
+
+.search-item img {
+    width: 50px;
+    height: 75px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.search-item h3 {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+    color: #333;
+    flex-grow: 1;
+    flex-shrink: 0; 
+}
+
+.search-item p {
+    font-size: 14px;
+    color: #555;
+    margin: 5px 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.author-name {
+    font-size: 13px;
+    color: #777;
+    margin-top: 5px;
+}
+
+.search-item p.truncated {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#search-results.empty {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    #search-results {
+        padding-left: 0;
+    }
+
+    .search-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .search-item img {
+        width: 60px;
+        height: 90px;
+    }
+
+    .search-item h3 {
+        font-size: 16px;
+    }
+
+    .search-item p {
+        font-size: 13px;
+    }
+
+    .author-name {
+        font-size: 12px;
+    }
+}
+
 @media (max-width: 1024px) {
-    /* Medium laptops */
     .Logo img {
         width: 150px;
     }
@@ -256,13 +338,12 @@
 }
 
 @media (max-width: 768px) {
-    /* Small laptops and tablets */
     .Logo img {
         width: 120px;
     }
 
     .center-nav {
-        order: 2; /* Keep the nav in the center on smaller screens */
+        order: 2;
         justify-content: center;
     }
 
@@ -277,17 +358,68 @@
 }
 
 @media (max-width: 480px) {
-    /* Mobile-sized screens */
     .Logo img {
         width: 100px;
     }
 
     .center-nav,
     .right-section {
-        display: none; /* Hide non-essential items for small screens */
+        display: none;
     }
 
     .SignIn {
         padding: 4px 10px;
+    }
+}
+
+
+.burger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+.burger .line {
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    margin: 4px 0;
+}
+
+.close {
+    display: none;
+    font-size: 24px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .burger {
+        display: flex;
+    }
+
+    .center-nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        background-color: #c0dde5;
+        width: 100%;
+        top: 60px;
+        left: 0;
+        z-index: 10;
+        margin-top: 30px;
+        padding-top: 10px;
+    }
+
+    .center-nav.show {
+        display: flex;
+    }
+
+    .close {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 20px;
     }
 }

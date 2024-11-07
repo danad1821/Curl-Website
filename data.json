@@ -542,6 +542,8 @@
       "summary": "A beautifully illustrated collection of tales following Cardan, the High King of Elfhame, as he recalls pivotal moments from his past and reflects on the love and hatred that shaped him."
     }
   ],
+
+
   "menu": [
     {
       "img": "",
@@ -726,6 +728,8 @@
       "categories": ["Drink", "Special", "Hot"]
     }
   ],
+
+
   "merch": [
     {
       "name": "Harry Potter Wand Replica",
@@ -783,6 +787,8 @@
       "price": 19.99
     }
   ],
+
+  
   "quotes":[
     {
       "content": "I am not afraid of storms, for I am learning how to sail my ship.",
