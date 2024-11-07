@@ -115,7 +115,7 @@ $searchInput.on("input", function () {
     // Handle books
     if (item.title) {
       title = item.title;
-      description = truncateText(item.summary);  // shorten the summary to 8 words
+      description = truncateText(item.summary);  // shorten the summary to 6 words
       author = item.author ? `By: ${item.author}` : "";  // Include author if available
       imgElement = item.img ? `<img src="${item.img}" alt="Book image" class="search-image">` : "";
     }
@@ -123,21 +123,21 @@ $searchInput.on("input", function () {
     // Handle menu items
     else if (item.name) {
       title = item.name;
-      description = truncateText(item.description);  // shorten the description to 8 words
+      description = truncateText(item.description);  // shorten the description to 6 words
       imgElement = item.img ? `<img src="${item.img}" alt="Menu item image" class="search-image">` : "";
     }
 
     // Handle merch
     else if (item.name) {
       title = item.name;
-      description = truncateText(item.description);  // shorten the description to 8 words
+      description = truncateText(item.description);  // shorten the description to 6 words
       imgElement = item.img ? `<img src="${item.img}" alt="Merch image" class="search-image">` : "";
     }
 
     // Handle quotes
     else if (item.content) {
       title = item.book ? item.book : item.author;
-      description = truncateText(item.content);  // shorten the content to 8 words
+      description = truncateText(item.content);  // shorten the content to 6 words
       author = item.author ? `By: ${item.author}` : "";  // Include author if available
       imgElement = "";
     }
@@ -168,11 +168,11 @@ $closeIcon.on("click", function (e) {
   $searchResults.empty();
 });
 
-// Showing first 8 words in the description
+// Showing first 6 words in the description
 function truncateText(text) {
   const words = text.split(" ");
-  if (words.length > 8) {
-    return words.slice(0, 8).join(" ") + "...";
+  if (words.length > 6) {
+    return words.slice(0, 6).join(" ") + "...";
   }
   return text;
 }
@@ -241,7 +241,7 @@ $searchInput.on("input", function () {
     // Handle books
     if (item.title) {
       title = item.title;
-      description = truncateText(item.summary);  // shorten the summary to 8 words
+      description = truncateText(item.summary);  // shorten the summary to 6 words
       author = item.author ? `By: ${item.author}` : "";  // Include author if available
       imgElement = item.img ? `<img src="${item.img}" alt="Book image" class="search-image">` : "";
     }
@@ -249,21 +249,21 @@ $searchInput.on("input", function () {
     // Handle menu items
     else if (item.name) {
       title = item.name;
-      description = truncateText(item.description);  // shorten the description to 8 words
+      description = truncateText(item.description);  // shorten the description to 6 words
       imgElement = item.img ? `<img src="${item.img}" alt="Menu item image" class="search-image">` : "";
     }
 
     // Handle merch
     else if (item.name) {
       title = item.name;
-      description = truncateText(item.description);  // shorten the description to 8 words
+      description = truncateText(item.description);  // shorten the description to 6 words
       imgElement = item.img ? `<img src="${item.img}" alt="Merch image" class="search-image">` : "";
     }
 
     // Handle quotes
     else if (item.content) {
       title = item.book ? item.book : item.author;
-      description = truncateText(item.content);  // shorten the content to 8 words
+      description = truncateText(item.content);  // shorten the content to 6 words
       author = item.author ? `By: ${item.author}` : "";  // Include author if available
       imgElement = "";
     }
@@ -271,10 +271,13 @@ $searchInput.on("input", function () {
     // Append the result, ensuring the author is under the description
     listItem.append(
       imgElement,
-      `<h3>${title}</h3>`,
-      `<p>${description}</p>`,
-      author ? `<p class="author-name">${author}</p>` : ""  // Add author below the description
+      `<div class="text-container">
+        <h3>${title}</h3>
+        <p>${description}</p>
+        ${author ? `<p class="author-name">${author}</p>` : ""}
+      </div>`
     );
+    
 
     $searchResults.append(listItem);
   });

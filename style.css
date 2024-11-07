@@ -243,8 +243,8 @@ body {
   height: 24px;
 }
 
-/* Default styling */
 .eventsSection {
+  margin-top: 5% !important;
   position: relative;
   display: inline-block;
   max-width: 100%;  /* Ensure it scales to the container */
@@ -278,46 +278,65 @@ body {
 
 /* For smaller screens */
 @media (max-width: 1200px) {
+  .eventsSection{
+    margin-top: 5% !important;
+  }
+
   .textOverlay {
-    top: 65%;
-    left: 50%;
+    top: 80%;
+    left: 30%;
   }
 
   .textOverlay h1 {
-    font-size: 6vw;  /* Slightly smaller font for medium screens */
+    font-size: 4vw;  /* Slightly smaller font for medium screens */
   }
 }
 
 /* For laptops with smaller screen widths (1024px and below) */
 @media (max-width: 1024px) {
+  .eventsSection{
+    margin-top: 13% !important;
+  }
+
   .textOverlay {
-    top: 60%;
-    left: 50%;
+    top: 80%;
+    left: 30%;
   }
 
   .textOverlay h1 {
-    font-size: 7vw; /* Further reduced font size */
+    font-size: 4vw; /* Further reduced font size */
+  }
+
+  .textOverlay h3 {
+    font-size: 2vw; /* Further reduced font size */
   }
 
   .textOverlay p {
-    font-size: 3.5vw; /* Adjust paragraph size for readability */
+    font-size: 1.6vw; /* Adjust paragraph size for readability */
   }
 }
 
 /* For mobile devices (up to 600px wide) */
 @media (max-width: 600px) {
-  .textOverlay {
-    top: 50%;
-    left: 50%;
-    width: 90%; /* Ensure it's not too wide on small screens */
+  .eventsSection{
+    margin-top: 15% !important;
   }
 
+  .textOverlay.textOverlay {
+    top: 80%;
+    left: 30%;
+}
+
   .textOverlay h1 {
-    font-size: 8vw;  /* Make the text smaller */
+    font-size: 3vw; /* Further reduced font size */
+  }
+
+  .textOverlay h3 {
+    font-size: 2vw; /* Further reduced font size */
   }
 
   .textOverlay p {
-    font-size: 4.5vw; /* Adjust for readability */
+    font-size: 1.6vw; /* Adjust paragraph size for readability */
   }
 }
 

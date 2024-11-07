@@ -225,23 +225,21 @@
 
 #search-results {
     list-style-type: none;
-    padding: 0;
     margin-top: -15px;
     margin-left: 60%;
-    max-height: 200px;
+    max-height: 400px;
     overflow-y: auto;
     border-radius: 8px;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     position: absolute;
-    width: 30%;
+    width: 34.8%;
     z-index: 999;
 }
 
 .search-item {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    align-items: flex-start;  /* Keep items aligned to the start */
     padding: 10px;
     border-bottom: 1px solid #ddd;
     background-color: #f9f9f9;
@@ -257,8 +255,7 @@
     height: 75px;
     object-fit: cover;
     border-radius: 8px;
-    margin-right: 10px;
-    margin-bottom: 10px;
+    margin-right: 10px;  /* Space between image and text */
 }
 
 .search-item h3 {
@@ -266,8 +263,6 @@
     font-weight: bold;
     margin: 0;
     color: #333;
-    flex-grow: 1;
-    flex-shrink: 0; 
 }
 
 .search-item p {
@@ -285,6 +280,12 @@
     margin-top: 5px;
 }
 
+/* Adjust the container of title and author to stack them */
+.search-item .text-container {
+    display: flex;
+    flex-direction: column;  /* Stack title and author vertically */
+}
+
 .search-item p.truncated {
     white-space: nowrap;
     overflow: hidden;
@@ -294,6 +295,7 @@
 #search-results.empty {
     display: none;
 }
+
 
 @media (max-width: 768px) {
     #search-results {
