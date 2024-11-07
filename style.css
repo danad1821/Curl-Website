@@ -595,29 +595,36 @@ body {
   justify-content: center;
   align-items: center;
   margin: 100px;
+  height: 50dvh;
+  position: relative;
 }
 #cookie-structure{
   display: flex;
   justify-content: center;
+  position: absolute;
+  top: 100px;
+  left: 0;
+  right: 0;
 }
 
 #ribbon, #crumbs{
   position: absolute;
-
+  top: 100px;
 }
 
 /* #right-cookie, #left-cookie{
   position: absolute;
 } */
 
-#left-cookie{
-  left: 17%;
+#left-cookie,
+#right-cookie{
+  max-width: 20%;
+  max-height: 50dvh;
 }
 
 #right-cookie{
-  right: 7%;
+  max-height: 40dvh;
 }
-
 
 #ribbon{
   z-index: 2;
@@ -632,9 +639,15 @@ body {
 }
 
 #background-cookies{
+  position: absolute;
   z-index: 1;
+  top: 60px;
+  left: 0;
+  right: 30px;
   display: flex;
-  /* justify-content: space-around; */
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: 52%;
 }
 
 /* MENU STYLES */
@@ -677,6 +690,11 @@ body {
   color: #F1EAE4;
   font-weight: 800;
   text-decoration: none;
+}
+
+/* Events Section  */
+.eventsSection{
+  margin-top: 5%;
 }
 
 /* adjusting welcome and about us section for responsiveness on tablet/ laptop and desktop */
