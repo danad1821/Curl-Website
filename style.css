@@ -375,6 +375,8 @@ body {
   justify-content: center;
   align-items: center;
   margin: 100px;
+  margin-bottom: 0%;
+  margin-top: 50px;
   height: 50dvh;
   position: relative;
 }
@@ -385,50 +387,35 @@ body {
   top: 100px;
   left: 0;
   right: 0;
+  
 }
 
-#ribbon, #crumbs{
+#cookie-structure p{
   position: absolute;
-  top: 100px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Offset to truly center */
+  color: #000000;
+  font-size: 20px;
+  text-align: center;
+  padding: 10px;
+
 }
 
-/* #right-cookie, #left-cookie{
+#fortuneBanner{
+  width: 90%;
+}
+
+#quoteDetails{
+  text-align: center;
+}
+
+#fortuneText{
   position: absolute;
-} */
-
-#left-cookie,
-#right-cookie{
-  max-width: 20%;
-  max-height: 50dvh;
+  bottom: -25%;
+  left: 42%;
 }
 
-#right-cookie{
-  max-height: 40dvh;
-}
-
-#ribbon{
-  z-index: 2;
-  width: 80%;
-}
-
-#crumbs{
-  z-index: 3;
-  margin-top: 6%;
-  margin-left: 10%;
-  width: 65%;
-}
-
-#background-cookies{
-  position: absolute;
-  z-index: 1;
-  top: 60px;
-  left: 0;
-  right: 30px;
-  display: flex;
-  flex-direction: row-reverse;
-  align-items: center;
-  gap: 52%;
-}
 
 /* MENU STYLES */
 .menuSection{
@@ -474,7 +461,7 @@ body {
 
 /* Events Section  */
 .eventsSection{
-  margin-top: 5%;
+  margin-top: 2%;
 }
 
 /* adjusting welcome and about us section for responsiveness on tablet/ laptop and desktop */
