@@ -680,6 +680,15 @@ body {
 }
 
 /* adjusting welcome and about us section for responsiveness on tablet/ laptop and desktop */
+@media (max-width: 1250px){
+  .secondSection{
+    height: 75vh;
+  }
+  .secondSection>div>p, .besellingBooksSection>p{
+    font-size: 20px;
+  }
+
+}
 @media (max-width: 1090px) {
   .firstSection > div > p{
     margin-top: -45px;
@@ -705,7 +714,7 @@ body {
     max-width: 95%;
   }
   .secondSection{
-    height: 73vh;
+    height: 83vh;
   }
 }
 @media (max-width: 1040px){
@@ -742,8 +751,8 @@ body {
 }
 @media (max-width: 900px){
   .secondSection{
-    /* margin-top: 7%; */
-    /* margin-left: 11%; */
+    margin-top: 7%;
+    margin-left: 11%;
   }
 }
 @media (max-width: 855px){

@@ -10,7 +10,7 @@ $(document).ready(function () {
     },
     error: function (error) {},
   });
-
+  // gets all the bestsellers found in the data.json file
   function getBestsellers(data) {
     for (const book of data.books) {
       if (book.genres.includes("Bestseller")) {
@@ -18,6 +18,7 @@ $(document).ready(function () {
       }
     }
   }
+  //creates carousel for the books using bootstrap
   const bookCarousel = new bootstrap.Carousel('#bookCarousel', {
     interval: 1000,
     touch: true
@@ -25,6 +26,7 @@ $(document).ready(function () {
   let startBooks = 0;
   let endBooks = 3;
   let booksDisplay = $("#booksDisplay");
+  // creates the carousel items which will be display when a user presses the prev or next btn
   function displayBestSellingBooks(data) {
     let numOfSections = Math.floor(bestsellers.length / 4);
     console.log(numOfSections);
