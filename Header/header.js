@@ -296,5 +296,4 @@ $(document).ready(function() {
       $(this).hide();
       $('#burgerIcon').show();
   });
-
 });
