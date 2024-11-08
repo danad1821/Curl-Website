@@ -546,49 +546,49 @@
 
   "menu": [
     {
-      "img": "",
+      "img": "designImages/exampleMenu.png",
       "name": "Espresso",
       "description": "A rich, concentrated coffee beverage",
       "price": 3.5,
       "categories": ["Drink", "Hot", "Coffee"]
     },
     {
-      "img": "",
+      "img": "designImages/exampleMenu.png",
       "name": "Americano",
       "description": "Espresso diluted with hot water",
       "price": 3.0,
       "categories": ["Drink", "Hot", "Coffee"]
     },
     {
-      "img": "",
+      "img": "designImages/exampleMenu.png",
       "name": "Latte",
       "description": "Espresso with steamed milk and foam",
       "price": 4.0,
       "categories": ["Drink", "Hot", "Coffee"]
     },
     {
-      "img": "",
+      "img": "designImages/exampleMenu.png",
       "name": "Cappuccino",
       "description": "Espresso with steamed milk and foam, with more foam than a latte",
       "price": 4.5,
       "categories": ["Drink", "Hot", "Coffee"]
     },
     {
-      "img": "",
+      "img": "designImages/exampleMenu.png",
       "name": "Mocha",
       "description": "Espresso, steamed milk, chocolate syrup, and foam",
       "price": 4.5,
       "categories": ["Drink", "Hot", "Coffee"]
     },
     {
-      "img": "",
+      "img": "designImages/exampleMenu.png",
       "name": "Hot Chocolate",
       "description": "Rich, creamy hot chocolate",
       "price": 3.5,
       "categories": ["Drink", "Hot", "Coffee"]
     },
     {
-      "img": "",
+      "img": "designImages/exampleMenu.png",
       "name": "Iced Coffee",
       "description": "Cold brewed coffee over ice",
       "price": 3.0,
@@ -609,28 +609,28 @@
       "categories": ["Drink", "Cold", "Tea"]
     },
     {
-      "img": "",
+      "img": "designImages/exampleMenu.png",
       "name": "Lemonade",
       "description": "Classic lemonade",
       "price": 2.0,
       "categories": ["Drink", "Cold"]
     },
     {
-      "img": "",
+      "img": "designImages/exampleMenu.png",
       "name": "Plain Croissant",
       "description": "Flaky, buttery croissant",
       "price": 2.5,
       "categories": ["Food", "Pastry"]
     },
     {
-      "img": "",
+      "img": "designImages/exampleMenu.png",
       "name": "Almond Croissant",
       "description": "Croissant filled with almond paste and topped with sliced almonds",
       "price": 3.0,
       "categories": ["Food", "Pastry"]
     },
     {
-      "img": "",
+      "img": "designImages/exampleMenu.png",
       "name": "Chocolate Croissant",
       "description": "Croissant filled with dark chocolate",
       "price": 2.75,

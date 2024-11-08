@@ -385,12 +385,34 @@ body {
   border: none;
   margin: 20px;
   margin-bottom: 0;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.communityButton:hover {
+  background-color: #37474F;
+  color: #F1EAE4;
 }
 
 .communityButton a{
   text-decoration: none;
-  color: #37474F;
+  /* color: #37474F; */
+  color: inherit;
   font-weight: 800;
+}
+
+@media (max-width: 500px){
+  #community p{
+    font-size: 14px;
+  }
+
+  .communityButton{
+    background-color: #F1EAE4;
+    color: #37474F;
+    width: 130px;
+    height: 29px;
+    margin: 10px;
+  }
+  
 }
 
 /* FORTUNE OF THE DAY SECTION */
@@ -418,6 +440,12 @@ body {
   height: 50dvh;
 }
 
+#fortuneHeader{
+  margin-bottom: -100px;
+  margin-top: 20%;
+}
+
+
  #cookie-structure>p {
   /* transform: translate(-50%, -50%); Offset to truly center */
   color: #000000;
@@ -438,7 +466,8 @@ body {
   align-items: center;
   justify-content: center;
   width: 100dvw;
-  margin-top: -10px;
+  margin-top: -100px;
+  margin-bottom: 0%;
 }
 
 @media(max-width: 1300px){
@@ -589,7 +618,8 @@ body {
 }
 
 #menu-header p{
-  width: 670px;
+  /* width: 670px; */
+  width: 70%;
   font-size: 20px;
   text-align: center;
 }
@@ -598,6 +628,11 @@ body {
   background-color: #F1EAE4;
   height: 330px;
   width: 100%;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+  display: flex;
+  justify-content: center;
 }
 
 .menuSection button{
@@ -615,9 +650,51 @@ body {
   text-decoration: none;
 }
 
+.scrollable-menu {
+  display: flex;
+  gap: 20px;
+  padding: 10px;
+}
+
+.itemDiv{
+  display: flex;
+  flex-direction: row;
+}
+
+.itemDiv img{
+  width: 50px;
+  height: 50px;
+}
+.menu-item {
+  width: 500px;
+  padding: 15px;
+}
+
+/* .menu-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+} */
+
+.menu-item h3 {
+  font-size: 18px;
+  margin: 10px 0 5px;
+}
+
+.menu-item p {
+  font-size: 14px;
+  color: #777;
+}
+
+.price {
+  font-size: 16px;
+  color: #333;
+  margin-top: 10px;
+}
+
 /* Events Section  */
 .eventsSection{
-  margin-top: 2%;
+  margin-top: 0%;
 }
 
 /* adjusting welcome and about us section for responsiveness on tablet/ laptop and desktop */
