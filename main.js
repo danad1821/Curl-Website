@@ -2,10 +2,9 @@ $(document).ready(function () {
   let bestsellers = [];
   let booksDisplay = $("#booksDisplay");
   let bookC = $(".bookCard")[0];
-  let numberOfDisplayedBooks = Math.floor(booksDisplay.width() / 190);
+  let numberOfDisplayedBooks = Math.floor(booksDisplay.width() / 200);
   let startBooks = 0;
-  let endBooks = numberOfDisplayedBooks - 1;
-
+  let endBooks = Math.min(numberOfDisplayedBooks - 1, 3);
   $.ajax({
     url: "data.json",
     type: "GET",

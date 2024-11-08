@@ -176,7 +176,7 @@ body {
   background-color: #F1EAE4;
   border-radius: 88px;
   overflow: hidden;
-  gap: 50px;
+  /* gap: 50px; */
   padding: 30px 50px;
   max-height: fit-content;
   width: 67dvw;
@@ -184,10 +184,10 @@ body {
 }
 
 .arrows{
-  width: 65px;
-  height: 55px;
   z-index: 1;
   cursor: pointer;
+  width: 12vw;
+  height: 7vh;
 }
 .arrows:hover{
   opacity: 1;
@@ -203,7 +203,7 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: 50px;
+  gap: 3%;
 }
 /* .carousel-item-start{
   padding: 0 10px;
@@ -212,6 +212,7 @@ body {
 .bookCard{
   display: flex;
   flex-direction: column;
+  padding: 2px 5px;
 }
 
 .bookCard>p, .bookCard>b{
@@ -451,9 +452,6 @@ body {
   #cookie-structure p{
     font-size: 13px;
   }
-  .sectionHeader{
-    margin-bottom: 40px;
-  }
 
   #generateQuoteBtn {
     font-size: 13px;
@@ -472,10 +470,6 @@ body {
   #cookie-structure p{
     font-size: 10px;
   }
-  .sectionHeader{
-    margin-bottom: 100px;
-  }
-
   #fortuneText{
     margin-bottom: 50px;
   }
@@ -514,10 +508,6 @@ body {
     bottom: -8%;
   }
 
-  .sectionHeader{
-    margin-bottom: 130px;
-  }
-
 }
 
 @media (max-width: 600px){
@@ -537,10 +527,6 @@ body {
   #fortuneText {
     bottom: 0%;
   }
-
-  .sectionHeader{
-    margin-bottom: 150px;
-  }
 }
 
 
@@ -550,9 +536,6 @@ body {
     width: 90%;
   }
 
-  .sectionHeader{
-    font-size: 20px !important;
-  }
 }
 
 
@@ -649,15 +632,17 @@ body {
 
 /* adjusting welcome and about us section for responsiveness on tablet/ laptop and desktop */
 @media (max-width: 1250px){
-  .secondSection{
-    /* height: 75vh; */
-    margin-top: 0;
-  }
   .secondSection>div>p, .besellingBooksSection>p{
     font-size: 20px;
   }
-
 }
+
+@media (max-width: 1170px){
+  #readingCat {
+    max-height: 81%;
+  }
+}
+
 @media (max-width: 1090px) {
   .firstSection > div > p{
     margin-top: -45px;
@@ -691,7 +676,8 @@ body {
     top:25vh;
   }
   .secondSection > div > p{
-    font-size: 20px;
+    font-size: 18px;
+    
   }
 }
 @media (max-width: 980px){
@@ -755,8 +741,9 @@ body {
   .firstSection>div>button{
     font-size: 14px;
   }
-}
-@media (max-width: 750px) {
+  .booksDisplay{
+    width: 90dvw;
+  }
   .backgroudS1{
     display: none;
   }
@@ -790,8 +777,15 @@ body {
     font-size: 150px;
   }
   .firstSection>div>p{
-    font-size: 20px;
+    font-size: 16px;
     margin-top: -40px;
     max-width: 100vw;
+  }
+  .firstSection{
+    width: 100%;
+  }
+  .secondSection>div>p, .besellingBooksSection>p{
+    font-size: 16px;
+    width: 85%;
   }
 }
