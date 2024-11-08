@@ -194,8 +194,8 @@ body {
 .arrows{
   z-index: 1;
   cursor: pointer;
-  width: 12vw;
-  height: 7vh;
+  width: 10vw;
+  height: 6vh;
 }
 .arrows:hover{
   opacity: 1;
@@ -705,9 +705,17 @@ body {
 .eventsSection{
   margin-top: 0%;
 }
+@media (max-width: 1441px) {
+  .sectionsContent{
+    background-position-y: 35%;
+  }
+}
 
 /* adjusting welcome and about us section for responsiveness on tablet/ laptop and desktop */
 @media (max-width: 1250px){
+  .secondSection{
+    height: 65vh;
+  }
   .secondSection>div>p, .besellingBooksSection>p{
     font-size: 18px;
   }
