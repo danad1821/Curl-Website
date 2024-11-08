@@ -415,11 +415,11 @@ body {
   
 }
 
-#cookie-structure p{
+ #cookie-structure p{
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%); /* Offset to truly center */
+  transform: translate(-50%, -50%); /*Offset to truly center */
   color: #000000;
   font-size: 20px;
   text-align: center;
@@ -438,8 +438,166 @@ body {
 #fortuneText{
   position: absolute;
   bottom: -25%;
-  left: 42%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 985px){
+  #cookie-structure p{
+    font-size: 13px;
+  }
+  .sectionHeader{
+    margin-bottom: 40px;
+  }
+
+  #generateQuoteBtn {
+    font-size: 13px;
+    padding: 8px 12px;
+  }
+  #fortuneText{
+    bottom:-10%;
+  }
+
+  #fortuneText p{
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 860px){
+  #cookie-structure p{
+    font-size: 10px;
+  }
+  .sectionHeader{
+    margin-bottom: 100px;
+  }
+
+  #fortuneText{
+    margin-bottom: 50px;
+  }
+}
+@media (max-width: 768px) {
+  #fortuneText {
+    bottom: -15%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  #fortuneBanner {
+    width: 90%;
+  }
+
+  #quoteDetails p{
+    font-size: 14px;
+  }
+
+  #generateQuoteBtn {
+    font-size: 13px;
+    padding: 5px 10px;
+  }
+}
+@media (max-width: 670px){
+  #quoteDetails p{
+    font-size: 12px;
+  }
+
+  #generateQuoteBtn {
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+
+  #fortuneText {
+    bottom: -8%;
+  }
+
+  .sectionHeader{
+    margin-bottom: 130px;
+  }
+
+}
+
+@media (max-width: 600px){
+
+  #cookie-structure p{
+    font-size: 8px;
+  }
+  #quoteDetails p{
+    font-size: 10px;
+  }
+
+  #generateQuoteBtn {
+    font-size: 10px;
+    padding: 2px 6px;
+  }
+
+  #fortuneText {
+    bottom: 0%;
+  }
+
+  .sectionHeader{
+    margin-bottom: 150px;
+  }
+}
+
+
+@media (max-width: 480px) {
+
+  #fortuneBanner {
+    width: 90%;
+  }
+
+  .sectionHeader{
+    font-size: 20px !important;
+  }
+}
+
+
+/* ########################################## */
+/* .fortuneSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 100px;
+  margin-bottom: 0;
+  margin-top: 50px;
+  height: 50dvh;
+  position: relative;
+}
+
+#cookie-structure {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  background-image: url("designImages/FortuneCookie/fortuneBanner.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#cookie-structure p {
+  color: #000;
+  font-size: 20px;
+  text-align: center;
+  padding: 10px;
+  width: 800px;
+}
+
+#fortuneText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+#quoteDetails {
+  text-align: center;
+} */
 
 
 /* MENU STYLES */
