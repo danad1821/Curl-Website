@@ -1,4 +1,6 @@
 $(document).ready(function () {
+  localStorage.setItem('cart', JSON.stringify({books:[], menuItems:[], merch:[]}));
+  localStorage.setItem('wishlist', JSON.stringify({books:[], menuItems:[], merch:[]}));
   let bestsellers = [];
   let booksDisplay = $("#booksDisplay");
   let bookC = $(".bookCard")[0];
@@ -65,6 +67,7 @@ $(document).ready(function () {
       booksDisplay.append(section);
     }
   }
+  $('.heartIcon')
 
   // This will load the content of header.html into the #navbar div
 
