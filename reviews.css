@@ -1,0 +1,21 @@
+#sectionHeader{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: -400px;
+}
+
+#img1,
+#img2{
+    width: 35%;
+    height: auto;
+}
+
+#img1{
+    margin-left: 7%;
+}
+
+#img2{
+    margin-left: -3%;
+}

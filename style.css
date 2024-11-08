@@ -10,6 +10,12 @@ body {
   overflow-x: hidden;
 }
 
+#header{
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
 /* welcome and about us  */
 .twoSections {
   position: relative;
@@ -125,6 +131,7 @@ body {
   font-size: 24px;
   margin: 5px 0;
 }
+
 /* common styling for section headers */
 .sectionHeader {
   font-weight: 700;
