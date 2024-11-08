@@ -409,43 +409,43 @@ body {
 #cookie-structure{
   display: flex;
   justify-content: center;
-  position: absolute;
-  top: 100px;
-  left: 0;
-  right: 0;
-  
+  align-items: center;
+  background-image: url("designImages/FortuneCookie/fortuneBanner.png");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: contain;
+  width: 100%;
+  height: 50dvh;
 }
 
- #cookie-structure p{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); /*Offset to truly center */
+ #cookie-structure>p {
+  /* transform: translate(-50%, -50%); Offset to truly center */
   color: #000000;
   font-size: 20px;
   text-align: center;
   padding: 10px;
-
+  width: 75%;
 }
 
-#fortuneBanner{
-  width: 90%;
-}
 
 #quoteDetails{
   text-align: center;
 }
 
 #fortuneText{
-  position: absolute;
-  bottom: -25%;
-  left: 50%;
-  transform: translateX(-50%);
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  width: 100dvw;
+  margin-top: -10px;
 }
 
+@media(max-width: 1300px){
+  #cookie-structure>p{
+    width: 50%;
+  }
+}
 
 /* Responsive adjustments for smaller screens */
 @media (max-width: 985px){
@@ -475,16 +475,6 @@ body {
   }
 }
 @media (max-width: 768px) {
-  #fortuneText {
-    bottom: -15%;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  #fortuneBanner {
-    width: 90%;
-  }
-
   #quoteDetails p{
     font-size: 14px;
   }
