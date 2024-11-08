@@ -10,6 +10,12 @@ body {
   overflow-x: hidden;
 }
 
+#header{
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
 /* welcome and about us  */
 .twoSections {
   position: relative;
