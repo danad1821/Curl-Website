@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../Header/header.css">
+    <link rel="stylesheet" href="../Header/CSS/header.css">
+    <link rel="stylesheet" href="../Header/CSS/search.css">
+    <link rel="stylesheet" href="../Header/CSS/signin.css">
+    <link rel="stylesheet" href="../Header/CSS/burger.css">
 </head>
 <body>
     <nav class="navbar">
@@ -15,17 +18,17 @@
     
             <div class="list">
                 <ul class="center-nav" id="navList">
-                    <li id="nav"> <b> <a href="#"> Home </a> </b> </li>
-                    <li id="nav"> <a href="#"> About us </a> </li>
-                    <li id="nav"> <a href="#"> Menu </a> </li>
-                    <li id="nav"> <a href="#"> Book </a> </li>
-                    <li id="nav"> <a href="#"> Merch </a> </li>
-                    <li id="nav"> <a href="#"> Events </a> </li>
-                    <li id="nav"> <a href="#"> Community </a> </li>
+                    <li id="nav" class="Home"> <b> <a href="#"> Home </a> </b> </li>
+                    <li id="nav" class="About"> <a href="#"> About us </a> </li>
+                    <li id="nav" class="Menu"> <a href="#"> Menu </a> </li>
+                    <li id="nav" class="Book"> <a href="#"> Book </a> </li>
+                    <li id="nav" class="Merch"> <a href="#"> Merch </a> </li>
+                    <li id="nav" class="Events"> <a href="#"> Events </a> </li>
+                    <li id="nav" class="Community"> <a href="#"> Community </a> </li>
                 </ul>
             </div>
 
-            <div class="right-section">
+            <div class="right-section" id="right-section">
                 <button class="SignIn" id="signInBtn"> <a href="#"> Sign in </a> </button>
                 <ul class="icons">
                     <li id="icon">
@@ -69,7 +72,7 @@
                     </li>
         
                 </ul>
-                <div class="burger" id="burgerIcon">
+                <div class="burger" id="burgerIcon" onclick="toggleMenu()">
                     <div class="line"></div>
                     <div class="line"></div>
                     <div class="line"></div>

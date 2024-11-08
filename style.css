@@ -138,6 +138,7 @@ body {
   font-size: 24px;
   margin: 5px 0;
 }
+
 /* common styling for section headers */
 .sectionHeader {
   font-weight: 700;
@@ -258,104 +259,6 @@ body {
   height: 24px;
   cursor: pointer;
 }
-
-.eventsSection {
-  margin-top: 5% !important;
-  position: relative;
-  display: inline-block;
-  max-width: 100%;  /* Ensure it scales to the container */
-  max-height: 100%; /* Prevent overflow */
-}
-
-#eventillu {
-  width: 100%;
-  height: auto;
-}
-
-.textOverlay {
-  position: absolute;
-  top: 70%;  /* Center vertically */
-  left: 30%; /* Center horizontally */
-  transform: translate(-50%, -50%);
-  color: black;
-}
-
-.textOverlay h1,
-.textOverlay h3,
-.textOverlay p,
-.textOverlay .homePageBtn {
-  margin-bottom: 20px;
-}
-
-.textOverlay h1 {
-  font-weight: bold;
-  font-size: 4vw; /* Responsive font size */
-}
-
-/* For smaller screens */
-@media (max-width: 1200px) {
-  .eventsSection{
-    margin-top: 5% !important;
-  }
-
-  .textOverlay {
-    top: 80%;
-    left: 30%;
-  }
-
-  .textOverlay h1 {
-    font-size: 4vw;  /* Slightly smaller font for medium screens */
-  }
-}
-
-/* For laptops with smaller screen widths (1024px and below) */
-@media (max-width: 1024px) {
-  .eventsSection{
-    margin-top: 13% !important;
-  }
-
-  .textOverlay {
-    top: 80%;
-    left: 30%;
-  }
-
-  .textOverlay h1 {
-    font-size: 4vw; /* Further reduced font size */
-  }
-
-  .textOverlay h3 {
-    font-size: 2vw; /* Further reduced font size */
-  }
-
-  .textOverlay p {
-    font-size: 1.6vw; /* Adjust paragraph size for readability */
-  }
-}
-
-/* For mobile devices (up to 600px wide) */
-@media (max-width: 600px) {
-  .eventsSection{
-    margin-top: 15% !important;
-  }
-
-  .textOverlay.textOverlay {
-    top: 80%;
-    left: 30%;
-}
-
-  .textOverlay h1 {
-    font-size: 3vw; /* Further reduced font size */
-  }
-
-  .textOverlay h3 {
-    font-size: 2vw; /* Further reduced font size */
-  }
-
-  .textOverlay p {
-    font-size: 1.6vw; /* Adjust paragraph size for readability */
-  }
-}
-
 
 /* COMMUNITY SECTION STYLES */
 #community

@@ -1,0 +1,170 @@
+.search-container {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    border-radius: 20px;
+    padding: 5px;
+    width: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: width 0.4s ease, opacity 0.2s ease, background-color 0.4s ease;
+    border: 2px solid transparent;
+    margin-left: 15px;
+}
+
+.search-container.focused { 
+    width: 200px;
+    background-color: #f1eae4;
+    opacity: 1;/* Make visible */
+}
+
+.search-input {
+    border: none;
+    outline: none;
+    padding: 5px;
+    font-size: 16px;
+    width: 100%;
+    background-color: #f1eae4;
+    border-radius: 20px;
+}
+
+.search-icon {
+    display: inline-block;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.search-container.focused ~ .search-icon {
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+.search-container.focused .search-icon {
+    display: none;
+}
+
+.close-icon {
+    cursor: pointer;
+    color: #000;
+    margin-left: 10px;
+    display: none;/* Hidden initially */
+}
+
+.search-container.focused .close-icon {
+    display: block;
+}
+
+#search-results {
+    list-style-type: none;
+    margin-top: -15px;
+    margin-left: 60%;
+    max-height: 400px;
+    overflow-y: auto;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    width: 34.8%;
+    z-index: 999;
+}
+
+.search-item {
+    display: flex;
+    align-items: flex-start;  /* Keep items aligned to the start */
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    background-color: #f9f9f9;
+    transition: background-color 0.3s ease;
+}
+
+.search-item:hover {
+    background-color: #f1f1f1;
+}
+
+.search-item img {
+    width: 50px;
+    height: 75px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 10px;  /* Space between image and text */
+}
+
+.search-item h3 {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+    color: #333;
+}
+
+.search-item p {
+    font-size: 14px;
+    color: #555;
+    margin: 5px 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.author-name {
+    font-size: 13px;
+    color: #777;
+    margin-top: 5px;
+}
+
+/* Adjust the container of title and author to stack them */
+.search-item .text-container {
+    display: flex;
+    flex-direction: column;  /* Stack title and author vertically */
+}
+
+.search-item p.truncated {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#search-results.empty {
+    display: none;
+}
+
+@media (max-width: 1200px) {
+    #search-results {
+        width: 37%;
+    }
+}
+
+@media (max-width: 1100px) {
+    #search-results {
+        margin-left: 58%;
+        width: 40%;
+    }
+}
+
+@media (max-width: 1024px) {
+    #search-results {
+        margin-left: 56%;
+        width: 42%;
+    }
+}
+
+@media (max-width: 1000px) {
+    #search-results {
+        margin-left: 54%;
+        width: 44%;
+    }
+}
+
+@media (max-width: 900px) {
+    #search-results {
+        margin-left: 51%;
+        width: 47%;
+    }
+}
+
+@media (max-width: 798px) {
+    #search-results {
+        margin-left: 45%;
+        width: 53%;
+    }
+}
