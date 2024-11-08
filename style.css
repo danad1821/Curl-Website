@@ -707,14 +707,13 @@ body {
     margin-left: 11%;
   }
 }
-@media (max-width: 840px) {
-  #aboutUsCurve{
-    height: 108dvh;
-  }
-}
 @media (max-width: 820px) {
   .sectionsContent{
     background: none;
+    height: 100vh;
+  }
+  .besellingBooksSection{
+    margin-top: 0;
   }
   .secondSection>div>p, .besellingBooksSection>div>p{
     font-size: 18px;
