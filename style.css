@@ -105,7 +105,7 @@ body {
 .secondSection {
   margin-left: 11.5%;
   margin-right: 0%;
-  /* height: 65vh; */
+  height: 65vh;
   max-width: 100%;
   justify-content: center;
   
@@ -256,6 +256,7 @@ body {
   fill: #37474f;
   width: 24px;
   height: 24px;
+  cursor: pointer;
 }
 
 .eventsSection {

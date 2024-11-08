@@ -670,7 +670,7 @@
     },
     {
       "id": 70,
-      "img": "iced-tea.jpg",
+      "img": "designImages/exampleMenu.png",
       "name": "Iced Tea",
       "description": "Refreshing iced tea",
       "price": 2.5,
