@@ -251,31 +251,41 @@ $(document).ready(function () {
 $(document).ready(function () {
   // Load and display menu items
   $.getJSON('data.json', function (data) {
+
+    //get only the 5 items on the home
     const itemsToShow = ['carrot cake', 'fruit croissant', 'iced latte', 'lemonade', 'glazed donut'];
     const menuItems = data.menu.filter(item => itemsToShow.includes(item.name.toLowerCase()));
 
     const $menuContainer = $('#menu-items');
-    $menuContainer.empty(); // Clear any existing content
+    $menuContainer.empty();
 
     menuItems.forEach(function (item) {
-      // Choose image based on category
+      // Choosing hand image based on category
       let handImage;
       if (item.categories.includes('Pastry')) handImage = 'designImages/White shirt Hand.png';
       else if (item.categories.includes('cake')) handImage = 'designImages/Blue shirt Hand.png';
       else if (item.categories.includes('Drink')) handImage = 'designImages/Hand Pink Shirt.png';
 
-      // Create the item HTML structure
+      //HTML structure
       const itemHTML = `
         <div class="menu-item">
           <div class="image-section">
             <img src="${handImage}" alt="${item.name}" class="handImg">
+
+             <div class="dessert-image ${item.name.toLowerCase().replace(" ", "-")}-image">
+                <img src="${item.img}" alt="${item.name}" class="dessertImg" data-id="${item.name.toLowerCase()}">
+            </div>
           </div>
           <div class="info-section">
             <h3>${item.name}</h3>
-            <p>${item.description}</p>
+            <p class="item-desc">${item.description}</p>
             <div class="item-price">
               <p>$${item.price}</p>
-              <button class="homePageBtn add-btn">Add</button>
+              <div>
+                <button class="homePageBtn add-btn">Add</button>
+                <i class="far fa-heart"></i>
+              </div>
+
             </div>
           </div>
         </div>

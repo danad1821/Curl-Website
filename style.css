@@ -393,6 +393,9 @@ body {
   margin-bottom: 0%;
 }
 
+#generateQuoteBtn {
+  z-index: 99;
+}
 @media (max-width: 1300px) {
   #cookie-structure > p {
     width: 50%;
@@ -472,6 +475,24 @@ body {
   #cookie-structure{
     background-size: 100% 60%;
   }
+
+  #cookie-structure p{
+    font-size: 15px;
+    margin-top: 10px;
+  }
+
+}
+
+@media (max-width: 420px) {
+  #cookie-structure{
+    background-size: 100% 60%;
+  }
+
+  #cookie-structure p{
+    font-size: 12px;
+    margin-top: 10px;
+  }
+
 }
 
 /* ########################################## */
@@ -530,6 +551,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: 20px;
 }
 
 #menu-header p {
@@ -541,13 +563,15 @@ body {
 
 #menu {
   background-color: #f1eae4;
-  height: 330px;
+  height: 300px;
   width: 100%;
 
-  overflow-x: auto;
+  /* overflow-x: auto; */
   overflow-y: hidden;
   display: flex;
   align-items: flex-end;
+
+  padding-right: 35%;
 }
 
 .menuSection button {
@@ -555,7 +579,7 @@ body {
   border-radius: 159px;
   width: 150px;
   height: 39px;
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 .menuSection button a {
@@ -566,20 +590,23 @@ body {
 
 .scrollable-menu {
   display: flex;
-  gap: 20px;
+  /* gap: 20px; */
   /* padding: 10px; */
 }
 
+#menu::-webkit-scrollbar{
+  display: none;
+  }
+
 .menu-item {
-  /* padding: 15px; */
-  width: fit-content;
   display: flex;
   flex-direction: row;
   margin: 0 5% 0 5%;
 }
 
 .menu-item h3 {
-  font-size: 18px;
+  font-size: 20px;
+  font-weight: bold;
   margin: 10px 0 5px;
 }
 
@@ -592,25 +619,101 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
+  align-content: center;
 }
 
 .item-price p{
-  vertical-align: middle;
+  font-size: 20px;
+}
+
+.item-price i{
+  font-size: 18px;
+  margin-left: 20px;
+  
 }
 .add-btn{
   width: 70px !important;
   margin: 0 !important;
 }
-
-.handImg{
-  height: 200px;
-  width: auto;
-}
-
 .info-section{
   width: 200px;
-  margin-left: -30px;
+  margin-left: -40px;
+  margin-top: -50px;
+}
+
+.item-desc{
+  min-height: 42px;
+  margin-bottom: 10px;
+}
+
+.image-section {
+  position: relative;
+  width: 150px;
+  height: 200px;
+  /* display: flex;
+  align-items: flex-end; */
+}
+
+.handImg {
+  height: 100%;
+  width: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.dessert-image {
+  position: absolute;
+  top: -15%;
+  left: -32%;
+  width: 80%;
+}
+
+.dessertImg {
+  width: 90%;
+}
+
+
+.fruit-croissant-image {
+  width: 120%;
+  left: -65% !important;
+  top: -35% !important;
+}
+
+.lemonade-image{
+  top: -8%;
+  left: -32%;
+  transform: rotate(7deg);
+}
+
+.glazed-donut-image{
+  width: 110%;
+  left: -55%;
+  top: -30%;
+}
+
+.menu-item:last-child{
+  padding-right: 5%;
+  margin-left: 0;
+}
+
+.menu-item:last-child .info-section{
+  margin-left: 60px;
+}
+
+.carrot-cake-image{
+  width: 130%;
+  top: -45%;
+  left: -3%;
+  z-index: 3;
+}
+
+@media (max-width: 768px){
+  #menu-header p {
+    font-size: 15px;
+    width: 70%;
+  }
 }
 /* Events Section  */
 .eventsSection {
