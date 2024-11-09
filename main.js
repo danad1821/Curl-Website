@@ -7,7 +7,7 @@ $(document).ready(function () {
     "wishlist",
     JSON.stringify({ books: [], menuItems: [], merch: [] })
   );
-  localStorage.setItem('book', JSON.stringify({}));
+  localStorage.setItem("book", JSON.stringify({}));
 
   let bestsellers = [];
   let booksDisplay = $("#booksDisplay");
@@ -88,19 +88,18 @@ $(document).ready(function () {
       //get selected book
       const selectedBook = bestsellers[clickedIndex];
       if ($(this).css("fill") !== "rgb(255, 0, 0)") {
-        // Check if the index is valid (within the bestsellers array)
+        // Checks if the index is valid (within the bestsellers array)
         if (clickedIndex >= 0 && clickedIndex < bestsellers.length) {
-          // Add the selected book directly to the wishlist array
+          // Adds the selected book directly to the wishlist.books array
           if (!wishlist.books.includes(selectedBook)) {
             wishlist.books.push(selectedBook);
           }
           // Changes the icon color
           $(this).css({ fill: "rgb(255, 0, 0)" });
-        } else {
-          console.error("Invalid book index!");
-        }
-      } else {
-        // Filter wishlist to remove the selected book
+        } 
+      }
+      else {
+        // Filter wishlist.bookks to remove the selected book
         wishlist.books = wishlist.books.filter(
           (book) => book.id !== selectedBook.id
         );
@@ -112,36 +111,40 @@ $(document).ready(function () {
     });
 
     let bestsellerAddBtn = $(".pinkAddBtn");
-    bestsellerAddBtn.click(function() {
-      let cart = JSON.parse(localStorage.getItem('cart')) || { books: [] };
-    
-      // Get the index of the clicked book in the bestsellers array
+    bestsellerAddBtn.click(function () {
+      let cart = JSON.parse(localStorage.getItem("cart")) || { books: [] };
+
+      // Gets the index of the clicked book in the bestsellers array
       const clickedIndex = $(this).parent().parent().parent().index();
-      // Get the selected book
+      // Gets the selected book
       const selectedBook = bestsellers[clickedIndex];
-    
-      // Find the book in the cart (if it exists)
-      const existingItem = cart.books.find((book) => book.id === selectedBook.id);
-    
+
+      // Finds the book in the cart (if it exists)
+      const existingItem = cart.books.find(
+        (book) => book.id === selectedBook.id
+      );
+
       if (existingItem) {
-        // Increase the quantity of the existing book
+        // Increases the quantity of the existing book by one
+        //only by one since quanity changing isn't an option
         existingItem.quantity++;
       } else {
         // Add the book to the cart with quantity 1
         const extended = $.extend(selectedBook, { quantity: 1 });
         cart.books.push(extended);
       }
-      // Update the cart data in localStorage
+      // Updates the cart data in localStorage
       localStorage.setItem("cart", JSON.stringify(cart));
     });
 
-    let bookImg=$(".bookImg");
-    bookImg.click(function(){
-      const clickedIndex=$(this).index();
-      const selectedBook =bestsellers[clickedIndex];
+    let bookImg = $(".bookImg");
+    //allows user to navigate to the page about the books by ppressng on the books image
+    bookImg.click(function () {
+      const clickedIndex = $(this).index();
+      const selectedBook = bestsellers[clickedIndex];
       localStorage.setItem("book", JSON.stringify(selectedBook));
-      $(location).prop('href', 'books/book.html')
-    })
+      $(location).prop("href", "books/book.html");
+    });
   }
 
   // This will load the content of header.html into the #navbar div
