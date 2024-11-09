@@ -606,7 +606,7 @@
   "menu": [
     {
       "id": 62,
-      "img": "designImages/exampleMenu.png",
+      "img": "",
       "name": "Espresso",
       "description": "A rich, concentrated coffee beverage",
       "price": 3.5,
@@ -614,7 +614,7 @@
     },
     {
       "id": 63,
-      "img": "designImages/exampleMenu.png",
+      "img": "",
       "name": "Americano",
       "description": "Espresso diluted with hot water",
       "price": 3.0,
@@ -622,7 +622,7 @@
     },
     {
       "id": 64,
-      "img": "designImages/exampleMenu.png",
+      "img": "",
       "name": "Latte",
       "description": "Espresso with steamed milk and foam",
       "price": 4.0,
@@ -630,7 +630,7 @@
     },
     {
       "id": 65,
-      "img": "designImages/exampleMenu.png",
+      "img": "",
       "name": "Cappuccino",
       "description": "Espresso with steamed milk and foam, with more foam than a latte",
       "price": 4.5,
@@ -638,7 +638,7 @@
     },
     {
       "id": 66,
-      "img": "designImages/exampleMenu.png",
+      "img": "",
       "name": "Mocha",
       "description": "Espresso, steamed milk, chocolate syrup, and foam",
       "price": 4.5,
@@ -646,7 +646,7 @@
     },
     {
       "id": 67,
-      "img": "designImages/exampleMenu.png",
+      "img": "",
       "name": "Hot Chocolate",
       "description": "Rich, creamy hot chocolate",
       "price": 3.5,
@@ -654,7 +654,7 @@
     },
     {
       "id": 68,
-      "img": "designImages/exampleMenu.png",
+      "img": "",
       "name": "Iced Coffee",
       "description": "Cold brewed coffee over ice",
       "price": 3.0,
@@ -670,7 +670,7 @@
     },
     {
       "id": 70,
-      "img": "designImages/exampleMenu.png",
+      "img": "",
       "name": "Iced Tea",
       "description": "Refreshing iced tea",
       "price": 2.5,
@@ -678,7 +678,7 @@
     },
     {
       "id": 71,
-      "img": "designImages/exampleMenu.png",
+      "img": "productImages/Lemonade.png",
       "name": "Lemonade",
       "description": "Classic lemonade",
       "price": 2.0,
@@ -686,7 +686,7 @@
     },
     {
       "id": 72,
-      "img": "designImages/exampleMenu.png",
+      "img": "",
       "name": "Plain Croissant",
       "description": "Flaky, buttery croissant",
       "price": 2.5,
@@ -694,7 +694,7 @@
     },
     {
       "id": 73,
-      "img": "designImages/exampleMenu.png",
+      "img": "",
       "name": "Almond Croissant",
       "description": "Croissant filled with almond paste and topped with sliced almonds",
       "price": 3.0,
@@ -702,7 +702,7 @@
     },
     {
       "id": 74,
-      "img": "designImages/exampleMenu.png",
+      "img": "",
       "name": "Chocolate Croissant",
       "description": "Croissant filled with dark chocolate",
       "price": 2.75,
@@ -710,7 +710,7 @@
     },
     {
       "id": 75,
-      "img": "productImages/Fruit croissant.png",
+      "img": "productImages/Fruit-croissant.png",
       "name": "Fruit Croissant",
       "description": "Croissant filled with figs",
       "price": 2.75,
@@ -734,11 +734,11 @@
     },
     {
       "id": 78,
-      "img": "",
+      "img": "productImages/lemony-yogurt-donuts.png",
       "name": "Glazed Donut",
       "description": "Classic glazed donut",
       "price": 1.5,
-      "categories": ["Food", "Donut"]
+      "categories": ["Food", "Donut", "Pastry"]
     },
     {
       "id": 79,
@@ -758,11 +758,11 @@
     },
     {
       "id": 81,
-      "img": "productImages/Carrot Cake.png",
+      "img": "productImages/Carrot-Cake.png",
       "name": "Carrot Cake",
       "description": "A spice cake with carrots.",
       "price": 2.75,
-      "categories": ["Food", "Pastry"]
+      "categories": ["Food", "cake"]
     },
     {
       "id": 82,

@@ -154,6 +154,17 @@ body {
   border: none;
 }
 
+.homePageBtn:hover, #welcomeBtn:hover {
+  background-color: #37474f;
+  color: #f1eae4;
+}
+
+#welcomeBtn, .homePageBtn{
+  transition: background-color 0.3s, color 0.3s;
+
+}
+
+
 #readingCat {
   max-height: 110%;
 }
@@ -523,7 +534,7 @@ body {
 
 #menu-header p {
   /* width: 670px; */
-  width: 70%;
+  width: 55%;
   font-size: 20px;
   text-align: center;
 }
@@ -536,7 +547,7 @@ body {
   overflow-x: auto;
   overflow-y: hidden;
   display: flex;
-  justify-content: center;
+  align-items: flex-end;
 }
 
 .menuSection button {
@@ -544,7 +555,6 @@ body {
   border-radius: 159px;
   width: 150px;
   height: 39px;
-  border: none;
   margin-top: 20px;
 }
 
@@ -557,28 +567,16 @@ body {
 .scrollable-menu {
   display: flex;
   gap: 20px;
-  padding: 10px;
+  /* padding: 10px; */
 }
 
-.itemDiv {
+.menu-item {
+  /* padding: 15px; */
+  width: fit-content;
   display: flex;
   flex-direction: row;
+  margin: 0 5% 0 5%;
 }
-
-.itemDiv img {
-  width: 50px;
-  height: 50px;
-}
-.menu-item {
-  width: 500px;
-  padding: 15px;
-}
-
-/* .menu-item img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-} */
 
 .menu-item h3 {
   font-size: 18px;
@@ -590,12 +588,30 @@ body {
   color: #777;
 }
 
-.price {
-  font-size: 16px;
-  color: #333;
-  margin-top: 10px;
+.item-price{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
+.item-price p{
+  vertical-align: middle;
+}
+.add-btn{
+  width: 70px !important;
+  margin: 0 !important;
+}
+
+.handImg{
+  height: 200px;
+  width: auto;
+}
+
+.info-section{
+  width: 200px;
+  margin-left: -30px;
+}
 /* Events Section  */
 .eventsSection {
   margin-top: 2%;
