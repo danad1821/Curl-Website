@@ -44,7 +44,7 @@ $(document).ready(function () {
   function displayBestSellingBooks(data) {
     let numOfSections = Math.ceil(bestsellers.length / numberOfDisplayedBooks);
     console.log(numOfSections);
-    for (let j = 0; j <= numOfSections; j++) {
+    for (let j = 0; j < numOfSections; j++) {
       let section = $("<div>");
       section.addClass("bookSection");
       section.addClass("carousel-item");

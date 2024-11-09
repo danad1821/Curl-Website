@@ -196,7 +196,7 @@ body {
   border-radius: 88px;
   overflow: hidden;
   /* gap: 50px; */
-  padding: 30px 50px;
+  padding: 30px 20px;
   max-height: fit-content;
   width: 67dvw;
   position: relative;
@@ -736,9 +736,6 @@ body {
   }
   .firstSection > div > button {
     font-size: 14px;
-  }
-  .booksDisplay {
-    width: 90dvw;
   }
   .backgroudS1 {
     display: none;
