@@ -107,12 +107,30 @@ $(document).ready(function () {
       }
       // Updates the wishlist data in localStorage
       localStorage.setItem("wishlist", JSON.stringify(wishlist));
-      console.log(localStorage.getItem("wishlist"));
     });
 
     let bestsellerAddBtn = $(".pinkAddBtn");
-    bestsellerAddBtn.click(() => {
-      console.log("hello");
+    bestsellerAddBtn.click(function() {
+      let cart = JSON.parse(localStorage.getItem('cart')) || { books: [] };
+    
+      // Get the index of the clicked book in the bestsellers array
+      const clickedIndex = $(this).parent().parent().parent().index();
+      // Get the selected book
+      const selectedBook = bestsellers[clickedIndex];
+    
+      // Find the book in the cart (if it exists)
+      const existingItem = cart.books.find((book) => book.id === selectedBook.id);
+    
+      if (existingItem) {
+        // Increase the quantity of the existing book
+        existingItem.quantity++;
+      } else {
+        // Add the book to the cart with quantity 1
+        const extended = $.extend(selectedBook, { quantity: 1 });
+        cart.books.push(extended);
+      }
+      // Update the cart data in localStorage
+      localStorage.setItem("cart", JSON.stringify(cart));
     });
   }
 
