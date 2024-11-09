@@ -7,6 +7,8 @@ $(document).ready(function () {
     "wishlist",
     JSON.stringify({ books: [], menuItems: [], merch: [] })
   );
+  localStorage.setItem('book', JSON.stringify({}));
+
   let bestsellers = [];
   let booksDisplay = $("#booksDisplay");
   let bookC = $(".bookCard")[0];
@@ -132,6 +134,14 @@ $(document).ready(function () {
       // Update the cart data in localStorage
       localStorage.setItem("cart", JSON.stringify(cart));
     });
+
+    let bookImg=$(".bookImg");
+    bookImg.click(function(){
+      const clickedIndex=$(this).index();
+      const selectedBook =bestsellers[clickedIndex];
+      localStorage.setItem("book", JSON.stringify(selectedBook));
+      $(location).prop('href', 'books/book.html')
+    })
   }
 
   // This will load the content of header.html into the #navbar div
