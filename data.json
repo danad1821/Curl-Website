@@ -821,7 +821,7 @@
       "description": "A tote bag with 'Books turn Muggles into Wizards'."
     },
     {
-      "name": "Dog Mom Mug",
+      "name": "Dog Mom White Mug",
       "price": "$8",
       "img": "designImages/Group 134.png",
       "description": "A mug with 'Dog Mom' and a paw print."
@@ -831,6 +831,13 @@
       "price": "$3",
       "img": "designImages/dbfgb 1.png",
       "description": "A keychain with miniature books."
+    },
+    {
+
+      "name": "Grishaverse Enamel Pins",
+      "description": "A set of enamel pins featuring the symbols of the different Grisha powers.",
+      "img": "designImages/drghsdth.png",
+      "price": 19.99
     }
   ],
   "merch": [
@@ -897,6 +904,20 @@
       "description": "A spacious and durable tote bag. Perfect for carrying books, groceries, or any other essentials.",
       "img": "",
       "price": 19.99
+    },
+    {
+      "id": 97,
+      "name": "Dog Mom White Mug",
+      "price": "$8",
+      "img": "designImages/Group 134.png",
+      "description": "A mug with 'Dog Mom' and a paw print."
+    },
+    {
+      "id": 98,
+      "name": "Lost in a Book Keychain",
+      "price": "$3",
+      "img": "designImages/dbfgb 1.png",
+      "description": "A keychain with miniature books."
     }
   ],
 
