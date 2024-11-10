@@ -385,7 +385,7 @@ button.add-to-cart {
   /* height: 345px; */
   height: 245px;
   background-color: #e9b9b9;
-  margin-bottom: 500px;
+  margin-bottom: 550px;
 }
 
 #community div {
@@ -929,17 +929,13 @@ footer {
   margin-bottom: 20px;
 }
 
-.textOverlay h2,
-.textOverlay h3,
-.textOverlay p {
-  color: #37474F;
-}
-
 .textOverlay h2 {
   font-weight: bold;
-  font-size: 4vw;
 }
 
+.textOverlay h3{
+  font-size: 20px;
+}
 @media (max-width: 1200px) {
   .eventsSection{
   margin-top: -1% !important;
