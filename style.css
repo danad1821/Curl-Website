@@ -13,7 +13,7 @@ body {
 #header {
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 999;
 }
 
 /* welcome and about us  */
@@ -819,7 +819,7 @@ footer {
   background-size: 100% 100%;
   background-position: bottom;
   height: 90vh;
-  margin-top: -23%;
+  margin-top: -20%;
 }
 
 .footer-content {

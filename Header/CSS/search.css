@@ -71,7 +71,7 @@
 
 .search-item {
     display: flex;
-    align-items: flex-start;  /* Keep items aligned to the start */
+    align-items: flex-start;
     padding: 10px;
     border-bottom: 1px solid #ddd;
     background-color: #f9f9f9;
@@ -87,7 +87,7 @@
     height: 75px;
     object-fit: cover;
     border-radius: 8px;
-    margin-right: 10px;  /* Space between image and text */
+    margin-right: 10px;
 }
 
 .search-item h3 {
@@ -112,10 +112,9 @@
     margin-top: 5px;
 }
 
-/* Adjust the container of title and author to stack them */
 .search-item .text-container {
     display: flex;
-    flex-direction: column;  /* Stack title and author vertically */
+    flex-direction: column;
 }
 
 .search-item p.truncated {

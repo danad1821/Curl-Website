@@ -977,5 +977,24 @@
       "author": "Leo Tolstoy",
       "book": "War and Peace"
     } 
+  ],
+
+  
+  "reviews": [
+    {
+      "rating": 5,
+      "review-content": "I absolutely love how vibrant and welcoming the website feels! The user-friendly design makes it so easy to explore and find my next great read.",
+      "review-author": "Layal K."
+    },
+    {
+      "rating": 4,
+      "review-content": "The interactive features on the site make it so much more engaging! I can easily join discussions and share my thoughts with others who love books.",
+      "review-author": "Nizar H."
+    },
+    {
+      "rating": 4,
+      "review-content": "The website really creates a sense of playfulness and is sooo cute! I especially like how easy it is to navigate through the book sections.",
+      "review-author": "Amal L."
+    }
   ]
 }

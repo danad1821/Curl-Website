@@ -1,3 +1,9 @@
+$("#header").load("Header/header.html");
+  
+$("#Event").load("Events/events.html");
+
+$("#Review").load("Reviews/reviews.html");
+
 $(document).ready(function () {
   localStorage.setItem(
     "cart",
@@ -215,10 +221,6 @@ $(document).ready(function () {
       $(location).prop("href", "books/book.html");
     });
   }
-
-  // This will load the content of header.html into the #navbar div
-
-  $("#header").load("Header/header.html");
 
   //code for the generation of a quote
 

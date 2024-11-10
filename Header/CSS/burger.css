@@ -20,13 +20,12 @@
 }
 
 /* Burger responsive */
-
 @media (max-width: 1078px) {
     .burger {
         display: flex;
     }
 
-    .center-nav{
+    .center-nav {
         display: none;
         flex-direction: column;
         position: absolute;
@@ -42,7 +41,7 @@
         padding-top: 20px;
     }
 
-    .center-nav.show{
+    .center-nav.show {
         display: flex;
     }
 
@@ -54,7 +53,7 @@
         z-index: 999999;
     }
 }
-    
+
     @media (max-width: 1024px) {
         .burger {
             display: flex;
