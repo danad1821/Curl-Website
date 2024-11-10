@@ -280,51 +280,45 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 5% 0;
 }
 
-.title {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 20px;
-  color: #555;
-  text-align: center;
+.merchSection>p{
+ width: 30dvw;
+ text-align: center;
 }
 
 .product-container {
   display: flex;
   justify-content: space-around;
-  width: 100%;
-  max-width: 800px;
   flex-wrap: wrap;
   align-items: end;
+  margin: 3% 0;
 }
 .add-and-price-container {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
 }
 .product h3 {
-  font-family: "Poppins", sans-serif;
-  font-size: 100%;
+  font-size: 20px;
+  font-weight: bold;
 }
 .product {
   text-align: center;
-  font-size: 14px;
-  color: #333;
-  max-width: 150px;
+  width: 250px;
+  margin: 0 10px;
 }
 
 .product img {
   width: auto;
-  height: 200px;
+  height: 300px;
   margin-bottom: 10px;
 }
 
 .product .price {
   font-size: 16px;
-  font-weight: bold;
-  color: #555;
 }
 
 button.add-to-cart {
@@ -335,39 +329,26 @@ button.add-to-cart {
   margin-top: 10px;
 }
 
-button.view-merch-btn {
-  background-color: #e9b9b9;
-  border-radius: 159px;
-  width: 150px;
-  height: 39px;
-  border: none;
-  margin-top: 20px;
-  color: white;
-  margin-bottom: 15px;
-}
-
-.heart {
-  color: black;
-  font-weight: bold;
-  font-size: 18px;
-  cursor: pointer;
-  margin-left: 0px;
-  padding-left: 0px; /* Adds a bit of spacing from the last item on the left */
+.merchHeartIcon{
+  width: 17px;
+  height: 17px;
 }
 
 .add-container {
   background-color: #ffffff;
   border: 1px solid #ddd;
   /*width: 150px; /* Adjust to accommodate all elements in one line */
-  height: auto; /* Adjust height as necessary */
+  height: 30px; /* Adjust height as necessary */
+  min-width: 150px;
   display: flex;
   align-items: center;
   justify-content: space-between; /* Spreads elements evenly */
-  border-radius: 20px; /* Gives rounded corners */
-  padding: 10px;
+  border-radius: 160px; /* Gives rounded corners */
+  padding: 15px;
   margin-top: 10px;
   position: relative;
   margin: 5px;
+  cursor: pointer;
 }
 
 .minus-button,
@@ -392,7 +373,7 @@ button.view-merch-btn {
 .plus-button,
 .quantity {
   font-weight: bold;
-  margin: 0 2px; /* Adds space between buttons */
+  margin: 0 1px; /* Adds space between buttons */
 }
 
 /* COMMUNITY SECTION STYLES */
@@ -1055,6 +1036,18 @@ footer {
     display: none;
   }
 }
+@media (max-width:650px) {
+  .product-container{
+    flex-direction: column;
+    align-items: center;
+  }
+  footer{
+    background-image: none;
+    background-color: #f1eae4;
+    height: fit-content;
+    margin-top: 0;
+  }
+}
 @media (max-width: 600px) {
   .firstSection > div > p {
     font-size: 16px;
@@ -1087,6 +1080,12 @@ footer {
   .besellingBooksSection > p {
     font-size: 16px;
     width: 85%;
+  }
+  .footer-content{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
   }
 }
 @media (max-height: 625px) {
