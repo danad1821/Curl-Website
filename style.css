@@ -174,7 +174,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: -23%;
+  margin-top: -20%;
 }
 
 .besellingBooksSection > p {
@@ -196,7 +196,7 @@ body {
   border-radius: 88px;
   overflow: hidden;
   /* gap: 50px; */
-  padding: 30px 20px;
+  padding: 30px 3vw;
   max-height: fit-content;
   width: 67dvw;
   position: relative;
