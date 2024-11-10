@@ -1,6 +1,5 @@
 $("#header").load("Header/header.html");
   
-
 $("#Review").load("Reviews/reviews.html");
 
 $(document).ready(function () {
