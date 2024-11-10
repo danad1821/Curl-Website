@@ -283,9 +283,9 @@ body {
   margin: 5% 0;
 }
 
-.merchSection>p{
- width: 30dvw;
- text-align: center;
+.merchSection > p {
+  width: 30dvw;
+  text-align: center;
 }
 
 .product-container {
@@ -329,7 +329,7 @@ button.add-to-cart {
   margin-top: 10px;
 }
 
-.merchHeartIcon{
+.merchHeartIcon {
   width: 17px;
   height: 17px;
 }
@@ -814,7 +814,7 @@ footer {
   align-items: center;
   justify-content: flex-end;
   position: relative;
-  background-image:  url("designImages/Group 150.png");
+  background-image: url("designImages/Group 150.png");
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-position: bottom;
@@ -926,7 +926,7 @@ footer {
   .sectionsContent {
     height: 176dvh;
   }
-  .merchSection>p{
+  .merchSection > p {
     width: 40vw;
   }
 }
@@ -955,7 +955,7 @@ footer {
   .secondSection > div > p {
     max-width: 95%;
   }
-  .merchSection>p{
+  .merchSection > p {
     width: 55dvw;
   }
 }
@@ -994,7 +994,7 @@ footer {
     background-position-y: 30%;
     height: 160dvh;
   }
-  .merchSection>p{
+  .merchSection > p {
     width: 65dvw;
   }
 }
@@ -1041,31 +1041,32 @@ footer {
   .secondSection > img:nth-child(1) {
     display: none;
   }
-  .product-container{
+  .product-container {
     flex-direction: column;
     align-items: center;
   }
 }
-@media (max-width:650px) {
+@media (max-width: 650px) {
   .sectionHeader {
     font-size: 20px;
   }
-  section>p, .secondSection > div > p, .besellingBooksSection > div > p{
+  section > p,
+  .secondSection > div > p,
+  .besellingBooksSection > div > p {
     font-size: 15px;
   }
-  footer{
+  footer {
     background-image: none;
     background-color: #f1eae4;
     height: fit-content;
     margin-top: 0;
   }
-  .merchSection>p{
+  .merchSection > p {
     width: 75dvw;
   }
   .homePageBtn {
     color: #f1eae4;
     font-size: 12px;
-
   }
 }
 @media (max-width: 600px) {
@@ -1075,6 +1076,17 @@ footer {
   }
   .firstSection > div > button {
     font-size: 12px;
+  }
+  footer{
+    align-items: center;
+    width: 100%;
+  }
+  .footer-content {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 10px;
+    width: auto;
   }
 }
 @media (max-width: 500px) {
@@ -1101,12 +1113,7 @@ footer {
     font-size: 16px;
     width: 85%;
   }
-  .footer-content{
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-  }
+  
 }
 @media (max-height: 625px) {
   .sectionsContent {
