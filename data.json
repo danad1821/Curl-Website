@@ -813,8 +813,26 @@
       "categories": ["Drink", "Special", "Hot"]
     }
   ],
-
-
+  "topMerch":[
+    {
+      "name": "Harry Potter Tote Bag",
+      "price": "$15",
+      "img": "designImages/aerhrtsfh 4.png",
+      "description": "A tote bag with 'Books turn Muggles into Wizards'."
+    },
+    {
+      "name": "Dog Mom Mug",
+      "price": "$8",
+      "img": "designImages/Group 134.png",
+      "description": "A mug with 'Dog Mom' and a paw print."
+    },
+    {
+      "name": "Lost in a Book Keychain",
+      "price": "$3",
+      "img": "designImages/dbfgb 1.png",
+      "description": "A keychain with miniature books."
+    }
+  ],
   "merch": [
     {
       "id": 88,

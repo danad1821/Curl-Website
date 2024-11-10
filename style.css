@@ -13,7 +13,7 @@ body {
 #header {
   position: sticky;
   top: 0;
-  z-index: 10;
+  z-index: 100;
 }
 
 /* welcome and about us  */
@@ -272,6 +272,127 @@ body {
   width: 24px;
   height: 24px;
   cursor: pointer;
+}
+
+/* Top Merch Section */
+
+.merchSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #555;
+  text-align: center;
+}
+
+.product-container {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  max-width: 800px;
+  flex-wrap: wrap;
+  align-items: end;
+}
+.add-and-price-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.product h3{
+  font-family: 'Poppins', sans-serif;
+  font-size: 100%;
+}
+.product {
+  text-align: center;
+  font-size: 14px;
+  color: #333;
+  max-width: 150px;
+}
+
+.product img {
+  width: auto;
+  height: 200px;
+  margin-bottom: 10px;
+}
+
+
+.product .price {
+  font-size: 16px;
+  font-weight: bold;
+  color: #555;
+}
+
+button.add-to-cart {
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button.view-merch-btn {
+  background-color: #E9B9B9;
+  border-radius: 159px;
+  width: 150px;
+  height: 39px;
+  border: none;
+  margin-top: 20px;
+  color: white;
+  margin-bottom: 15px;
+}
+
+.heart {
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+  cursor: pointer;
+  margin-left: 0px;
+  padding-left: 0px; /* Adds a bit of spacing from the last item on the left */
+}
+
+.add-container {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  /*width: 150px; /* Adjust to accommodate all elements in one line */
+  height: auto; /* Adjust height as necessary */
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Spreads elements evenly */
+  border-radius: 20px; /* Gives rounded corners */
+  padding: 10px;
+  margin-top: 10px;
+  position: relative;
+  margin: 5px;
+}
+
+
+.minus-button, .plus-button {
+  cursor: pointer;
+  font-weight: bold;
+  padding: 0 2px;
+}
+
+.quantity {
+  font-weight: bold;
+  padding: 0 2px;
+}
+
+
+.add-label {
+  font-weight: bold;
+  margin-right: 5px; /* Space between "Add" label and minus button */
+  margin-left: 2px;
+}
+
+.minus-button, .plus-button, .quantity {
+  font-weight: bold;
+  margin: 0 2px; /* Adds space between buttons */
 }
 
 /* COMMUNITY SECTION STYLES */
@@ -707,6 +828,103 @@ body {
   top: -45%;
   left: -3%;
   z-index: 3;
+}
+
+/* Footer Section */
+
+
+
+footer {
+  
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  margin-top: 200px;
+  margin-bottom: -50px;
+  
+  
+}
+
+.footerimages{
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  top: -600px;
+  
+}
+
+
+
+.footer-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: start;
+  width: 80%;
+  max-width: 1200px;
+  position: relative;
+  z-index: 2;
+}
+
+.logo {
+  text-align: center;
+}
+
+.logo-circle {
+  background-color: #a5d9d9;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-circle img {
+  width: 100px;
+  height: 62px;
+}
+
+.logo-circle p {
+  font-size: 14px;
+  color: #555;
+}
+
+.about,
+.contact {
+  text-align: left;
+}
+
+.about h3,
+.contact h3 {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 5px;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+.about p,
+.contact p {
+  font-size: 14px;
+  color: #555;
+  margin: 4px 0;
+}
+
+
+.copyright {
+  background-color: #a5d9d9;
+  font-size: 12px;
+  width: 100%;
+  text-align: center;
+  color: #777;
+  margin-top: 20px;
+  position: relative;
+  z-index: 2;
+  top: 20px;
 }
 
 @media (max-width: 768px){

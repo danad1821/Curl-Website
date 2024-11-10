@@ -21,11 +21,83 @@ $(document).ready(function () {
     type: "GET",
     dataType: "json",
     success: function (data) {
+      getTopMerch(data);
       getBestsellers(data);
       displayBestSellingBooks(bestsellers);
     },
-    error: function (error) { },
+    error: function (error) {
+      console.error("Error loading data:", error);
+    },
   });
+
+  function getTopMerch(data) {
+    const $container = $("#product-container");
+  
+    data.topMerch.forEach(function(individualMerch) {
+      const $productDiv = $("<div>").addClass("product");
+  
+      // Product Image
+      const $productImage = $("<img>").attr("src", individualMerch.img).attr("alt", individualMerch.name);
+      $productDiv.append($productImage);
+  
+      // Product Name
+      const $productName = $("<h3>").text(individualMerch.name);
+      $productDiv.append($productName);
+  
+      const $addAndPriceContainer = $("<div>").addClass("add-and-price-container");
+  
+      // Product Price
+      const $productPrice = $("<span>").addClass("price").text(individualMerch.price);
+      $addAndPriceContainer.append($productPrice);
+  
+      // Create the white box container for "Add" section
+      const $addContainer = $("<div>").addClass("add-container");
+  
+      // "Add" label
+      const $addLabel = $("<span>").text("Add").addClass("add-label");
+  
+      // Minus button
+      const $minusButton = $("<span>").text("-").addClass("minus-button");
+  
+      // Quantity display
+      const $quantityDisplay = $("<span>").text("0").addClass("quantity");
+  
+      // Plus button
+      const $plusButton = $("<span>").text("+").addClass("plus-button");
+  
+      // Heart Icon
+      const $heartIcon = $("<span>").addClass("heart").html("&#9829;"); // Use HTML entity for heart 
+  
+      $heartIcon.click(function() {
+        $(this).html($(this).html() === "&#9829;" ? "&#10084;" : "&#9829;");
+      });
+  
+      // Add event listeners for increment and decrement
+      let quantity = 0;
+      $minusButton.click(function() {
+        if (quantity > 0) {
+          quantity--;
+          $quantityDisplay.text(quantity);
+        }
+      });
+  
+      $plusButton.click(function() {
+        quantity++;
+        $quantityDisplay.text(quantity);
+      });
+  
+      // Append elements to addContainer
+      $addContainer.append($addLabel, $minusButton, $quantityDisplay, $plusButton);
+  
+      // Append all elements to addAndPriceContainer
+      $addAndPriceContainer.append($productPrice, $addContainer, $heartIcon);
+  
+      // Append addAndPriceContainer and productDiv to container
+      $productDiv.append($addAndPriceContainer);
+      $container.append($productDiv);
+    });
+  }
+
   // gets all the bestsellers found in the data.json file
   function getBestsellers(data) {
     for (const book of data.books) {
@@ -64,8 +136,8 @@ $(document).ready(function () {
         bookDiv.append(author);
         let innerDiv = $("<div>").html(
           "$" +
-          data[i]?.price +
-          " <div> <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' class='heartIcon bookHeartIcon'><path d='M225.8 468.2l-2.5-2.3L48.1 303.2C17.4 274.7 0 234.7 0 192.8l0-3.3c0-70.4 50-130.8 119.2-144C158.6 37.9 198.9 47 231 69.6c9 6.4 17.4 13.8 25 22.3c4.2-4.8 8.7-9.2 13.5-13.3c3.7-3.2 7.5-6.2 11.5-9c0 0 0 0 0 0C313.1 47 353.4 37.9 392.8 45.4C462 58.6 512 119.1 512 189.5l0 3.3c0 41.9-17.4 81.9-48.1 110.4L288.7 465.9l-2.5 2.3c-8.2 7.6-19 11.9-30.2 11.9s-22-4.2-30.2-11.9zM239.1 145c-.4-.3-.7-.7-1-1.1l-17.8-20-.1-.1s0 0 0 0c-23.1-25.9-58-37.7-92-31.2C81.6 101.5 48 142.1 48 189.5l0 3.3c0 28.5 11.9 55.8 32.8 75.2L256 430.7 431.2 268c20.9-19.4 32.8-46.7 32.8-75.2l0-3.3c0-47.3-33.6-88-80.1-96.9c-34-6.5-69 5.4-92 31.2c0 0 0 0-.1 .1s0 0-.1 .1l-17.8 20c-.3 .4-.7 .7-1 1.1c-4.5 4.5-10.6 7-16.9 7s-12.4-2.5-16.9-7z'/></svg> <button class='homePageBtn pinkAddBtn'>Add</button></div>"
+            data[i]?.price +
+            " <div> <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' class='heartIcon bookHeartIcon'><path d='M225.8 468.2l-2.5-2.3L48.1 303.2C17.4 274.7 0 234.7 0 192.8l0-3.3c0-70.4 50-130.8 119.2-144C158.6 37.9 198.9 47 231 69.6c9 6.4 17.4 13.8 25 22.3c4.2-4.8 8.7-9.2 13.5-13.3c3.7-3.2 7.5-6.2 11.5-9c0 0 0 0 0 0C313.1 47 353.4 37.9 392.8 45.4C462 58.6 512 119.1 512 189.5l0 3.3c0 41.9-17.4 81.9-48.1 110.4L288.7 465.9l-2.5 2.3c-8.2 7.6-19 11.9-30.2 11.9s-22-4.2-30.2-11.9zM239.1 145c-.4-.3-.7-.7-1-1.1l-17.8-20-.1-.1s0 0 0 0c-23.1-25.9-58-37.7-92-31.2C81.6 101.5 48 142.1 48 189.5l0 3.3c0 28.5 11.9 55.8 32.8 75.2L256 430.7 431.2 268c20.9-19.4 32.8-46.7 32.8-75.2l0-3.3c0-47.3-33.6-88-80.1-96.9c-34-6.5-69 5.4-92 31.2c0 0 0 0-.1 .1s0 0-.1 .1l-17.8 20c-.3 .4-.7 .7-1 1.1c-4.5 4.5-10.6 7-16.9 7s-12.4-2.5-16.9-7z'/></svg> <button class='homePageBtn pinkAddBtn'>Add</button></div>"
         );
         innerDiv.addClass("innerBookDiv");
         bookDiv.append(innerDiv);
@@ -97,8 +169,7 @@ $(document).ready(function () {
           // Changes the icon color
           $(this).css({ fill: "rgb(255, 0, 0)" });
         }
-      }
-      else {
+      } else {
         // Filter wishlist.bookks to remove the selected book
         wishlist.books = wishlist.books.filter(
           (book) => book.id !== selectedBook.id
@@ -202,7 +273,6 @@ $(document).ready(function () {
   });
 });
 
-
 // $(document).ready(function () {
 //   $.getJSON("data.json", function (data) {
 //     // Access the "menu" array inside the JSON data
@@ -247,24 +317,33 @@ $(document).ready(function () {
 //   return itemDiv;
 // }
 
-
 $(document).ready(function () {
   // Load and display menu items
-  $.getJSON('data.json', function (data) {
-
+  $.getJSON("data.json", function (data) {
     //get only the 5 items on the home
-    const itemsToShow = ['carrot cake', 'fruit croissant', 'iced latte', 'lemonade', 'glazed donut'];
-    const menuItems = data.menu.filter(item => itemsToShow.includes(item.name.toLowerCase()));
+    const itemsToShow = [
+      "carrot cake",
+      "fruit croissant",
+      "iced latte",
+      "lemonade",
+      "glazed donut",
+    ];
+    const menuItems = data.menu.filter((item) =>
+      itemsToShow.includes(item.name.toLowerCase())
+    );
 
-    const $menuContainer = $('#menu-items');
+    const $menuContainer = $("#menu-items");
     $menuContainer.empty();
 
     menuItems.forEach(function (item) {
       // Choosing hand image based on category
       let handImage;
-      if (item.categories.includes('Pastry')) handImage = 'designImages/White shirt Hand.png';
-      else if (item.categories.includes('cake')) handImage = 'designImages/Blue shirt Hand.png';
-      else if (item.categories.includes('Drink')) handImage = 'designImages/Hand Pink Shirt.png';
+      if (item.categories.includes("Pastry"))
+        handImage = "designImages/White shirt Hand.png";
+      else if (item.categories.includes("cake"))
+        handImage = "designImages/Blue shirt Hand.png";
+      else if (item.categories.includes("Drink"))
+        handImage = "designImages/Hand Pink Shirt.png";
 
       //HTML structure
       const itemHTML = `
@@ -272,8 +351,12 @@ $(document).ready(function () {
           <div class="image-section">
             <img src="${handImage}" alt="${item.name}" class="handImg">
 
-             <div class="dessert-image ${item.name.toLowerCase().replace(" ", "-")}-image">
-                <img src="${item.img}" alt="${item.name}" class="dessertImg" data-id="${item.name.toLowerCase()}">
+             <div class="dessert-image ${item.name
+               .toLowerCase()
+               .replace(" ", "-")}-image">
+                <img src="${item.img}" alt="${
+        item.name
+      }" class="dessertImg" data-id="${item.name.toLowerCase()}">
             </div>
           </div>
           <div class="info-section">
@@ -295,6 +378,6 @@ $(document).ready(function () {
       $menuContainer.append(itemHTML);
     });
   }).fail(function (error) {
-    console.error('Error loading menu:', error);
+    console.error("Error loading menu:", error);
   });
 });
