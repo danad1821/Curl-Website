@@ -154,16 +154,16 @@ body {
   border: none;
 }
 
-.homePageBtn:hover, #welcomeBtn:hover {
+.homePageBtn:hover,
+#welcomeBtn:hover {
   background-color: #37474f;
   color: #f1eae4;
 }
 
-#welcomeBtn, .homePageBtn{
+#welcomeBtn,
+.homePageBtn {
   transition: background-color 0.3s, color 0.3s;
-
 }
-
 
 #readingCat {
   max-height: 110%;
@@ -298,14 +298,14 @@ body {
   flex-wrap: wrap;
   align-items: end;
 }
-.add-and-price-container{
+.add-and-price-container {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
-.product h3{
-  font-family: 'Poppins', sans-serif;
+.product h3 {
+  font-family: "Poppins", sans-serif;
   font-size: 100%;
 }
 .product {
@@ -320,7 +320,6 @@ body {
   height: 200px;
   margin-bottom: 10px;
 }
-
 
 .product .price {
   font-size: 16px;
@@ -337,7 +336,7 @@ button.add-to-cart {
 }
 
 button.view-merch-btn {
-  background-color: #E9B9B9;
+  background-color: #e9b9b9;
   border-radius: 159px;
   width: 150px;
   height: 39px;
@@ -371,8 +370,8 @@ button.view-merch-btn {
   margin: 5px;
 }
 
-
-.minus-button, .plus-button {
+.minus-button,
+.plus-button {
   cursor: pointer;
   font-weight: bold;
   padding: 0 2px;
@@ -383,14 +382,15 @@ button.view-merch-btn {
   padding: 0 2px;
 }
 
-
 .add-label {
   font-weight: bold;
   margin-right: 5px; /* Space between "Add" label and minus button */
   margin-left: 2px;
 }
 
-.minus-button, .plus-button, .quantity {
+.minus-button,
+.plus-button,
+.quantity {
   font-weight: bold;
   margin: 0 2px; /* Adds space between buttons */
 }
@@ -472,7 +472,7 @@ button.view-merch-btn {
   height: 50dvh;
   position: relative;
 }
-.fortuneSection>.sectionHeader{
+.fortuneSection > .sectionHeader {
   text-align: center;
 }
 #cookie-structure {
@@ -538,7 +538,6 @@ button.view-merch-btn {
   #fortuneText p {
     font-size: 16px;
   }
-
 }
 
 @media (max-width: 860px) {
@@ -593,27 +592,25 @@ button.view-merch-btn {
 }
 
 @media (max-width: 480px) {
-  #cookie-structure{
+  #cookie-structure {
     background-size: 100% 60%;
   }
 
-  #cookie-structure p{
+  #cookie-structure p {
     font-size: 15px;
     margin-top: 10px;
   }
-
 }
 
 @media (max-width: 420px) {
-  #cookie-structure{
+  #cookie-structure {
     background-size: 100% 60%;
   }
 
-  #cookie-structure p{
+  #cookie-structure p {
     font-size: 12px;
     margin-top: 10px;
   }
-
 }
 
 /* ########################################## */
@@ -715,9 +712,9 @@ button.view-merch-btn {
   /* padding: 10px; */
 }
 
-#menu::-webkit-scrollbar{
+#menu::-webkit-scrollbar {
   display: none;
-  }
+}
 
 .menu-item {
   display: flex;
@@ -736,33 +733,32 @@ button.view-merch-btn {
   color: #777;
 }
 
-.item-price{
+.item-price {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-content: center;
 }
 
-.item-price p{
+.item-price p {
   font-size: 20px;
 }
 
-.item-price i{
+.item-price i {
   font-size: 18px;
   margin-left: 20px;
-  
 }
-.add-btn{
+.add-btn {
   width: 70px !important;
   margin: 0 !important;
 }
-.info-section{
+.info-section {
   width: 200px;
   margin-left: -40px;
   margin-top: -50px;
 }
 
-.item-desc{
+.item-desc {
   min-height: 42px;
   margin-bottom: 10px;
 }
@@ -795,35 +791,34 @@ button.view-merch-btn {
   width: 90%;
 }
 
-
 .fruit-croissant-image {
   width: 120%;
   left: -65% !important;
   top: -35% !important;
 }
 
-.lemonade-image{
+.lemonade-image {
   top: -8%;
   left: -32%;
   transform: rotate(7deg);
 }
 
-.glazed-donut-image{
+.glazed-donut-image {
   width: 110%;
   left: -55%;
   top: -30%;
 }
 
-.menu-item:last-child{
+.menu-item:last-child {
   padding-right: 5%;
   margin-left: 0;
 }
 
-.menu-item:last-child .info-section{
+.menu-item:last-child .info-section {
   margin-left: 60px;
 }
 
-.carrot-cake-image{
+.carrot-cake-image {
   width: 130%;
   top: -45%;
   left: -3%;
@@ -832,36 +827,26 @@ button.view-merch-btn {
 
 /* Footer Section */
 
-
-
 footer {
-  
-  
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: flex-end;
   position: relative;
-  margin-top: 200px;
-  margin-bottom: -50px;
-  
-  
+  background-image:  url("designImages/Group 150.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: bottom;
+  height: 90vh;
+  margin-top: -23%;
 }
-
-.footerimages{
-  position: absolute;
-  z-index: 2;
-  width: 100%;
-  top: -600px;
-  
-}
-
-
 
 .footer-content {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-between;
-  align-items: start;
+  align-items: center;
   width: 80%;
   max-width: 1200px;
   position: relative;
@@ -914,7 +899,6 @@ footer {
   margin: 4px 0;
 }
 
-
 .copyright {
   background-color: #a5d9d9;
   font-size: 12px;
@@ -927,7 +911,7 @@ footer {
   top: 20px;
 }
 
-@media (max-width: 768px){
+@media (max-width: 768px) {
   #menu-header p {
     font-size: 15px;
     width: 70%;
@@ -1007,7 +991,7 @@ footer {
     /* margin-top: 5%; */
     margin-left: 10.5%;
   }
-  .sectionHeader{
+  .sectionHeader {
     font-size: 20px;
   }
 }
