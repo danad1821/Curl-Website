@@ -167,3 +167,34 @@
         width: 53%;
     }
 }
+
+@media (max-width: 645px){
+    .search-icon{
+        display: none;
+    }
+
+    .search-container{
+        display: flex;
+        padding: 5px;
+        width: 100%;
+        opacity: 1;
+        margin-left: 0;
+        margin-right: -10px;
+    }
+}
+
+@media (max-width: 390px){
+    .search-icon{
+        display: none;
+    }
+
+    .search-container{
+        display: flex;
+        padding: 5px;
+        width: 90%;
+        opacity: 1;
+        top: 50%;
+        margin-left: 0;
+        margin-right: -10px;
+    }
+}

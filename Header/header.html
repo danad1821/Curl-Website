@@ -18,6 +18,7 @@
     
             <div class="list">
                 <ul class="center-nav" id="navList">
+                    <div class="close" id="closeIcon" style="display: none;">✖</div>
                     <li id="nav" class="Home"><a href="../index.html"> Home </a> </li>
                     <li id="nav" class="About"> <a href="../about/about.html"> About us </a> </li>
                     <li id="nav" class="Community"> <a href="../community/community.html"> Community </a> </li>
@@ -30,54 +31,52 @@
 
             <div class="right-section" id="right-section">
                 <button class="SignIn" id="signInBtn"> <a href="#"> Sign in </a> </button>
-                <ul class="icons" id="navList">
-                    <li id="icon">
-                        <div class="search-container">
-                            <input type="text" placeholder="Search..." class="search-input" id="search-input" aria-label="Search" />
-                            <a href="#" class="close-icon" id="close-icon" aria-label="Close search">
+                <ul class="icons">
+                        <li id="icon" class="searchIcon">
+                            <div class="search-container">
+                                <input type="text" placeholder="Search..." class="search-input" id="search-input" aria-label="Search" />
+                                <a href="#" class="close-icon" id="close-icon" aria-label="Close search">
+                                    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M6 18L18 6M6 6l12 12" />
+                                    </svg>
+                                </a>
+                            </div>
+                            <a href="#" class="search-icon" id="search-icon" aria-label="Search">
                                 <svg width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round"
                                     stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M6 18L18 6M6 6l12 12" />
+                                    <path d="M11 3a8 8 0 1 0 0 16 8 8 0 1 0 0-16z"></path>
+                                    <path d="m21 21-4.35-4.35"></path>
                                 </svg>
                             </a>
-                        </div>
-                        <a href="#" class="search-icon" id="search-icon" aria-label="Search">
+                        </li>
+                        <li id="icon">
+                            <a href="#">
                             <svg width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round"
                                 stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M11 3a8 8 0 1 0 0 16 8 8 0 1 0 0-16z"></path>
-                                <path d="m21 21-4.35-4.35"></path>
+                                <path
+                                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                                </path>
                             </svg>
-                        </a>
-                    </li>
-            
-                    <li id="icon">
-                        <a href="#">
-                        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round"
-                            stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                            d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
-                            </path>
-                        </svg>
-                        </a>
-                    </li>
-                    <li id="icon">
-                        <a href="#">
-                        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round"
-                            stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M9 20a1 1 0 1 0 0 2 1 1 0 1 0 0-2z"></path>
-                            <path d="M20 20a1 1 0 1 0 0 2 1 1 0 1 0 0-2z"></path>
-                            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
-                        </svg>
-                        </a>
-                    </li>
-        
+                            </a>
+                        </li>
+                        <li id="icon">
+                            <a href="#">
+                            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9 20a1 1 0 1 0 0 2 1 1 0 1 0 0-2z"></path>
+                                <path d="M20 20a1 1 0 1 0 0 2 1 1 0 1 0 0-2z"></path>
+                                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                            </svg>
+                            </a>
+                        </li>
+                        <div class="burger" id="burgerIcon">
+                            <div class="line"></div>
+                            <div class="line"></div>
+                            <div class="line"></div>
+                        </div>
                 </ul>
-                <div class="burger" id="burgerIcon">
-                    <div class="line"></div>
-                    <div class="line"></div>
-                    <div class="line"></div>
-                </div>
-                <div class="close" id="closeIcon" style="display: none;">✖</div>
+                
             </div>
         </div>
     </nav>

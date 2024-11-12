@@ -132,6 +132,42 @@
     }
 }
 
+@media (max-width: 675px) {
+    .SignIn {
+        padding: 6px 12px;
+        margin-right: -30px;
+        margin-left: 20px;
+        margin-bottom: 5px;
+        width: 25%;
+        font-size: smaller;
+    }
+
+    .modal-content {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .modal-content h2 {
+        font-size: 20px;
+    }
+
+    .modal-content form input {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .modal-content form button {
+        padding: 10px 18px;
+        font-size: 14px;
+    }
+
+    .close {
+        font-size: 24px;
+        top: 8px;
+        right: 15px;
+    }
+}
+
 @media (max-width: 480px) {
     .SignIn {
         padding: 6px 10px;
@@ -161,5 +197,33 @@
         font-size: 22px;
         top: 6px;
         right: 10px;
+    }
+}
+
+@media (max-width: 390px) {
+    
+    .SignIn {
+        font-size: 15px; /* Increase font size */
+        width: 80%; /* Adjust padding for a larger button */
+        justify-content: center;
+    }
+
+    .modal-content {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .modal-content h2 {
+        font-size: 20px;
+    }
+
+    .modal-content form input {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .modal-content form button {
+        padding: 10px 18px;
+        font-size: 14px;
     }
 }

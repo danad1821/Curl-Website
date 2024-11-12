@@ -5,11 +5,12 @@
 
 .navdiv {
     display: flex;
-    align-items: center;  
+    align-items: center;
     justify-content: space-between;
     padding: 10px 20px;
     box-sizing: border-box;
     width: 100%;
+    flex-wrap: wrap; /* Allow items to wrap if needed */
 }
 
 .Logo img {
@@ -18,6 +19,7 @@
     margin-left: 2px;
 }
 
+/* Centered nav links */
 .center-nav {
     display: flex;
     justify-content: center;
@@ -31,25 +33,25 @@
     list-style: none;
     text-align: center;
     border-radius: 25px;
-  padding: 4px 10px;
+    padding: 4px 10px;
 }
 
-.center-nav li:hover{
+.center-nav li:hover {
     background-color: #F1EAE4;
-  text-align: center;
 }
 
 .center-nav li a {
     color: black;
     font-size: 18px;
     text-decoration: none;
-    text-align: center;
 }
 
+/* Right section with sign-in, icons, and burger */
 .right-section {
     display: flex;
     align-items: center;
     gap: 10px;
+    flex-wrap: nowrap; /* Prevent wrapping here */
 }
 
 .icons {
@@ -68,18 +70,97 @@
     margin-right: 10px;
 }
 
-@media (max-width: 768px) {
-    .Logo img {
-        width: 120px;
+.burger{
+    display: none;
+}
+
+.close {
+    display: none;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+@media (max-width: 598px) {
+    /* Center the logo */
+    .Logo {
+        flex-basis: 70%;
+        display: flex;
+        align-items: center;
+        order: 1;
     }
 
+    /* Stack nav links below the logo */
     .center-nav {
         order: 2;
+        flex-basis: 100%;
         justify-content: center;
     }
 
-    .center-nav li a {
-        font-size: 14px;
-        text-align: center;
+    /* Right section stays in a row with icons, sign-in, and burger */
+    .right-section {
+        order: 3;
+        flex-grow: 1;
+        justify-content: space-between;
+    }
+
+    .burger {
+        display: block;
+        cursor: pointer;
+    }
+
+    /* Hide navigation items by default for mobile */
+    .center-nav {
+        display: none;
+    }
+
+    /* Show nav links when the burger menu is clicked */
+    .burger-active .center-nav {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* Styling for screens 390px or smaller */
+@media (max-width: 390px) {
+    .navbar{
+        margin-left: -3%;
+    }
+    /* Centering the logo */
+    .Logo {
+        flex-basis: 70%;
+        display: flex;
+        align-items: center;
+        order: 1;
+    }
+
+    /* Stack Sign-in and search on top */
+    .right-section {
+        order: 2;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    /* Align icons and burger in the same row within the new menu-icons wrapper */
+    .menu-icons {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 10px; /* Space between icons and burger */
+    }
+
+    /* Icons styling in a row */
+    .icons {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    /* Ensure the burger stays aligned with the icons */
+    .burger {
+        display: flex;
+        align-items: center;
     }
 }
