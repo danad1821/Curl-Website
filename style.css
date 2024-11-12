@@ -15,6 +15,12 @@ body {
   top: 0;
   z-index: 999;
 }
+.Home{
+  background-color: #F1EAE4;
+  border-radius: 25px;
+  padding: 4px 10px;
+  text-align: center;
+}
 
 /* welcome and about us  */
 .twoSections {
@@ -1120,6 +1126,9 @@ footer {
   }
   .merchSection > p {
     width: 55dvw;
+  }
+  .Home{
+    background-color: #C0DDE5;
   }
 }
 @media (max-width: 980px) {

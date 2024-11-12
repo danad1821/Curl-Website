@@ -29,13 +29,21 @@
 
 .center-nav li {
     list-style: none;
+    text-align: center;
+    border-radius: 25px;
+  padding: 4px 10px;
+}
+
+.center-nav li:hover{
+    background-color: #F1EAE4;
+  text-align: center;
 }
 
 .center-nav li a {
     color: black;
     font-size: 18px;
     text-decoration: none;
-    margin-right: 10px;
+    text-align: center;
 }
 
 .right-section {
@@ -72,5 +80,6 @@
 
     .center-nav li a {
         font-size: 14px;
+        text-align: center;
     }
 }

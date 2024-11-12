@@ -286,14 +286,14 @@ $searchInput.on("input", function () {
 //burger js
 $(document).ready(function() {
   $('#burgerIcon').click(function() {
-      $('#navList').toggleClass('show');
-      $(this).hide();
-      $('#closeIcon').show();
+      // $('#navList').toggleClass('show')
+      $("#navList").slideToggle();
+      $('#closeIcon').slideToggle();
   });
 
   $('#closeIcon').click(function() {
-      $('#navList').removeClass('show');
-      $(this).hide();
+      $('#navList').slideToggle();
+      $(this).slideToggle();
       $('#burgerIcon').show();
   });
 });
