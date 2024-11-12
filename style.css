@@ -845,7 +845,7 @@ footer {
 }
 
 .logo-circle {
-  background-color: #a5d9d9;
+  background-color: #C0DDE5;
   width: 150px;
   height: 150px;
   border-radius: 50%;
@@ -887,16 +887,15 @@ footer {
 .about p,
 .contact p {
   font-size: 16px;
-  color: #555;
+  color: black;
   margin: 4px 0;
 }
 
 .copyright {
-  background-color: #a5d9d9;
+  background-color: #C0DDE5;
   font-size: 12px;
   width: 100%;
   text-align: center;
-  color: #777;
   margin-top: 20px;
   position: relative;
   z-index: 2;
