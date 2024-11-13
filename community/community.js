@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    $("#header").load("../Header/header.html");
     let rooms=[]
     let roomsDisplay=$("#roomsDisplay")
   $.ajax({

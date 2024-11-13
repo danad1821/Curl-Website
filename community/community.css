@@ -173,14 +173,8 @@ footer {
   top: 20px;
 }
 
-@media (max-width: 768px) {
-  #menu-header p {
-    font-size: 15px;
-    width: 70%;
-  }
-}
 
-@media (max-width: 1090px) {
+@media (max-width: 1157px) {
   .Community {
     background-color: #c0dde5;
   }

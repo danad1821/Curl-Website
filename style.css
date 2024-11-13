@@ -1104,6 +1104,11 @@ footer {
     width: 40vw;
   }
 }
+@media (max-width: 1157px) {
+  .Home {
+    background-color: #c0dde5;
+  }
+}
 
 @media (max-width: 1090px) {
   .firstSection > div > p {
@@ -1131,9 +1136,6 @@ footer {
   }
   .merchSection > p {
     width: 55dvw;
-  }
-  .Home{
-    background-color: #C0DDE5;
   }
 }
 @media (max-width: 980px) {
