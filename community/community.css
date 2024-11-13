@@ -30,11 +30,70 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  position: relative;
+  height: 79vh;
 }
 .landingCommunitySection h1 {
   font-family: "New Class", sans-serif;
-  font-size: 12dvw;
+  font-size: 13dvw;
   font-weight: 300;
+  position: absolute;
+  top: 20%;
+  left: 17%;
+}
+.landingCommunitySection>img, .landingCommunitySection>div{
+  position: absolute;
+}
+#manImage{
+  width: 38%;
+  left: 13%;
+  top: -3%;
+}
+.landingCommunitySection>div{
+  width: 30%;
+  bottom: 29%;
+  text-align: center;
+  font-size: 24px;
+}
+#curledCat{
+  left: 3%;
+  width: 20%;
+  bottom: -15%;
+}
+#girlWithBook{
+  left: 12%;
+  width: 23%;
+  bottom: -5%;
+}
+#arms{
+  width: 19%;
+  left: 24%;
+  top: 18%;
+}
+#chatBubbles{
+  top: 10%;
+  right: 16%;
+  width: 10%;
+}
+#girlsWithBook{
+  bottom: -15%;
+  right: 3%;
+  width: 30%;
+}
+#catOnN{
+  top: 12%;
+  width: 8%;
+  right: 34.5%;
+}
+#strechingCat{
+  width: 15%;
+  bottom: -9%;
+  left: 30%;
+}
+#sleepingCat{
+  width: 15%;
+  bottom: -9%;
+  right: 33%;
 }
 
 /* Main Content  */
