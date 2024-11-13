@@ -1,0 +1,247 @@
+* {
+  margin: 0;
+  padding: 0;
+  color: #37474f;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #c0dde5;
+  overflow-x: hidden;
+}
+
+#header {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.Community {
+  background-color: #f1eae4;
+  border-radius: 25px;
+  padding: 4px 10px;
+  text-align: center;
+}
+
+/* Landing Display  */
+
+.landingCommunitySection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.landingCommunitySection h1 {
+  font-family: "New Class", sans-serif;
+  font-size: 12dvw;
+  font-weight: 300;
+}
+
+/* Main Content  */
+.mainContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.communityPageBtn {
+  color: #f1eae4;
+  font-size: 18px;
+  background-color: #e9b9b9;
+  border-radius: 159px;
+  padding: 10px 12px;
+  border: none;
+}
+
+.communityPageBtn:hover {
+  background-color: #37474f;
+  color: #f1eae4;
+}
+
+.communityPageBtn {
+  transition: background-color 0.3s, color 0.3s;
+}
+
+#roomsDisplay{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.roomDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+.roomInnerDiv{
+    background-color: #f1eae4;
+    border-radius: 50px;
+    width: 20vw;
+    height: 40vh;
+}
+
+.roomImg{
+    border-radius: 50px;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* Footer Section */
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+  background-color: #f1eae4;
+  align-self: flex-end;
+  padding: 10px 0;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  position: relative;
+  z-index: 2;
+}
+
+.logo {
+  text-align: center;
+}
+
+.logo-circle {
+  background-color: #c0dde5;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-circle img {
+  width: 120px;
+  height: 74px;
+}
+
+.logo-circle p {
+  font-size: 14px;
+  color: black;
+}
+
+.about,
+.contact {
+  text-align: left;
+}
+
+
+.about h3,
+.contact h3 {
+  font-size: 20px;
+  color: black;
+  margin-bottom: 5px;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+.about p,
+.contact p {
+  font-size: 16px;
+  color: black;
+  margin: 4px 0;
+}
+
+.copyright {
+  background-color: #c0dde5;
+  font-size: 12px;
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+  position: relative;
+  z-index: 2;
+  top: 20px;
+}
+
+@media (max-width: 768px) {
+  #menu-header p {
+    font-size: 15px;
+    width: 70%;
+  }
+}
+
+@media (max-width: 1090px) {
+  .Community {
+    background-color: #c0dde5;
+  }
+}
+
+@media (max-width: 855px) {
+  .communityPageBtn {
+    font-size: 14px;
+  }
+  .contact {
+    margin-left: 0;
+  }
+}
+@media (max-width: 650px) {
+  .communityPageBtn {
+    color: #f1eae4;
+    font-size: 12px;
+  }
+}
+@media (max-width: 1080px) {
+  .contact {
+    margin-right: 0px;
+  }
+}
+
+@media (max-width: 750px) {
+  footer {
+    align-items: center;
+    width: 100%;
+    background-image: none;
+    background-color: #f1eae4;
+    height: fit-content;
+    margin-top: 0;
+    padding-top: 10px;
+  }
+  .footer-content {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 10px;
+    width: auto;
+  }
+  footer {
+    background-image: none;
+    background-color: #f1eae4;
+    height: fit-content;
+    margin-top: 0;
+    padding-top: 5px;
+  }
+}
+
+@media (max-width: 600px) {
+  footer {
+    align-items: center;
+    width: 100%;
+  }
+  .footer-content {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 10px;
+    width: auto;
+  }
+}
