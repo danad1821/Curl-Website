@@ -41,56 +41,57 @@ body {
   top: 20%;
   left: 17%;
 }
-.landingCommunitySection>img, .landingCommunitySection>div{
+.landingCommunitySection > img,
+.landingCommunitySection > div {
   position: absolute;
 }
-#manImage{
+#manImage {
   width: 38%;
   left: 13%;
   top: -3%;
 }
-.landingCommunitySection>div{
+.landingCommunitySection > div {
   width: 30%;
   bottom: 29%;
   text-align: center;
   font-size: 24px;
 }
-#curledCat{
+#curledCat {
   left: 3%;
   width: 20%;
   bottom: -15%;
 }
-#girlWithBook{
+#girlWithBook {
   left: 12%;
   width: 23%;
   bottom: -5%;
 }
-#arms{
+#arms {
   width: 19%;
   left: 24%;
   top: 18%;
 }
-#chatBubbles{
+#chatBubbles {
   top: 10%;
   right: 16%;
   width: 10%;
 }
-#girlsWithBook{
+#girlsWithBook {
   bottom: -15%;
   right: 3%;
   width: 30%;
 }
-#catOnN{
+#catOnN {
   top: 12%;
   width: 8%;
   right: 34.5%;
 }
-#strechingCat{
+#strechingCat {
   width: 15%;
   bottom: -9%;
   left: 30%;
 }
-#sleepingCat{
+#sleepingCat {
   width: 15%;
   bottom: -9%;
   right: 33%;
@@ -122,32 +123,31 @@ body {
   transition: background-color 0.3s, color 0.3s;
 }
 
-#roomsDisplay{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
+#roomsDisplay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
 }
-.roomDiv{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 10px;
+.roomDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
 }
-.roomInnerDiv{
-    background-color: #f1eae4;
-    border-radius: 50px;
-    width: 20vw;
-    height: 40vh;
-}
-
-.roomImg{
-    border-radius: 50px;
-    width: 100%;
-    height: 100%;
+.roomInnerDiv {
+  background-color: #f1eae4;
+  border-radius: 50px;
+  width: 20vw;
+  height: 40vh;
 }
 
+.roomImg {
+  border-radius: 50px;
+  width: 100%;
+  height: 100%;
+}
 
 /* Footer Section */
 
@@ -159,7 +159,6 @@ footer {
   position: relative;
   background-color: #f1eae4;
   align-self: flex-end;
-  padding: 10px 0;
 }
 
 .footer-content {
@@ -171,6 +170,7 @@ footer {
   width: 100%;
   max-width: 1200px;
   position: relative;
+  padding: 10px 0;
   z-index: 2;
 }
 
@@ -204,7 +204,6 @@ footer {
   text-align: left;
 }
 
-
 .about h3,
 .contact h3 {
   font-size: 20px;
@@ -231,7 +230,6 @@ footer {
   z-index: 2;
   top: 20px;
 }
-
 
 @media (max-width: 1157px) {
   .Community {
