@@ -2,6 +2,8 @@ $("#header").load("Header/header.html");
   
 $("#Review").load("Reviews/reviews.html");
 
+$("#footer").load("footer/footer.html");
+
 $(document).ready(function () {
   localStorage.setItem(
     "cart",

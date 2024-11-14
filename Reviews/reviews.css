@@ -129,6 +129,7 @@ input[type=radio] {
 
     #img1{
         margin-left: 5%;
+        width: 30%;
     }
 
     .container {
@@ -149,8 +150,8 @@ input[type=radio] {
         margin-top: 55%;
         position: absolute;
         width: 100%; /* Increased width */
-        height: 50%; /* Increased height */
-        left: -10%;
+        height: 40%; /* Increased height */
+        left: -20%;
         transition: transform 0.6s ease, opacity 0.6s ease; /* Make transitions smoother */
         cursor: pointer;
         color: #37474F;
@@ -166,12 +167,12 @@ input[type=radio] {
     }
 
     .star-rating {
-        font-size: 45px;
+        font-size: 50px;
     }
 
     /* Style for review text and author */
 .card p {
-    font-size: 18px;
+    font-size: 22px;
 }
 
 .card em {
@@ -341,7 +342,7 @@ input[type=radio] {
 
 @media (max-width: 540px){
     .SectionReview {
-        margin-top: -80%;
+        margin-top: -90%;
     }
 
     #img1{
@@ -362,11 +363,11 @@ input[type=radio] {
     }
     
     .card {
-        margin-top: 30%;
+        margin-top: 50%;
         position: absolute;
         width: 100%; /* Increased width */
         height: 50%; /* Increased height */
-        left: 0;
+        left: -10%;
         transition: transform 0.6s ease, opacity 0.6s ease; /* Make transitions smoother */
         cursor: pointer;
         color: #37474F;
@@ -461,7 +462,7 @@ input[type=radio] {
 @media (max-width: 414px) and (max-height: 896px){
 
     .SectionReview {
-        margin-top: -110%;
+        margin-top: -120%;
         font-size: 20px;
     }
 
@@ -523,7 +524,7 @@ input[type=radio] {
 @media (max-width: 412px){
 
     .SectionReview {
-        margin-top: -110%;
+        margin-top: -130%;
         font-size: 20px;
     }
 
@@ -536,9 +537,8 @@ input[type=radio] {
         align-items: center;
         justify-content: center;
         padding: 30px 10px;
-        width: 50%;
-        height: 45vh; /* Make the container fill the full screen */
-        margin-top: -10%;
+        width: 60%;
+        height: 50vh; /* Make the container fill the full screen */
     }
     
     input[type=radio] {
@@ -546,7 +546,7 @@ input[type=radio] {
     }
     
     .card {
-        margin-top: 50%;
+        margin-top: 20%;
         position: absolute;
         width: 100%; /* Increased width */
         height: 50%; /* Increased height */
@@ -572,7 +572,7 @@ input[type=radio] {
 
     /* Style for review text and author */
 .card p {
-    font-size: 8px;
+    font-size: 10px;
     margin-bottom: 0;
 }
 

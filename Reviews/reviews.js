@@ -24,7 +24,7 @@ fetch('../data.json') // Go up one level to fetch data.json
             // Add the stars and review content to the card
             reviewCard.innerHTML = ` 
                 <p>"${review["review-content"]}"</p>
-                <p><em>- ${review["review-author"]}</em></p>
+                <p> <b> ${review["review-author"]} </b> </p>
             `;
             reviewCard.prepend(starsDiv); // Prepend the stars to the card
         });
