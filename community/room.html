@@ -32,7 +32,12 @@
   </head>
   <body>
     <div id="header"></div>
-    <section id="topSection"></section>
+    <section id="topSection">
+      <!-- changes depending on the room  -->
+    </section>
+    <section id="postsSection">
+      <!-- posts are added here  -->
+    </section>
 
     <!-- Footer -->
     <footer>
@@ -66,13 +71,14 @@
           <div class="modal-body">
             <div id="fileInputDiv">
               <label for="fileInput">Upload Image</label>
-              <input type="file" id="fileInput" name="fileInput" />
+              <input type="file" id="fileInput" name="fileInput"/>
+              <img src="#" alt="" id="inputImg">
             </div>
             <div class="" id="descInputDiv">
-              <label for="description" class="form-label">Description:</label>
+              <label for="description" class="form-label" id="descLabel">Description:</label>
               <input
                 type="text"
-                class="form-control"
+                class=""
                 id="description"
                 placeholder="Type here..."
               />

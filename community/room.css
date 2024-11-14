@@ -3,7 +3,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 0 20px;
+  margin: 0 30px;
 }
 .roomName {
   font-family: "New Class", sans-serif;
@@ -17,46 +17,102 @@
   border: none;
   border-radius: 27px;
 }
-.postBtn>img{
-    width: 25px;
-    height: 25px;
-    margin-right: 3px;
+.postBtn > img {
+  width: 25px;
+  height: 25px;
+  margin-right: 3px;
 }
-.postBtn:hover {
+.postBtn:hover, .smallPostBtn:hover, #descLabel:hover {
   background-color: #37474f;
   color: #f1eae4;
 }
 
-.postBtn {
+.postBtn, .smallPostBtn, #descLabel{
   transition: background-color 0.3s, color 0.3s;
 }
 .mainUserIcon {
   width: 100px;
   height: 100px;
 }
-.modal{
-    background-color: #F1EAE4;
+/* Post popup */
+.modal {
+  background-color: #f1eae4;
 }
-#newPostModal .modal-content{
-    min-width: 30dvw;
+#newPostModal .modal-content {
+  min-width: 30dvw;
+  padding: 15px 20px;
 }
-#fileInputDiv{
-    border: 1px solid black ;
-    padding: 50px 55px;
-    border-radius: 30px;
+
+#fileInputDiv {
+  border: 1px solid black;
+  padding: 50px 55px;
+  border-radius: 30px;
 }
-#fileInputDiv>label{
-    background-color: #e9b9b9;
-    color: white;
-    padding: 5px 15px ;
-    border-radius: 50px;
+#fileInputDiv > label {
+  background-color: #e9b9b9;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 50px;
 }
-#fileInput{
-    display: none;
+#fileInput {
+  display: none;
 }
-#descInputDiv{
-    margin: 10px 0;
+#descInputDiv {
+  margin: 10px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
-#descInputDiv>label{
-    text-align: left;
+#descInputDiv > label {
+  text-align: left;
+  margin-left: 10px;
+  cursor: pointer;
+}
+#description {
+  background-color: #f1eae4;
+  border-radius: 25px;
+  padding: 10px 20px;
+  border: 1px solid black;
+  outline: none;
+  font-size: 14px;
+}
+#description:focus {
+  outline: none;
+}
+.smallPostBtn{
+  background-color: #e9b9b9;
+  padding: 4px 15px;
+  color: #ffff;
+  border-radius: 25px;
+}
+
+
+/* post  */
+.post{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.postDiv{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60%;
+  background-color: #f1eae4;
+  border-radius: 60px;
+}
+.topPostSection{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #e9b9b9;
+  width: 100%;
+  border-top-left-radius: 60px;
+  border-top-right-radius: 60px;
+  padding: 10px;
+}
+.topPostSectionImg{
+  width: 60px;
+  height: 60px;
 }
