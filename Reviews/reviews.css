@@ -124,7 +124,11 @@ input[type=radio] {
 /* Resposive style */
 @media (max-width: 1920px) and (max-height: 1080px) {
     .SectionReview {
+<<<<<<< HEAD
         margin-top: -25% !important;
+=======
+        margin-top: -20%;
+>>>>>>> 979227a75192b514a6370fa4ff485142d8f90369
     }
 
     #img1{
@@ -136,10 +140,10 @@ input[type=radio] {
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 30px 10px;
+        padding: 10px 10px;
         width: 33%;
-        height: 85vh; /* Make the container fill the full screen */
-        margin-top: -10%;
+        height: 90vh; /* Make the container fill the full screen */
+        margin-top: -15%;
     }
     
     input[type=radio] {
@@ -149,14 +153,14 @@ input[type=radio] {
     .card {
         margin-top: 55%;
         position: absolute;
-        width: 100%; /* Increased width */
-        height: 40%; /* Increased height */
+        width: 110%; /* Increased width */
+        height: 50%; /* Increased height */
         left: -20%;
         transition: transform 0.6s ease, opacity 0.6s ease; /* Make transitions smoother */
         cursor: pointer;
         color: #37474F;
         background-color: #E9B9B9; /* Background color */
-        padding: 20px;
+        padding: 20px 40px;
         border-radius: 500px; /* Reduced radius for rounded corners */
         display: flex;
         flex-direction: column;
@@ -172,11 +176,11 @@ input[type=radio] {
 
     /* Style for review text and author */
 .card p {
-    font-size: 22px;
+    font-size: 20px;
 }
 
 .card em {
-    font-size: 1.2em;
+    font-size: 20px;
 }
 }
 
