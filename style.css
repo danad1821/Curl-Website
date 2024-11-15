@@ -826,7 +826,7 @@ footer {
   background-size: 100% 100%;
   background-position: bottom;
   height: 65vh;
-  margin-top: -16.7%;
+  margin-top: -12%;
 }
 
 .footer-content {
@@ -846,7 +846,7 @@ footer {
 }
 
 .logo-circle {
-  background-color: #a5d9d9;
+  background-color: #c0dde5;
   width: 150px;
   height: 150px;
   border-radius: 50%;
@@ -893,7 +893,7 @@ footer {
 }
 
 .copyright {
-  background-color: #a5d9d9;
+  background-color: #c0dde5;
   font-size: 12px;
   width: 100%;
   text-align: center;

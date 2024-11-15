@@ -27,12 +27,40 @@
     transition: opacity 0.4s ease, pointer-events 0s 0.4s;
 }
 
+.inner-modal{
+    background-color: #c0dde5;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 0;
+    border-radius: 50px;
+}
+
+.girl-sitting{
+    margin-right: 30px;
+    width: 40%;
+}
+
+.inner-modal-2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.inner-modal-2 h1{
+    padding-bottom: 30px;
+    color: #37474F;
+}
+
 .modal-content {
-    background-color: #f1eae4;
+    display: flex;
+    flex-direction: column;
+    background-color: #E9B9B9;
     padding: 30px;
-    border-radius: 10px;
-    width: 350px;
-    max-width: 90%;
+    border-radius: 40px;
+    width: 450px;
     text-align: center;
     opacity: 0;
     transform: translateY(-50px);
@@ -50,65 +78,82 @@
     opacity: 1;
 }
 
-.close {
-    color: #aaa;
-    font-size: 30px;
+.modal-content form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modal-content form h6{
     font-weight: bold;
-    cursor: pointer;
-    position: absolute;
-    top: 10px;
-    right: 20px;
 }
 
-.close:hover {
-    color: #000;
-}
-
-.modal-content h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
-    color: #37474f;
-}
-
-.modal-content form label {
+label {
     display: block;
-    margin: 10px 0 5px;
-    color: #37474f;
+    margin: 10px 15px 10px;
+    color:#37474f;
+    align-self: flex-start;
+    font-size: 17px;
 }
 
 .modal-content form input {
-    width: 100%;
+    width: 90%;
     padding: 10px;
     margin-bottom: 15px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
+    border-radius: 20px;
+    border: none;
+    background-color: #F1EAE4;
     font-size: 16px;
 }
 
 .modal-content form button {
-    background-color: #37474f;
-    color: #fff;
-    padding: 12px 20px;
+    background-color: #F1EAE4;
+    color: #37474f;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    padding: 10px 30px;
     border: none;
-    border-radius: 5px;
+    border-radius: 30px;
     cursor: pointer;
     font-size: 16px;
 }
 
-.modal-content form button:hover {
-    background-color: #455a64;
+.google-signin {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F1EAE4;
+    color: #37474f;
+    font-weight: bold;
+    border: 1px;
+    border-radius: 20px;
+    padding: 10px;
+    margin-top: 10px;
+    width: 60%;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.google-logo {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
 }
 
 /* Responsive Styles */
-@media (max-width: 768px) {
-    .SignIn {
-        padding: 6px 12px;
-        margin-right: -30px;
+@media (min-width: 1024px) {
+
+    .girl-sitting{
+        margin-right: 70px;
     }
 
     .modal-content {
-        width: 90%;
+        width: 150%;
         padding: 20px;
+    }
+
+    .inner-modal{
+        width: 80%;
     }
 
     .modal-content h2 {
@@ -125,14 +170,126 @@
         font-size: 14px;
     }
 
-    .close {
-        font-size: 24px;
-        top: 8px;
-        right: 15px;
+    .google-signin{
+        font-size: 12px;
     }
 }
 
-@media (max-width: 675px) {
+@media (max-width: 912px) {
+    .SignIn {
+        padding: 6px 12px;
+        margin-right: -30px;
+    }
+
+    .girl-sitting{
+        margin-right: 60px;
+    }
+
+    .modal-content {
+        width: 150%;
+        padding: 20px;
+    }
+
+    .inner-modal{
+        width: 90%;
+    }
+
+    .modal-content h2 {
+        font-size: 20px;
+    }
+
+    .modal-content form input {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .modal-content form button {
+        padding: 10px 18px;
+        font-size: 14px;
+    }
+
+    .google-signin{
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 860px) {
+    .SignIn {
+        padding: 6px 12px;
+        margin-right: -30px;
+    }
+
+    .girl-sitting{
+        display: none;
+    }
+
+    .modal-content {
+        width: 150%;
+        padding: 20px;
+    }
+
+    .inner-modal{
+        width: 80%;
+    }
+
+    .modal-content h2 {
+        font-size: 20px;
+    }
+
+    .modal-content form input {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .modal-content form button {
+        padding: 10px 18px;
+        font-size: 14px;
+    }
+
+    .google-signin{
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 768px) {
+    .SignIn {
+        padding: 6px 12px;
+        margin-right: -30px;
+    }
+
+    .girl-sitting{
+        display: none;
+    }
+
+    .modal-content {
+        width: 150%;
+        padding: 20px;
+    }
+
+    .inner-modal{
+        width: 70%;
+    }
+
+    .modal-content h2 {
+        font-size: 20px;
+    }
+
+    .modal-content form input {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .modal-content form button {
+        padding: 10px 18px;
+        font-size: 14px;
+    }
+
+    .google-signin{
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 540px) {
     .SignIn {
         padding: 6px 12px;
         margin-right: -30px;
@@ -142,8 +299,13 @@
         font-size: smaller;
     }
 
+    .inner-modal{
+        width: 80%;
+        height: 80%;
+    }
+
     .modal-content {
-        width: 90%;
+        width: 140%;
         padding: 20px;
     }
 
@@ -160,43 +322,47 @@
         padding: 10px 18px;
         font-size: 14px;
     }
-
-    .close {
-        font-size: 24px;
-        top: 8px;
-        right: 15px;
-    }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 430px) {
     .SignIn {
         padding: 6px 10px;
         margin-right: -20px;
     }
 
-    .modal-content {
-        width: 90%;
-        padding: 15px;
+    .inner-modal{
+        width: 70%;
+        height: 60%;
     }
 
-    .modal-content h2 {
-        font-size: 18px;
+    .modal-content {
+        width: 100%;
+        height: 50%;
+        padding: 20px;
+    }
+
+    .modal-content form label {
+        font-size: 15px;
     }
 
     .modal-content form input {
-        padding: 6px;
-        font-size: 12px;
+        padding: 8px;
+        font-size: 10px;
     }
 
     .modal-content form button {
-        padding: 8px 14px;
-        font-size: 12px;
+        padding: 10px 18px;
+        font-size: 14px;
     }
 
-    .close {
-        font-size: 22px;
-        top: 6px;
-        right: 10px;
+    .google-logo{
+        width: 10px;
+        height: 10px;
+    }
+
+    .google-signin{
+        font-size: 10px;
+        padding: 7px 50px;
     }
 }
 
@@ -225,5 +391,49 @@
     .modal-content form button {
         padding: 10px 18px;
         font-size: 14px;
+    }
+}
+
+@media (max-width: 380px) {
+    
+    .SignIn {
+        font-size: 15px; /* Increase font size */
+        width: 80%; /* Adjust padding for a larger button */
+        justify-content: center;
+    }
+
+    .inner-modal{
+        width: 80%;
+        height: 75%;
+    }
+
+    .modal-content {
+        width: 100%;
+        height: 50%;
+        padding: 20px;
+    }
+
+    .modal-content form label {
+        font-size: 15px;
+    }
+
+    .modal-content form input {
+        padding: 8px;
+        font-size: 10px;
+    }
+
+    .modal-content form button {
+        padding: 10px 18px;
+        font-size: 14px;
+    }
+
+    .google-logo{
+        width: 10px;
+        height: 10px;
+    }
+
+    .google-signin{
+        font-size: 10px;
+        padding: 7px 50px;
     }
 }
