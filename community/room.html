@@ -64,18 +64,20 @@
       </div>
       <p class="copyright">© Copyright</p>
     </footer>
-
+    <!-- new post popup  -->
     <div class="modal" tabindex="-1" id="newPostModal">
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-body">
             <div id="fileInputDiv">
               <label for="fileInput">Upload Image</label>
-              <input type="file" id="fileInput" name="fileInput"/>
-              <img src="#" alt="" id="inputImg">
+              <input type="file" id="fileInput" name="fileInput" />
+              <img src="#" alt="" id="inputImg" />
             </div>
             <div class="" id="descInputDiv">
-              <label for="description" class="form-label" id="descLabel">Description:</label>
+              <label for="description" class="form-label" id="descLabel"
+                >Description:</label
+              >
               <input
                 type="text"
                 class=""
@@ -83,6 +85,18 @@
                 placeholder="Type here..."
               />
             </div>
+            <button class="btn smallPostBtn">Post</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- new comment pop up  -->
+    <div class="modal" tabindex="-1" id="commentModal" aria-labelledby="commentModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-body">
+            <label for="commentInput" class="form-label">Comment:</label>
+            <input type="text" id="commentInput" placeholder="Type here..." />
             <button class="btn smallPostBtn">Post</button>
           </div>
         </div>
