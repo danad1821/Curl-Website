@@ -269,6 +269,10 @@ $(document).ready(function () {
     let newQuote = getRandomQuote();
     displayQuote(newQuote);
   });
+  //for create a room popup
+  $("#createRoomPopup").on("shown.bs.modal", function () {
+    $("#createBtn").focus();
+  });
 });
 
 // $(document).ready(function () {
