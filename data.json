@@ -605,214 +605,82 @@
 
   "menu": [
     {
-      "id": 62,
-      "img": "",
-      "name": "Espresso",
-      "description": "A rich, concentrated coffee beverage",
-      "price": 3.5,
-      "categories": ["Drink", "Hot", "Coffee"]
-    },
-    {
-      "id": 63,
-      "img": "",
-      "name": "Americano",
-      "description": "Espresso diluted with hot water",
-      "price": 3.0,
-      "categories": ["Drink", "Hot", "Coffee"]
-    },
-    {
-      "id": 64,
-      "img": "",
-      "name": "Latte",
-      "description": "Espresso with steamed milk and foam",
-      "price": 4.0,
-      "categories": ["Drink", "Hot", "Coffee"]
-    },
-    {
-      "id": 65,
-      "img": "",
-      "name": "Cappuccino",
-      "description": "Espresso with steamed milk and foam, with more foam than a latte",
-      "price": 4.5,
-      "categories": ["Drink", "Hot", "Coffee"]
-    },
-    {
-      "id": 66,
-      "img": "",
-      "name": "Mocha",
-      "description": "Espresso, steamed milk, chocolate syrup, and foam",
-      "price": 4.5,
-      "categories": ["Drink", "Hot", "Coffee"]
-    },
-    {
-      "id": 67,
-      "img": "",
-      "name": "Hot Chocolate",
-      "description": "Rich, creamy hot chocolate",
-      "price": 3.5,
-      "categories": ["Drink", "Hot", "Coffee"]
-    },
-    {
-      "id": 68,
-      "img": "",
-      "name": "Iced Coffee",
-      "description": "Cold brewed coffee over ice",
-      "price": 3.0,
-      "categories": ["Drink", "Cold", "Coffee"]
-    },
-    {
-      "id": 69,
-      "img": "productImages/Iced Latte.png",
-      "name": "Iced Latte",
-      "description": "Espresso with cold milk and foam over ice",
-      "price": 4.0,
-      "categories": ["Drink", "Cold", "Coffee"]
-    },
-    {
-      "id": 70,
-      "img": "",
-      "name": "Iced Tea",
-      "description": "Refreshing iced tea",
-      "price": 2.5,
-      "categories": ["Drink", "Cold", "Tea"]
-    },
-    {
-      "id": 71,
-      "img": "productImages/Lemonade.png",
-      "name": "Lemonade",
-      "description": "Classic lemonade",
-      "price": 2.0,
-      "categories": ["Drink", "Cold"]
+      "id": 75,
+      "img": "../designImages/Pastries/Fruit croissant.png",
+      "name": "Fruit Croissant",
+      "description": "Crispy pastry with fruits of your choice",
+      "price": 5,
+      "categories": ["Food", "Pastry"]
     },
     {
       "id": 72,
-      "img": "",
+      "img": "../designImages/Pastries/croissant.png",
       "name": "Plain Croissant",
-      "description": "Flaky, buttery croissant",
-      "price": 2.5,
+      "description": "Buttery, flasky pastry with a light and airy texture",
+      "price": 4,
       "categories": ["Food", "Pastry"]
-    },
-    {
-      "id": 73,
-      "img": "",
-      "name": "Almond Croissant",
-      "description": "Croissant filled with almond paste and topped with sliced almonds",
-      "price": 3.0,
-      "categories": ["Food", "Pastry"]
-    },
-    {
-      "id": 74,
-      "img": "",
-      "name": "Chocolate Croissant",
-      "description": "Croissant filled with dark chocolate",
-      "price": 2.75,
-      "categories": ["Food", "Pastry"]
-    },
-    {
-      "id": 75,
-      "img": "productImages/Fruit-croissant.png",
-      "name": "Fruit Croissant",
-      "description": "Croissant filled with figs",
-      "price": 2.75,
-      "categories": ["Food", "Pastry"]
-    },
-    {
-      "id": 76,
-      "img": "",
-      "name": "Pain au Chocolat",
-      "description": "Croissant filled with dark chocolate",
-      "price": 2.75,
-      "categories": ["Food", "Pastry"]
-    },
-    {
-      "id": 77,
-      "img": "",
-      "name": "Blueberry Muffin",
-      "description": "Moist muffin with blueberries",
-      "price": 2.0,
-      "categories": ["Food", "Baked Goods"]
     },
     {
       "id": 78,
-      "img": "productImages/lemony-yogurt-donuts.png",
+      "img": "../designImages/Pastries/Glazed Donut.png",
       "name": "Glazed Donut",
       "description": "Classic glazed donut",
-      "price": 1.5,
+      "price": 6,
       "categories": ["Food", "Donut", "Pastry"]
     },
+
     {
-      "id": 79,
-      "img": "",
-      "name": "Cranberry Scone",
-      "description": "Buttery scone with cranberries",
-      "price": 2.25,
-      "categories": ["Food", "Baked Goods"]
+      "id": 68,
+      "img": "../designImages/Drinks/Iced coffee.png",
+      "name": "Iced Coffee",
+      "description": "Ice, a splash of milk and rich espresso-like coffee",
+      "price": 5,
+      "categories": ["Drink", "Cold", "Coffee"]
     },
     {
+      "id": 71,
+      "img": "../designImages/Drinks/Lemonade.png",
+      "name": "Lemonade",
+      "description": "Classic lemon with ice and sugar",
+      "price": 4,
+      "categories": ["Drink", "Cold"]
+    },
+    {
+      "id": 65,
+      "img": "../designImages/Drinks/Cappuccino.png",
+      "name": "Cappuccino",
+      "description": "Creamy espresso topped with a layer of frothed milk",
+      "price": 3,
+      "categories": ["Drink", "Hot", "Coffee"]
+    },
+
+    {
       "id": 80,
-      "img": "",
+      "img": "../designImages/sweet/chocolate cookie.png",
       "name": "Chocolate Chip Cookie",
       "description": "Chewy chocolate chip cookie",
-      "price": 1.0,
-      "categories": ["Food", "Baked Goods"]
+      "price": 3,
+      "categories": ["Food", "cookies", "sweet"]
     },
     {
       "id": 81,
-      "img": "productImages/Carrot-Cake.png",
+      "img": "../designImages/sweet/Carrot Cake.png",
       "name": "Carrot Cake",
-      "description": "A spice cake with carrots.",
-      "price": 2.75,
-      "categories": ["Food", "cake"]
+      "description": "Fresh carrots with fluffy white cream.",
+      "price": 4,
+      "categories": ["Food", "cake", "sweet"]
     },
     {
       "id": 82,
-      "img": "",
-      "name": "Pride and Prejudice",
-      "description": "A delicate blend of Earl Grey tea, honey, and lemon",
-      "price": 4.5,
-      "categories": ["Drink", "Special", "Cold", "Tea"]
-    },
-    {
-      "id": 83,
-      "img": "",
-      "name": "Wonderland",
-      "description": "A cozy blend of espresso, steamed milk, and cinnamon, topped with a sprinkle of cinnamon",
-      "price": 4.5,
-      "categories": ["Drink", "Special", "Hot", "Coffee"]
-    },
-    {
-      "id": 84,
-      "img": "",
-      "name": "The Alchemist",
-      "description": "A rich, dark roast coffee inspired by the journey of self-discovery. Bold and flavorful, with a hint of caramel.",
-      "price": 4.5,
-      "categories": ["Drink", "Hot", "Coffee", "Special"]
-    },
-    {
-      "id": 85,
-      "img": "",
-      "name": "The Mortal Instruments",
-      "description": "A mysterious blend of dark roast coffee with hints of vanilla and almond, perfect for a night of shadowhunting. Topped with whipped cream and a dusting of cocoa powder.",
-      "price": 4.75,
-      "categories": ["Drink", "Hot", "Coffee", "Special"]
-    },
-    {
-      "id": 86,
-      "img": "",
-      "name": "Caraval",
-      "description": "A magical blend of espresso, steamed milk, and lavender syrup, topped with a sprinkle of edible glitter. A truly enchanting drink.",
-      "price": 5.25,
-      "categories": ["Drink", "Hot", "Coffee", "Special"]
-    },
-    {
-      "id": 87,
-      "img": "",
-      "name": "Enchanted Butterbeer",
-      "description": "A magical blend of creamy butterscotch, vanilla, and a hint of pumpkin spice, topped with whipped cream and a sprinkle of cinnamon sugar. A truly enchanting drink.",
-      "price": 5.5,
-      "categories": ["Drink", "Special", "Hot"]
+      "img": "../designImages/sweet/lazycake.png",
+      "name": "Lazy Cake",
+      "description": "Rich chocolate biscut dessert perfectly dense",
+      "price": 5,
+      "categories": ["Food", "cake", "sweet"]
     }
   ],
+
+
   "topMerch":[
     {
       "name": "Harry Potter Tote Bag",
@@ -840,6 +708,8 @@
       "price": 19.99
     }
   ],
+
+
   "merch": [
     {
       "id": 88,

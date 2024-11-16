@@ -813,123 +813,6 @@ button.add-to-cart {
   z-index: 3;
 }
 
-/* Footer Section */
-
-footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-end;
-  position: relative;
-  background-image: url("designImages/Group\ 150\ \(1\).png");
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  background-position: bottom;
-  height: 65vh;
-  margin-top: -12%;
-}
-
-.footer-content {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  width: 80%;
-  max-width: 1200px;
-  position: relative;
-  z-index: 2;
-}
-
-.logo {
-  text-align: center;
-}
-
-.logo-circle {
-  background-color: #c0dde5;
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.logo-circle img {
-  width: 120px;
-  height: 74px;
-}
-
-.logo-circle p {
-  font-size: 14px;
-  color: black;
-}
-
-.about,
-.contact {
-  text-align: left;
-  
-}
-
-.contact {
-  margin-right:200px;
-}
-
-.about h3,
-.contact h3 {
-  font-size: 20px;
-  color: black;
-  margin-bottom: 5px;
-  margin-top: 15px;
-  font-weight: bold;
-}
-
-.about p,
-.contact p {
-  font-size: 16px;
-  color: #555;
-  margin: 4px 0;
-}
-
-.copyright {
-  background-color: #c0dde5;
-  font-size: 12px;
-  width: 100%;
-  text-align: center;
-  color: #777;
-  margin-top: 20px;
-  position: relative;
-  z-index: 2;
-  top: 20px;
-}
-
-@media (max-width: 750px) {
-  footer{
-    align-items: center;
-    width: 100%;
-    background-image: none;
-    background-color: #f1eae4;
-    height: fit-content;
-    margin-top: 0;
-    padding-top:10px;
-  }
-  .footer-content {
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 10px;
-    width: auto;
-  }
-  footer {
-    background-image: none;
-    background-color: #f1eae4;
-    height: fit-content;
-    margin-top: 0;
-    padding-top:5px;
-  }
-}
-
 @media (max-width: 768px) {
   #menu-header p {
     font-size: 15px;
@@ -1304,17 +1187,6 @@ footer {
   .firstSection > div > button {
     font-size: 12px;
   }
-  footer{
-    align-items: center;
-    width: 100%;
-  }
-  .footer-content {
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 10px;
-    width: auto;
-  }
 }
 
 @media (max-width: 500px) {
@@ -1354,5 +1226,135 @@ footer {
   }
   .besellingBooksSection {
     margin-top: -10%;
+  }
+}
+
+/* Footer */
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+  background-image: url("../designImages/Group\ 150\ \(1\).png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: bottom;
+  height: 65vh;
+  margin-top: -16.7%;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  max-width: 1200px;
+  position: relative;
+  z-index: 2;
+}
+
+.logo {
+  text-align: center;
+}
+
+.logo-circle {
+  background-color: #c0dde5;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-circle img {
+  width: 120px;
+  height: 74px;
+}
+
+.logo-circle p {
+  font-size: 14px;
+  color: black;
+}
+
+.about,
+.contact {
+  text-align: left;
+  
+}
+
+.contact {
+  margin-right:200px;
+}
+
+.about h3,
+.contact h3 {
+  font-size: 20px;
+  color: black;
+  margin-bottom: 5px;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+.about p,
+.contact p {
+  font-size: 16px;
+  color: #555;
+  margin: 4px 0;
+}
+
+.copyright {
+  background-color: #c0dde5;
+  font-size: 12px;
+  width: 100%;
+  text-align: center;
+  color: #777;
+  margin-top: 20px;
+  position: relative;
+  z-index: 2;
+  top: 20px;
+}
+
+@media (max-width: 750px) {
+  footer{
+  align-items: center;
+  width: 100%;
+  background-image: none;
+  background-color: #f1eae4;
+  height: fit-content;
+  margin-top: 0;
+  padding-top:10px;
+  }
+  .footer-content {
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 10px;
+  width: auto;
+  }
+  footer {
+  background-image: none;
+  background-color: #f1eae4;
+  height: fit-content;
+  margin-top: 0;
+  padding-top:5px;
+  }
+}
+
+@media (max-width: 600px) {
+  footer{
+      align-items: center;
+      width: 100%;
+  }
+  .footer-content {
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 10px;
+      width: auto;
   }
 }
