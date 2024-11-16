@@ -26,8 +26,8 @@
     
     .logo-circle {
         background-color: #c0dde5;
-        width: 150px;
-        height: 150px;
+        width: 250px;
+        height: 250px;
         border-radius: 50%;
         display: flex;
         flex-direction: column;
@@ -36,19 +36,13 @@
     }
     
     .logo-circle img {
-        width: 120px;
-        height: 74px;
-    }
-    
-    .logo-circle p {
-        font-size: 14px;
-        color: black;
+        width: 200px;
+        height: 120px;
     }
     
     .about,
     .contact {
         text-align: left;
-        
     }
     
     .contact {
@@ -57,7 +51,7 @@
     
     .about h3,
     .contact h3 {
-        font-size: 20px;
+        font-size: 30px;
         color: black;
         margin-bottom: 5px;
         margin-top: 15px;
@@ -66,17 +60,17 @@
     
     .about p,
     .contact p {
-        font-size: 16px;
-        color: #555;
+        font-size: 20px;
+        color: #000;
         margin: 4px 0;
     }
     
     .copyright {
         background-color: #c0dde5;
-        font-size: 12px;
+        font-size: 15px;
         width: 100%;
         text-align: center;
-        color: #777;
+        color: #37474F;
         margin-top: 20px;
         position: relative;
         z-index: 2;

@@ -1,0 +1,1059 @@
+{
+  "rooms": [
+    {
+      "roomName": "Book club",
+      "description": "Have a cup of coffee and discuss books together",
+      "roomImg": "../designImages/Untitled_Artwork 2 1.png",
+      "participants": ["user1", "user2", "user3"],
+      "posts": [
+        {
+          "postId": 1,
+          "user": "user1",
+          "userImg": "../designImages/Frame 2.png",
+          "caption": "The story revolves around a girl who can shapeshift into a cat to go around looking through the secrets.",
+          "img": "../designImages/48d50a82-b7fd-4ab1-83c6-799072c9f01f 1.png",
+          "likes": 100,
+          "comments": [
+            {
+              "user": "user3",
+              "userImg": "../designImages/Frame 2.png",
+              "commentId": 1,
+              "likes": 100,
+              "comment": "The story revolves around a girl who can shapeshift into a cat to go around looking through the secrets of the.",
+              "replies": [
+                {
+                  "replyId": 1,
+                  "reply": "This is a random reply"
+                }
+              ]
+            },
+            {
+              "user": "user2",
+              "userImg": "../designImages/Frame 2.png",
+              "commentId": 2,
+              "likes": 100,
+              "comment": "The story revolves around a girl who can shapeshift into a cat to go around looking through the secrets of the.",
+              "replies": []
+            },
+            {
+              "user": "user2",
+              "userImg": "../designImages/Frame 2.png",
+              "commentId": 3,
+              "likes": 100,
+              "comment": "The story revolves around a girl who can shapeshift into a cat to go around looking through the secrets of the.",
+              "replies": []
+            }
+          ]
+        },
+        {
+          "postId": 2,
+          "user": "user2",
+          "userImg": "../designImages/Frame 2.png",
+          "caption": "The story revolves around a girl who can shapeshift into a cat to go around looking through the secrets.",
+          "img": "../designImages/567ea4f5cf24b2754ad6b39458bc0385 1.png",
+          "likes": 340,
+          "comments": [
+            {
+              "user": "user1",
+              "userImg": "../designImages/Frame 2.png",
+              "commentId": 1,
+              "likes": 100,
+              "comment": "The story revolves around a girl who can shapeshift into a cat to go around looking through the secrets of the.",
+              "replies": [
+                {
+                  "replyId": 1,
+                  "reply": "This is a random reply"
+                }
+              ]
+            },
+            {
+              "user": "user2",
+              "userImg": "../designImages/Frame 2.png",
+              "commentId": 2,
+              "likes": 100,
+              "comment": "The story revolves around a girl who can shapeshift into a cat to go around looking through the secrets of the.",
+              "replies": []
+            },
+            {
+              "user": "user2",
+              "userImg": "../designImages/Frame 2.png",
+              "commentId": 3,
+              "likes": 100,
+              "comment": "The story revolves around a girl who can shapeshift into a cat to go around looking through the secrets of the.",
+              "replies": []
+            },
+            {
+              "user": "user2",
+              "userImg": "../designImages/Frame 2.png",
+              "commentId": 4,
+              "likes": 100,
+              "comment": "The story revolves around a girl who can shapeshift into a cat to go around looking through the secrets of the.",
+              "replies": []
+            },
+            {
+              "user": "user2",
+              "userImg": "../designImages/Frame 2.png",
+              "commentId": 5,
+              "likes": 100,
+              "comment": "The story revolves around a girl who can shapeshift into a cat to go around looking through the secrets of the.",
+              "replies": []
+            }
+          ]
+        },
+        {
+          "postId": 3,
+          "user": "user2",
+          "userImg": "../designImages/Frame 2.png",
+          "caption": "The story revolves around a girl who can shapeshift into a cat to go around looking through the secrets.",
+          "img": "../designImages/567ea4f5cf24b2754ad6b39458bc0385 1.png",
+          "likes": 56,
+          "comments": [
+            {
+              "user": "user2",
+              "userImg": "../designImages/Frame 2.png",
+              "commentId": 3,
+              "likes": 100,
+              "comment": "The story revolves around a girl who can shapeshift into a cat to go around looking through the secrets of the.",
+              "replies": []
+            },
+            {
+              "user": "user2",
+              "userImg": "../designImages/Frame 2.png",
+              "commentId": 4,
+              "likes": 100,
+              "comment": "The story revolves around a girl who can shapeshift into a cat to go around looking through the secrets of the.",
+              "replies": []
+            },
+            {
+              "user": "user2",
+              "userImg": "../designImages/Frame 2.png",
+              "commentId": 5,
+              "likes": 100,
+              "comment": "The story revolves around a girl who can shapeshift into a cat to go around looking through the secrets of the.",
+              "replies": []
+            }
+          ]
+        },
+        {
+          "postId": 4,
+          "user": "user2",
+          "userImg": "../designImages/Frame 2.png",
+          "caption": "The story revolves around a girl who can shapeshift into a cat to go around looking through the secrets.",
+          "img": "../designImages/567ea4f5cf24b2754ad6b39458bc0385 1.png",
+          "likes": 10,
+          "comments": [
+            {
+              "user": "user1",
+              "userImg": "../designImages/Frame 2.png",
+              "commentId": 1,
+              "likes": 100,
+              "comment": "The story revolves around a girl who can shapeshift into a cat to go around looking through the secrets of the.",
+              "replies": [
+                {
+                  "replyId": 1,
+                  "reply": "This is a random reply"
+                }
+              ]
+            },
+            {
+              "user": "user1",
+              "userImg": "../designImages/Frame 2.png",
+              "commentId": 1,
+              "likes": 100,
+              "comment": "The story revolves around a girl who can shapeshift into a cat to go around looking through the secrets of the.",
+              "replies": [
+                {
+                  "replyId": 1,
+                  "reply": "This is a random reply"
+                }
+              ]
+            },
+            {
+              "user": "user1",
+              "userImg": "../designImages/Frame 2.png",
+              "commentId": 1,
+              "likes": 100,
+              "comment": "The story revolves around a girl who can shapeshift into a cat to go around looking through the secrets of the.",
+              "replies": [
+                {
+                  "replyId": 1,
+                  "reply": "This is a random reply"
+                }
+              ]
+            },
+            {
+              "user": "user1",
+              "userImg": "../designImages/Frame 2.png",
+              "commentId": 1,
+              "likes": 100,
+              "comment": "The story revolves around a girl who can shapeshift into a cat to go around looking through the secrets of the.",
+              "replies": [
+                {
+                  "replyId": 1,
+                  "reply": "This is a random reply"
+                }
+              ]
+            },
+            {
+              "user": "user1",
+              "userImg": "../designImages/Frame 2.png",
+              "commentId": 1,
+              "likes": 100,
+              "comment": "The story revolves around a girl who can shapeshift into a cat to go around looking through the secrets of the.",
+              "replies": [
+                {
+                  "replyId": 1,
+                  "reply": "This is a random reply"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "roomName": "Pet corner",
+      "description": "Share pics of your cute pets and talk about them",
+      "roomImg": "../designImages/Untitled_Artwork 3 1.png",
+      "participants": ["user1", "user2", "user3"],
+      "posts": [
+        {
+          "postId": 1,
+          "user": "user1",
+          "userImg": "../designImages/Frame 2.png",
+          "caption": "The story revolves around a girl who can shapeshift into a cat to go around looking through the secrets.",
+          "img": "../designImages/567ea4f5cf24b2754ad6b39458bc0385 1.png",
+          "likes": 100,
+          "comments": [
+            {
+              "user": "user3",
+              "userImg": "../designImages/Frame 2.png",
+              "commentId": 1,
+              "likes": 100,
+              "comment": "The story revolves around a girl who can shapeshift into a cat to go around looking through the secrets of the.",
+              "replies": [
+                {
+                  "replyId": 1,
+                  "reply": "This is a random reply"
+                }
+              ]
+            },
+            {
+              "user": "user2",
+              "userImg": "../designImages/Frame 2.png",
+              "commentId": 2,
+              "likes": 100,
+              "comment": "The story revolves around a girl who can shapeshift into a cat to go around looking through the secrets of the.",
+              "replies": []
+            },
+            {
+              "user": "user2",
+              "userImg": "../designImages/Frame 2.png",
+              "commentId": 3,
+              "likes": 100,
+              "comment": "The story revolves around a girl who can shapeshift into a cat to go around looking through the secrets of the.",
+              "replies": []
+            }
+          ]
+        },
+        {
+          "postId": 2,
+          "user": "user2",
+          "userImg": "../designImages/Frame 2.png",
+          "caption": "The story revolves around a girl who can shapeshift into a cat to go around looking through the secrets.",
+          "img": "../designImages/567ea4f5cf24b2754ad6b39458bc0385 1.png",
+          "likes": 340,
+          "comments": [
+            {
+              "user": "user1",
+              "userImg": "../designImages/Frame 2.png",
+              "commentId": 1,
+              "likes": 100,
+              "comment": "The story revolves around a girl who can shapeshift into a cat to go around looking through the secrets of the.",
+              "replies": [
+                {
+                  "replyId": 1,
+                  "reply": "This is a random reply"
+                }
+              ]
+            },
+            {
+              "user": "user2",
+              "userImg": "../designImages/Frame 2.png",
+              "commentId": 2,
+              "likes": 100,
+              "comment": "The story revolves around a girl who can shapeshift into a cat to go around looking through the secrets of the.",
+              "replies": []
+            },
+            {
+              "user": "user2",
+              "userImg": "../designImages/Frame 2.png",
+              "commentId": 3,
+              "likes": 100,
+              "comment": "The story revolves around a girl who can shapeshift into a cat to go around looking through the secrets of the.",
+              "replies": []
+            },
+            {
+              "user": "user2",
+              "userImg": "../designImages/Frame 2.png",
+              "commentId": 4,
+              "likes": 100,
+              "comment": "The story revolves around a girl who can shapeshift into a cat to go around looking through the secrets of the.",
+              "replies": []
+            },
+            {
+              "user": "user2",
+              "userImg": "../designImages/Frame 2.png",
+              "commentId": 5,
+              "likes": 100,
+              "comment": "The story revolves around a girl who can shapeshift into a cat to go around looking through the secrets of the.",
+              "replies": []
+            }
+          ]
+        },
+        {
+          "postId": 3,
+          "user": "user2",
+          "userImg": "../designImages/Frame 2.png",
+          "caption": "The story revolves around a girl who can shapeshift into a cat to go around looking through the secrets.",
+          "img": "../designImages/567ea4f5cf24b2754ad6b39458bc0385 1.png",
+          "likes": 56,
+          "comments": [
+            {
+              "user": "user2",
+              "userImg": "../designImages/Frame 2.png",
+              "commentId": 3,
+              "likes": 100,
+              "comment": "The story revolves around a girl who can shapeshift into a cat to go around looking through the secrets of the.",
+              "replies": []
+            },
+            {
+              "user": "user2",
+              "userImg": "../designImages/Frame 2.png",
+              "commentId": 4,
+              "likes": 100,
+              "comment": "The story revolves around a girl who can shapeshift into a cat to go around looking through the secrets of the.",
+              "replies": []
+            },
+            {
+              "user": "user2",
+              "userImg": "../designImages/Frame 2.png",
+              "commentId": 5,
+              "likes": 100,
+              "comment": "The story revolves around a girl who can shapeshift into a cat to go around looking through the secrets of the.",
+              "replies": []
+            }
+          ]
+        },
+        {
+          "postId": 4,
+          "user": "user2",
+          "userImg": "../designImages/Frame 2.png",
+          "caption": "The story revolves around a girl who can shapeshift into a cat to go around looking through the secrets.",
+          "img": "../designImages/567ea4f5cf24b2754ad6b39458bc0385 1.png",
+          "likes": 10,
+          "comments": [
+            {
+              "user": "user1",
+              "userImg": "../designImages/Frame 2.png",
+              "commentId": 1,
+              "likes": 100,
+              "comment": "The story revolves around a girl who can shapeshift into a cat to go around looking through the secrets of the.",
+              "replies": [
+                {
+                  "replyId": 1,
+                  "reply": "This is a random reply"
+                }
+              ]
+            },
+            {
+              "user": "user1",
+              "userImg": "../designImages/Frame 2.png",
+              "commentId": 1,
+              "likes": 100,
+              "comment": "The story revolves around a girl who can shapeshift into a cat to go around looking through the secrets of the.",
+              "replies": [
+                {
+                  "replyId": 1,
+                  "reply": "This is a random reply"
+                }
+              ]
+            },
+            {
+              "user": "user1",
+              "userImg": "../designImages/Frame 2.png",
+              "commentId": 1,
+              "likes": 100,
+              "comment": "The story revolves around a girl who can shapeshift into a cat to go around looking through the secrets of the.",
+              "replies": [
+                {
+                  "replyId": 1,
+                  "reply": "This is a random reply"
+                }
+              ]
+            },
+            {
+              "user": "user1",
+              "userImg": "../designImages/Frame 2.png",
+              "commentId": 1,
+              "likes": 100,
+              "comment": "The story revolves around a girl who can shapeshift into a cat to go around looking through the secrets of the.",
+              "replies": [
+                {
+                  "replyId": 1,
+                  "reply": "This is a random reply"
+                }
+              ]
+            },
+            {
+              "user": "user1",
+              "userImg": "../designImages/Frame 2.png",
+              "commentId": 1,
+              "likes": 100,
+              "comment": "The story revolves around a girl who can shapeshift into a cat to go around looking through the secrets of the.",
+              "replies": [
+                {
+                  "replyId": 1,
+                  "reply": "This is a random reply"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "roomName": "Events",
+      "description": "Stay tuned for our weekly events at curl",
+      "roomImg": "../designImages/events 1.png",
+      "participants": ["user1", "user2", "user3"],
+      "posts": [
+        {
+          "postId": 1,
+          "user": "user1",
+          "userImg": "../designImages/Frame 2.png",
+          "caption": "The story revolves around a girl who can shapeshift into a cat to go around looking through the secrets.",
+          "img": "../designImages/567ea4f5cf24b2754ad6b39458bc0385 1.png",
+          "likes": 100,
+          "comments": [
+            {
+              "user": "user3",
+              "userImg": "../designImages/Frame 2.png",
+              "commentId": 1,
+              "likes": 100,
+              "comment": "The story revolves around a girl who can shapeshift into a cat to go around looking through the secrets of the.",
+              "replies": [
+                {
+                  "replyId": 1,
+                  "reply": "This is a random reply"
+                }
+              ]
+            },
+            {
+              "user": "user2",
+              "userImg": "../designImages/Frame 2.png",
+              "commentId": 2,
+              "likes": 100,
+              "comment": "The story revolves around a girl who can shapeshift into a cat to go around looking through the secrets of the.",
+              "replies": []
+            },
+            {
+              "user": "user2",
+              "userImg": "../designImages/Frame 2.png",
+              "commentId": 3,
+              "likes": 100,
+              "comment": "The story revolves around a girl who can shapeshift into a cat to go around looking through the secrets of the.",
+              "replies": []
+            }
+          ]
+        },
+        {
+          "postId": 2,
+          "user": "user2",
+          "userImg": "../designImages/Frame 2.png",
+          "caption": "The story revolves around a girl who can shapeshift into a cat to go around looking through the secrets.",
+          "img": "../designImages/567ea4f5cf24b2754ad6b39458bc0385 1.png",
+          "likes": 340,
+          "comments": [
+            {
+              "user": "user1",
+              "userImg": "../designImages/Frame 2.png",
+              "commentId": 1,
+              "likes": 100,
+              "comment": "The story revolves around a girl who can shapeshift into a cat to go around looking through the secrets of the.",
+              "replies": [
+                {
+                  "replyId": 1,
+                  "reply": "This is a random reply"
+                }
+              ]
+            },
+            {
+              "user": "user2",
+              "userImg": "../designImages/Frame 2.png",
+              "commentId": 2,
+              "likes": 100,
+              "comment": "The story revolves around a girl who can shapeshift into a cat to go around looking through the secrets of the.",
+              "replies": []
+            },
+            {
+              "user": "user2",
+              "userImg": "../designImages/Frame 2.png",
+              "commentId": 3,
+              "likes": 100,
+              "comment": "The story revolves around a girl who can shapeshift into a cat to go around looking through the secrets of the.",
+              "replies": []
+            },
+            {
+              "user": "user2",
+              "userImg": "../designImages/Frame 2.png",
+              "commentId": 4,
+              "likes": 100,
+              "comment": "The story revolves around a girl who can shapeshift into a cat to go around looking through the secrets of the.",
+              "replies": []
+            },
+            {
+              "user": "user2",
+              "userImg": "../designImages/Frame 2.png",
+              "commentId": 5,
+              "likes": 100,
+              "comment": "The story revolves around a girl who can shapeshift into a cat to go around looking through the secrets of the.",
+              "replies": []
+            }
+          ]
+        },
+        {
+          "postId": 3,
+          "user": "user2",
+          "userImg": "../designImages/Frame 2.png",
+          "caption": "The story revolves around a girl who can shapeshift into a cat to go around looking through the secrets.",
+          "img": "../designImages/567ea4f5cf24b2754ad6b39458bc0385 1.png",
+          "likes": 56,
+          "comments": [
+            {
+              "user": "user2",
+              "userImg": "../designImages/Frame 2.png",
+              "commentId": 3,
+              "likes": 100,
+              "comment": "The story revolves around a girl who can shapeshift into a cat to go around looking through the secrets of the.",
+              "replies": []
+            },
+            {
+              "user": "user2",
+              "userImg": "../designImages/Frame 2.png",
+              "commentId": 4,
+              "likes": 100,
+              "comment": "The story revolves around a girl who can shapeshift into a cat to go around looking through the secrets of the.",
+              "replies": []
+            },
+            {
+              "user": "user2",
+              "userImg": "../designImages/Frame 2.png",
+              "commentId": 5,
+              "likes": 100,
+              "comment": "The story revolves around a girl who can shapeshift into a cat to go around looking through the secrets of the.",
+              "replies": []
+            }
+          ]
+        },
+        {
+          "postId": 4,
+          "user": "user2",
+          "userImg": "../designImages/Frame 2.png",
+          "caption": "The story revolves around a girl who can shapeshift into a cat to go around looking through the secrets.",
+          "img": "../designImages/567ea4f5cf24b2754ad6b39458bc0385 1.png",
+          "likes": 10,
+          "comments": [
+            {
+              "user": "user1",
+              "userImg": "../designImages/Frame 2.png",
+              "commentId": 1,
+              "likes": 100,
+              "comment": "The story revolves around a girl who can shapeshift into a cat to go around looking through the secrets of the.",
+              "replies": [
+                {
+                  "replyId": 1,
+                  "reply": "This is a random reply"
+                }
+              ]
+            },
+            {
+              "user": "user1",
+              "userImg": "../designImages/Frame 2.png",
+              "commentId": 1,
+              "likes": 100,
+              "comment": "The story revolves around a girl who can shapeshift into a cat to go around looking through the secrets of the.",
+              "replies": [
+                {
+                  "replyId": 1,
+                  "reply": "This is a random reply"
+                }
+              ]
+            },
+            {
+              "user": "user1",
+              "userImg": "../designImages/Frame 2.png",
+              "commentId": 1,
+              "likes": 100,
+              "comment": "The story revolves around a girl who can shapeshift into a cat to go around looking through the secrets of the.",
+              "replies": [
+                {
+                  "replyId": 1,
+                  "reply": "This is a random reply"
+                }
+              ]
+            },
+            {
+              "user": "user1",
+              "userImg": "../designImages/Frame 2.png",
+              "commentId": 1,
+              "likes": 100,
+              "comment": "The story revolves around a girl who can shapeshift into a cat to go around looking through the secrets of the.",
+              "replies": [
+                {
+                  "replyId": 1,
+                  "reply": "This is a random reply"
+                }
+              ]
+            },
+            {
+              "user": "user1",
+              "userImg": "../designImages/Frame 2.png",
+              "commentId": 1,
+              "likes": 100,
+              "comment": "The story revolves around a girl who can shapeshift into a cat to go around looking through the secrets of the.",
+              "replies": [
+                {
+                  "replyId": 1,
+                  "reply": "This is a random reply"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "roomName": "Friends of Curl",
+      "description": "Express your thoughts and feelings with friends.",
+      "roomImg": "../designImages/IMG_4252 2.png",
+      "participants": ["user1", "user2", "user3"],
+      "posts": [
+        {
+          "postId": 1,
+          "user": "user1",
+          "userImg": "../designImages/Frame 2.png",
+          "caption": "The story revolves around a girl who can shapeshift into a cat to go around looking through the secrets.",
+          "img": "../designImages/567ea4f5cf24b2754ad6b39458bc0385 1.png",
+          "likes": 100,
+          "comments": [
+            {
+              "user": "user3",
+              "userImg": "../designImages/Frame 2.png",
+              "commentId": 1,
+              "likes": 100,
+              "comment": "The story revolves around a girl who can shapeshift into a cat to go around looking through the secrets of the.",
+              "replies": [
+                {
+                  "replyId": 1,
+                  "reply": "This is a random reply"
+                }
+              ]
+            },
+            {
+              "user": "user2",
+              "userImg": "../designImages/Frame 2.png",
+              "commentId": 2,
+              "likes": 100,
+              "comment": "The story revolves around a girl who can shapeshift into a cat to go around looking through the secrets of the.",
+              "replies": []
+            },
+            {
+              "user": "user2",
+              "userImg": "../designImages/Frame 2.png",
+              "commentId": 3,
+              "likes": 100,
+              "comment": "The story revolves around a girl who can shapeshift into a cat to go around looking through the secrets of the.",
+              "replies": []
+            }
+          ]
+        },
+        {
+          "postId": 2,
+          "user": "user2",
+          "userImg": "../designImages/Frame 2.png",
+          "caption": "The story revolves around a girl who can shapeshift into a cat to go around looking through the secrets.",
+          "img": "../designImages/567ea4f5cf24b2754ad6b39458bc0385 1.png",
+          "likes": 340,
+          "comments": [
+            {
+              "user": "user1",
+              "userImg": "../designImages/Frame 2.png",
+              "commentId": 1,
+              "likes": 100,
+              "comment": "The story revolves around a girl who can shapeshift into a cat to go around looking through the secrets of the.",
+              "replies": [
+                {
+                  "replyId": 1,
+                  "reply": "This is a random reply"
+                }
+              ]
+            },
+            {
+              "user": "user2",
+              "userImg": "../designImages/Frame 2.png",
+              "commentId": 2,
+              "likes": 100,
+              "comment": "The story revolves around a girl who can shapeshift into a cat to go around looking through the secrets of the.",
+              "replies": []
+            },
+            {
+              "user": "user2",
+              "userImg": "../designImages/Frame 2.png",
+              "commentId": 3,
+              "likes": 100,
+              "comment": "The story revolves around a girl who can shapeshift into a cat to go around looking through the secrets of the.",
+              "replies": []
+            },
+            {
+              "user": "user2",
+              "userImg": "../designImages/Frame 2.png",
+              "commentId": 4,
+              "likes": 100,
+              "comment": "The story revolves around a girl who can shapeshift into a cat to go around looking through the secrets of the.",
+              "replies": []
+            },
+            {
+              "user": "user2",
+              "userImg": "../designImages/Frame 2.png",
+              "commentId": 5,
+              "likes": 100,
+              "comment": "The story revolves around a girl who can shapeshift into a cat to go around looking through the secrets of the.",
+              "replies": []
+            }
+          ]
+        },
+        {
+          "postId": 3,
+          "user": "user2",
+          "userImg": "../designImages/Frame 2.png",
+          "caption": "The story revolves around a girl who can shapeshift into a cat to go around looking through the secrets.",
+          "img": "../designImages/567ea4f5cf24b2754ad6b39458bc0385 1.png",
+          "likes": 56,
+          "comments": [
+            {
+              "user": "user2",
+              "userImg": "../designImages/Frame 2.png",
+              "commentId": 3,
+              "likes": 100,
+              "comment": "The story revolves around a girl who can shapeshift into a cat to go around looking through the secrets of the.",
+              "replies": []
+            },
+            {
+              "user": "user2",
+              "userImg": "../designImages/Frame 2.png",
+              "commentId": 4,
+              "likes": 100,
+              "comment": "The story revolves around a girl who can shapeshift into a cat to go around looking through the secrets of the.",
+              "replies": []
+            },
+            {
+              "user": "user2",
+              "userImg": "../designImages/Frame 2.png",
+              "commentId": 5,
+              "likes": 100,
+              "comment": "The story revolves around a girl who can shapeshift into a cat to go around looking through the secrets of the.",
+              "replies": []
+            }
+          ]
+        },
+        {
+          "postId": 4,
+          "user": "user2",
+          "userImg": "../designImages/Frame 2.png",
+          "caption": "The story revolves around a girl who can shapeshift into a cat to go around looking through the secrets.",
+          "img": "../designImages/567ea4f5cf24b2754ad6b39458bc0385 1.png",
+          "likes": 10,
+          "comments": [
+            {
+              "user": "user1",
+              "userImg": "../designImages/Frame 2.png",
+              "commentId": 1,
+              "likes": 100,
+              "comment": "The story revolves around a girl who can shapeshift into a cat to go around looking through the secrets of the.",
+              "replies": [
+                {
+                  "replyId": 1,
+                  "reply": "This is a random reply"
+                }
+              ]
+            },
+            {
+              "user": "user1",
+              "userImg": "../designImages/Frame 2.png",
+              "commentId": 1,
+              "likes": 100,
+              "comment": "The story revolves around a girl who can shapeshift into a cat to go around looking through the secrets of the.",
+              "replies": [
+                {
+                  "replyId": 1,
+                  "reply": "This is a random reply"
+                }
+              ]
+            },
+            {
+              "user": "user1",
+              "userImg": "../designImages/Frame 2.png",
+              "commentId": 1,
+              "likes": 100,
+              "comment": "The story revolves around a girl who can shapeshift into a cat to go around looking through the secrets of the.",
+              "replies": [
+                {
+                  "replyId": 1,
+                  "reply": "This is a random reply"
+                }
+              ]
+            },
+            {
+              "user": "user1",
+              "userImg": "../designImages/Frame 2.png",
+              "commentId": 1,
+              "likes": 100,
+              "comment": "The story revolves around a girl who can shapeshift into a cat to go around looking through the secrets of the.",
+              "replies": [
+                {
+                  "replyId": 1,
+                  "reply": "This is a random reply"
+                }
+              ]
+            },
+            {
+              "user": "user1",
+              "userImg": "../designImages/Frame 2.png",
+              "commentId": 1,
+              "likes": 100,
+              "comment": "The story revolves around a girl who can shapeshift into a cat to go around looking through the secrets of the.",
+              "replies": [
+                {
+                  "replyId": 1,
+                  "reply": "This is a random reply"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "roomName": "Coffee & Pastry faves",
+      "description": "Drop some of ur fav pastries & coffee with your friends",
+      "roomImg": "../designImages/IMG_4252 2.png",
+      "participants": ["user1", "user2", "user3"],
+      "posts": [
+        {
+          "postId": 1,
+          "user": "user1",
+          "userImg": "../designImages/Frame 2.png",
+          "caption": "The story revolves around a girl who can shapeshift into a cat to go around looking through the secrets.",
+          "img": "../designImages/567ea4f5cf24b2754ad6b39458bc0385 1.png",
+          "likes": 100,
+          "comments": [
+            {
+              "user": "user3",
+              "userImg": "../designImages/Frame 2.png",
+              "commentId": 1,
+              "likes": 100,
+              "comment": "The story revolves around a girl who can shapeshift into a cat to go around looking through the secrets of the.",
+              "replies": [
+                {
+                  "replyId": 1,
+                  "reply": "This is a random reply"
+                }
+              ]
+            },
+            {
+              "user": "user2",
+              "userImg": "../designImages/Frame 2.png",
+              "commentId": 2,
+              "likes": 100,
+              "comment": "The story revolves around a girl who can shapeshift into a cat to go around looking through the secrets of the.",
+              "replies": []
+            },
+            {
+              "user": "user2",
+              "userImg": "../designImages/Frame 2.png",
+              "commentId": 3,
+              "likes": 100,
+              "comment": "The story revolves around a girl who can shapeshift into a cat to go around looking through the secrets of the.",
+              "replies": []
+            }
+          ]
+        },
+        {
+          "postId": 2,
+          "user": "user2",
+          "userImg": "../designImages/Frame 2.png",
+          "caption": "The story revolves around a girl who can shapeshift into a cat to go around looking through the secrets.",
+          "img": "../designImages/567ea4f5cf24b2754ad6b39458bc0385 1.png",
+          "likes": 340,
+          "comments": [
+            {
+              "user": "user1",
+              "userImg": "../designImages/Frame 2.png",
+              "commentId": 1,
+              "likes": 100,
+              "comment": "The story revolves around a girl who can shapeshift into a cat to go around looking through the secrets of the.",
+              "replies": [
+                {
+                  "replyId": 1,
+                  "reply": "This is a random reply"
+                }
+              ]
+            },
+            {
+              "user": "user2",
+              "userImg": "../designImages/Frame 2.png",
+              "commentId": 2,
+              "likes": 100,
+              "comment": "The story revolves around a girl who can shapeshift into a cat to go around looking through the secrets of the.",
+              "replies": []
+            },
+            {
+              "user": "user2",
+              "userImg": "../designImages/Frame 2.png",
+              "commentId": 3,
+              "likes": 100,
+              "comment": "The story revolves around a girl who can shapeshift into a cat to go around looking through the secrets of the.",
+              "replies": []
+            },
+            {
+              "user": "user2",
+              "userImg": "../designImages/Frame 2.png",
+              "commentId": 4,
+              "likes": 100,
+              "comment": "The story revolves around a girl who can shapeshift into a cat to go around looking through the secrets of the.",
+              "replies": []
+            },
+            {
+              "user": "user2",
+              "userImg": "../designImages/Frame 2.png",
+              "commentId": 5,
+              "likes": 100,
+              "comment": "The story revolves around a girl who can shapeshift into a cat to go around looking through the secrets of the.",
+              "replies": []
+            }
+          ]
+        },
+        {
+          "postId": 3,
+          "user": "user2",
+          "userImg": "../designImages/Frame 2.png",
+          "caption": "The story revolves around a girl who can shapeshift into a cat to go around looking through the secrets.",
+          "img": "../designImages/567ea4f5cf24b2754ad6b39458bc0385 1.png",
+          "likes": 56,
+          "comments": [
+            {
+              "user": "user2",
+              "userImg": "../designImages/Frame 2.png",
+              "commentId": 3,
+              "likes": 100,
+              "comment": "The story revolves around a girl who can shapeshift into a cat to go around looking through the secrets of the.",
+              "replies": []
+            },
+            {
+              "user": "user2",
+              "userImg": "../designImages/Frame 2.png",
+              "commentId": 4,
+              "likes": 100,
+              "comment": "The story revolves around a girl who can shapeshift into a cat to go around looking through the secrets of the.",
+              "replies": []
+            },
+            {
+              "user": "user2",
+              "userImg": "../designImages/Frame 2.png",
+              "commentId": 5,
+              "likes": 100,
+              "comment": "The story revolves around a girl who can shapeshift into a cat to go around looking through the secrets of the.",
+              "replies": []
+            }
+          ]
+        },
+        {
+          "postId": 4,
+          "user": "user2",
+          "userImg": "../designImages/Frame 2.png",
+          "caption": "The story revolves around a girl who can shapeshift into a cat to go around looking through the secrets.",
+          "img": "../designImages/567ea4f5cf24b2754ad6b39458bc0385 1.png",
+          "likes": 10,
+          "comments": [
+            {
+              "user": "user1",
+              "userImg": "../designImages/Frame 2.png",
+              "commentId": 1,
+              "likes": 100,
+              "comment": "The story revolves around a girl who can shapeshift into a cat to go around looking through the secrets of the.",
+              "replies": [
+                {
+                  "replyId": 1,
+                  "reply": "This is a random reply"
+                }
+              ]
+            },
+            {
+              "user": "user1",
+              "userImg": "../designImages/Frame 2.png",
+              "commentId": 1,
+              "likes": 100,
+              "comment": "The story revolves around a girl who can shapeshift into a cat to go around looking through the secrets of the.",
+              "replies": [
+                {
+                  "replyId": 1,
+                  "reply": "This is a random reply"
+                }
+              ]
+            },
+            {
+              "user": "user1",
+              "userImg": "../designImages/Frame 2.png",
+              "commentId": 1,
+              "likes": 100,
+              "comment": "The story revolves around a girl who can shapeshift into a cat to go around looking through the secrets of the.",
+              "replies": [
+                {
+                  "replyId": 1,
+                  "reply": "This is a random reply"
+                }
+              ]
+            },
+            {
+              "user": "user1",
+              "userImg": "../designImages/Frame 2.png",
+              "commentId": 1,
+              "likes": 100,
+              "comment": "The story revolves around a girl who can shapeshift into a cat to go around looking through the secrets of the.",
+              "replies": [
+                {
+                  "replyId": 1,
+                  "reply": "This is a random reply"
+                }
+              ]
+            },
+            {
+              "user": "user1",
+              "userImg": "../designImages/Frame 2.png",
+              "commentId": 1,
+              "likes": 100,
+              "comment": "The story revolves around a girl who can shapeshift into a cat to go around looking through the secrets of the.",
+              "replies": [
+                {
+                  "replyId": 1,
+                  "reply": "This is a random reply"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
