@@ -26,9 +26,10 @@ $(document).ready(function () {
     for (const room of rooms) {
       const roomDiv = $("<div>").addClass("roomDiv");
       const roomButton = $("<button>")
-        .text(room.roomName)
-        .addClass("communityPageBtn");
+        .text("Join")
+        .addClass("communityPageBtn joinBtn");
       const roomInnerDiv = $("<div>").addClass("roomInnerDiv");
+      const roomDesc=$("<p>"+room.description+"</p>").addClass('roomDesc')
 
       // Add error handling for image loading
       const roomImage = $(
@@ -36,12 +37,13 @@ $(document).ready(function () {
           room.roomImg +
           '" alt="Room Image" onerror="this.src=\'error.jpg\'">'
       ).addClass("roomImg"); // Replace 'error.jpg' with your desired error image
+      const roomTitle=$("<p>"+room.roomName+"</p>").addClass('roomTitle')
       roomButton.click(function () {
         localStorage.setItem("room", JSON.stringify(room))
         $(location).prop('href', 'room.html')
       });
-      roomInnerDiv.append(roomImage);
-      roomDiv.append(roomButton, roomInnerDiv);
+      roomInnerDiv.append(roomImage, roomTitle);
+      roomDiv.append(roomInnerDiv, roomDesc, roomButton);
       roomsDisplay.append(roomDiv);
     }
   }
