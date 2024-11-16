@@ -850,7 +850,11 @@ footer {
 }
 
 .logo-circle {
+<<<<<<< HEAD
   background-color: #c0dde5;
+=======
+  background-color: #C0DDE5;
+>>>>>>> 7be797846d2dbb7cf17b7fabfc42c6521b4484ec
   width: 150px;
   height: 150px;
   border-radius: 50%;
@@ -891,16 +895,19 @@ footer {
 .about p,
 .contact p {
   font-size: 16px;
-  color: #555;
+  color: black;
   margin: 4px 0;
 }
 
 .copyright {
+<<<<<<< HEAD
   background-color: #c0dde5;
+=======
+  background-color: #C0DDE5;
+>>>>>>> 7be797846d2dbb7cf17b7fabfc42c6521b4484ec
   font-size: 12px;
   width: 100%;
   text-align: center;
-  color: #777;
   margin-top: 20px;
   position: relative;
   z-index: 2;

@@ -16,8 +16,9 @@
 .review-container {
     display: flex;
     justify-content: center;
-    align-items: center;
-    margin-top: 20px;
+    align-items: flex-end;
+    /* margin-top: 20px; */
+    overflow-x: hidden;
 }
 
 /* Style for the image */
@@ -35,8 +36,8 @@
     align-items: center;
     justify-content: center;
     width: 530px; /* Set a fixed width for the review box */
-    height: 80vh; /* Adjust height */
-    padding: 30px 10px;
+    height: 60vh; /* Adjust height */
+    /* padding: 30px 10px; */
 }
 
 input[type=radio] {
@@ -45,8 +46,8 @@ input[type=radio] {
 
 .card {
     position: absolute;
-    width: 90%;
-    height: 80%;
+    width: 110%;
+    height: 70%;
     left: 0;
     top: 0;
     right: 0;
@@ -56,13 +57,14 @@ input[type=radio] {
     color: #37474F;
     background-color: #E9B9B9;
     padding: 20px;
-    border-radius: 500px;
+    border-radius: 400px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
     overflow: hidden;
+    min-width: 200px;
 }
 
 /* Stars section */
@@ -88,11 +90,13 @@ input[type=radio] {
 
 /* Style for review text and author */
 .card p {
-    margin: 10px 0;
+    margin: 10px 15px;
 }
 
-.card em {
+.card p:nth-child(3) {
     font-size: 0.9em;
+    font-weight: bold;
+    font-style: none;
     color: #37474F;
 }
 
@@ -122,6 +126,7 @@ input[type=radio] {
 }
 
 /* Resposive style */
+<<<<<<< HEAD
 @media (max-width: 1920px) and (max-height: 1080px) {
     .SectionReview {
         margin-top: -25% !important;
@@ -180,6 +185,8 @@ input[type=radio] {
 }
 }
 
+=======
+>>>>>>> 7be797846d2dbb7cf17b7fabfc42c6521b4484ec
 @media (max-width: 1024px){
     .SectionReview {
         margin-top: -40%;
