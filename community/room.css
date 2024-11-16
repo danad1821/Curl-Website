@@ -28,12 +28,12 @@
   height: 25px;
   margin-right: 3px;
 }
-.postBtn:hover, .smallPostBtn:hover, #descLabel:hover {
+.postBtn:hover, .smallPostBtn:hover, #fileInputDiv > label:hover {
   background-color: #37474f;
   color: #f1eae4;
 }
 
-.postBtn, .smallPostBtn, #descLabel{
+.postBtn, .smallPostBtn, #fileInputDiv > label{
   transition: background-color 0.3s, color 0.3s;
 }
 .mainUserIcon {
@@ -47,6 +47,7 @@
 #newPostModal .modal-content {
   min-width: 30dvw;
   padding: 15px 20px;
+  background-color: #f1eae4;
 }
 
 #fileInputDiv {
@@ -176,11 +177,11 @@
 .commentsDiv{
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   background-color: #f1eae4;
   width: 30%;
-  border-radius: 50px;
+  border-radius: 30px;
   height: 70vh;
   overflow-y: scroll;
 }
@@ -194,6 +195,7 @@
   background-color: #e9b9b9;
   border-radius: 50px;
   width: 100%;
+  padding: 5px 0;
 }
 .topCommentSectionUser, .topCommentSectionActions{
   display: flex;
@@ -211,4 +213,7 @@
 }
 .replyIcon{
   transform: scaleX(-1);
+}
+.commentMainSection{
+  margin: 20px 25px;
 }
