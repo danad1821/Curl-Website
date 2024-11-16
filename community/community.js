@@ -47,4 +47,7 @@ $(document).ready(function () {
       roomsDisplay.append(roomDiv);
     }
   }
+  $("#createRoomPopup").on("shown.bs.modal", function () {
+    $("#createBtn").focus();
+  });
 });

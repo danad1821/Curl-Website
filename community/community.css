@@ -168,6 +168,7 @@ body {
 .roomDesc{
   width: 15vw;
   text-align: center;
+  margin-top: 10px;
 }
 /* Footer Section */
 
@@ -249,6 +250,62 @@ footer {
   position: relative;
   z-index: 2;
   top: 20px;
+}
+
+/* create room popup */
+#createRoomPopup .modal-content{
+  background-color: #F1EAE4;
+}
+#createRoomPopup .modal-body>div{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 10px 0;
+}
+#createRoomPopup .modal-body>div label{
+  font-weight: 600;
+}
+#createRoomPopup .modal-body>div input{
+  border: 2px solid black;
+  border-radius: 20px;
+  padding: 6px 20px;
+  background-color: #F1EAE4;
+}
+#createRoomPopup .modal-body>div:nth-child(2) input, #createRoomPopup .modal-body>div:nth-child(3) input{
+  height: 70px;
+  border-radius: 50px;
+}
+#createRoomPopup .modal-body>div:nth-child(3) input{
+  width: 90%;
+}
+#createRoomPopup .modal-body>div:nth-child(3)>div{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#createRoomPopup .modal-body>button{
+  background-color: #e9b9b9;
+  color: #f1eae4;
+  padding: 5px 20px;
+  border: none;
+  border-radius: 27px;
+  font-weight: 600;
+  transition: background-color 0.3s, color 0.3s;
+  margin-top: 15px;
+}
+#createRoomPopup .modal-body>button:hover {
+  background-color: #37474f;
+  color: #f1eae4;
+}
+#createRoomPopup .modal-body>div:nth-child(3)>div>button{
+  border-radius: 100%;
+  border: 2px solid black;
+  padding: 10px 10px;
+}
+.linkIcon{
+  width: 30px;
+  height: 30px;
+  fill: #37474f;
 }
 @media(max-width: 1250px){
   #manImage {

@@ -22,6 +22,7 @@
   padding: 5px 15px;
   border: none;
   border-radius: 27px;
+  font-weight: 600;
 }
 .postBtn > img {
   width: 25px;
@@ -45,20 +46,31 @@
   background-color: #f1eae4;
 }
 #newPostModal .modal-content {
-  min-width: 30dvw;
   padding: 15px 20px;
   background-color: #f1eae4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
-
+#newPostModal .modal-body{
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 #fileInputDiv {
-  border: 1px solid black;
-  padding: 50px 55px;
+  border: 2px solid black;
+  padding: 50px 40px;
   border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
 }
 #fileInputDiv > label {
   background-color: #e9b9b9;
   color: white;
-  padding: 5px 15px;
+  padding: 5px 18px;
   border-radius: 50px;
 }
 #fileInput {
@@ -69,17 +81,19 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  width: 100%;
 }
 #descInputDiv > label {
   text-align: left;
-  margin-left: 10px;
+  margin-left: 15px;
   cursor: pointer;
+  font-weight: 600;
 }
 #description {
   background-color: #f1eae4;
-  border-radius: 25px;
-  padding: 10px 20px;
-  border: 1px solid black;
+  border-radius: 27px;
+  padding: 15px 30px;
+  border: 2px solid black;
   outline: none;
   font-size: 14px;
 }
@@ -91,6 +105,7 @@
   padding: 4px 15px;
   color: #ffff;
   border-radius: 25px;
+  margin-top: 10px;
 }
 
 
