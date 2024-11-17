@@ -80,6 +80,7 @@
     cursor: pointer;
 }
 
+
 @media (max-width: 598px) {
     /* Center the logo */
     .Logo {

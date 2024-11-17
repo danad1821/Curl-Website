@@ -437,6 +437,62 @@ button.add-to-cart {
   font-weight: 800;
 }
 
+/* create room popup */
+#createRoomPopup .modal-content{
+  background-color: #F1EAE4;
+}
+#createRoomPopup .modal-body>div{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 10px 0;
+}
+#createRoomPopup .modal-body>div label{
+  font-weight: 600;
+}
+#createRoomPopup .modal-body>div input{
+  border: 2px solid black;
+  border-radius: 20px;
+  padding: 6px 20px;
+  background-color: #F1EAE4;
+}
+#createRoomPopup .modal-body>div:nth-child(2) input, #createRoomPopup .modal-body>div:nth-child(3) input{
+  height: 70px;
+  border-radius: 50px;
+}
+#createRoomPopup .modal-body>div:nth-child(3) input{
+  width: 90%;
+}
+#createRoomPopup .modal-body>div:nth-child(3)>div{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#createRoomPopup .modal-body>button{
+  background-color: #e9b9b9;
+  color: #f1eae4;
+  padding: 5px 20px;
+  border: none;
+  border-radius: 27px;
+  font-weight: 600;
+  transition: background-color 0.3s, color 0.3s;
+  margin-top: 15px;
+}
+#createRoomPopup .modal-body>button:hover {
+  background-color: #37474f;
+  color: #f1eae4;
+}
+#createRoomPopup .modal-body>div:nth-child(3)>div>button{
+  border-radius: 100%;
+  border: 2px solid black;
+  padding: 10px 10px;
+}
+.linkIcon{
+  width: 30px;
+  height: 30px;
+  fill: #37474f;
+}
+
 @media (max-width: 500px) {
   #community p {
     font-size: 14px;
@@ -977,7 +1033,6 @@ footer {
   margin-bottom: 20px;
 }
 
-
 @media (max-width: 1920px) and (max-height: 1080px) {
   .eventsSection {
     margin-top: 1% !important;
@@ -1233,17 +1288,6 @@ footer {
   .firstSection > div > button {
     font-size: 12px;
   }
-  footer {
-    align-items: center;
-    width: 100%;
-  }
-  .footer-content {
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 10px;
-    width: auto;
-  }
 }
 
 @media (max-width: 500px) {
@@ -1282,5 +1326,135 @@ footer {
   }
   .besellingBooksSection {
     margin-top: -10%;
+  }
+}
+
+/* Footer */
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+  background-image: url("../designImages/Group\ 150\ \(1\).png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: bottom;
+  height: 65vh;
+  margin-top: -12.6%;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  max-width: 1200px;
+  position: relative;
+  z-index: 2;
+}
+
+.logo {
+  text-align: center;
+}
+
+.logo-circle {
+  background-color: #c0dde5;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-circle img {
+  width: 120px;
+  height: 74px;
+}
+
+.logo-circle p {
+  font-size: 14px;
+  color: black;
+}
+
+.about,
+.contact {
+  text-align: left;
+  
+}
+
+.contact {
+  margin-right:200px;
+}
+
+.about h3,
+.contact h3 {
+  font-size: 20px;
+  color: black;
+  margin-bottom: 5px;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+.about p,
+.contact p {
+  font-size: 16px;
+  color: #555;
+  margin: 4px 0;
+}
+
+.copyright {
+  background-color: #c0dde5;
+  font-size: 12px;
+  width: 100%;
+  text-align: center;
+  color: #777;
+  margin-top: 20px;
+  position: relative;
+  z-index: 2;
+  top: 20px;
+}
+
+@media (max-width: 750px) {
+  footer{
+  align-items: center;
+  width: 100%;
+  background-image: none;
+  background-color: #f1eae4;
+  height: fit-content;
+  margin-top: 0;
+  padding-top:10px;
+  }
+  .footer-content {
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 10px;
+  width: auto;
+  }
+  footer {
+  background-image: none;
+  background-color: #f1eae4;
+  height: fit-content;
+  margin-top: 0;
+  padding-top:5px;
+  }
+}
+
+@media (max-width: 600px) {
+  footer{
+      align-items: center;
+      width: 100%;
+  }
+  .footer-content {
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 10px;
+      width: auto;
   }
 }

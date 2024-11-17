@@ -1,10 +1,8 @@
-$("#header").load("Header/header.html");
-  
-$("#Review").load("Reviews/reviews.html");
-
-$("#footer").load("footer/footer.html");
-
 $(document).ready(function () {
+  $("#header").load("Header/header.html");
+  
+  $("#Review").load("Reviews/reviews.html");
+
   localStorage.setItem(
     "cart",
     JSON.stringify({ books: [], menuItems: [], merch: [] })
@@ -271,6 +269,10 @@ $(document).ready(function () {
     let newQuote = getRandomQuote();
     displayQuote(newQuote);
   });
+  //for create a room popup
+  $("#createRoomPopup").on("shown.bs.modal", function () {
+    $("#createBtn").focus();
+  });
 });
 
 // $(document).ready(function () {
@@ -351,10 +353,10 @@ $(document).ready(function () {
           <div class="image-section">
             <img src="${handImage}" alt="${item.name}" class="handImg">
 
-             <div class="dessert-image ${item.name
-               .toLowerCase()
-               .replace(" ", "-")}-image">
-                <img src="${item.img}" alt="${
+            <div class="dessert-image ${item.name
+              .toLowerCase()
+              .replace(" ", "-")}-image">
+              <img src="${item.img}" alt="${
         item.name
       }" class="dessertImg" data-id="${item.name.toLowerCase()}">
             </div>
