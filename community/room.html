@@ -70,9 +70,8 @@
         <div class="modal-content">
           <div class="modal-body">
             <div id="fileInputDiv">
-              <label for="fileInput">Upload Image</label>
+              <label for="fileInput"><p>Upload Image</p> <img src="#" alt="" id="inputImg" /></label>
               <input type="file" id="fileInput" name="fileInput" accept="image/*" />
-              <img src="#" alt="" id="inputImg" />
             </div>
             <div class="" id="descInputDiv">
               <label for="description" class="form-label" id="descLabel"
@@ -85,19 +84,31 @@
                 placeholder="Type here..."
               />
             </div>
-            <button class="btn smallPostBtn">Post</button>
+            <button class="btn smallPostBtn" data-bs-dismiss="modal">Post</button>
           </div>
         </div>
       </div>
     </div>
     <!-- new comment pop up  -->
-    <div class="modal" tabindex="-1" id="commentModal" aria-labelledby="commentModalLabel" aria-hidden="true">
+    <div class="modal" tabindex="-1" id="commentModal">
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-body">
             <label for="commentInput" class="form-label">Comment:</label>
-            <input type="text" id="commentInput" placeholder="Type here..." />
-            <button class="btn smallPostBtn">Post</button>
+            <textarea id="commentInput" placeholder="Type here..." ></textarea>
+            <button class="btn smallPostBtn" data-bs-dismiss="modal">Post</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- new reply popup  -->
+    <div class="modal" tabindex="-1" id="replyModal">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-body">
+            <label for="replyInput" class="form-label">Reply:</label>
+            <textarea id="replyInput" placeholder="Type here..." ></textarea>
+            <button class="btn smallPostBtn" data-bs-dismiss="modal">Post</button>
           </div>
         </div>
       </div>
