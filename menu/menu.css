@@ -1,4 +1,6 @@
 *{
+    padding: 0;
+    margin: 0;
     color: #37474f;
     font-family: "Poppins", sans-serif;
 }
@@ -13,4 +15,352 @@ body{
     border-radius: 25px;
     padding: 4px 10px;
     text-align: center;
+}
+
+.head-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Align images vertically center (optional) */
+    gap: 10px; /* Add spacing between images if needed */
+    margin-top: 0;
+    margin-left: -10%;
+}
+
+.head-menu-img{
+    width: 20%;
+}
+
+.cookies{
+    width: 10%;
+    margin-top: -3.5%;
+    margin-left: -2%;
+}
+
+.h3{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: -50px;
+    margin-left: -50px;
+}
+
+.under-menu{
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    margin-top: -5%;
+}
+
+.under-menu img{
+    width: 20%;
+}
+
+.under-menu .cat{
+    margin-left: 320px;
+    margin-top: -1%;
+}
+
+.under-menu .book{
+    margin-top: -6%;
+    margin-right: 280px;
+}
+
+.menu{
+    background-color: #F1EAE4;
+    border-radius: 150px;
+    margin-top: -3%;
+}
+
+.menu h1{
+    display: flex;
+    justify-content: center;
+    font-weight: bolder;
+    font-size: 50px;
+}
+
+.pastries{
+    padding-top: 100px;
+}
+
+/* Container holding the pastries image and cards */
+.pastries-items {
+    display: flex;
+    align-items: center; /* Align items at the top */
+    gap: 20px; /* Add space between items */
+}
+
+/* Style for the pastries girl image */
+.pastries-girl {
+    max-width: 25%; /* Adjust the size as needed */
+    margin-top: -13.5%;
+    margin-left: 2%;
+}
+
+/* Cards container */
+#pastries-items {
+    flex: 3; /* Give more space to the cards */
+    display: flex;
+    flex-wrap: wrap; /* Wrap cards to a new line if needed */
+    gap: 20px; /* Space between cards */
+}
+
+/* Individual card styling */
+.pastry-card {
+    display: flex;
+    flex-direction: column; /* Arrange content in a column */
+    align-items: flex-start; /* Align all items to the left */
+    padding: 20px;
+    width: 350px; /* Fixed width for the card */
+    height: 450px; /* Ensure all cards are of the same height */
+    text-align: left; /* Align text to the left */
+    margin-top: 5%;
+    margin-right: 0;
+    margin-left: 4%;
+}
+
+/* Consistent image height */
+.pastry-card img {
+    width: auto; /* Make image span the full width */
+    height: 180px; /* Increase image height */
+    object-fit: cover; /* Ensure the image fits without distortion */
+    border-radius: 10px;
+    margin-bottom: 10px; /* Add spacing below the image */
+}
+
+/* Name alignment */
+.pastry-card h3 {
+    font-weight: bold;
+    margin-top: 15px;
+    font-size: 30px;
+    min-height: 40px; /* Ensure all titles have consistent height */
+    text-align: left; /* Align text to the left */
+}
+
+/* Description alignment */
+.pastry-card .pastry-description {
+    font-size: 20px;
+    min-height: 60px; /* Ensure consistent height for descriptions */
+    text-align: left; /* Align text to the left */
+}
+
+/* Price container styling to align the price, Add button, and heart icon on the same line */
+/* Price container styling */
+.price-container {
+    display: flex;
+    align-items: center; /* Vertically align items */
+    justify-content: space-between; /* Space items to opposite sides */
+    width: 100%; /* Ensure the container takes the full card width */
+    margin-top: 10px; /* Add spacing above the container */
+}
+
+/* Price styling */
+.pastry-card .pastry-price {
+    font-size: 1.4em;
+    font-weight: bold;
+    margin: 0; /* Remove default margin */
+}
+
+/* Right section containing the Add button and Heart icon */
+.right {
+    display: flex; /* Align the button and heart horizontally */
+    align-items: center; /* Center align vertically */
+    gap: 10px; /* Space between the button and the heart */
+    margin-right: 40px;
+}
+
+/* Add button styling */
+.pinkAddBtn {
+    font-size: 16px;
+    border: none;
+    background-color: #E9B9B9;
+    color: #F1EAE4;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.pinkAddBtn:hover {
+    background-color: #37474f; /* Slightly darker pink on hover */
+}
+
+/* Heart icon styling */
+.heartIcon {
+    fill: #37474f;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    transition: fill 0.3s;
+}
+
+.heartIcon:hover {
+    fill: red; /* Change color on hover */
+}
+
+.arrow-container{
+    margin-top: -10px;
+}
+
+.arrow{
+    margin-left: -190%;
+}
+
+.drinks{
+    padding-top: 100px;
+}
+
+/* Container holding the pastries image and cards */
+.Drinks-items {
+    display: flex; /* Arrange items horizontally */
+    align-items: flex-start; /* Align items at the top */
+    gap: 20px; /* Add space between the girl image and the cards */
+}
+
+.Drink-girl {
+    max-width: 25%; /* Adjust the size as needed */
+    margin-top: -7%;
+    margin-right: 2%;
+}
+
+#Drinks-items {
+    flex: 1; /* Allow the cards to take up the remaining space */
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping of cards when needed */
+    gap: 20px; /* Add space between cards */
+}
+
+/* Individual card styling */
+.drink-card {
+    display: flex;
+    flex-direction: column; /* Arrange content in a column */
+    align-items: flex-start; /* Align all items to the left */
+    padding: 20px;
+    width: 350px; /* Fixed width for the card */
+    height: 450px; /* Ensure all cards are of the same height */
+    text-align: left; /* Align text to the left */
+    margin-top: 5%;
+    margin-right: -5%;
+    margin-left: 7%;
+}
+
+/* Consistent image height */
+.drink-card img {
+    width: auto; /* Make image span the full width */
+    height: 180px; /* Increase image height */
+    object-fit: cover; /* Ensure the image fits without distortion */
+    border-radius: 10px;
+    margin-bottom: 10px; /* Add spacing below the image */
+}
+
+/* Name alignment */
+.drink-card h3 {
+    font-weight: bold;
+    margin-top: 15px;
+    font-size: 30px;
+    min-height: 40px; /* Ensure all titles have consistent height */
+    text-align: left; /* Align text to the left */
+}
+
+/* Description alignment */
+.drink-card .drink-description {
+    font-size: 20px;
+    min-height: 60px; /* Ensure consistent height for descriptions */
+    text-align: left; /* Align text to the left */
+}
+
+/* Price styling */
+.drink-card .drink-price {
+    font-size: 1.4em;
+    font-weight: bold;
+    margin: 0; /* Remove default margin */
+}
+
+.arrows-container{
+    margin-top: 12%;
+}
+
+.arrows{
+    margin-left: 0;
+}
+
+/* Sweet Paart */
+.sweets{
+    padding-top: 100px;
+}
+
+/* Container holding the pastries image and cards */
+.sweets-items {
+    display: flex;
+    align-items: center; /* Align items at the top */
+    gap: 20px; /* Add space between items */
+}
+
+/* Style for the pastries girl image */
+.Sweet-girl {
+    max-width: 25%; /* Adjust the size as needed */
+    margin-top: -12%;
+    margin-left: 2%;
+}
+
+/* Cards container */
+#sweets-items {
+    flex: 3; /* Give more space to the cards */
+    display: flex;
+    flex-wrap: wrap; /* Wrap cards to a new line if needed */
+    gap: 20px; /* Space between cards */
+}
+
+/* Individual card styling */
+.sweet-card {
+    display: flex;
+    flex-direction: column; /* Arrange content in a column */
+    align-items: flex-start; /* Align all items to the left */
+    padding: 20px;
+    width: 350px; /* Fixed width for the card */
+    height: 450px; /* Ensure all cards are of the same height */
+    text-align: left; /* Align text to the left */
+    margin-top: 5%;
+    margin-right: 5%;
+    margin-left: -2%;
+}
+
+/* Consistent image height */
+.sweet-card img {
+    width: auto; /* Make image span the full width */
+    height: 180px; /* Increase image height */
+    object-fit: cover; /* Ensure the image fits without distortion */
+    border-radius: 10px;
+    margin-bottom: 10px; /* Add spacing below the image */
+}
+
+/* Name alignment */
+.sweet-card h3 {
+    font-weight: bold;
+    margin-top: 15px;
+    font-size: 25px;
+    min-height: 40px; /* Ensure all titles have consistent height */
+    text-align: left; /* Align text to the left */
+}
+
+/* Description alignment */
+.sweet-card .sweet-description {
+    font-size: 20px;
+    min-height: 60px; /* Ensure consistent height for descriptions */
+    text-align: left; /* Align text to the left */
+}
+
+/* Price styling */
+.sweet-card .sweet-price {
+    font-size: 1.4em;
+    font-weight: bold;
+    margin: 0; /* Remove default margin */
+}
+
+.arrow-container{
+    margin-top: -10px;
+}
+
+.arrow{
+    margin-left: -190%;
 }

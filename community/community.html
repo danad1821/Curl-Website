@@ -33,67 +33,36 @@
     <div id="header"></div>
 
     <section class="landingCommunitySection">
-      <img
-        class=""
-        id="manImage"
-        src="../designImages/gujgyuk 1.png"
-      />
-      <h1
-        class=""
-      >
-        Community
-      </h1>
-      <div
-        class=""
-      >
+      <img class="" id="manImage" src="../designImages/gujgyuk 1.png" />
+      <h1 class="">Community</h1>
+      <div class="">
         <span
           >You’ll find your <b>book lovers</b> here to discuss the latest
           happenings.</span
         >
       </div>
-      <img
-        class=""
-        id="curledCat"
-        src="../designImages/cat 1.png"
-      />
-      <img
-        class=""
-        src="../designImages/rgdrt 1.png"
-        id="girlWithBook"
-      />
+      <img class="" id="curledCat" src="../designImages/cat 1.png" />
+      <img class="" src="../designImages/rgdrt 1.png" id="girlWithBook" />
       <img
         class=""
         src="../designImages/Website Illustrations 1.png"
         id="arms"
       />
-      <img
-        class=""
-        src="../designImages/fyufkyk 1.png"
-        id="chatBubbles"
-      />
-      <img
-        class=""
-        src="../designImages/tyfyuk 1.png"
-        id="girlsWithBook"
-      />
-      <img
-        class=""
-        src="../designImages/fjukfj 1.png"
-        id="catOnN"
-      />
-      <img
-        class=""
-        src="../designImages/rwgsrth 1.png"
-        id="strechingCat"
-      />
-      <img
-        class=""
-        src="../designImages/yjfyukj 1.png"
-        id="sleepingCat"
-      />
+      <img class="" src="../designImages/fyufkyk 1.png" id="chatBubbles" />
+      <img class="" src="../designImages/tyfyuk 1.png" id="girlsWithBook" />
+      <img class="" src="../designImages/fjukfj 1.png" id="catOnN" />
+      <img class="" src="../designImages/rwgsrth 1.png" id="strechingCat" />
+      <img class="" src="../designImages/yjfyukj 1.png" id="sleepingCat" />
     </section>
     <section class="mainContent">
-      <button class="communityPageBtn">Create a Room</button>
+      <button
+        class="communityPageBtn"
+        id="createBtn"
+        data-bs-toggle="modal"
+        data-bs-target="#createRoomPopup"
+      >
+        Create a Room
+      </button>
       <section id="roomsDisplay"></section>
     </section>
 
@@ -122,6 +91,45 @@
       </div>
       <p class="copyright">© Copyright</p>
     </footer>
+    <!-- create room popup  -->
+    <div class="modal" tabindex="-1" id="createRoomPopup">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div>
+              <label for="roomName">Name:</label>
+              <input
+                type="text"
+                placeholder="The Mystery Crew"
+                name="roomName"
+              />
+            </div>
+            <div>
+              <label for="roomName">Room Description:</label>
+              <input
+                type="text"
+                placeholder="Discuss books related to the mystery section."
+              />
+            </div>
+            <div>
+              <label for="roomName">URL:</label>
+              <div>
+                <input
+                  type="text"
+                  placeholder="https://www.figma.com/design/cIqS9Wfyx0hUxD1iYwkxzd/Curl?node-id=719-978&node-type=frame&t=lsdEIbV71jia3HfG-0"
+                />
+                <button class="btn">
+                  <svg width="30" height="30" class="lickIcon" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13.983 18.51C14.6308 19.377 15.4573 20.0943 16.4065 20.6134C17.3556 21.1325 18.4052 21.4412 19.484 21.5185C20.5628 21.5959 21.6456 21.4401 22.659 21.0617C23.6723 20.6833 24.5925 20.0911 25.3572 19.3255L29.8827 14.7954C31.2567 13.3714 32.0169 11.4642 31.9997 9.48456C31.9825 7.50493 31.1893 5.61125 29.7908 4.21139C28.3924 2.81153 26.5006 2.01749 24.523 2.00029C22.5453 1.98308 20.6401 2.7441 19.2175 4.11942L16.6229 6.70158M20.017 15.49C19.3692 14.623 18.5427 13.9057 17.5935 13.3866C16.6444 12.8675 15.5948 12.5588 14.516 12.4815C13.4372 12.4041 12.3544 12.5599 11.341 12.9383C10.3277 13.3167 9.40748 13.9089 8.64283 14.6745L4.11729 19.2046C2.74335 20.6286 1.9831 22.5358 2.00029 24.5154C2.01747 26.4951 2.81071 28.3887 4.20917 29.7886C5.60762 31.1885 7.49939 31.9825 9.47703 31.9997C11.4547 32.0169 13.3599 31.2559 14.7825 29.8806L17.362 27.2984" stroke="#37474F" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>                    
+                </button>
+              </div>
+            </div>
+            <button class="btn">Make Room</button>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- cdn for jquery  -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <!-- cdn for bootstrap  -->
