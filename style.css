@@ -871,6 +871,14 @@ button.add-to-cart {
   left: -3%;
   z-index: 3;
 }
+
+
+@media (max-width: 768px) {
+  #menu-header p {
+    font-size: 15px;
+    width: 70%;
+  }
+}
 /* Events Section  */
 .eventsSection {
   margin-top: 2%;
