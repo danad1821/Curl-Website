@@ -10,10 +10,7 @@ $(document).ready(function () {
   let postBtn = $(
     "<button data-bs-toggle='modal' data-bs-target='#newPostModal'><img src='../designImages/Group 226.png'/> New Post</button>"
   ).addClass("postBtn");
-  let userProfile = $("<img src='../designImages/Frame 2.png'/>").addClass(
-    "mainUserIcon"
-  );
-  $("#topSection").append(roomName, postBtn, userProfile);
+  $("#topSection").append(roomName, postBtn);
   //makes new post popup appear
   $("#newPostModal").on("shown.bs.modal", function () {
     postBtn.focus();
@@ -72,7 +69,7 @@ $(document).ready(function () {
           "</div>"
       );
       postInnerDiv.append(
-        "<svg class='icon commentIcon' data-bs-toggle='modal' data-bs-target='#commentModal' viewBox='0 0 48 48' xmlns='http://www.w3.org/2000/svg'><title>comment-blank</title><g id='Layer_2' data-name='Layer 2'><g id='invisible_box' data-name='invisible box'><rect width='48' height='48' fill='none'/></g><g id='icons_Q2' data-name='icons Q2'><path d='M40,8V32H13.6l-1.2,1.1L8,37.3V8H40m2-4H6A2,2,0,0,0,4,6V42a2,2,0,0,0,2,2,2,2,0,0,0,1.4-.6L15.2,36H42a2,2,0,0,0,2-2V6a2,2,0,0,0-2-2Z'/></g></g></svg>"
+        "<div><svg class='icon commentIcon' data-bs-toggle='modal' data-bs-target='#commentModal' viewBox='0 0 48 48' xmlns='http://www.w3.org/2000/svg'><title>comment-blank</title><g id='Layer_2' data-name='Layer 2'><g id='invisible_box' data-name='invisible box'><rect width='48' height='48' fill='none'/></g><g id='icons_Q2' data-name='icons Q2'><path d='M40,8V32H13.6l-1.2,1.1L8,37.3V8H40m2-4H6A2,2,0,0,0,4,6V42a2,2,0,0,0,2,2,2,2,0,0,0,1.4-.6L15.2,36H42a2,2,0,0,0,2-2V6a2,2,0,0,0-2-2Z'/></g></g></svg>"+post.comments.length+"</div>"
       );
       postInnerDiv.addClass("postInnerDiv");
       let postCaption = $("<p>" + post.caption + "</p>").addClass(
@@ -91,7 +88,7 @@ $(document).ready(function () {
             "<div><img src='" +
               comment.userImg +
               "'/> <h3>" +
-              post.user +
+              comment.user +
               "</h3></div>"
           ).addClass("topCommentSectionUser");
           let topCommentSectionActions = $(
