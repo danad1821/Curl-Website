@@ -789,11 +789,12 @@ button.add-to-cart {
 
 .item-price p {
   font-size: 20px;
+  margin: 5px 0;
 }
 
 .item-price i {
-  font-size: 18px;
-  margin-left: 20px;
+  font-size: 20px;
+  margin-left: 10px;
 }
 .add-btn {
   width: 70px !important;
