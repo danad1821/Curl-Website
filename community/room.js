@@ -111,9 +111,29 @@ $(document).ready(function () {
       posting.append(postDiv, commentsDiv);
       postsSection.append(posting);
 
+
       $("#commentModal").on("shown.bs.modal", function () {
-        $(".commentIcon")[0].focus();
+        $(".commentIcon").focus();
       });
     }
+    $(".heartIcon").click(function() {
+        const heart = $(this);
+      
+        // Toggle the "liked" class
+        heart.toggleClass("liked");
+      
+        // Apply styles based on the "liked" class
+        if (heart.hasClass("liked")) {
+          heart.css({
+            backgroundColor: "rgb(233, 185, 185)",
+            clipPath: "path('M13 5.248c-5.148-5.402-12-3.825-12 3.944 1 6.661 8.571 11.427 12 14.808 6.43-6.381 12-11.147 11-15.808 0-6.792-8.875-8.306-12-2.944z')"
+          });
+        } else {
+          heart.css({
+            backgroundColor: "#f1eae4",
+            clipPath: "none"
+          });
+        }
+      });
   }
 });
