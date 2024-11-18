@@ -731,7 +731,6 @@ button.add-to-cart {
   background-color: #f1eae4;
   height: 300px;
   width: 100%;
-
   /* overflow-x: auto; */
   overflow-y: hidden;
   display: flex;
@@ -871,13 +870,6 @@ button.add-to-cart {
   top: -45%;
   left: -3%;
   z-index: 3;
-}
-
-@media (max-width: 768px) {
-  #menu-header p {
-    font-size: 15px;
-    width: 70%;
-  }
 }
 /* Events Section  */
 .eventsSection {

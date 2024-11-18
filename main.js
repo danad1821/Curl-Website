@@ -273,53 +273,7 @@ $(document).ready(function () {
   $("#createRoomPopup").on("shown.bs.modal", function () {
     $("#createBtn").focus();
   });
-});
-
-// $(document).ready(function () {
-//   $.getJSON("data.json", function (data) {
-//     // Access the "menu" array inside the JSON data
-//     const menuItems = data.menu;
-
-//     // Check if menuItems is an array
-//     if (!Array.isArray(menuItems)) {
-//       console.error("Expected an array of menu items.");
-//       return;
-//     }
-
-//     const menuContainer = $("#menu-items");
-
-//     // Limit to the first 10 items
-//     const firstTenItems = menuItems.slice(0, 5);
-
-//     firstTenItems.forEach(function (item) {
-//       const menuItem = createMenuItem(item);
-//       menuContainer.append(menuItem);
-//     });
-//   }).fail(function () {
-//     console.error("Error loading menu items.");
-//   });
-// });
-
-// function createMenuItem(item) {
-//   const itemDiv = $("<div>").addClass("menu-item");
-//   const itemInfo = $("<div>").addClass("menu-info");
-//   const itemName = $("<div>").addClass("item-Name");
-//   const itemPrice = $("<div>").addClass("item-price");
-
-//   const img = $("<img>").attr("src", item.img).attr("alt", item.name);
-//   const name = $("<h3>").text(item.name);
-//   const description = $("<p>").text(item.description);
-//   const price = $("<p>").addClass("price").text(`$${item.price}`);
-//   const addButton = $("<button>").addClass("add-btn homePageBtn").text("Add");
-
-//   itemName.append(name, description);
-//   itemPrice.append(price, addButton);
-//   itemInfo.append(itemName, itemPrice);
-//   itemDiv.append(img, itemInfo);
-//   return itemDiv;
-// }
-
-$(document).ready(function () {
+  
   // Load and display menu items
   $.getJSON("data.json", function (data) {
     //get only the 5 items on the home
@@ -353,10 +307,10 @@ $(document).ready(function () {
           <div class="image-section">
             <img src="${handImage}" alt="${item.name}" class="handImg">
 
-            <div class="dessert-image ${item.name
-              .toLowerCase()
-              .replace(" ", "-")}-image">
-              <img src="${item.img}" alt="${
+             <div class="dessert-image ${item.name
+               .toLowerCase()
+               .replace(" ", "-")}-image">
+                <img src="${item.img}" alt="${
         item.name
       }" class="dessertImg" data-id="${item.name.toLowerCase()}">
             </div>
