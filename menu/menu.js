@@ -15,7 +15,7 @@ $(document).ready(function () {
         // Sort the pastries by price in descending order
         // Iterate over the filtered pastries and add them as cards
         pastries.forEach(pastry => {
-        const pastryCard = `
+            const pastryCard = `
             <div class="pastry-card">
             <img src="${pastry.img}" alt="${pastry.name}" class="pastry-img">
             <h3 class="pastry-name">${pastry.name}</h3>
@@ -31,8 +31,8 @@ $(document).ready(function () {
             </div>
             </div>
         `;
-        $("#pastries-items").append(pastryCard);
-    });
+            $("#pastries-items").append(pastryCard);
+        });
     });
 });
 
@@ -47,7 +47,7 @@ $(document).ready(function () {
         // Sort the Drinks by price in descending order
         // Iterate over the filtered Drink and add them as cards
         drinks.forEach(drink => {
-        const drinkCard = `
+            const drinkCard = `
             <div class="drink-card">
             <img src="${drink.img}" alt="${drink.name}" class="drink-img">
             <h3 class="drink-name">${drink.name}</h3>
@@ -63,8 +63,8 @@ $(document).ready(function () {
             </div>
             </div>
         `;
-        $("#Drinks-items").append(drinkCard);
-    });
+            $("#Drinks-items").append(drinkCard);
+        });
     });
 });
 
@@ -79,7 +79,7 @@ $(document).ready(function () {
         // Sort the Sweet by price in descending order
         // Iterate over the filtered Sweet and add them as cards
         sweets.forEach(sweet => {
-        const sweetCard = `
+            const sweetCard = `
             <div class="sweet-card">
             <img src="${sweet.img}" alt="${sweet.name}" class="sweet-img">
             <h3 class="sweet-name">${sweet.name}</h3>
@@ -95,7 +95,7 @@ $(document).ready(function () {
             </div>
             </div>
         `;
-        $("#sweets-items").append(sweetCard);
-    });
+            $("#sweets-items").append(sweetCard);
+        });
     });
 });

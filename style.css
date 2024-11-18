@@ -396,7 +396,7 @@ button.add-to-cart {
   /* height: 345px; */
   height: 245px;
   background-color: #e9b9b9;
-  margin-bottom: 490px;
+  margin-bottom: 1000px;
 }
 
 #community div {
@@ -789,11 +789,12 @@ button.add-to-cart {
 
 .item-price p {
   font-size: 20px;
+  margin: 5px 0;
 }
 
 .item-price i {
-  font-size: 18px;
-  margin-left: 20px;
+  font-size: 20px;
+  margin-left: 10px;
 }
 .add-btn {
   width: 70px !important;
@@ -838,6 +839,11 @@ button.add-to-cart {
   width: 90%;
 }
 
+.iced-coffee-image{
+  width: 170%;
+  left: -70%;
+  top: -32%;
+}
 .fruit-croissant-image {
   width: 120%;
   left: -65% !important;
@@ -845,14 +851,15 @@ button.add-to-cart {
 }
 
 .lemonade-image {
-  top: -8%;
-  left: -32%;
+  top: -12%;
+  left: -45%;
+  width: 110%;
   transform: rotate(7deg);
 }
 
 .glazed-donut-image {
-  width: 110%;
-  left: -55%;
+  width: 130%;
+  left: -63%;
   top: -30%;
 }
 
@@ -866,10 +873,18 @@ button.add-to-cart {
 }
 
 .carrot-cake-image {
-  width: 130%;
-  top: -45%;
-  left: -3%;
+  width: 160%;
+  top: -55%;
+  left: -1%;
   z-index: 3;
+}
+
+
+@media (max-width: 768px) {
+  #menu-header p {
+    font-size: 15px;
+    width: 70%;
+  }
 }
 /* Events Section  */
 .eventsSection {
