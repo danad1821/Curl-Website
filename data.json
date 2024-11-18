@@ -30,7 +30,7 @@
         "price": 11.0,
         "rating": 4.6,
         "availability": 20,
-        "genres": ["Fiction", "Romance", "Contemporary", "Bestseller"],
+        "genres": ["Fiction", "Romance", "Contemporary"],
         "summary": "Lily's story of love and resilience as she navigates a complex relationship, drawing strength from her past."
       },
       {
