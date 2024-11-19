@@ -145,10 +145,11 @@ a.active {
   flex-direction: row;
 }
 
-#bookFilteredGenres:first-child{
+#bookFilteredGenres p{
   margin-right: 30px;
   font-weight: bold;
   font-size: 18px;
+  margin-bottom: 0%;
 }
 
 #search-sort button{
@@ -166,16 +167,31 @@ a.active {
 
 
 
-
+/* genre sections styles */
+#genre-div{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.genre-title{
+  font-weight: bold;
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
 .genre-section{
   overflow-y: hidden;
   overflow-x: scroll;
 }
 
+.genre-section::-webkit-scrollbar {
+  display: none;
+}
+
 .books-list{
   display: flex;
   flex-direction: row;
-
+  gap: 30px; /
 }
 
 
@@ -184,13 +200,13 @@ a.active {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 300px;
+  width: 270px;
 }
 
 
 .book-img{
-  width: 150px;
-  height: 240px;
+  width: 130px;
+  height: 220px;
   border-radius: 15px;
 }
 
@@ -200,6 +216,9 @@ a.active {
 }
 .book-details p:first-child{
   font-weight: bold;
+  line-height: 18px;
+  min-height: 40px;
+  margin-bottom: 0%;
 }
 
 .book-author span{
@@ -209,7 +228,24 @@ a.active {
 .price-div{
   display: flex;
   flex-direction: row;
+  align-items: center;
   justify-content: space-between;
+
+
+}
+
+.price-div p{
+  margin-bottom: 0%;
+}
+.price-div div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+
+.price-div i{
+  font-size: 18px;
 }
 
 .add-to-cart-btn{
@@ -217,7 +253,53 @@ a.active {
   background-color: #E9B9B9;
   color: #F1EAE4;
   font-weight: 700;
-  padding: 2px 13px 2px 13px;
+  padding: 3px 10px 3px 10px;
   border-radius: 20px;
   font-size: 14px;
+}
+
+
+
+#books-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.carousel-inner {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+#carousel-books {
+  display: flex;           /* Align items horizontally */
+  gap: 30px;               /* Optional: Space between items */
+  width: 100%;             /* Full width of the container */
+  overflow: hidden;  
+}
+
+.carousel-item {
+
+  display: flex; /* Ensure that the books are in a row */
+  justify-content: space-between;
+  align-items: center; /* Vertically align items */
+  padding: 10px; /* Optional: Space between books */
+  flex: 0 0 auto;            /* Prevent items from stretching */
+  width: 33.33%;
+}
+
+#scroll-left img, #scroll-right img {
+  width: 30px;
+  height: auto;
+}
+
+#scroll-left, #scroll-right {
+  display: inline-block;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+#scroll-left:hover, #scroll-right:hover {
+  opacity: 0.8;
 }

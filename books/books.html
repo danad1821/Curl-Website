@@ -86,7 +86,24 @@
                 </div>
             </div>
 
-            <div id="books-container"></div>
+            <div id="books-container">
+                <div id="genre-div">
+                    <div id="scroll-left" class="scroll-arrow" style="display: none;">
+                        <img src="../designImages/ArrowLeft.png" alt="Left Arrow" />
+                    </div>
+                    <!-- Book list container using Bootstrap carousel -->
+                    <div id="books-list" class="carousel slide" data-bs-ride="false">
+                        <div class="carousel-inner" id="carousel-books">
+                            <!-- Books will be dynamically injected here -->
+                        </div>
+                    </div>
+                    <!-- Right Arrow -->
+                    <div id="scroll-right" class="scroll-arrow" style="display: none;">
+                        <img src="../designImages/ArrowRight.png" alt="Right Arrow" />
+                    </div>
+                </div>
+            </div>
+
 
         </div>
 
