@@ -19,9 +19,10 @@ $(document).ready(function () {
 
 });
 
+
 // $(document).ready(function () {
 //     let selectedGenres = [];
-//     let currentBookIndex = 0; // Tracks the current index of the books to display (starting from 0)
+//     let currentBookIndexes = {}; // Tracks the current index of books for each genre
 
 //     // Load and display books categorized by genre
 //     $.getJSON("../data.json", function (data) {
@@ -30,8 +31,8 @@ $(document).ready(function () {
 //             book.genres.some((genre) => genresToShow.includes(genre))
 //         );
 
-//         const $booksContainer = $("#books-list");
-//         $booksContainer.empty();
+//         const $booksContainer = $("#books-container");
+//         $booksContainer.empty(); // Clear any existing content
 
 //         // Group books by genre
 //         const booksByGenre = books.reduce((acc, book) => {
@@ -46,115 +47,91 @@ $(document).ready(function () {
 //             return acc;
 //         }, {});
 
-//         // Function to display books based on selected genres
-//         // function displayBooks() {
-//         //     $booksContainer.empty(); // Clear any existing books
-//         //     // const genre = selectedGenres[selectedGenres.length - 1]; // Get the latest selected genre
+//         // Function to dynamically create a genre section with a carousel
+//         function createGenreCarousel(genre) {
+//             const genreDiv = $('<div class="genre-section"></div>');
+//             const genreTitle = $('<h3 class="genre-title"></h3>').text(genre);
 
-//         //     // if (!genre || !booksByGenre[genre]) return;
+//             // Carousel structure
+//             const scrollLeft = $(`<div class="scroll-arrow left-arrow" data-genre="${genre}" style="display: none;">
+//                 <img src="../designImages/books/LeftArrow.png" alt="Left Arrow" />
+//             </div>`);
+//             const scrollRight = $(`<div class="scroll-arrow right-arrow" data-genre="${genre}" style="display: none;">
+//                 <img src="../designImages/books/RightArrow.png" alt="Right Arrow" />
+//             </div>`);
+//             const booksList = $(`<div class="books-list carousel" data-genre="${genre}"></div>`);
 
+//             genreDiv.append(genreTitle, scrollLeft, booksList, scrollRight);
+//             $booksContainer.append(genreDiv);
 
+//             // Initialize the current index for this genre
+//             currentBookIndexes[genre] = 0;
 
-//         //     // Create a section for the genre
-//         //     const genreDiv = $('<div class="genre-section"></div>');
-//         //     const genreTitle = $('<h3 class="genre-title"></h3>').text(genre);
-//         //     const booksContainer = $('<div class="books-list"></div>');
+//             displayBooksForGenre(genre);
+//         }
 
-//         //     // Limit to 3 books for the selected genre
-//         //     // const booksToDisplay = booksByGenre[genre].slice(currentBookIndex, currentBookIndex + 3);
+//         // Function to display books for a specific genre
+//         function displayBooksForGenre(genre) {
+//             const $booksList = $(`.books-list[data-genre="${genre}"]`);
+//             $booksList.empty(); // Clear any existing books
 
-//         //     const booksToDisplay = booksByGenre[genre].slice(0, 3); // Always start from the beginning
+//             const booksToDisplay = booksByGenre[genre].slice(
+//                 currentBookIndexes[genre],
+//                 currentBookIndexes[genre] + 3 // Show 3 books at a time
+//             );
 
-
-//         //     // Loop through the 3 books to display
-//         //     booksToDisplay.forEach(function (book) {
-//         //         const bookHTML = `
-//         //             <div class="book">
-//         //                 <div class="book-image">
-//         //                     <img src="${book.img}" alt="${book.title}" class="book-img">
-//         //                 </div>
-//         //                 <div class="book-info">
-//         //                     <div class="book-details">
-//         //                         <p>${book.title}</p>
-//         //                         <p class="book-author">Author: <span>${book.author}</span></p>
-//         //                     </div>
-//         //                     <div class="price-div">
-//         //                         <p class="book-price">$${book.price}</p>
-//         //                         <div>
-//         //                             <i class="far fa-heart"></i>
-//         //                             <button class="add-to-cart-btn">Add</button>
-//         //                         </div>
-//         //                     </div>
-//         //                 </div>
-//         //             </div>
-//         //         `;
-//         //         booksContainer.append(bookHTML);
-//         //     });
-
-//         //     genreDiv.append(genreTitle, booksContainer);
-//         //     $booksContainer.append(genreDiv);
-
-//         //     // Show the arrows if there are more books to display
-//         //     const totalBooks = booksByGenre[genre].length;
-//         //     if (totalBooks > 3) {
-//         //         $('#scroll-left, #scroll-right').show();
-//         //     } else {
-//         //         $('#scroll-left, #scroll-right').hide();
-//         //     }
-//         // }
-
-//         function displayBooks() {
-//             $booksContainer.empty(); // Clear any existing books
-
-//             selectedGenres.forEach((genre) => {
-//                 if (!genre || !booksByGenre[genre]) return;
-
-//                 // Create a section for the genre
-//                 const genreDiv = $('<div class="genre-section"></div>');
-//                 const genreTitle = $('<h3 class="genre-title"></h3>').text(genre);
-//                 const booksContainer = $('<div class="books-list"></div>');
-
-//                 // Limit to 3 books for the selected genre
-//                 const booksToDisplay = booksByGenre[genre].slice(0, 3); // Always start from the beginning
-
-//                 // Loop through the 3 books to display
-//                 booksToDisplay.forEach(function (book) {
-//                     const bookHTML = `
-//                         <div class="book">
-//                             <div class="book-image">
-//                                 <img src="${book.img}" alt="${book.title}" class="book-img">
+//             booksToDisplay.forEach(function (book) {
+//                 const bookHTML = `
+//                     <div class="book">
+//                         <div class="book-image">
+//                             <img src="${book.img}" alt="${book.title}" class="book-img">
+//                         </div>
+//                         <div class="book-info">
+//                             <div class="book-details">
+//                                 <p>${book.title}</p>
+//                                 <p class="book-author">Author: <span>${book.author}</span></p>
 //                             </div>
-//                             <div class="book-info">
-//                                 <div class="book-details">
-//                                     <p>${book.title}</p>
-//                                     <p class="book-author">Author: <span>${book.author}</span></p>
-//                                 </div>
-//                                 <div class="price-div">
-//                                     <p class="book-price">$${book.price}</p>
-//                                     <div>
-//                                         <i class="far fa-heart"></i>
-//                                         <button class="add-to-cart-btn">Add</button>
-//                                     </div>
+//                             <div class="price-div">
+//                                 <p class="book-price">$${book.price}</p>
+//                                 <div>
+//                                     <i class="far fa-heart"></i>
+//                                     <button class="add-to-cart-btn">Add</button>
 //                                 </div>
 //                             </div>
 //                         </div>
-//                     `;
-//                     booksContainer.append(bookHTML);
-//                 });
+//                     </div>
+//                 `;
+//                 $booksList.append(bookHTML);
+//             });
 
-//                 genreDiv.append(genreTitle, booksContainer);
-//                 $booksContainer.append(genreDiv);
+//             // Show or hide arrows depending on the total number of books
+//             const totalBooks = booksByGenre[genre].length;
+//             const $leftArrow = $(`.left-arrow[data-genre="${genre}"]`);
+//             const $rightArrow = $(`.right-arrow[data-genre="${genre}"]`);
 
-//                 // Show arrows if there are more books for the genre
-//                 const totalBooks = booksByGenre[genre].length;
-//                 if (totalBooks > 3) {
-//                     $('#scroll-left, #scroll-right').show();
-//                 } else {
-//                     $('#scroll-left, #scroll-right').hide();
+//             if (currentBookIndexes[genre] > 0) {
+//                 $leftArrow.show();
+//             } else {
+//                 $leftArrow.hide();
+//             }
+
+//             if (currentBookIndexes[genre] + 3 < totalBooks) {
+//                 $rightArrow.show();
+//             } else {
+//                 $rightArrow.hide();
+//             }
+//         }
+
+//         // Function to display selected genres
+//         function displayGenres() {
+//             $booksContainer.empty(); // Clear any existing content
+
+//             selectedGenres.forEach((genre) => {
+//                 if (booksByGenre[genre]) {
+//                     createGenreCarousel(genre);
 //                 }
 //             });
 //         }
-
 
 //         // Handle genre link clicks
 //         $('#Genre a').click(function (e) {
@@ -164,14 +141,14 @@ $(document).ready(function () {
 
 //             // If the genre is already selected, remove it; otherwise, add it
 //             if (selectedGenres.includes(genre)) {
-//                 selectedGenres = selectedGenres.filter(g => g !== genre);
+//                 selectedGenres = selectedGenres.filter((g) => g !== genre);
 //                 $(this).css('color', ''); // Reset color if removed
 //             } else if (selectedGenres.length < 3) {
 //                 selectedGenres.push(genre);
 //             }
 
-//             // Display books based on selected genres
-//             displayBooks();
+//             // Display books for selected genres
+//             displayGenres();
 
 //             // Disable further genre selection if 3 genres are selected
 //             if (selectedGenres.length === 3) {
@@ -182,31 +159,36 @@ $(document).ready(function () {
 //         });
 
 //         // Arrow functionality for scrolling books
-//         $('#scroll-left').click(function () {
-//             if (currentBookIndex > 0) {
-//                 currentBookIndex -= 3;
-//                 displayBooks();
+//         $booksContainer.on('click', '.left-arrow', function () {
+//             const genre = $(this).data('genre');
+//             if (currentBookIndexes[genre] > 0) {
+//                 currentBookIndexes[genre] -= 3;
+//                 displayBooksForGenre(genre);
 //             }
 //         });
 
-//         $('#scroll-right').click(function () {
-//             const genre = selectedGenres[selectedGenres.length - 1];
+//         $booksContainer.on('click', '.right-arrow', function () {
+//             const genre = $(this).data('genre');
 //             const totalBooks = booksByGenre[genre].length;
-//             if (currentBookIndex + 3 < totalBooks) {
-//                 currentBookIndex += 3;
-//                 displayBooks();
+//             if (currentBookIndexes[genre] + 3 < totalBooks) {
+//                 currentBookIndexes[genre] += 3;
+//                 displayBooksForGenre(genre);
 //             }
 //         });
 
 //     }).fail(function (error) {
 //         console.error("Error loading books:", error);
 //     });
+
 // });
 
 
+
+
+
 // $(document).ready(function () {
-//     let selectedGenres = [];
-//     let currentBookIndex = 0; // Tracks the current index of the books to display (starting from 0)
+//     let selectedGenres = ["Fantasy", "Romance", "Mystery"]; // Default genres
+//     let currentBookIndexes = {}; // Tracks the current index of books for each genre
 
 //     // Load and display books categorized by genre
 //     $.getJSON("../data.json", function (data) {
@@ -215,8 +197,8 @@ $(document).ready(function () {
 //             book.genres.some((genre) => genresToShow.includes(genre))
 //         );
 
-//         const $booksContainer = $("#carousel-books");
-//         $booksContainer.empty();
+//         const $booksContainer = $("#books-container");
+//         $booksContainer.empty(); // Clear any existing content
 
 //         // Group books by genre
 //         const booksByGenre = books.reduce((acc, book) => {
@@ -231,186 +213,102 @@ $(document).ready(function () {
 //             return acc;
 //         }, {});
 
-//         // Function to display books based on selected genres
-//         function displayBooks() {
-//             $booksContainer.empty(); // Clear any existing books
+//         // Function to dynamically create a genre section with a carousel
+//         function createGenreCarousel(genre) {
+//             const genreDiv = $('<div class="genre-section"></div>');
+//             const genreTitle = $('<h3 class="genre-title"></h3>').text(genre);
 
-//             selectedGenres.forEach((genre) => {
-//                 if (!genre || !booksByGenre[genre]) return;
+//             // Carousel structure
+//             const scrollLeft = $(`<div class="scroll-arrow left-arrow" data-genre="${genre}" style="display: none;">
+//                 <img src="../designImages/books/LeftArrow.png" alt="Left Arrow" />
+//             </div>`);
+//             const scrollRight = $(`<div class="scroll-arrow right-arrow" data-genre="${genre}" style="display: none;">
+//                 <img src="../designImages/books/RightArrow.png" alt="Right Arrow" />
+//             </div>`);
+//             const booksList = $(`<div class="books-list carousel" data-genre="${genre}"></div>`);
 
-//                 // Create a section for the genre
-//                 const genreDiv = $('<div class="genre-section"></div>');
-//                 const genreTitle = $('<h3 class="genre-title"></h3>').text(genre);
-//                 const booksContainer = $('<div class="carousel-inner"></div>');
+//             genreDiv.append(genreTitle, scrollLeft, booksList, scrollRight);
+//             $booksContainer.append(genreDiv);
 
-//                 // Limit to 3 books for the selected genre
-//                 const booksToDisplay = booksByGenre[genre].slice(currentBookIndex, currentBookIndex + 3); // Always start from the current index
+//             // Initialize the current index for this genre
+//             currentBookIndexes[genre] = 0;
 
-//                 // Loop through the 3 books to display
-//                 booksToDisplay.forEach(function (book, index) {
-//                     const activeClass = index === 0 ? 'active' : ''; // Mark the first book as active
-//                     const bookHTML = `
-//                         <div class="carousel-item ${activeClass}">
-//                             <div class="book">
-//                                 <div class="book-image">
-//                                     <img src="${book.img}" alt="${book.title}" class="book-img">
-//                                 </div>
-//                                 <div class="book-info">
-//                                     <div class="book-details">
-//                                         <p>${book.title}</p>
-//                                         <p class="book-author">Author: <span>${book.author}</span></p>
-//                                     </div>
-//                                     <div class="price-div">
-//                                         <p class="book-price">$${book.price}</p>
-//                                         <div>
-//                                             <i class="far fa-heart"></i>
-//                                             <button class="add-to-cart-btn">Add</button>
-//                                         </div>
-//                                     </div>
+//             displayBooksForGenre(genre);
+//         }
+
+//         // Function to display books for a specific genre
+//         function displayBooksForGenre(genre) {
+//             const $booksList = $(`.books-list[data-genre="${genre}"]`);
+//             $booksList.empty(); // Clear any existing books
+
+//             const booksToDisplay = booksByGenre[genre].slice(
+//                 currentBookIndexes[genre],
+//                 currentBookIndexes[genre] + 3 // Show 3 books at a time
+//             );
+
+//             booksToDisplay.forEach(function (book) {
+//                 const bookHTML = `
+//                     <div class="book">
+//                         <div class="book-image">
+//                             <img src="${book.img}" alt="${book.title}" class="book-img">
+//                         </div>
+//                         <div class="book-info">
+//                             <div class="book-details">
+//                                 <p>${book.title}</p>
+//                                 <p class="book-author">Author: <span>${book.author}</span></p>
+//                             </div>
+//                             <div class="price-div">
+//                                 <p class="book-price">$${book.price}</p>
+//                                 <div>
+//                                     <i class="far fa-heart"></i>
+//                                     <button class="add-to-cart-btn">Add</button>
 //                                 </div>
 //                             </div>
 //                         </div>
-//                     `;
-//                     booksContainer.append(bookHTML);
-//                 });
-
-//                 genreDiv.append(genreTitle, booksContainer);
-//                 $booksContainer.append(genreDiv);
-
-//                 // Show arrows if there are more books for the genre
-//                 const totalBooks = booksByGenre[genre].length;
-//                 if (totalBooks > 3) {
-//                     $('#scroll-left, #scroll-right').show();
-//                 } else {
-//                     $('#scroll-left, #scroll-right').hide();
-//                 }
+//                     </div>
+//                 `;
+//                 $booksList.append(bookHTML);
 //             });
-//         }
 
-//         // Handle genre link clicks
-//         $('#Genre a').click(function (e) {
-//             e.preventDefault(); // Prevent page reload
+//             // Show or hide arrows depending on the total number of books
+//             const totalBooks = booksByGenre[genre].length;
+//             const $leftArrow = $(`.left-arrow[data-genre="${genre}"]`);
+//             const $rightArrow = $(`.right-arrow[data-genre="${genre}"]`);
 
-//             const genre = $(this).text(); // Get the genre from the link text
-
-//             // If the genre is already selected, remove it; otherwise, add it
-//             if (selectedGenres.includes(genre)) {
-//                 selectedGenres = selectedGenres.filter(g => g !== genre);
-//                 $(this).css('color', ''); // Reset color if removed
-//             } else if (selectedGenres.length < 3) {
-//                 selectedGenres.push(genre);
-//             }
-
-//             // Display books based on selected genres
-//             displayBooks();
-
-//             // Disable further genre selection if 3 genres are selected
-//             if (selectedGenres.length === 3) {
-//                 $('#Genre a').not(':contains(' + selectedGenres.join('), :contains(') + ')').css('pointer-events', 'none');
+//             if (currentBookIndexes[genre] > 0) {
+//                 $leftArrow.show();
 //             } else {
-//                 $('#Genre a').css('pointer-events', 'auto');
+//                 $leftArrow.hide();
 //             }
-//         });
 
-//         // Arrow functionality for scrolling books using Bootstrap carousel
-//         $('#scroll-left').click(function () {
-//             $('#books-list').carousel('prev');
-//         });
+//             if (currentBookIndexes[genre] + 3 < totalBooks) {
+//                 $rightArrow.show();
+//             } else {
+//                 $rightArrow.hide();
+//             }
+//         }
 
-//         $('#scroll-right').click(function () {
-//             $('#books-list').carousel('next');
-//         });
-
-//     }).fail(function (error) {
-//         console.error("Error loading books:", error);
-//     });
-// });
-
-
-// $(document).ready(function () {
-//     let selectedGenres = [];
-//     let currentBookIndex = 0; // Tracks the current index of the books to display (starting from 0)
-
-//     // Load and display books categorized by genre
-//     $.getJSON("../data.json", function (data) {
-//         const genresToShow = ["Fantasy", "Mystery", "Romance", "Young Adult", "Comedy", "Thriller", "Family", "Philosophy", "Psychology", "Science-Fiction"];
-//         const books = data.books.filter((book) =>
-//             book.genres.some((genre) => genresToShow.includes(genre))
-//         );
-
-//         const $booksContainer = $("#carousel-books");
-//         $booksContainer.empty();
-
-//         // Group books by genre
-//         const booksByGenre = books.reduce((acc, book) => {
-//             book.genres.forEach((genre) => {
-//                 if (genresToShow.includes(genre)) {
-//                     if (!acc[genre]) {
-//                         acc[genre] = [];
-//                     }
-//                     acc[genre].push(book);
-//                 }
-//             });
-//             return acc;
-//         }, {});
-
-//         // Function to display books based on selected genres
-//         function displayBooks() {
-//             $booksContainer.empty(); // Clear any existing books
+//         // Function to display selected genres
+//         function displayGenres() {
+//             $booksContainer.empty(); // Clear any existing content
 
 //             selectedGenres.forEach((genre) => {
-//                 if (!genre || !booksByGenre[genre]) return;
-
-//                 // Create a section for the genre
-//                 const genreDiv = $('<div class="genre-section"></div>');
-//                 const genreTitle = $('<h3 class="genre-title"></h3>').text(genre);
-
-//                 // Books container for carousel
-//                 const booksContainer = $('<div class="carousel-inner"></div>');
-
-//                 // Get the books in sets of 3
-//                 const booksToDisplay = booksByGenre[genre].slice(currentBookIndex, currentBookIndex + 3); // Show 3 books at a time
-
-//                 // Loop through the 3 books to display
-//                 booksToDisplay.forEach(function (book, index) {
-//                     const activeClass = index === 0 ? 'active' : ''; // Mark the first book as active
-//                     const bookHTML = `
-//                         <div class="carousel-item ${activeClass}">
-//                             <div class="book">
-//                                 <div class="book-image">
-//                                     <img src="${book.img}" alt="${book.title}" class="book-img">
-//                                 </div>
-//                                 <div class="book-info">
-//                                     <div class="book-details">
-//                                         <p>${book.title}</p>
-//                                         <p class="book-author">Author: <span>${book.author}</span></p>
-//                                     </div>
-//                                     <div class="price-div">
-//                                         <p class="book-price">$${book.price}</p>
-//                                         <div>
-//                                             <i class="far fa-heart"></i>
-//                                             <button class="add-to-cart-btn">Add</button>
-//                                         </div>
-//                                     </div>
-//                                 </div>
-//                             </div>
-//                         </div>
-//                     `;
-//                     booksContainer.append(bookHTML);
-//                 });
-
-//                 genreDiv.append(genreTitle, booksContainer);
-//                 $booksContainer.append(genreDiv);
-
-//                 // Show arrows if there are more books for the genre
-//                 const totalBooks = booksByGenre[genre].length;
-//                 if (totalBooks > 3) {
-//                     $('#scroll-left, #scroll-right').show();
-//                 } else {
-//                     $('#scroll-left, #scroll-right').hide();
+//                 if (booksByGenre[genre]) {
+//                     createGenreCarousel(genre);
 //                 }
 //             });
 //         }
+
+//         // Initial display of default genres
+//         displayGenres();
+
+//         // Preselect default genres and apply the 'active' class
+//         $('#Genre a').each(function () {
+//             const genre = $(this).text();
+//             if (selectedGenres.includes(genre)) {
+//                 $(this).addClass('active'); // Apply the active class for default genres
+//             }
+//         });
 
 //         // Handle genre link clicks
 //         $('#Genre a').click(function (e) {
@@ -420,50 +318,54 @@ $(document).ready(function () {
 
 //             // If the genre is already selected, remove it; otherwise, add it
 //             if (selectedGenres.includes(genre)) {
-//                 selectedGenres = selectedGenres.filter(g => g !== genre);
-//                 $(this).css('color', ''); // Reset color if removed
+//                 selectedGenres = selectedGenres.filter((g) => g !== genre);
+//                 $(this).removeClass('active'); // Remove active class if unselected
 //             } else if (selectedGenres.length < 3) {
 //                 selectedGenres.push(genre);
+//                 $(this).addClass('active'); // Add active class if newly selected
 //             }
 
-//             // Display books based on selected genres
-//             displayBooks();
+//             // Display books for selected genres
+//             displayGenres();
 
 //             // Disable further genre selection if 3 genres are selected
 //             if (selectedGenres.length === 3) {
-//                 $('#Genre a').not(':contains(' + selectedGenres.join('), :contains(') + ')').css('pointer-events', 'none');
+//                 $('#Genre a').not('.active').css('pointer-events', 'none');
 //             } else {
 //                 $('#Genre a').css('pointer-events', 'auto');
 //             }
 //         });
 
 //         // Arrow functionality for scrolling books
-//         $('#scroll-left').click(function () {
-//             if (currentBookIndex > 0) {
-//                 currentBookIndex -= 3;
-//                 displayBooks();
+//         $booksContainer.on('click', '.left-arrow', function () {
+//             const genre = $(this).data('genre');
+//             if (currentBookIndexes[genre] > 0) {
+//                 currentBookIndexes[genre] -= 3;
+//                 displayBooksForGenre(genre);
 //             }
 //         });
 
-//         $('#scroll-right').click(function () {
-//             const genre = selectedGenres[selectedGenres.length - 1];
+//         $booksContainer.on('click', '.right-arrow', function () {
+//             const genre = $(this).data('genre');
 //             const totalBooks = booksByGenre[genre].length;
-//             if (currentBookIndex + 3 < totalBooks) {
-//                 currentBookIndex += 3;
-//                 displayBooks();
+//             if (currentBookIndexes[genre] + 3 < totalBooks) {
+//                 currentBookIndexes[genre] += 3;
+//                 displayBooksForGenre(genre);
 //             }
 //         });
 
 //     }).fail(function (error) {
 //         console.error("Error loading books:", error);
 //     });
+
 // });
 
 
 
 $(document).ready(function () {
-    let selectedGenres = [];
-    let currentBookIndex = 0; // Tracks the current index of the books to display
+    let selectedGenres = ["Fantasy", "Romance", "Mystery"]; // Default genres
+    let currentBookIndexes = {}; // Tracks the current index of books for each genre
+    let minPrice = 0, maxPrice = 100; // Default price range (you can adjust these based on your data)
 
     // Load and display books categorized by genre
     $.getJSON("../data.json", function (data) {
@@ -472,8 +374,8 @@ $(document).ready(function () {
             book.genres.some((genre) => genresToShow.includes(genre))
         );
 
-        const $booksContainer = $("#carousel-books");
-        $booksContainer.empty();
+        const $booksContainer = $("#books-container");
+        $booksContainer.empty(); // Clear any existing content
 
         // Group books by genre
         const booksByGenre = books.reduce((acc, book) => {
@@ -488,76 +390,157 @@ $(document).ready(function () {
             return acc;
         }, {});
 
-        // Function to display books based on selected genres
-        function displayBooks() {
-            $booksContainer.empty(); // Clear any existing books
+        // Initialize the slider with the range of prices
+        const allPrices = books.map(book => book.price);
+        minPrice = Math.min(...allPrices);
+        maxPrice = Math.max(...allPrices);
 
-            selectedGenres.forEach((genre) => {
-                if (!genre || !booksByGenre[genre]) return;
+        $("#slider").slider({
+            range: "min",
+            min: minPrice,
+            max: maxPrice,
+            value: 12,
+            slide: function (event, ui) {
+                // Update the price range label
+                // $("#price-range").text(`$${ui.values[0]} - $${ui.values[1]}`);
+                $("#current-price").text(`$${ui.value}`);
 
-                // Create a section for the genre
-                const genreDiv = $('<div class="genre-section"></div>');
-                const genreTitle = $('<h3 class="genre-title"></h3>').text(genre);
+                // Update displayed books based on the new price range
+                filterBooksByPrice(ui.value, maxPrice);
+            },
 
-                // Books container for carousel
-                // const booksContainer = $('<div class="carousel-inner"></div>');
-                const booksContainer = $('<div class="genre-books"></div>'); // Use genre-books class
+            create: function (event, ui) {
+                // Set the min and max price labels on the slider
+                $("#min-price").text(`$${minPrice}`);
+                $("#max-price").text(`$${maxPrice}`);
+                $("#current-price").text(`$${12}`);  // Set the initial value
+            }
+        });
 
+        // Function to filter books by price
+        function filterBooksByPrice(min, max) {
+            const filteredBooks = books.filter((book) =>
+                book.price >= min && book.price <= max
+            );
 
-                // Group books into sets of 3 and display
-                const booksToDisplay = booksByGenre[genre].slice(currentBookIndex, currentBookIndex + 3); // Show 3 books at a time
-                const chunkedBooks = chunkArray(booksToDisplay, 3); // Create chunks of 3 books
-
-                chunkedBooks.forEach((chunk, chunkIndex) => {
-                    const activeClass = chunkIndex === 0 ? 'active' : ''; // Mark the first chunk as active
-                    const carouselItem = $('<div class="carousel-item ' + activeClass + '"></div>');
-                    chunk.forEach(function (book) {
-                        const bookHTML = `
-                            <div class="book">
-                                <div class="book-image">
-                                    <img src="${book.img}" alt="${book.title}" class="book-img">
-                                </div>
-                                <div class="book-info">
-                                    <div class="book-details">
-                                        <p>${book.title}</p>
-                                        <p class="book-author">Author: <span>${book.author}</span></p>
-                                    </div>
-                                    <div class="price-div">
-                                        <p class="book-price">$${book.price}</p>
-                                        <div>
-                                            <i class="far fa-heart"></i>
-                                            <button class="add-to-cart-btn">Add</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        `;
-                        carouselItem.append(bookHTML);
-                    });
-                    booksContainer.append(carouselItem); // Append each chunk of books as a carousel-item
+            // Recreate the book display with filtered results
+            const booksByGenreFiltered = filteredBooks.reduce((acc, book) => {
+                book.genres.forEach((genre) => {
+                    if (genresToShow.includes(genre)) {
+                        if (!acc[genre]) {
+                            acc[genre] = [];
+                        }
+                        acc[genre].push(book);
+                    }
                 });
+                return acc;
+            }, {});
 
-                genreDiv.append(genreTitle, booksContainer);
-                $booksContainer.append(genreDiv);
-
-                // Show arrows if there are more books for the genre
-                const totalBooks = booksByGenre[genre].length;
-                if (totalBooks > 3) {
-                    $('#scroll-left, #scroll-right').show();
-                } else {
-                    $('#scroll-left, #scroll-right').hide();
+            // Clear existing content and display filtered books
+            $booksContainer.empty();
+            selectedGenres.forEach((genre) => {
+                if (booksByGenreFiltered[genre]) {
+                    createGenreCarousel(genre, booksByGenreFiltered[genre]);
                 }
             });
         }
 
-        // Helper function to chunk an array into smaller arrays of length 3
-        function chunkArray(array, size) {
-            const result = [];
-            for (let i = 0; i < array.length; i += size) {
-                result.push(array.slice(i, i + size));
-            }
-            return result;
+        // Function to dynamically create a genre section with a carousel
+        function createGenreCarousel(genre, booksForGenre) {
+            const genreDiv = $('<div class="genre-section"></div>');
+            const genreTitle = $('<h3 class="genre-title"></h3>').text(genre);
+
+            // Carousel structure
+            const scrollLeft = $(`<div class="scroll-arrow left-arrow" data-genre="${genre}" style="display: none;">
+                <img src="../designImages/books/LeftArrow.png" alt="Left Arrow" />
+            </div>`);
+            const scrollRight = $(`<div class="scroll-arrow right-arrow" data-genre="${genre}" style="display: none;">
+                <img src="../designImages/books/RightArrow.png" alt="Right Arrow" />
+            </div>`);
+            const booksList = $(`<div class="books-list carousel" data-genre="${genre}"></div>`);
+
+            genreDiv.append(genreTitle, scrollLeft, booksList, scrollRight);
+            $booksContainer.append(genreDiv);
+
+            // Initialize the current index for this genre
+            currentBookIndexes[genre] = 0;
+
+            displayBooksForGenre(genre, booksForGenre);
         }
+
+        // Function to display books for a specific genre
+        function displayBooksForGenre(genre, booksForGenre) {
+            const $booksList = $(`.books-list[data-genre="${genre}"]`);
+            $booksList.empty(); // Clear any existing books
+
+            const booksToDisplay = booksForGenre.slice(
+                currentBookIndexes[genre],
+                currentBookIndexes[genre] + 3 // Show 3 books at a time
+            );
+
+            booksToDisplay.forEach(function (book) {
+                const bookHTML = `
+                    <div class="book">
+                        <div class="book-image">
+                            <img src="${book.img}" alt="${book.title}" class="book-img">
+                        </div>
+                        <div class="book-info">
+                            <div class="book-details">
+                                <p>${book.title}</p>
+                                <p class="book-author">Author: <span>${book.author}</span></p>
+                            </div>
+                            <div class="price-div">
+                                <p class="book-price">$${book.price}</p>
+                                <div>
+                                    <i class="far fa-heart"></i>
+                                    <button class="add-to-cart-btn">Add</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                $booksList.append(bookHTML);
+            });
+
+            // Show or hide arrows depending on the total number of books
+            const totalBooks = booksForGenre.length;
+            const $leftArrow = $(`.left-arrow[data-genre="${genre}"]`);
+            const $rightArrow = $(`.right-arrow[data-genre="${genre}"]`);
+
+            if (currentBookIndexes[genre] > 0) {
+                $leftArrow.show();
+            } else {
+                $leftArrow.hide();
+            }
+
+            if (currentBookIndexes[genre] + 3 < totalBooks) {
+                $rightArrow.show();
+            } else {
+                $rightArrow.hide();
+            }
+        }
+
+        // Function to display selected genres
+        function displayGenres() {
+            $booksContainer.empty(); // Clear any existing content
+
+            selectedGenres.forEach((genre) => {
+                if (booksByGenre[genre]) {
+                    createGenreCarousel(genre, booksByGenre[genre]);
+                }
+            });
+        }
+
+        // Initial display of default genres
+        displayGenres();
+
+        // Preselect default genres and apply the 'active' class
+        $('#Genre a').each(function () {
+            const genre = $(this).text();
+            if (selectedGenres.includes(genre)) {
+                $(this).addClass('active'); // Apply the active class for default genres
+            }
+        });
 
         // Handle genre link clicks
         $('#Genre a').click(function (e) {
@@ -567,42 +550,44 @@ $(document).ready(function () {
 
             // If the genre is already selected, remove it; otherwise, add it
             if (selectedGenres.includes(genre)) {
-                selectedGenres = selectedGenres.filter(g => g !== genre);
-                $(this).css('color', ''); // Reset color if removed
+                selectedGenres = selectedGenres.filter((g) => g !== genre);
+                $(this).removeClass('active'); // Remove active class if unselected
             } else if (selectedGenres.length < 3) {
                 selectedGenres.push(genre);
+                $(this).addClass('active'); // Add active class if newly selected
             }
 
-            // Display books based on selected genres
-            displayBooks();
+            // Display books for selected genres
+            displayGenres();
 
             // Disable further genre selection if 3 genres are selected
             if (selectedGenres.length === 3) {
-                $('#Genre a').not(':contains(' + selectedGenres.join('), :contains(') + ')').css('pointer-events', 'none');
+                $('#Genre a').not('.active').css('pointer-events', 'none');
             } else {
                 $('#Genre a').css('pointer-events', 'auto');
             }
         });
 
         // Arrow functionality for scrolling books
-        $('#scroll-left').click(function () {
-            if (currentBookIndex > 0) {
-                currentBookIndex -= 3;
-                displayBooks();
+        $booksContainer.on('click', '.left-arrow', function () {
+            const genre = $(this).data('genre');
+            if (currentBookIndexes[genre] > 0) {
+                currentBookIndexes[genre] -= 3;
+                displayBooksForGenre(genre, booksByGenre[genre]);
             }
         });
 
-        $('#scroll-right').click(function () {
-            const genre = selectedGenres[selectedGenres.length - 1];
+        $booksContainer.on('click', '.right-arrow', function () {
+            const genre = $(this).data('genre');
             const totalBooks = booksByGenre[genre].length;
-            if (currentBookIndex + 3 < totalBooks) {
-                currentBookIndex += 3;
-                displayBooks();
+            if (currentBookIndexes[genre] + 3 < totalBooks) {
+                currentBookIndexes[genre] += 3;
+                displayBooksForGenre(genre, booksByGenre[genre]);
             }
         });
 
     }).fail(function (error) {
         console.error("Error loading books:", error);
     });
-});
 
+});

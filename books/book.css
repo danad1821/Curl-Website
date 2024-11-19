@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    color: #37474f;
+    font-family: "Poppins", sans-serif;
+  }
+  
+body {
+  background-color: #F1EAE4;
+  overflow-x: hidden;
+}
+
+
+#chosenBookSection{
+  display: flex;
+  flex-direction: row;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5%;
+}
+
+.bookMain{
+  padding-left: 17%;
+}
+/* book img section */
+.bookImg{
+  width: 200px;
+  height: 308px;
+  position: absolute;
+  top: 25%;
+  right: 17.9%;
+  border-radius: 10px;
+}
+
+.girlImg{
+  width: 33%;
+  position: absolute;
+  top: 22%;
+  right: 0;
+}
+/* book details */
+
+.bookDetails{
+  font-weight: light;
+}
+#breadCrumbs span,  .book-title, .bookDetails span, .price{
+  font-weight: bold;
+
+}
+
+.description{
+  width: 55%;
+  font-weight: 100;
+}
+
+
+.purchasingBookSection{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 610px;
+}
+
+.purchasingBookSection div:first-child{
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 30px;
+}
+
+.purchasingBookSection div:first-child p{
+  font-weight: bold !important;
+  margin-bottom: 0;
+}
+.add-to-cart{ 
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  align-items: center;
+}
+.add-to-cart-btn{
+  border: none;
+  border-radius: 25px;
+  color: #F1EAE4;
+  font-weight:bold ;
+  background-color: #E9B9B9;
+  padding: 5px 20px 5px 20px;
+}
+
+
+.counter{
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  gap: 15px;
+}
+
+.counter p{
+  background-color: #E9B9B9;
+  padding: 10px 20px 10px 20px;
+  border-radius: 50%;
+  color: #F1EAE4;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+.counter button{
+  background-color: transparent;
+  border:none;
+}
