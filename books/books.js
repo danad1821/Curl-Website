@@ -463,7 +463,7 @@ $(document).ready(function () {
 
 $(document).ready(function () {
     let selectedGenres = [];
-    let currentBookIndex = 0; // Tracks the current index of the books to display (starting from 0)
+    let currentBookIndex = 0; // Tracks the current index of the books to display
 
     // Load and display books categorized by genre
     $.getJSON("../data.json", function (data) {
@@ -500,7 +500,9 @@ $(document).ready(function () {
                 const genreTitle = $('<h3 class="genre-title"></h3>').text(genre);
 
                 // Books container for carousel
-                const booksContainer = $('<div class="carousel-inner"></div>');
+                // const booksContainer = $('<div class="carousel-inner"></div>');
+                const booksContainer = $('<div class="genre-books"></div>'); // Use genre-books class
+
 
                 // Group books into sets of 3 and display
                 const booksToDisplay = booksByGenre[genre].slice(currentBookIndex, currentBookIndex + 3); // Show 3 books at a time

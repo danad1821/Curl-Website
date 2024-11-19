@@ -180,8 +180,12 @@ a.active {
   margin-top: 50px;
 }
 .genre-section{
-  overflow-y: hidden;
-  overflow-x: scroll;
+  /* overflow-y: hidden;
+  overflow-x: scroll; */
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .genre-section::-webkit-scrollbar {
@@ -273,20 +277,24 @@ a.active {
 }
 
 #carousel-books {
-  display: flex;           /* Align items horizontally */
-  gap: 30px;               /* Optional: Space between items */
-  width: 100%;             /* Full width of the container */
-  overflow: hidden;  
+  display: flex; 
+  flex-direction: column;
+  gap: 30px;              
+  width: 100%;
+  /* overflow: hidden;   */
 }
 
 .carousel-item {
 
-  display: flex; /* Ensure that the books are in a row */
+  /* display: flex; 
   justify-content: space-between;
-  align-items: center; /* Vertically align items */
-  padding: 10px; /* Optional: Space between books */
-  flex: 0 0 auto;            /* Prevent items from stretching */
-  width: 33.33%;
+  align-items: center;
+  padding: 10px;
+  flex: 0 0 auto;
+  width: 33.33%; */
+
+  flex: 0 0 auto;
+  display: flex;
 }
 
 #scroll-left img, #scroll-right img {
@@ -302,4 +310,25 @@ a.active {
 
 #scroll-left:hover, #scroll-right:hover {
   opacity: 0.8;
+}
+
+.genre-books {
+  display: flex;
+  flex-direction: row;
+  /* gap: 30px;
+  overflow: hidden; */
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+.book {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 270px;
 }
