@@ -15,6 +15,12 @@ body {
   top: 0;
   z-index: 999;
 }
+.Book{
+  background-color: #f1eae4;
+  border-radius: 25px;
+  padding: 4px 10px;
+  text-align: center;
+}
 
 /* LANDING STYLES */
 #LandingText{
@@ -285,14 +291,6 @@ a.active {
 }
 
 .carousel-item {
-
-  /* display: flex; 
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-  flex: 0 0 auto;
-  width: 33.33%; */
-
   flex: 0 0 auto;
   display: flex;
 }
@@ -317,9 +315,6 @@ a.active {
   flex-direction: row;
   /* gap: 30px;
   overflow: hidden; */
-
-  display: flex;
-  flex-direction: column;
   gap: 20px;
 }
 
@@ -331,4 +326,10 @@ a.active {
   justify-content: flex-start;
   align-items: center;
   width: 270px;
+}
+
+@media (max-width: 1157px) {
+  .Book {
+    background-color: #c0dde5;
+  }
 }
