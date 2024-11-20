@@ -58,9 +58,10 @@ body {
   font-size: 24px;
 }
 #curledCat {
-  left: 3%;
+  left: 1%;
   width: 20%;
   bottom: -15%;
+  transform: rotate(-45deg);
 }
 #girlWithBook {
   left: 12%;
