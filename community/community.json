@@ -453,7 +453,7 @@
     },
     {
       "roomName": "Pet corner",
-      "description": "Have a cup of coffee and discuss books together",
+      "description": "Share pics of your cute pets and talk about them",
       "roomImg": "../designImages/Community/trhrth 1.png",
       "participants": ["lookatme34", "NovelNomad78", "LitLover68"],
       "posts": [
@@ -664,7 +664,7 @@
     },
     {
       "roomName": "Events",
-      "description": "Have a cup of coffee and discuss books together",
+      "description": "Stay tuned for our weekly events at curl",
       "roomImg": "../designImages/Community/yjty 1.png",
       "participants": ["lookatme34", "NovelNomad78", "LitLover68"],
       "posts": [
@@ -875,7 +875,7 @@
     },
     {
       "roomName": "Coffee & Pastry Faves",
-      "description": "Have a cup of coffee and discuss books together",
+      "description": "Drop some of your fav pastries & coffee with your friends",
       "roomImg": "../designImages/Community/yukjfuj 1.png",
       "participants": ["lookatme34", "NovelNomad78", "LitLover68"],
       "posts": [
@@ -1086,7 +1086,7 @@
     },
     {
       "roomName": "Friends of Curl",
-      "description": "Have a cup of coffee and discuss books together",
+      "description": "Express your thoughts and feelings with friends",
       "roomImg": "../designImages/Community/thjghm 1.png",
       "participants": ["lookatme34", "NovelNomad78", "LitLover68"],
       "posts": [

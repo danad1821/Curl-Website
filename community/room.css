@@ -270,7 +270,7 @@
   font-weight: 600;
 }
 #commentModal textarea, #replyModal textarea{
-  width: 110%;
+  width: 100%;
   padding: 10px 30px;
   height: 150px;
   background-color: #f1eae4;
