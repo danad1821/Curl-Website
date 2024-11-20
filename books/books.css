@@ -159,6 +159,12 @@ a.active {
   margin-bottom: 0%;
 }
 
+#selected-genres-container{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
 #search-sort button{
   background-color: #E9B9B9;
   color: #F1EAE4;
@@ -225,7 +231,7 @@ a.active {
 .books-list {
   display: flex;
   flex-direction: row;
-  gap: 100px;
+  /* gap: 50px; */
   overflow: hidden; /* Prevent items from overflowing outside the carousel */
   justify-content: flex-start; /* Align books to the left */
 }
@@ -275,7 +281,7 @@ a.active {
   justify-content: center;
   align-items: center;
   width: 270px;
-  width: max-content;
+  /* width: max-content; */
 }
 
 .book-img {
@@ -310,6 +316,7 @@ a.active {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  width: 170px;
 }
 
 .price-div p {

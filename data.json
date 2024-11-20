@@ -140,7 +140,7 @@
       "price": 15.99,
       "rating": 4.7,
       "availability": 10,
-      "genres": ["Fiction", "Science Fiction", "Bestseller"],
+      "genres": ["Fiction", "Science-Fiction", "Bestseller"],
       "summary": "Ryland Grace wakes up disoriented on a spaceship drifting millions of miles from Earth, with no memory of how he got there or what his mission is. As he reconstructs his fragmented memories, he discovers that he is the sole crew member on a desperate mission to save the sun from mysteriously diminishing."
     },
     {
@@ -206,7 +206,7 @@
       "price": 14.99,
       "rating": 4.2,
       "availability": 5,
-      "genres": ["Fiction", "Science Fiction", "Utopian", "Dystopian"],
+      "genres": ["Fiction", "Science-Fiction", "Utopian", "Dystopian"],
       "summary": "Shevek, a physicist from the anarchist moon of Anarres, travels to the capitalist world of Urras. There, he encounters a society with stark contrasts to his own, facing challenges that force him to question his ideals and the possibility of utopia."
     },
     {
@@ -228,7 +228,7 @@
       "price": 8.99,
       "rating": 4.2,
       "availability": 30,
-      "genres": ["Dystopian", "Fiction", "Science Fiction"],
+      "genres": ["Dystopian", "Fiction", "Science-Fiction"],
       "summary": "Set in a totalitarian state, 1984 follows the life of Winston Smith, a low-ranking government employee who begins to question the oppressive regime and its constant surveillance."
     },
     {
@@ -305,7 +305,7 @@
       "price": 12.99,
       "rating": 4.4,
       "availability": 2,
-      "genres": ["Fiction", "Science Fiction", "Fantasy"],
+      "genres": ["Fiction", "Science-Fiction", "Fantasy"],
       "summary": "Set on the desert planet Arrakis, Dune follows the story of Paul Atreides, a young noble whose family is given control of the planet. As he navigates political intrigue, ecological challenges, and a powerful drug called Spice, Paul's destiny intertwines with the fate of the universe."
     },
     {
@@ -316,7 +316,7 @@
       "price": 8.99,
       "rating": 4.2,
       "availability": 20,
-      "genres": ["Fiction", "Science Fiction", "Comedy", "Satire"],
+      "genres": ["Fiction", "Science-Fiction", "Comedy", "Satire"],
       "summary": "Arthur Dent, an ordinary man, finds his life turned upside down when Earth is demolished to make way for a hyperspace bypass. With the help of his eccentric friend Ford Prefect, he embarks on a hilarious and often absurd journey through the cosmos."
     },
     {
@@ -404,19 +404,8 @@
       "price": 12.99,
       "rating": 4.1,
       "availability": 6,
-      "genres": ["Fiction", "Young Adult", "Dystopian", "Science Fiction"],
+      "genres": ["Fiction", "Young Adult", "Dystopian", "Science-Fiction"],
       "summary": "In a future Chicago divided into five factions, Beatrice Prior discovers that she doesn't fit into any of them and must choose a new path that could lead to danger and rebellion."
-    },
-    {
-      "id": 38,
-      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-XewEIDM-yCiLLSynORoahhkJwn0CiHT7qg&s",
-      "title": "The Midnight Library",
-      "author": "Matt Haig",
-      "genres": ["Fiction", "Fantasy", "Philosophy"],
-      "price": 15.99,
-      "rating": 4.2,
-      "availability": 6,
-      "summary": "A heartwarming and philosophical novel about a woman who has the chance to explore infinite possibilities of her life."
     },
     {
       "id": 39,
@@ -610,7 +599,7 @@
       "img": "https://thecirclebookshop.com/cdn/shop/files/9780575081505_39825e29-f4b2-4a4f-be88-c784b1cd4e45_500x500_crop_center.jpg?v=1722662092",
       "title": "Dune",
       "author": "Frank Herbert",
-      "genres": ["Science Fiction", "Fantasy", "Adventure"],
+      "genres": ["Science-Fiction", "Fantasy", "Adventure"],
       "price": 13.99,
       "rating": 4.6,
       "availability": 5,
