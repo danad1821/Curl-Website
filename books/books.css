@@ -89,7 +89,7 @@ body {
   display: flex;
   flex-direction: row;
   width: 100%;
-  margin-top: 30%; /* Adjust as needed for your layout */
+  margin-top: 35%; /* Adjust as needed for your layout */
   position: relative; /* Remove `absolute` */
   padding-bottom: 50px;
 }
@@ -138,6 +138,82 @@ a.active {
   font-weight: 600;
 }
 
+
+/* Customizing the jQuery UI Slider */
+#slider {
+  width: 100%;
+  margin: 20px 0;
+  background: #37474f;
+  height: 5px;
+  width: 180px;
+  position: relative;
+}
+
+#slider .ui-slider-range {
+  background-color: #E9B9B9;
+  height: 5px;
+}
+
+/* Customizing the slider's handle*/
+#slider .ui-slider-handle {
+  background-color: #E9B9B9;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  border: none;
+  position: absolute; /* Make sure it's positioned on the track */
+  margin-left: -10px; /* Center the handle over the track */
+  z-index: 2; 
+}
+
+/* Positioning the labels for min and max */
+#min-price, #max-price {
+  font-size: 14px;
+  color: #37474f;
+  /* position: absolute; */
+  top: 20px;
+}
+
+/* Min price label (left side) */
+#min-price {
+  left: 0;
+}
+
+/* Max price label (right side) */
+#max-price {
+  right: 0;
+}
+
+/* Positioning the current value label */
+#current-price {
+  font-size: 14px;
+  color: #000;
+  font-weight: bold;
+  /* position: absolute; */
+  top: -30px; /* Position above the slider */
+  left: 50%; /* Center it above the slider */
+  transform: translateX(-50%); /* Adjust for centering */
+}
+
+/* Customizing the highlighted area (between the handle and max value) */
+#slider .ui-slider-range-min {
+  background-color: #E9B9B9;
+}
+
+
+#slider .ui-slider-handle:hover {
+  background-color: #E9B9B9;
+}
+
+/* Customizing the price range text */
+#price-range {
+  font-size: 16px;
+  width: 180px;
+  font-weight: bold;
+  color: #37474f;
+  display: flex;
+  justify-content: space-between;
+}
 
 /* books section styles */
 #booksTop{
@@ -204,6 +280,7 @@ a.active {
   gap: 20px;
   position: relative;
   align-items: flex-start;
+  margin-bottom: 30px;
 }
 
 .genre-section::-webkit-scrollbar {
@@ -212,7 +289,7 @@ a.active {
 
 .genre-title {
   font-weight: bold;
-  margin: 50px 0; /* Combined margin for top and bottom */
+  margin: 30px 0; /* Combined margin for top and bottom */
   text-align: left;
   align-self: flex-start; /* Align the title to the start of the container */
 }
@@ -261,7 +338,7 @@ a.active {
 }
 
 .right-arrow {
-  right: -130px; /* Position the right arrow to the side of the carousel */
+  right: -15px; /* Position the right arrow to the side of the carousel */
 }
 
 .scroll-arrow img {
@@ -278,8 +355,8 @@ a.active {
   flex: 0 0 auto;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
   width: 270px;
   /* width: max-content; */
 }
@@ -429,77 +506,3 @@ footer {
   top: 20px;
 }
 
-
-/* Customizing the jQuery UI Slider */
-#slider {
-  width: 100%;
-  margin: 20px 0;
-  background: #37474f;
-  height: 5px;
-  position: relative;
-}
-
-#slider .ui-slider-range {
-  background-color: #E9B9B9;
-  height: 5px;
-}
-
-/* Customizing the slider's handle*/
-#slider .ui-slider-handle {
-  background-color: #E9B9B9;
-  border-radius: 50%;
-  width: 20px;
-  height: 20px;
-  border: none;
-  position: absolute; /* Make sure it's positioned on the track */
-  margin-left: -10px; /* Center the handle over the track */
-  z-index: 2; 
-}
-
-/* Positioning the labels for min and max */
-#min-price, #max-price {
-  font-size: 14px;
-  color: #37474f;
-  /* position: absolute; */
-  top: 20px;
-}
-
-/* Min price label (left side) */
-#min-price {
-  left: 0;
-}
-
-/* Max price label (right side) */
-#max-price {
-  right: 0;
-}
-
-/* Positioning the current value label */
-#current-price {
-  font-size: 14px;
-  color: #000;
-  font-weight: bold;
-  /* position: absolute; */
-  top: -30px; /* Position above the slider */
-  left: 50%; /* Center it above the slider */
-  transform: translateX(-50%); /* Adjust for centering */
-}
-
-/* Customizing the highlighted area (between the handle and max value) */
-#slider .ui-slider-range-min {
-  background-color: #E9B9B9;
-}
-
-
-#slider .ui-slider-handle:hover {
-  background-color: #E9B9B9;
-}
-
-/* Customizing the price range text */
-#price-range {
-  font-size: 16px;
-  font-weight: bold;
-  color: #37474f;
-  display: flex;
-  justify-content: space-between;
-}

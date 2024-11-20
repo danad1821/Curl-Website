@@ -275,12 +275,40 @@ $(document).ready(function () {
         });
 
         // Function to filter books by price
-        function filterBooksByPrice(min, max) {
-            const filteredBooks = books.filter((book) =>
-                book.price >= min && book.price <= max
-            );
+        // function filterBooksByPrice(min, max) {
+        //     const filteredBooks = books.filter((book) =>
+        //         book.price >= min && book.price <= max
+        //     );
 
-            // Recreate the book display with filtered results
+
+
+        //     // Recreate the book display with filtered results
+        //     const booksByGenreFiltered = filteredBooks.reduce((acc, book) => {
+        //         book.genres.forEach((genre) => {
+        //             if (genresToShow.includes(genre)) {
+        //                 if (!acc[genre]) {
+        //                     acc[genre] = [];
+        //                 }
+        //                 acc[genre].push(book);
+        //             }
+        //         });
+        //         return acc;
+        //     }, {});
+
+        //     // Clear existing content and display filtered books
+        //     $booksContainer.empty();
+        //     selectedGenres.forEach((genre) => {
+        //         if (booksByGenreFiltered[genre]) {
+        //             createGenreCarousel(genre, booksByGenreFiltered[genre]);
+        //         }
+        //     });
+        // }
+
+        function filterBooksByPrice(currentMax) {
+            // Filter books whose price is <= currentMax
+            const filteredBooks = books.filter((book) => book.price <= currentMax);
+
+            // Group filtered books by genre
             const booksByGenreFiltered = filteredBooks.reduce((acc, book) => {
                 book.genres.forEach((genre) => {
                     if (genresToShow.includes(genre)) {
@@ -293,14 +321,16 @@ $(document).ready(function () {
                 return acc;
             }, {});
 
-            // Clear existing content and display filtered books
+            // Clear and display filtered books
             $booksContainer.empty();
+
             selectedGenres.forEach((genre) => {
-                if (booksByGenreFiltered[genre]) {
+                if (booksByGenreFiltered[genre] && booksByGenreFiltered[genre].length > 0) {
                     createGenreCarousel(genre, booksByGenreFiltered[genre]);
                 }
             });
         }
+
 
         // Function to dynamically create a genre section with a carousel
         function createGenreCarousel(genre, booksForGenre) {
