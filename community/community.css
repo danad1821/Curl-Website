@@ -58,9 +58,10 @@ body {
   font-size: 24px;
 }
 #curledCat {
-  left: 3%;
+  left: 1%;
   width: 20%;
   bottom: -15%;
+  transform: rotate(-45deg);
 }
 #girlWithBook {
   left: 12%;
@@ -124,6 +125,10 @@ body {
 .communityPageBtn {
   transition: background-color 0.3s, color 0.3s;
 }
+#createBtn{
+  margin-top: 50px;
+  padding: 12px 18px;
+}
 
 #roomsDisplay {
   display: flex;
@@ -137,13 +142,13 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 10px 40px;
+  margin: 30px 40px;
 }
 .roomInnerDiv {
   background-color: #f1eae4;
   border-radius: 50px;
-  width: 20vw;
-  height: 40vh;
+  width: 300px;
+  height: 300px;
   position: relative;
 }
 
@@ -166,9 +171,9 @@ body {
   padding: 5px 16px;
 }
 .roomDesc{
-  width: 15vw;
+  width: 250px;
   text-align: center;
-  margin-top: 10px;
+  margin: 20px 0;
 }
 /* Footer Section */
 
@@ -387,6 +392,30 @@ footer {
 @media(max-width: 1045px){
   .landingCommunitySection{
     height: 66vh;
+  }
+}
+@media (max-width: 1000px) {
+  #manImage, #arms, #girlWithBook, #girlsWithBook, #curledCat, #sleepingCat, #strechingCat, #catOnN, #chatBubbles{
+    display: none;
+  }
+  .landingCommunitySection{
+    height: 45vh;
+    display: flex;
+    flex-direction: column;
+  }
+  .landingCommunitySection h1 {
+    font-family: "New Class", sans-serif;
+    font-size: 15dvw;
+    font-weight: 300;
+    position: static;
+  }
+  .landingCommunitySection>div{
+    position: static;
+    width: 50vw;
+    margin-top: -20px;
+  }
+  #createBtn{
+    margin-top: 5px;
   }
 }
 
