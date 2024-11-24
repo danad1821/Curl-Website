@@ -69,7 +69,7 @@ $searchInput.on("input", function () {
 
   const allData = [
     ...data.books,
-    ...data.menu,
+    ...data.menu_menu,
     ...data.merch,
     ...data.quotes
   ];

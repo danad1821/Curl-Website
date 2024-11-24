@@ -151,7 +151,7 @@ label {
 @media (min-width: 1024px) {
 
     .girl-sitting{
-        margin-right: 70px;
+        margin-right: 50px !important;
     }
 
     .modal-content {
@@ -189,7 +189,7 @@ label {
     }
 
     .girl-sitting{
-        margin-right: 60px;
+        margin-right: 60px !important;
     }
 
     .modal-content {
