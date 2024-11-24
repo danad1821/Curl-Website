@@ -10,18 +10,26 @@ body {
   overflow-x: hidden;
 }
 
+#books-link, #genre-link{
+  text-decoration: none;
+  color: #37474f;
+}
+
+#books-link{
+  font-weight: bold;
+}
 
 #chosenBookSection{
   display: flex;
   flex-direction: row;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   margin-top: 5%;
 }
 
 .bookMain{
-  padding-left: 17%;
+  padding-left: 20%;
 }
 /* book img section */
 .bookImg{
@@ -39,21 +47,27 @@ body {
   top: 22%;
   right: 0;
 }
-/* book details */
 
+/* book details */
+#breadCrumbs{
+  margin-bottom: 20px;
+}
 .bookDetails{
   font-weight: light;
 }
-#breadCrumbs span,  .book-title, .bookDetails span, .price{
+#breadCrumbs span, .bookDetails span, .price{
   font-weight: bold;
 
 }
 
 .description{
-  width: 55%;
+  width: 610px;
   font-weight: 100;
 }
 
+#book-title-breadCrumbs{
+  font-weight: normal !important;
+}
 
 .purchasingBookSection{
   display: flex;
@@ -108,4 +122,225 @@ gap: 30px;
 .counter button{
   background-color: transparent;
   border:none;
+}
+
+
+/* SIMILAR BOOKS STYLES */
+
+.similar-books-section{
+  margin-left: 20%;
+  margin-top: 50px;
+}
+
+.similar-books-section h3{
+  font-weight: bold;
+  margin-bottom: 50px;
+}
+
+/* Carousel and Books Display */
+.books-list {
+  display: flex;
+  flex-direction: row;
+  /* gap: 50px; */
+  overflow: hidden; /* Prevent items from overflowing outside the carousel */
+  justify-content: flex-start;
+
+  transition: transform 0.5s ease; /* Smooth transition for sliding */
+
+}
+
+.carousel-inner {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.carousel-item {
+  flex: 0 0 auto;
+  display: flex;
+}
+
+/* Arrow Styles */
+.scroll-arrow {
+  position: absolute;
+  top: 103%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+  z-index: 1; /* Ensure arrows appear above the books */
+}
+
+.left-arrow {
+  left: 150px;
+}
+
+.right-arrow {
+  right: 110px; /* Position the right arrow to the side of the carousel */
+}
+
+.scroll-arrow img {
+  width: 50px;
+  height: auto;
+}
+
+.scroll-arrow:hover {
+  opacity: 0.8; /* Slight fade effect on hover */
+}
+
+/* Book Item Styles */
+.book {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 260px;
+  /* width: max-content; */
+
+}
+
+.book-img {
+  width: 160px;
+  height: 220px;
+  border-radius: 15px;
+}
+
+.book-details {
+  margin-top: 20px;
+  line-height: 10px;
+  font-size: 14px;
+}
+
+
+#book-title {
+  font-weight: bold;
+  line-height: 18px;
+  min-height: 40px;
+  margin-bottom: 0;
+}
+
+.book-author span {
+  font-weight: bold;
+}
+
+.price-div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 170px;
+}
+
+.price-div p {
+  margin-bottom: 0;
+}
+
+.price-div div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+
+.price-div i {
+  font-size: 18px;
+}
+
+.add-to-cart-btn {
+  border: none;
+  background-color: #e9b9b9;
+  color: #f1eae4;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+
+
+
+
+
+
+/* FOOTER */
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+  background-color: #c0dde5;
+  align-self: flex-end;
+  margin-top: 75px;
+  
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  position: relative;
+  padding: 10px 0;
+  z-index: 2;
+  height: 250px;
+}
+
+.logo {
+  text-align: center;
+}
+
+.logo-circle {
+  background-color: #F1EAE4;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-circle img {
+  width: 120px;
+  height: 74px;
+}
+
+.logo-circle p {
+  font-size: 14px;
+  color: black;
+}
+
+.about,
+.contact {
+  text-align: left;
+}
+
+.about h3,
+.contact h3 {
+  font-size: 20px;
+  color: black;
+  margin-bottom: 5px;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+.about p,
+.contact p {
+  font-size: 14px;
+  color: black;
+  margin: 4px 0;
+}
+
+.copyright {
+  background-color: #F1EAE4;
+  font-size: 12px;
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+  position: relative;
+  z-index: 2;
+  top: 20px;
 }

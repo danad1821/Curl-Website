@@ -24,7 +24,7 @@
 
     <div id="header"></div>
     <section id="chosenBookSection">
-        <div class="bookMain">
+        <!-- <div class="bookMain">
             <div id="breadCrumbs">
                 <p>
                     <span>Books </span> > Fantasy > The Battle of the Fae King Throne
@@ -55,12 +55,88 @@
                     </div>
                 </div>
             </div>
+        </div> -->
+
+        <div class="bookMain">
+            <!-- <div id="breadCrumbs">
+                <p id="breadcrumbs"></p>
+            </div> -->
+            <div id="breadCrumbs">
+                <a href="books.html" id="books-link">Books</a> &gt;
+                <a href="#" id="genre-link"></a> &gt;
+                <span id="book-title-breadCrumbs"></span>
+            </div>
+
+            <div class="bookDetails">
+                <p id="book-title"></p>
+                <p id="book-author"><span>By: </span></p>
+                <p id="book-availability"><span>Availability: </span></p>
+                <p id="book-genre"><span>Genre: </span></p>
+                <p id="book-price" class="price"></p>
+                <p id="book-description" class="description"></p>
+                <div class="purchasingBookSection">
+                    <div>
+                        <p>Quantity</p>
+                        <div class="counter">
+                            <button class="decrease"><i class="fa-solid fa-minus" style="color: #37474f;"></i></button>
+                            <p id="quantity">1</p>
+                            <button class="increase"><i class="fa-solid fa-plus" style="color: #37474f;"></i></button>
+                        </div>
+                    </div>
+                    <div class="add-to-cart">
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                        <i class="far fa-heart"></i>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div>
-            <img src="../designImages/books/TheBattle.jpg" alt="" class="bookImg">
+
+        <div id="imagesContainer">
+            <!-- <img src="../designImages/books/TheBattle.jpg" alt="" class="bookImg"> -->
+            <img id="book-image" src="" alt="" class="bookImg">
             <img src="../designImages/books/girlBookDetails.png" alt="" class="girlImg">
         </div>
+
     </section>
+
+    <!-- <div id="similar-books-container" class="similar-books-section">
+        <h3>Similar Books</h3>
+    </div> -->
+
+    <div class="similar-books-section">
+        <h3>Similar Books</h3>
+        <div id="similar-books-container"></div>
+    </div>
+
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="logo">
+                <div class="logo-circle">
+                    <img src="../designImages/Logo[1].png" alt="" />
+                </div>
+            </div>
+            <div class="about">
+                <h3>About us</h3>
+                <p>Bookstore/Coffee shop</p>
+                <p>Events</p>
+                <p>Community</p>
+                <p>Badaro St., Beirut, Lebanon</p>
+            </div>
+            <div class="contact">
+                <h3>Contact Us</h3>
+                <p>curlcoffee</p>
+                <p>Curl book & coffee shop</p>
+                <h3>Help</h3>
+                <p>hello@curlcoffee.com</p>
+            </div>
+        </div>
+        <p class="copyright">© Copyright</p>
+    </footer>
+
+
 
     <!-- cdn for jquery  -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -70,6 +146,7 @@
         crossorigin="anonymous"></script>
 
     <script src="books.js"></script>
+    <script src="book.js"></script>
 </body>
 
 </html>

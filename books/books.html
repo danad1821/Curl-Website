@@ -17,6 +17,7 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="stylesheet" href="../Header/CSS/search.css">
     <link rel="stylesheet" href="books.css">
 
 </head>
@@ -92,7 +93,18 @@
 
                 <div id="search-sort">
                     <button>Search <i class="fa-solid fa-magnifying-glass" style="color: #f1eae4;"></i></button>
-                    <button>Sort By</button>
+                    <button id="sort-btn">Sort By</button>
+                </div>
+                <div id="search-results"></div>
+
+                <!-- Sort options popup -->
+                <div id="sort-popup" class="sort-popup">
+                    <ul>
+                        <li class="sort-option" data-sort="new-to-old">New to Old</li>
+                        <li class="sort-option" data-sort="old-to-new">Old to New</li>
+                        <li class="sort-option" data-sort="high-to-low">High to Low Price</li>
+                        <li class="sort-option" data-sort="low-to-high">Low to High Price</li>
+                    </ul>
                 </div>
             </div>
 

@@ -220,6 +220,7 @@ a.active {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   width: 80%;
 }
 
@@ -241,7 +242,16 @@ a.active {
   gap: 10px;
 }
 
-#search-sort button{
+#search-sort {
+  display: flex; /* Use flexbox to keep items in a row */
+  align-items: center; /* Vertically align items */
+  gap: 10px; /* Add spacing between elements */
+
+}
+
+
+#search-sort button, 
+#search-sort .search-input {
   background-color: #E9B9B9;
   color: #F1EAE4;
   font-weight: 700;
@@ -250,13 +260,69 @@ a.active {
   border: none;
   font-size: 15px;
 }
-#search-sort button:first-child{
+/* #search-sort button:first-child{
   margin-right: 10px;
+} */
+
+#search-sort .search-input {
+  flex-grow: 1; /* Makes the input field responsive */
+  max-width: 300px; /* Optional: Restrict the width */
+}
+
+#search-sort button:last-child {
+  flex-shrink: 0; /* Prevents "Sort By" button from shrinking */
+  min-width: 100px; /* Set a minimum width for consistent sizing */
+}
+
+#search-results {
+  position: absolute;
+  width: 34.8%;
+  z-index: 999;
+  right: 20px;
+  top: 70px;
+}
+
+.search-input::placeholder{
+  color: #F1EAE4;
 }
 
 
+#sort-popup {
+  display: none;
+  position: absolute;
+  top: 70px;
+  right: 180px;
+  background-color: #E9B9B9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  z-index: 999;
+  padding: 0;
+}
 
+#sort-popup ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
 
+#sort-popup li {
+  padding: 12px;
+  cursor: pointer;
+  color: #F1EAE4;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+#sort-popup li:hover {
+  background-color: #F1EAE4;
+  color: #37474f;
+}
+
+#sort-popup li:active {
+  background-color: #E9B9B9;
+  color: #37474f;
+}
 
 /* General Layout Styles */
 #books-container {
@@ -310,7 +376,10 @@ a.active {
   flex-direction: row;
   /* gap: 50px; */
   overflow: hidden; /* Prevent items from overflowing outside the carousel */
-  justify-content: flex-start; /* Align books to the left */
+  justify-content: flex-start;
+
+  transition: transform 0.5s ease; /* Smooth transition for sliding */
+
 }
 
 .carousel-inner {
@@ -359,6 +428,7 @@ a.active {
   align-items: flex-start;
   width: 270px;
   /* width: max-content; */
+
 }
 
 .book-img {
