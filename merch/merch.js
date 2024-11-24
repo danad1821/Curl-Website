@@ -3,6 +3,11 @@ $(document).ready(function () {
 
     $("#footer").load("../footer/footer.html");
 });
+$(document).ready(function () {
+    $("#header").load("../Header/header.html");
+
+    $("#footer").load("../footer/footer.html");
+});
 document.addEventListener("DOMContentLoaded", () => {
     fetch("merch.json")
       .then(response => response.json())
@@ -40,7 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
             minusBtn.classList.add("control-btn");
 
             const quantity = document.createElement("p");
-            quantity.textContent = "0";
+            quantity.textContent = "1";
             quantity.classList.add("quantity-label");
 
             const plusBtn = document.createElement("button");
@@ -49,7 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             minusBtn.addEventListener("click", () => {
                 let currentQuantity = parseInt(quantity.textContent);
-                if (currentQuantity > 0) {
+                if (currentQuantity > 1) {
                     quantity.textContent = currentQuantity - 1;
                 }
             });
@@ -92,4 +97,3 @@ document.addEventListener("DOMContentLoaded", () => {
       })
       .catch(error => console.error("Error loading products:", error));
   });
- 
