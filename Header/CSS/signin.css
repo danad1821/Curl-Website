@@ -11,6 +11,16 @@
     text-decoration: none;
 }
 
+#userProfileBtn{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#userProfileBtn>p{
+    margin: 0;
+    margin-right: 5px;
+}
+
 .modal {
     display: none;
     position: fixed;

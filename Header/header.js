@@ -2,6 +2,7 @@
 const $modal = $("#signInModal");
 const $btn = $("#signInBtn");
 const $closeBtn = $(".close");
+localStorage.setItem("loggenInUser", "");
 
 // Show the modal when the "Sign In" button is clicked
 $btn.on("click", function (event) {
@@ -185,4 +186,49 @@ $(document).ready(function() {
       $(this).slideToggle();
       $('#burgerIcon').show();
   });
+
+  //get all users
+  let allUsers=[];
+  $.ajax({
+    url: "../user.json",
+  type: "GET",
+  dataType: "json",
+  success: function (data) {
+    allUsers=data.users;
+  },
+  error: function (error) {
+    console.error("Error loading data:", error);
+  }
+  })
+
+  //sign in
+  if(localStorage.getItem("loggedInUser")==""){
+    $("#userProfileBtn").hide();
+    $("#signInBtn").show();
+  }
+  else{
+    $("#userProfileBtn").show();
+      $("#signInBtn").hide();
+  }
+  
+  $("#sign-in-submit-btn").click(function(e){
+    e.preventDefault()
+    let usernameOrEmail=$("#username").val();
+    let password=$("#password").val();
+    let userData=allUsers.find((user)=>(user.username == usernameOrEmail || user.email ==usernameOrEmail) && user.password==password);
+    if(userData){
+      $("#userProfileBtn").show();
+      $("#signInBtn").hide();
+      localStorage.setItem("loggedInUser", JSON.stringify(userData))
+    }
+    else{
+      console.log("error")
+    }
+  })
+
+  $("#userProfileBtn").click(function(){
+    $(location).prop("href", "../profile/profile.html");
+  })
+
 });
+
