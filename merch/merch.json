@@ -1,0 +1,16 @@
+{
+    "products": [
+      { "name": "Harry Potter Tote Bag", "price": 15, "image": "../merchImages/aerhrtsfh 4.png" },
+      { "name": "Dog Mom White Mug", "price": 8, "image": "../merchImages/Group 134.png" },
+      { "name": "Talking to My Cat Pouch", "price": 3, "image": "../merchImages/tyjfg 1 (1).png" },
+      { "name": "Grishaverse Enamel Pin", "price": 3, "image": "../merchImages/drghsdth 1.png"},
+      { "name": "Camp Half Blood T-shirt", "price": 15, "image": "../merchImages/thgsrgh 1.png" },
+      { "name": "The Harry Potter Wand", "price": 6, "image": "../merchImages/rytyj 1.png" },
+      { "name": "Dog Pattern Thermo", "price": 12, "image": "../merchImages/dyjfyu 1.png" },
+      { "name": "Lost in a Book Keychain", "price": 3, "image": "../merchImages/dbfgb 1.png" },
+      { "name": "Silver Dog Necklace", "price": 5, "image": "../merchImages/Menu and Merch Illustrations 2.png" },
+      { "name": "I Like Coffee T-Shirt", "price": 10, "image": "../merchImages/ethsdrth 1.png" },
+      { "name": "Marauders Map Print", "price": 8, "image": "../merchImages/aergrsth 1.png" },
+      { "name": "Old Book Library Mug", "price": 4, "image": "../merchImages/yjyj 1.png" }
+    ]
+  }
