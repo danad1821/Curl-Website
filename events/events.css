@@ -1,0 +1,190 @@
+*{
+    padding: 0;
+    margin: 0;
+    color: #37474f;
+    font-family: "Poppins", sans-serif;
+}body {
+    
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #c0dde5;
+  }
+  
+  .events-label {
+    width: 500px;
+    height: 161px;
+    margin-top: 50px;
+  }
+
+  .dog {
+    position: absolute;
+    z-index: -1;
+    transform: translateX(330px);
+    top: 55px;
+  }
+
+  .rope {
+    margin-top: -402px;
+    transform: translateX(-28px);
+  }
+
+  .events-container {
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  .events-container h1 {
+    font-size: 3rem;
+    color: #4f6771;
+  }
+  
+  .events-container .event-sublabel {
+    font-size: 1.5rem;
+    color: #4f6771;
+    width: 550px;
+  }
+
+  .events-container p {
+    font-size: 1.2rem;
+    color: #4f6771;
+  }
+  
+  .upcoming-events h2 {
+    font-size: 2rem;
+    margin: 20px 0;
+    margin-top: -220px;
+  }
+  
+  .event-grid {
+    /*
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-content: center; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .event-box {
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 30px;
+    text-align: center;
+    position: relative; /* Positioning context for child elements */
+    width: 470px;
+    margin: 7px;
+  }
+  
+  .event-box p {
+    text-align: left;
+  }
+
+  .event-box img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    margin-top: 80px;
+    margin-bottom: 20px;
+  }
+  
+  .event-box h2 {
+    position: absolute; /* Position relative to the event-box */
+    top: 230px; /* Distance from the top */
+    left: 10px; /* Distance from the right */
+    padding: 5px 10px;
+  }
+  
+  .event-box .time {
+    position: absolute; /* Position relative to the event-box */
+    top: 50px; /* Distance from the top */
+    left: 10px; /* Distance from the right */
+    padding: 5px 10px;
+  }
+
+  .event-box .date {
+    position: absolute; /* Position relative to the event-box */
+    top: 10px; /* Distance from the top */
+    left: 10px; /* Distance from the left */
+    font-size: 0.9rem;
+    color: #4f6771;
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.8); /* Optional: Add background for better readability */
+    padding: 5px;
+    border-radius: 5px;
+  }
+  
+  .reserve-btn {
+    position: absolute; /* Position relative to the event-box */
+    top: 20px; /* Distance from the top */
+    right: 20px; /* Distance from the right */
+    background-color: #ffb3c1;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+  }
+  
+  .reserve-btn:hover {
+    background-color: #ff99ad;
+  }
+  
+  
+  .reservation-form-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+  }
+  /*
+  .name-container {
+    display: flex;
+    flex-direction: row;
+  }*/
+
+  .reservation-form {
+    background-color: #ffb3c1;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .reservation-form label {
+    font-size: 1rem;
+    color: #4f6771;
+  }
+  
+  .reservation-form input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  #submitReservation {
+    background-color: #ff99ad;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #submitReservation:hover {
+    background-color: #ff8094;
+  }

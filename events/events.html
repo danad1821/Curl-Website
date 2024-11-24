@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Merch</title>
+    <title>Events</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -27,4 +27,89 @@
     />
     <link rel="stylesheet" href="/events/events.css">
 </head>
-    
+
+<body>
+<div id="header"></div>
+  <div class="events-container">
+    <img src="../events images/Events.png" alt="" class="events-label">
+    <p class="event-sublabel">Join us for <b>unforgettable moments</b> and unique experiences at our <b>exciting events</b></p>
+    <img src="../events images/Website Illustrations-Recovered 1.png" alt="" class="dog">
+    <img src="../events images/Untitled_Artwork 5 1.png" alt="" class="rope">
+    <div class="upcoming-events">
+      <h2>Upcoming Events</h2>
+      <div class="event-grid">
+        <!-- Event Boxes -->
+        
+        <div class="event-box">
+            <h2>Sep 18</h2>
+            <p class="time">From 2:00 p.m to 6:00 p.m</p>
+          <img src="../events images/461280710_18018628106571333_2289256839872048841_n 1 (1).png" alt="Event 1">
+          <p>Creative Writing Workshop</p>
+          <button class="reserve-btn">Reserve</button>
+        </div>
+        <div class="event-box">
+            <h2>Sep 30</h2> <button class="reserve-btn">Reserve</button>
+            <p class="time">From 3:00 p.m to 5:00 p.m</p>
+          <img src="../events images/LyingLife1 1.png" alt="Event 2">
+           <p>The Lying Life of Adults Book Release</p>
+          
+        </div>
+        <div class="event-box">
+            <h2>Oct 15</h2>
+            <p class="time">From 4:00 p.m to 7:00 p.m</p>
+          <img src="../events images/Liesel_Alison_Rossiters-2_Nero AI_Photo 1.png" alt="Event 3">
+          <p>How to Be a Storyteller Workshop</p>
+          <button class="reserve-btn">Reserve</button>
+        </div>
+        <div class="event-box">
+            <h2>Oct 26</h2>
+            <p class="time">From 12:00 p.m to 5:00 p.m</p>
+          <img src="../events images/Fantasy_Bookly_Box_1_--4_Nero AI_Photo 1.png" alt="Event 4">
+        
+          <p>Fantasy Festival</p>
+          <button class="reserve-btn">Reserve</button>
+        </div>
+        <div class="event-box">
+            <h2>Nov 8</h2>
+            <p class="time">From 3:00 p.m to 5:00 p.m</p>
+          <img src="../events images/8ae2e692c3_Nero AI_Photo 1.png" alt="Event 5">
+           <p>Social Bookworms Event</p>
+          <button class="reserve-btn">Reserve</button>
+        </div>
+        <div class="event-box">
+            <h2>Nov 18</h2>
+            <p class="time">From 1:00 p.m to 5:00 p.m</p>
+          <img src="../events images/An event where there are specific book releases of the romance genre such as How to End a Love Story, It Ends with Us, and more..png" alt="Event 6">
+          <p>Love is in the Air Event</p>
+          <button class="reserve-btn">Reserve</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Reservation Form -->
+  <div class="reservation-form-container" id="reservationForm">
+    <div class="reservation-form">
+        <div class="name-container">
+
+            <label for="firstName">First Name</label>
+            <input type="text" id="firstName" placeholder="Alya">
+            
+            <label for="lastName">Last Name</label>
+            <input type="text" id="lastName" placeholder="Itani">
+        </div>
+      
+      <label for="email">Email</label>
+      <input type="email" id="email" placeholder="razzi85@gmail.com">
+      
+      <label for="phone">Phone Number</label>
+      <input type="text" id="phone" placeholder="+981">
+      
+      <button id="submitReservation">Reserve</button>
+    </div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="events.js"></script>
+  <div id="footer"></div>
+</body>
+</html>
