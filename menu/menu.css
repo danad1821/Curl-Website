@@ -20,8 +20,8 @@ body{
 .head-menu {
     display: flex;
     justify-content: center;
-    align-items: center; /* Align images vertically center (optional) */
-    gap: 8px; /* Add spacing between images if needed */
+    align-items: center;
+    gap: 8px;
     margin-top: -3%;
     margin-left: -10%;
 }
@@ -86,27 +86,24 @@ body{
     padding-top: 100px;
 }
 
-/* Container holding the pastries image and cards */
 .pastries-items {
     display: flex;
-    align-items: center; /* Align items at the top */
-    gap: 20px; /* Add space between items */
+    align-items: center;
+    gap: 20px;
 }
 
-/* Style for the pastries girl image */
 .pastries-girl {
-    max-width: 25%; /* Adjust the size as needed */
+    max-width: 25%;
     margin-top: -30%;
     margin-left: 2%;
 }
 
-/* Cards container */
 #pastries-items {
-    flex: 3; /* Give more space to the cards */
+    flex: 3;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap; /* Wrap cards to a new line if needed */
-    gap: 10px; /* Space between cards */
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 #pastries-items{
@@ -124,70 +121,61 @@ body{
     opacity: 1;
 }
 
-/* Individual card styling */
 .pastry-card {
     display: flex;
-    flex-direction: column; /* Arrange content in a column */
-    align-items: flex-start; /* Align all items to the left */
+    flex-direction: column;
+    align-items: flex-start;
     padding: 20px;
-    width: 250px; /* Fixed width for the card */
-    height: 450px; /* Ensure all cards are of the same height */
-    text-align: left; /* Align text to the left */
+    width: 250px;
+    height: 450px;
+    text-align: left;
     margin-top: 5%;
     margin-right: 0;
     margin-left: -2%;
 }
 
-/* Consistent image height */
 .pastry-card img {
-    width: auto; /* Make image span the full width */
-    height: 120px; /* Increase image height */
-    object-fit: cover; /* Ensure the image fits without distortion */
+    width: auto;
+    height: 120px;
+    object-fit: cover;
     border-radius: 10px;
-    margin-bottom: 10px; /* Add spacing below the image */
+    margin-bottom: 10px;
 }
 
-/* Name alignment */
 .pastry-card h3 {
     font-weight: bold;
     margin-top: 15px;
     font-size: 20px;
-    min-height: 40px; /* Ensure all titles have consistent height */
-    text-align: left; /* Align text to the left */
+    min-height: 40px;
+    text-align: left;
 }
 
-/* Description alignment */
 .pastry-card .pastry-description {
     font-size: 15px;
-    min-height: 60px; /* Ensure consistent height for descriptions */
-    text-align: left; /* Align text to the left */
+    min-height: 60px;
+    text-align: left;
 }
 
-/* Price container styling to align the price, Add button, and heart icon on the same line */
-/* Price container styling */
 .price-container {
     display: flex;
-    align-items: center; /* Vertically align items */
-    justify-content: space-between; /* Space items to opposite sides */
-    width: 90%; /* Ensure the container takes the full card width */
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
 }
 
-/* Price styling */
 .pastry-card .pastry-price {
     font-size: 1.1em;
     font-weight: bold;
-    margin: 0; /* Remove default margin */
+    margin: 0;
 }
 
-/* Right section containing the Add button and Heart icon */
 .right {
-    display: flex; /* Align the button and heart horizontally */
-    align-items: center; /* Center align vertically */
-    gap: 10px; /* Space between the button and the heart */
+    display: flex;
+    align-items: center;
+    gap: 10px;
     margin-right: 40px;
 }
 
-/* Add button styling */
 .pinkAddBtn {
     font-size: 13px;
     border: none;
@@ -201,10 +189,9 @@ body{
 }
 
 .pinkAddBtn:hover {
-    background-color: #37474f; /* Slightly darker pink on hover */
+    background-color: #37474f;
 }
 
-/* Heart icon styling */
 .heartIcon {
     fill: #37474f;
     width: 30px;
@@ -214,7 +201,7 @@ body{
 }
 
 .heartIcon:hover {
-    fill: red; /* Change color on hover */
+    fill: red;
 }
 
 .arrow-container{
@@ -232,25 +219,22 @@ body{
     cursor: pointer;
 }
 
-/* Drinks Part*/
-
-/* Container holding the pastries image and cards */
 .Drinks-items {
-    display: flex; /* Arrange items horizontally */
-    align-items: flex-start; /* Align items at the top */
-    gap: 20px; /* Add space between the girl image and the cards */
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
 }
 
 .Drink-girl {
-    max-width: 25%; /* Adjust the size as needed */
+    max-width: 25%;
     margin-top: -7%;
 }
 
 #Drinks-items {
-    flex: 1; /* Allow the cards to take up the remaining space */
+    flex: 1;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap; /* Allow wrapping of cards when needed */
+    flex-wrap: wrap;
 }
 
 #Drinks-items{
@@ -268,50 +252,45 @@ body{
     opacity: 1;
 }
 
-/* Individual card styling */
 .drink-card {
     display: flex;
-    flex-direction: column; /* Arrange content in a column */
-    align-items: flex-start; /* Align all items to the left */
+    flex-direction: column;
+    align-items: flex-start;
     padding: 20px;
-    width: 240px; /* Fixed width for the card */
-    height: 450px; /* Ensure all cards are of the same height */
-    text-align: left; /* Align text to the left */
+    width: 240px;
+    height: 450px;
+    text-align: left;
     margin-top: 5%;
     margin-right: -5%;
     margin-left: 7%;
 }
 
-/* Consistent image height */
 .drink-card img {
-    width: auto; /* Make image span the full width */
-    height: 120px; /* Increase image height */
-    object-fit: cover; /* Ensure the image fits without distortion */
+    width: auto;
+    height: 120px;
+    object-fit: cover;
     border-radius: 10px;
-    margin-bottom: 10px; /* Add spacing below the image */
+    margin-bottom: 10px;
 }
 
-/* Name alignment */
 .drink-card h3 {
     font-weight: bold;
     margin-top: 15px;
     font-size: 20px;
-    min-height: 40px; /* Ensure all titles have consistent height */
-    text-align: left; /* Align text to the left */
+    min-height: 40px;
+    text-align: left;
 }
 
-/* Description alignment */
 .drink-card .drink-description {
     font-size: 15px;
-    min-height: 60px; /* Ensure consistent height for descriptions */
-    text-align: left; /* Align text to the left */
+    min-height: 60px;
+    text-align: left;
 }
 
-/* Price styling */
 .drink-card .drink-price {
     font-size: 1.1em;
     font-weight: bold;
-    margin: 0; /* Remove default margin */
+    margin: 0;
 }
 
 .arrows-container{
@@ -324,30 +303,25 @@ body{
     cursor: pointer;
 }
 
-/* Sweet Part */
-
-/* Container holding the pastries image and cards */
 .sweets-items {
     display: flex;
-    align-items: center; /* Align items at the top */
-    gap: 20px; /* Add space between items */
+    align-items: center;
+    gap: 20px;
 }
 
-/* Style for the pastries girl image */
 .Sweet-girl {
-    max-width: 25%; /* Adjust the size as needed */
+    max-width: 25%;
     margin-top: -20%;
     margin-left: 3%;
     margin-right: -2%;
 }
 
-/* Cards container */
 #sweets-items {
-    flex: 3; /* Give more space to the cards */
+    flex: 3;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap; /* Wrap cards to a new line if needed */
-    gap: 10px; /* Space between cards */
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 #sweets-items{
@@ -365,60 +339,53 @@ body{
     opacity: 1;
 }
 
-/* Individual card styling */
 .sweet-card {
     display: flex;
-    flex-direction: column; /* Arrange content in a column */
-    align-items: flex-start; /* Align all items to the left */
+    flex-direction: column;
+    align-items: flex-start;
     padding: 20px;
-    width: 250px; /* Fixed width for the card */
-    height: 450px; /* Ensure all cards are of the same height */
-    text-align: left; /* Align text to the left */
+    width: 250px;
+    height: 450px;
+    text-align: left;
     margin-top: 8%;
     margin-right: 0;
     margin-left: -2%;
 }
 
-/* Consistent image height */
 .sweet-card img {
-    width: auto; /* Make image span the full width */
-    height: 90px; /* Increase image height */
-    object-fit: cover; /* Ensure the image fits without distortion */
+    width: auto;
+    height: 90px;
+    object-fit: cover;
     border-radius: 10px;
-    margin-bottom: 10px; /* Add spacing below the image */
+    margin-bottom: 10px;
 }
 
-/* Name alignment */
 .sweet-card h3 {
     font-weight: bold;
     margin-top: 15px;
     font-size: 20px;
-    min-height: 40px; /* Ensure all titles have consistent height */
-    text-align: left; /* Align text to the left */
+    min-height: 40px;
+    text-align: left;
 }
 
-/* Description alignment */
 .sweet-card .sweet-description {
     font-size: 15px;
-    min-height: 60px; /* Ensure consistent height for descriptions */
-    text-align: left; /* Align text to the left */
+    min-height: 60px;
+    text-align: left;
 }
 
-/* Price container styling to align the price, Add button, and heart icon on the same line */
-/* Price container styling */
 .price-container {
     display: flex;
-    align-items: center; /* Vertically align items */
-    justify-content: space-between; /* Space items to opposite sides */
-    width: 90%; /* Ensure the container takes the full card width */
-    margin-top: -10px; /* Add spacing above the container */
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    margin-top: -10px;
 }
 
-/* Price styling */
 .sweet-card .sweet-price {
     font-size: 1.1em;
     font-weight: bold;
-    margin: 0; /* Remove default margin */
+    margin: 0;
 }
 
 @media (max-width: 1157px) {
@@ -454,17 +421,14 @@ body{
         margin-right: 10%;
     }
     
-    /* Style for the pastries girl image */
     .pastries-girl {
         margin-top: -20%;
     }
     
-    /* Cards container */
     #pastries-items {
         justify-content: center;
     }
     
-    /* Individual card styling */
     .pastry-card {
         margin-right: 60px;
     }
@@ -477,7 +441,6 @@ body{
         justify-content: center;
     }
     
-    /* Individual card styling */
     .drink-card {
         margin-right: 0;
     }
@@ -490,20 +453,16 @@ body{
         margin-left: -100%;
     }
     
-    /* Sweet Part */
-    /* Style for the pastries girl image */
     .Sweet-girl {
         margin-left: 100px;
         margin-right: -150px;
         margin-top: -15%;
     }
     
-    /* Cards container */
     #sweets-items {
         justify-content: center;
     }
     
-    /* Individual card styling */
     .sweet-card {
         margin-right: 60px;
     }
@@ -528,38 +487,31 @@ body{
         padding-top: 80px;
     }
     
-    /* Style for the pastries girl image */
     .pastries-girl {
-        max-width: 24%; /* Adjust the size as needed */
+        max-width: 24%;
         margin-top: -40%;
         margin-left: 2%;
     }
     
-    /* Individual card styling */
     .pastry-card {
-        width: 220px; /* Fixed width for the card */
-        height: 450px; /* Ensure all cards are of the same height */
+        width: 220px;
+        height: 450px;
     }
     
-    /* Consistent image height */
     .pastry-card img {
-        height: 100px; /* Increase image height */
+        height: 100px;
     }
     
-    /* Name alignment */
     .pastry-card h3 {
         font-size: 18px;
     }
     
-    /* Description alignment */
     .pastry-card .pastry-description {
         font-size: 13px;
     }
     
-    /* Price container styling to align the price, Add button, and heart icon on the same line */
-    /* Price container styling */
     .price-container {
-        width: 115%; /* Ensure the container takes the full card width */
+        width: 115%;
         margin-top: -10%;
     }
     
@@ -577,52 +529,42 @@ body{
         margin-left: -130%;
     }
 
-    /* Add button styling */
     .pinkAddBtn {
         font-size: 13px;
     }
 
-    /* Heart icon styling */
     .heartIcon {
         width: 30px;
         height: 30px;
     }  
     
-    /* Style for the pastries girl image */
     .Drink-girl {
-        max-width: 25%; /* Adjust the size as needed */
+        max-width: 25%;
         margin-top: -7%;
     }
     
-    /* Individual card styling */
     .drink-card {
-        width: 200px; /* Fixed width for the card */
-        height: 450px; /* Ensure all cards are of the same height */
+        width: 200px;
+        height: 450px;
     }
     
-    /* Consistent image height */
     .drink-card img {
-        height: 100px; /* Increase image height */
+        height: 100px;
     }
     
-    /* Name alignment */
     .drink-card h3 {
         font-size: 18px;
     }
     
-    /* Description alignment */
     .drink-card .drink-description {
         font-size: 13px;
     }
     
-    /* Price container styling to align the price, Add button, and heart icon on the same line */
-    /* Price container styling */
     .drink-container {
-        width: 115%; /* Ensure the container takes the full card width */
+        width: 115%;
         margin-top: -10%;
     }
     
-    /* Price styling */
     .drink-card .drink-price {
         font-size: 1.0em;
     }
@@ -636,43 +578,35 @@ body{
         width: 60px;
     }
     
-    /* Style for the pastries girl image */
     .Sweet-girl {
-        max-width: 24%; /* Adjust the size as needed */
+        max-width: 24%;
         margin-top: -20%;
         margin-left: 5%;
         margin-right: -5%;
     }
     
-    /* Individual card styling */
     .sweet-card {
-        width: 220px; /* Fixed width for the card */
-        height: 450px; /* Ensure all cards are of the same height */
+        width: 220px;
+        height: 450px;
     }
     
-    /* Consistent image height */
     .sweet-card img {
-        height: 100px; /* Increase image height */
+        height: 100px;
     }
     
-    /* Name alignment */
     .sweet-card h3 {
         font-size: 18px;
     }
     
-    /* Description alignment */
     .sweet-card .sweet-description {
         font-size: 13px;
     }
     
-    /* Price container styling to align the price, Add button, and heart icon on the same line */
-    /* Price container styling */
     .sweet-container {
-        width: 115%; /* Ensure the container takes the full card width */
+        width: 115%;
         margin-top: -10%;
     }
     
-    /* Price styling */
     .sweet-card .sweet-price {
         font-size: 1.0em;
     }
@@ -696,58 +630,48 @@ body{
         margin-right: -7%;
     }
     
-    /* Style for the pastries girl image */
     .pastries-girl {
-        max-width: 22%; /* Adjust the size as needed */
+        max-width: 22%;
         margin-top: -30%;
         margin-left: 2%;
     }
     
-    /* Individual card styling */
     .pastry-card {
-        width: 200px; /* Fixed width for the card */
-        height: 450px; /* Ensure all cards are of the same height */
+        width: 200px;
+        height: 450px;
     }
     
-    /* Style for the pastries girl image */
     .Drink-girl {
-        max-width: 25%; /* Adjust the size as needed */
+        max-width: 25%;
         margin-top: -4%;
     }
     .drinks h1{
         margin-top: -5%;
     }
 
-    /* Individual card styling */
     .drink-card {
         margin-left: 4%;
-        width: 200px; /* Fixed width for the card */
-        height: 450px; /* Ensure all cards are of the same height */
+        width: 200px;
+        height: 450px;
     }
     
-    /* Consistent image height */
     .drink-card img {
-        height: 100px; /* Increase image height */
+        height: 100px;
     }
     
-    /* Name alignment */
     .drink-card h3 {
         font-size: 18px;
     }
     
-    /* Description alignment */
     .drink-card .drink-description {
         font-size: 13px;
     }
-    
-    /* Price container styling to align the price, Add button, and heart icon on the same line */
-    /* Price container styling */
+
     .drink-container {
-        width: 115%; /* Ensure the container takes the full card width */
+        width: 115%;
         margin-top: -10%;
     }
     
-    /* Price styling */
     .drink-card .drink-price {
         font-size: 1.0em;
     }
@@ -765,18 +689,16 @@ body{
         margin-top: -5%;
     }
 
-    /* Style for the pastries girl image */
     .Sweet-girl {
-        max-width: 24%; /* Adjust the size as needed */
+        max-width: 24%;
         margin-top: -20%;
         margin-left: 5%;
         margin-right: -5%;
     }
     
-    /* Individual card styling */
     .sweet-card {
-        width: 200px; /* Fixed width for the card */
-        height: 450px; /* Ensure all cards are of the same height */
+        width: 200px;
+        height: 450px;
     }
 }
 
@@ -789,7 +711,6 @@ body{
         margin-right: -7%;
     }
     
-    /* Style for the pastries girl image */
     .pastries-girl {
         display: none;
     }
@@ -803,26 +724,23 @@ body{
     }
 
     #pastries-items {
-        gap: 30px; /* Space between cards */
+        gap: 30px;
         margin-left: 7%;
     }
     
-    /* Individual card styling */
     .pastry-card {
-        width: 220px; /* Fixed width for the card */
-        height: 450px; /* Ensure all cards are of the same height */
+        width: 220px;
+        height: 450px;
     }
     
-    /* Style for the pastries girl image */
     #Drinks-items {
-        gap: 30px; /* Space between cards */
+        gap: 30px;
         margin-left: 0;
     }
     
-    /* Individual card styling */
     .drink-card {
-        width: 220px; /* Fixed width for the card */
-        height: 450px; /* Ensure all cards are of the same height */
+        width: 220px;
+        height: 450px;
     }
 
     .arrows-container{
@@ -835,14 +753,13 @@ body{
     }
     
     #sweets-items {
-        gap: 30px; /* Space between cards */
+        gap: 30px;
         margin-left: 7%;
     }
     
-    /* Individual card styling */
     .sweet-card {
-        width: 220px; /* Fixed width for the card */
-        height: 450px; /* Ensure all cards are of the same height */
+        width: 220px;
+        height: 450px;
     }
 }
 
@@ -861,20 +778,19 @@ body{
     }
 
     #pastries-items {
-        gap: 10px; /* Space between cards */
+        gap: 10px;
     }
     
-    /* Style for the pastries girl image */
     #Drinks-items {
-        gap: 10px; /* Space between cards */
+        gap: 10px;
     }
     
     #sweets-items {
-        gap: 10px; /* Space between cards */
+        gap: 10px;
     }
 
     .sweet-card img {
-        height: 80px; /* Increase image height */
+        height: 80px;
     }
 }
 
@@ -905,40 +821,37 @@ body{
     }
 
     #pastries-items {
-        gap: 0; /* Space between cards */
+        gap: 0;
     }
     
-    /* Style for the pastries girl image */
     #Drinks-items {
-        gap: 0; /* Space between cards */
+        gap: 0;
     }
     
     #sweets-items {
-        gap: 0; /* Space between cards */
+        gap: 0;
     }
 
     .pastry-card {
-        width: 160px; /* Fixed width for the card */
-        height: auto; /* Ensure all cards are of the same height */
+        width: 160px;
+        height: auto;
     }
 
     .drink-card {
-        width: 150px; /* Fixed width for the card */
-        height: auto; /* Ensure all cards are of the same height */
+        width: 150px;
+        height: auto;
     }
 
     .sweet-card {
-        width: 160px; /* Fixed width for the card */
-        height: auto; /* Ensure all cards are of the same height */
+        width: 160px;
+        height: auto;
     }
 
-    /* Add button styling */
     .pinkAddBtn {
         font-size: 10px;
         padding: 5px 15px;
     }
     
-    /* Heart icon styling */
     .heartIcon {
         width: 20px;
         height: 20px;
@@ -948,38 +861,32 @@ body{
         margin-bottom: -2%;
     }
 
-    /* Consistent image height */
     .pastry-card img {
-        height: 50px; /* Increase image height */
+        height: 50px;
     }
     
-    /* Name alignment */
     .pastry-card h3 {
         font-size: 10px;
         margin-bottom: -10%;
     }
     
-    /* Description alignment */
     .pastry-card .pastry-description {
         font-size: 8px;
     }
     
-    /* Price container styling to align the price, Add button, and heart icon on the same line */
-    /* Price container styling */
     .price-container {
-        width: 130%; /* Ensure the container takes the full card width */
+        width: 130%;
         margin-top: -30%;
     }
     
-    /* Price styling */
     .pastry-card .pastry-price {
         font-size: 0.7em;
     }
 
     .right {
-        display: flex; /* Align the button and heart horizontally */
-        align-items: center; /* Center align vertically */
-        gap: 5px; /* Space between the button and the heart */
+        display: flex;
+        align-items: center;
+        gap: 5px;
         margin-right: 40px;
     }
     
@@ -997,30 +904,24 @@ body{
         margin-bottom: -2%;
     }
     
-    /* Consistent image height */
     .drink-card img {
-        height: 50px; /* Increase image height */
+        height: 50px;
     }
     
-    /* Name alignment */
     .drink-card h3 {
         font-size: 10px;
         margin-bottom: -20%;
     }
     
-    /* Description alignment */
     .drink-card .drink-description {
         font-size: 8px;
     }
     
-    /* Price container styling to align the price, Add button, and heart icon on the same line */
-    /* Price container styling */
     .drink-container {
-        width: 120% !important; /* Ensure the container takes the full card width */
+        width: 120% !important;
         margin-top: -10%;
     }
     
-    /* Price styling */
     .drink-card .drink-price {
         font-size: 0.7em;
     }
@@ -1039,26 +940,21 @@ body{
         margin-bottom: -2% !important;
     }
 
-/* Consistent image height */
     .sweet-card img {
-        height: 50px; /* Increase image height */
+        height: 50px;
     }
     
-    /* Name alignment */
     .sweet-card h3 {
         font-size: 10px;
         margin-bottom: -10%;
     }
     
-    /* Description alignment */
     .sweet-card .sweet-description {
         font-size: 8px;
     }
-    
-    /* Price container styling to align the price, Add button, and heart icon on the same line */
-    /* Price container styling */
+
     .sweet-container {
-        width: 130%; /* Ensure the container takes the full card width */
+        width: 130%;
         margin-top: -30%;
     }
     
@@ -1094,27 +990,25 @@ body{
     }
 
     .pastry-card {
-        width: 120px; /* Fixed width for the card */
-        height: auto; /* Ensure all cards are of the same height */
+        width: 120px;
+        height: auto;
     }
 
     .drink-card {
-        width: 110px; /* Fixed width for the card */
-        height: auto; /* Ensure all cards are of the same height */
+        width: 110px;
+        height: auto;
     }
 
     .sweet-card {
-        width: 120px; /* Fixed width for the card */
-        height: auto; /* Ensure all cards are of the same height */
+        width: 120px;
+        height: auto;
     }
 
-    /* Add button styling */
     .pinkAddBtn {
         font-size: 8px;
         padding: 2px 12px;
     }
     
-    /* Heart icon styling */
     .heartIcon {
         width: 10px;
         height: 10px;
@@ -1124,38 +1018,32 @@ body{
         margin-bottom: -2%;
     }
 
-    /* Consistent image height */
     .pastry-card img {
-        height: 50px; /* Increase image height */
+        height: 50px; 
     }
     
-    /* Name alignment */
     .pastry-card h3 {
         font-size: 10px;
         margin-bottom: -10%;
     }
     
-    /* Description alignment */
     .pastry-card .pastry-description {
         font-size: 8px;
     }
-    
-    /* Price container styling to align the price, Add button, and heart icon on the same line */
-    /* Price container styling */
+
     .price-container {
-        width: 160%; /* Ensure the container takes the full card width */
+        width: 160%;
         margin-top: -30%;
     }
     
-    /* Price styling */
     .pastry-card .pastry-price {
         font-size: 0.7em;
     }
 
     .right {
-        display: flex; /* Align the button and heart horizontally */
-        align-items: center; /* Center align vertically */
-        gap: 5px; /* Space between the button and the heart */
+        display: flex;
+        align-items: center;
+        gap: 5px;
         margin-right: 40px;
     }
     
@@ -1173,30 +1061,24 @@ body{
         margin-bottom: -2%;
     }
     
-    /* Consistent image height */
     .drink-card img {
-        height: 50px; /* Increase image height */
+        height: 50px;
     }
     
-    /* Name alignment */
     .drink-card h3 {
         font-size: 10px;
         margin-bottom: -20%;
     }
-    
-    /* Description alignment */
+
     .drink-card .drink-description {
         font-size: 8px;
     }
-    
-    /* Price container styling to align the price, Add button, and heart icon on the same line */
-    /* Price container styling */
+
     .drink-container {
-        width: 120% !important; /* Ensure the container takes the full card width */
+        width: 120% !important;
         margin-top: -10%;
     }
     
-    /* Price styling */
     .drink-card .drink-price {
         font-size: 0.6em;
     }
@@ -1215,26 +1097,21 @@ body{
         margin-bottom: -2% !important;
     }
 
-/* Consistent image height */
     .sweet-card img {
-        height: 50px; /* Increase image height */
+        height: 50px;
     }
     
-    /* Name alignment */
     .sweet-card h3 {
         font-size: 10px;
         margin-bottom: -10%;
     }
     
-    /* Description alignment */
     .sweet-card .sweet-description {
         font-size: 8px;
     }
-    
-    /* Price container styling to align the price, Add button, and heart icon on the same line */
-    /* Price container styling */
+
     .sweet-container {
-        width: 130%; /* Ensure the container takes the full card width */
+        width: 130%;
         margin-top: -30%;
     }
     
@@ -1258,27 +1135,25 @@ body{
 
 @media (max-width: 390px){
     .pastry-card {
-        width: 100px !important; /* Fixed width for the card */
-        height: auto; /* Ensure all cards are of the same height */
+        width: 100px !important;
+        height: auto;
     }
 
     .drink-card {
-        width: 110px; /* Fixed width for the card */
-        height: auto; /* Ensure all cards are of the same height */
+        width: 110px;
+        height: auto;
     }
 
     .sweet-card {
-        width: 100px !important; /* Fixed width for the card */
-        height: auto; /* Ensure all cards are of the same height */
+        width: 100px !important;
+        height: auto;
     }
 
-    /* Add button styling */
     .pinkAddBtn {
         font-size: 8px;
         padding: 2px 12px;
     }
     
-    /* Heart icon styling */
     .heartIcon {
         width: 10px;
         height: 10px;
@@ -1288,30 +1163,24 @@ body{
         margin-bottom: -2%;
     }
 
-    /* Consistent image height */
     .pastry-card img {
-        height: 40px; /* Increase image height */
+        height: 40px;
     }
     
-    /* Name alignment */
     .pastry-card h3 {
         font-size: 10px;
         margin-bottom: -10%;
     }
     
-    /* Description alignment */
     .pastry-card .pastry-description {
         font-size: 5.5px;
     }
-    
-    /* Price container styling to align the price, Add button, and heart icon on the same line */
-    /* Price container styling */
+
     .price-container {
-        width: 180%; /* Ensure the container takes the full card width */
+        width: 180%;
         margin-top: -60%;
     }
     
-    /* Price styling */
     .pastry-card .pastry-price {
         font-size: 0.5em;
     }
@@ -1321,30 +1190,24 @@ body{
         margin-bottom: -2%;
     }
     
-    /* Consistent image height */
     .drink-card img {
-        height: 40px; /* Increase image height */
+        height: 40px;
     }
     
-    /* Name alignment */
     .drink-card h3 {
         font-size: 10px;
         margin-bottom: -20%;
     }
     
-    /* Description alignment */
     .drink-card .drink-description {
         font-size: 6px;
     }
-    
-    /* Price container styling to align the price, Add button, and heart icon on the same line */
-    /* Price container styling */
+
     .drink-container {
-        width: 120% !important; /* Ensure the container takes the full card width */
+        width: 120% !important;
         margin-top: -10%;
     }
     
-    /* Price styling */
     .drink-card .drink-price {
         font-size: 0.5em;
     }
@@ -1354,30 +1217,24 @@ body{
         margin-bottom: -2% !important;
     }
 
-/* Consistent image height */
     .sweet-card img {
-        height: 40px; /* Increase image height */
+        height: 40px;
     }
     
-    /* Name alignment */
     .sweet-card h3 {
         font-size: 8px;
         margin-bottom: -10%;
     }
     
-    /* Description alignment */
     .sweet-card .sweet-description {
         font-size: 6px;
     }
-    
-    /* Price container styling to align the price, Add button, and heart icon on the same line */
-    /* Price container styling */
+
     .sweet-container {
-        width: 130%; /* Ensure the container takes the full card width */
+        width: 130%;
         margin-top: -30%;
     }
     
-    /* Price styling */
     .sweet-card .sweet-price {
         font-size: 0.5em;
     }
