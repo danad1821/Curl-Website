@@ -3,7 +3,11 @@ $(document).ready(function () {
 
     // Select all links
     const links = document.querySelectorAll("ul a");
+    let selectedTypes = null;
+    let selectedGenres = ["Fantasy", "Romance", "Mystery"]; // Default genres
+    let currentBookIndexes = {}; // Tracks the current index of books for each genre
 
+    //Color links when selected
     links.forEach(link => {
         link.addEventListener("click", function (event) {
             event.preventDefault(); // Prevent the default behavior of links
@@ -17,19 +21,11 @@ $(document).ready(function () {
         });
     });
 
-});
 
-$(document).ready(function () {
-    let selectedTypes = null;
-    let selectedGenres = ["Fantasy", "Romance", "Mystery"]; // Default genres
-    let currentBookIndexes = {}; // Tracks the current index of books for each genre
-    let minPrice = 0, maxPrice = 100; // Default price range (you can adjust these based on your data)
-
-
-    // Function to update the selected genres container
+    // Function to update the selected genres container (in book top)
     function updateSelectedGenresDisplay() {
         const $selectedGenresContainer = $("#selected-genres-container");
-        $selectedGenresContainer.empty(); // Clear existing content
+        $selectedGenresContainer.empty();
 
         if (selectedGenres.length === 0) {
             $selectedGenresContainer.append('<p>No genres selected.</p>');
@@ -55,7 +51,7 @@ $(document).ready(function () {
         );
 
         const $booksContainer = $("#books-container");
-        $booksContainer.empty(); // Clear any existing content
+        $booksContainer.empty();
 
         // Group books by genre
         const booksByGenre = books.reduce((acc, book) => {
@@ -97,36 +93,7 @@ $(document).ready(function () {
             }
         });
 
-        // Function to filter books by price
-        // function filterBooksByPrice(min, max) {
-        //     const filteredBooks = books.filter((book) =>
-        //         book.price >= min && book.price <= max
-        //     );
-
-
-
-        //     // Recreate the book display with filtered results
-        //     const booksByGenreFiltered = filteredBooks.reduce((acc, book) => {
-        //         book.genres.forEach((genre) => {
-        //             if (genresToShow.includes(genre)) {
-        //                 if (!acc[genre]) {
-        //                     acc[genre] = [];
-        //                 }
-        //                 acc[genre].push(book);
-        //             }
-        //         });
-        //         return acc;
-        //     }, {});
-
-        //     // Clear existing content and display filtered books
-        //     $booksContainer.empty();
-        //     selectedGenres.forEach((genre) => {
-        //         if (booksByGenreFiltered[genre]) {
-        //             createGenreCarousel(genre, booksByGenreFiltered[genre]);
-        //         }
-        //     });
-        // }
-
+        //Filter books by price
         function filterBooksByPrice(currentMax) {
             // Filter books whose price is <= currentMax
             const filteredBooks = books.filter((book) => book.price <= currentMax);
@@ -181,8 +148,10 @@ $(document).ready(function () {
         // Function to display books for a specific genre
         function displayBooksForGenre(genre, booksForGenre) {
             const $booksList = $(`.books-list[data-genre="${genre}"]`);
-            $booksList.empty(); // Clear any existing books
+            $booksList.empty();
 
+            const cart = JSON.parse(localStorage.getItem("cart")) || { books: [], menuItems: [], merch: [] };
+            const wishlist = JSON.parse(localStorage.getItem("wishlist")) || { books: [], menuItems: [], merch: [] };
 
             const booksToDisplay = booksForGenre.slice(
                 currentBookIndexes[genre],
@@ -190,14 +159,19 @@ $(document).ready(function () {
             );
 
             booksToDisplay.forEach(function (book) {
+                const isInWishlist = wishlist.books.some(b => b.id === book.id);
                 const bookHTML = `
                     <div class="book" data-book-id="${book.id}">
                         <div class="book-image">
-                            <img src="${book.img}" alt="${book.title}" class="book-img">
+                            <a href="book.html" class="book-link">
+                                <img src="${book.img}" alt="${book.title}" class="book-img">
+                            </a>
                         </div>
                         <div class="book-info">
                             <div class="book-details">
-                                <p>${book.title}</p>
+                                <a href="book.html" class="book-link">
+                                    <p>${book.title}</p>
+                                 </a>
                                 <p class="book-author">Author: <span>${book.author}</span></p>
                             </div>
                             <div class="price-div">
@@ -215,6 +189,7 @@ $(document).ready(function () {
 
             // Add a click event to the book to store information and redirect
             $booksList.find('.book').click(function () {
+                e.stopPropagation(); // Prevent the click from bubbling up to the parent book div
                 const bookId = $(this).data('book-id');
                 const bookData = booksForGenre.find(book => book.id === bookId);
 
@@ -245,7 +220,7 @@ $(document).ready(function () {
 
         // Function to display selected genres
         function displayGenres() {
-            $booksContainer.empty(); // Clear any existing content
+            $booksContainer.empty();
 
             selectedGenres.forEach((genre) => {
                 if (booksByGenre[genre]) {
@@ -258,17 +233,22 @@ $(document).ready(function () {
         displayGenres();
         updateSelectedGenresDisplay();
 
+
         // Preselect default genres and apply the 'active' class
         $('#Genre a').each(function () {
             const genre = $(this).text();
             if (selectedGenres.includes(genre)) {
                 $(this).addClass('active'); // Apply the active class for default genres
             }
-        });
 
+            // Ensure the selectedGenres array includes the default genres
+            if (!selectedGenres.includes(genre)) {
+                selectedGenres.push(genre);
+            }
+        });
         // Handle genre link clicks
         $('#Genre a').click(function (e) {
-            e.preventDefault(); // Prevent page reload
+            e.preventDefault();
 
             const genre = $(this).text(); // Get the genre from the link text
 
@@ -289,10 +269,12 @@ $(document).ready(function () {
             // Disable further genre selection if 3 genres are selected
             if (selectedGenres.length === 3) {
                 $('#Genre a').not('.active').css('pointer-events', 'none');
-            } else {
+            }
+            else {
                 $('#Genre a').css('pointer-events', 'auto');
             }
         });
+
 
         // Arrow functionality for scrolling books
         $booksContainer.on('click', '.left-arrow', function () {
@@ -328,114 +310,125 @@ $(document).ready(function () {
         console.error("Error loading books:", error);
     });
 
-});
 
+    // Search function
+    const $searchSortDiv = $("#search-sort");
+    const $searchResults = $("#search-results");
+    let booksData = [];
 
-// Ensure $searchResults is declared only once
-const $searchSortDiv = $("#search-sort");
-const $searchResults = $("#search-results");
-let booksData = [];
-
-// Load books data from data.json
-$.ajax({
-    url: '../data.json',
-    method: 'GET',
-    dataType: 'json',
-    success: function (jsonData) {
-        booksData = jsonData.books || []; // Load only books data
-    },
-    error: function (xhr, status, error) {
-        console.error('Error loading books data:', error);
-    }
-});
-
-// Replace the Search button with an input field when clicked
-$searchSortDiv.on("click", "button:first-child", function (e) {
-    e.preventDefault();
-
-    // Create the search input dynamically
-    const $searchInput = $(
-        `<input type="text" class="search-input" placeholder="Search for books..." autocomplete="off">`
-    );
-
-    // Replace the button with the search input
-    $(this).replaceWith($searchInput);
-
-    // Focus on the input field
-    $searchInput.focus();
-
-    // Handle user input in the search field
-    $searchInput.on("input", function () {
-        const query = $searchInput.val().toLowerCase().trim();
-
-        // Clear results if query is empty
-        if (!query) {
-            $searchResults.empty();
-            return;
+    // Load books data from data.json
+    $.ajax({
+        url: '../data.json',
+        method: 'GET',
+        dataType: 'json',
+        success: function (jsonData) {
+            booksData = jsonData.books || []; // Load only books data
+        },
+        error: function (xhr, status, error) {
+            console.error('Error loading books data:', error);
         }
-
-        // Filter books based on the query
-        const filteredResults = booksData.filter(book => {
-            return (
-                (book.title && book.title.toLowerCase().includes(query)) ||
-                (book.author && book.author.toLowerCase().includes(query)) ||
-                (book.genres && book.genres.some(genre => genre.toLowerCase().includes(query)))
-            );
-        });
-
-        // Render the filtered results
-        $searchResults.empty();
-        filteredResults.forEach(book => {
-            const $listItem = $("<li>").addClass("search-item");
-            const imgElement = book.img ? `<img src="${book.img}" alt="Book image" class="search-image">` : "";
-            const title = book.title || "Untitled";
-            const description = truncateText(book.summary || "No description available.");
-            const author = book.author ? `Author: ${book.author}` : "";
-
-            $listItem.append(
-                imgElement,
-                `<div class="text-container">
-          <h3>${title}</h3>
-          <p>${description}</p>
-          ${author ? `<p class="author-name">${author}</p>` : ""}
-        </div>`
-            );
-
-            $searchResults.append($listItem);
-        });
     });
 
-    // Replace input with the original Search button on blur
-    $searchInput.on("blur", function () {
-        const $newButton = $(
-            `<button>Search <i class="fa-solid fa-magnifying-glass" style="color: #f1eae4;"></i></button>`
+    // Replace the Search button with an input field when clicked
+    $searchSortDiv.on("click", "button:first-child", function (e) {
+        e.preventDefault();
+
+        // Create the search input dynamically
+        const $searchInput = $(
+            `<input type="text" class="search-input" placeholder="Search for books..." autocomplete="off">`
         );
 
-        // Hide the search results when the input loses focus
-        $searchResults.empty();
+        // Replace the button with the search input
+        $(this).replaceWith($searchInput);
 
-        // Replace the input field with the button
-        $(this).replaceWith($newButton);
+        // Focus on the input field
+        $searchInput.focus();
 
-        // Rebind the button click handler to repeat the process
-        $newButton.on("click", function (e) {
-            e.preventDefault();
-            $searchSortDiv.find("button:first-child").trigger("click");
+        // Handle user input in the search field
+        $searchInput.on("input", function () {
+            const query = $searchInput.val().toLowerCase().trim();
+
+            // Clear results if query is empty
+            if (!query) {
+                $searchResults.empty();
+                return;
+            }
+
+            // Filter books based on the query
+            const filteredResults = booksData.filter(book => {
+                return (
+                    (book.title && book.title.toLowerCase().includes(query)) ||
+                    (book.author && book.author.toLowerCase().includes(query)) ||
+                    (book.genres && book.genres.some(genre => genre.toLowerCase().includes(query)))
+                );
+            });
+
+            // Render the filtered results
+            $searchResults.empty();
+            filteredResults.forEach(book => {
+                const $listItem = $("<li>").addClass("search-item");
+                const imgElement = book.img ? `<img src="${book.img}" alt="Book image" class="search-image">` : "";
+                const title = book.title || "Untitled";
+                const description = truncateText(book.summary || "No description available.");
+                const author = book.author ? `Author: ${book.author}` : "";
+
+                $listItem.append(
+                    imgElement,
+                    `<div class="text-container">
+                            <h3>${title}</h3>
+                            <p>${description}</p>
+                            ${author ? `<p class="author-name">${author}</p>` : ""}
+                    </div>`
+                );
+
+
+                // Add the book's data to a custom data attribute for identification
+                $listItem.data('book', book);
+
+
+                $searchResults.append($listItem);
+            });
+        });
+
+        // Use event delegation for dynamic elements
+        $searchResults.on('click', '.search-item', function () {
+            const book = $(this).data('book'); // Retrieve the book data from the clicked item
+
+            if (book) {
+                console.log('Book clicked:', book); // Debugging: Confirm click event
+                localStorage.setItem('selectedBook', JSON.stringify(book));
+                window.location.href = 'book.html';
+            }
+        });
+
+        // Replace input with the original Search button on blur
+        $searchInput.on("blur", function () {
+            const $newButton = $(
+                `<button>Search <i class="fa-solid fa-magnifying-glass" style="color: #f1eae4;"></i></button>`
+            );
+
+            // Hide the search results when the input loses focus
+            $searchResults.empty();
+
+            // Replace the input field with the button
+            $(this).replaceWith($newButton);
+
+            // Rebind the button click handler to repeat the process
+            $newButton.on("click", function (e) {
+                e.preventDefault();
+                $searchSortDiv.find("button:first-child").trigger("click");
+            });
         });
     });
-});
 
-// Helper function to truncate text
-function truncateText(text) {
-    const words = text.split(" ");
-    if (words.length > 6) {
-        return words.slice(0, 6).join(" ") + "...";
+    // Helper function to truncate text
+    function truncateText(text) {
+        const words = text.split(" ");
+        if (words.length > 6) {
+            return words.slice(0, 6).join(" ") + "...";
+        }
+        return text;
     }
-    return text;
-}
-
-
-$(document).ready(function () {
     const $booksContainer = $('#books-container');
 
     // Show the sort popup when the "Sort By" button is clicked
@@ -496,4 +489,6 @@ $(document).ready(function () {
         // Reorder the book elements in the DOM based on the sorted array
         $booksContainer.append(books); // Append the sorted books back to the container
     });
+
+
 });

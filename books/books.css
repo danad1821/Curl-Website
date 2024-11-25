@@ -437,6 +437,10 @@ a.active {
 
 }
 
+.book-link{
+  text-decoration: none;
+}
+
 .book-img {
   width: 160px;
   height: 220px;
