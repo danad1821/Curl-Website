@@ -9,6 +9,13 @@ body {
   background-color: #C0DDE5 !important;
 }
 
+.About{
+  background-color: #f1eae4;
+  border-radius: 25px;
+  padding: 4px 10px;
+  text-align: center;
+}
+
 /* LANDING STYLES */
 #LandingText{
     margin-top: 5%;

@@ -10,6 +10,13 @@ body {
   overflow-x: hidden;
 }
 
+.Book{
+  background-color: #f1eae4;
+  border-radius: 25px;
+  padding: 4px 10px;
+  text-align: center;
+}
+
 #books-link, #genre-link{
   text-decoration: none;
   color: #37474f;

@@ -116,6 +116,11 @@ body {
   flex-direction: column;
   padding-left: 0;
 }
+
+#TypesOfBooks li{
+  list-style-type: none;
+  margin-bottom: 20px;
+}
 #TypesOfBooks a, #Genre a{
   text-decoration: none;
   color: #37474f;
@@ -124,7 +129,7 @@ body {
 
 }
 
-#TypesOfBooks a:last-child, #Genre a:last-child{
+#TypesOfBooks a:last-child, #Genre a:last-child, #TypesOfBooks li:last-child{
   margin-bottom: 0%;
   
 }
@@ -276,9 +281,10 @@ a.active {
 
 #search-results {
   position: absolute;
-  width: 34.8%;
+  /* width: 34.8%; */
+  width: 25%  !important;
   z-index: 999;
-  right: 20px;
+  right: 170px;
   top: 70px;
 }
 
@@ -576,3 +582,11 @@ footer {
   top: 20px;
 }
 
+
+
+
+@media (max-width: 1157px) {
+  .Book {
+    background-color: #c0dde5;
+  }
+}

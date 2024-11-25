@@ -20,9 +20,11 @@ $(document).ready(function () {
 });
 
 $(document).ready(function () {
+    let selectedTypes = null;
     let selectedGenres = ["Fantasy", "Romance", "Mystery"]; // Default genres
     let currentBookIndexes = {}; // Tracks the current index of books for each genre
     let minPrice = 0, maxPrice = 100; // Default price range (you can adjust these based on your data)
+
 
     // Function to update the selected genres container
     function updateSelectedGenresDisplay() {
@@ -388,7 +390,7 @@ $searchSortDiv.on("click", "button:first-child", function (e) {
             const imgElement = book.img ? `<img src="${book.img}" alt="Book image" class="search-image">` : "";
             const title = book.title || "Untitled";
             const description = truncateText(book.summary || "No description available.");
-            const author = book.author ? `By: ${book.author}` : "";
+            const author = book.author ? `Author: ${book.author}` : "";
 
             $listItem.append(
                 imgElement,
