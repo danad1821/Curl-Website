@@ -12,6 +12,10 @@
   justify-content: center;
   margin: 0 30px;
   padding: 20px 0;
+  position: sticky;
+  top: 14%;
+  z-index: 5;
+  background-color: #c0dde5;
 }
 .roomName {
   font-family: "New Class", sans-serif;
@@ -119,8 +123,10 @@
   display: flex;
   flex-direction: column;
   gap: 30px;
-  max-height: 300vh;
+  max-height: 295vh;
   overflow: scroll;
+  width: 100vw;
+  align-self: center;
 }
 #postsSection::-webkit-scrollbar{
   display: none;
