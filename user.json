@@ -8,7 +8,7 @@
       "lastName": "Ibrahim",
       "address": "Beirut, Lebanon",
       "phone": "71 393 384",
-      "profilePicture": "",
+      "profilePicture": "../designImages/profile/Frame 3.png",
       "events": [
         {
           "day": "Sep 18",
