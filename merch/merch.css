@@ -213,7 +213,10 @@
     background-color: #f4b996;
     color: white;
   }
-
+  .merchHeartIcon {
+    width: 17px;
+    height: 17px;
+  }
 
 /* styling header*/
 .navbar {
