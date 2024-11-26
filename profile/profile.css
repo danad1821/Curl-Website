@@ -22,9 +22,11 @@ main {
   padding: 50px;
   margin: 20px 0;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: flex-start;
+  flex-wrap: wrap;
   min-height: 50vh;
+  gap: 50px;
 }
 main h2{
   font-weight: 700;
@@ -64,14 +66,14 @@ h4{
   align-items: center;
   gap: 10px;
 }
-.roomBtn{
+.roomBtn, #saveBtn{
   background-color: #e9b9b9;
   color: #f1eae4;
   font-weight: 700;
   border-radius: 20px;
   transition: background-color 0.3s, color 0.3s;
 }
-.roomBtn:hover {
+.roomBtn:hover, #saveBtn:hover {
   background-color: #37474f;
   color: #f1eae4;
 }
@@ -113,6 +115,51 @@ h4{
   color: #f1eae4;
   border-radius: 20px;
   font-weight: 700;
+}
+/* user info section  */
+#userInfoSection{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 50%;
+}
+#userInfoForm{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#userInfoForm>.mb-3{
+  width: 100%;
+}
+#nameinputs{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.form-control{
+  background-color: #f1eae4;
+  border: 2px solid #37474f;
+  border-radius: 40px;
+  outline: none;
+  padding: 10px 25px;
+  color: #37474f;
+}
+.form-control::placeholder{
+  color: #A5ADB1;
+}
+.form-control:focus{
+  background-color: #f1eae4;
+  outline: none;
+  border-color: #37474f;
+  box-shadow: none;
+}
+#saveBtn{
+  display: block;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Footer Section */

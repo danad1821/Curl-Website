@@ -29,4 +29,12 @@ $(document).ready(function () {
     eventDiv.append(eventTextDiv, eventReserved)
     $("#events").append(eventDiv)
   }
+
+  // user info section 
+  $("#firstName").val(currentUser.firstName);
+  $("#lastName").val(currentUser.lastName);
+  $("#username").val(currentUser.username);
+  $("#email").val(currentUser.email);
+  $("#address").val(currentUser.address);
+  $("#phoneNumber").val(currentUser.phone)
 });
