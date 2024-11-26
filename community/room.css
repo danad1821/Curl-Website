@@ -207,6 +207,12 @@
   fill: #37474f;
   cursor: pointer;
 }
+.iconImg{
+  height: 21.5px;
+  width: 25px;
+  display: none;
+  margin-right: 5px;
+}
 
 /* comments  */
 .commentsDiv{
