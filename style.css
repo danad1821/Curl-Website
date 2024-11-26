@@ -276,12 +276,19 @@ body {
 .pinkAddBtn {
   font-size: 16px;
 }
-
+.heart-div{
+  position: relative;
+}
 .heartIcon {
   fill: #37474f;
   width: 20px;
   height: 20px;
   cursor: pointer;
+}
+.iconImg{
+  width: 20px;
+  height: 18px;
+  display: none;
 }
 
 /* Top Merch Section */
