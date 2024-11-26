@@ -831,12 +831,38 @@
       "categories": ["Drink", "Cold", "Coffee"]
     },
     {
+      "id": 75,
+      "img": "../designImages/Pastries/Fruit croissant.png",
+      "name": "Fruit Croissant",
+      "description": "Crispy pastry with fruits of your choice",
+      "price": 5,
+      "categories": ["Food", "Pastry"]
+    },
+
+    {
+      "id": 81,
+      "img": "../designImages/sweet/Carrot Cake.png",
+      "name": "Carrot Cake",
+      "description": "Fresh carrots with fluffy white cream.",
+      "price": 4,
+      "categories": ["Food", "cake", "sweet"]
+    },
+    {
       "id": 71,
       "img": "../designImages/Drinks/Lemonade.png",
       "name": "Lemonade",
       "description": "Classic lemon with ice and sugar",
       "price": 4,
       "categories": ["Drink", "Cold"]
+    },
+
+    {
+      "id": 78,
+      "img": "../designImages/Pastries/Glazed Donut.png",
+      "name": "Glazed Donut",
+      "description": "Classic glazed donut",
+      "price": 6,
+      "categories": ["Food", "Donut", "Pastry"]
     },
     {
       "id": 65,
@@ -846,14 +872,7 @@
       "price": 3,
       "categories": ["Drink", "Hot", "Coffee"]
     },
-    {
-      "id": 75,
-      "img": "../designImages/Pastries/Fruit croissant.png",
-      "name": "Fruit Croissant",
-      "description": "Crispy pastry with fruits of your choice",
-      "price": 5,
-      "categories": ["Food", "Pastry"]
-    },
+
     {
       "id": 72,
       "img": "../designImages/Pastries/croissant.png",
@@ -862,14 +881,7 @@
       "price": 4,
       "categories": ["Food", "Pastry"]
     },
-    {
-      "id": 78,
-      "img": "../designImages/Pastries/Glazed Donut.png",
-      "name": "Glazed Donut",
-      "description": "Classic glazed donut",
-      "price": 6,
-      "categories": ["Food", "Donut", "Pastry"]
-    },
+
 
     {
       "id": 80,
@@ -879,14 +891,7 @@
       "price": 3,
       "categories": ["Food", "cookies", "sweet"]
     },
-    {
-      "id": 81,
-      "img": "../designImages/sweet/Carrot Cake.png",
-      "name": "Carrot Cake",
-      "description": "Fresh carrots with fluffy white cream.",
-      "price": 4,
-      "categories": ["Food", "cake", "sweet"]
-    },
+
     {
       "id": 82,
       "img": "../designImages/sweet/lazycake.png",

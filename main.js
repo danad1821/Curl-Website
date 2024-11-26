@@ -217,6 +217,7 @@ $(document).ready(function () {
       const selectedBook = bestsellers[clickedIndex];
       localStorage.setItem("book", JSON.stringify(selectedBook));
       $(location).prop("href", "books/book.html");
+
     });
   }
 
@@ -291,6 +292,7 @@ $(document).ready(function () {
     const $menuContainer = $("#menu-items");
     $menuContainer.empty();
 
+
     menuItems.forEach(function (item) {
       // Choosing hand image based on category
       let handImage;
@@ -340,4 +342,10 @@ $(document).ready(function () {
   }).fail(function (error) {
     console.error("Error loading menu:", error);
   });
+
+
+
+
+
 });
+
