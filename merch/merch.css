@@ -141,19 +141,17 @@
     color: #555;
   }
   
-  /* Heart icon */
   .heartIcon {
-    margin-top: 10px;
-    width: 24px;
-    height: 24px;
-    fill: #e0e0e0;
+    fill: #37474f;
+    width: 35px;
+    height: 35px;
     cursor: pointer;
-    transition: fill 0.3s ease;
-  }
-  
-  .heartIcon:hover {
-    fill: #ff6b6b;
-  }
+    transition: fill 0.3s;
+}
+
+.heartIcon:hover {
+    fill: red; /* Change color on hover */
+}
   * General styles for the selector */
   /* General styles for the selector */
 .selector {
