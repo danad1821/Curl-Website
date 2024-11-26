@@ -189,7 +189,6 @@ $(document).ready(function () {
           likeIcon.css("display", "block");
         }
       }
-      console.log(wishlist)
       localStorage.setItem("wishlist", JSON.stringify(wishlist));
     });
     $(".iconImg").click(function () {
@@ -219,7 +218,6 @@ $(document).ready(function () {
           likeIcon.css("display", "block");
         }
       }
-      console.log(wishlist)
       localStorage.setItem("wishlist", JSON.stringify(wishlist));
     });
 

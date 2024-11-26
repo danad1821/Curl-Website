@@ -20,6 +20,13 @@ $(document).ready(function () {
     });
   }
   for(const event of currentUser.events){
-    let eventDiv=$("<div>")
+    let eventDiv=$("<div>").addClass('eventDiv');
+    let eventTextDiv=$("<div>").html("<h5>"+event.day+"</h5>"+
+      "<p class='timingText'>From "+event.startTime+" to "+event.endTime+"</p>"+
+      "<p class='eventName'>"+event.name+"</p>"
+    )
+    let eventReserved=$("<p class='reservedText'>Reserved</p>");
+    eventDiv.append(eventTextDiv, eventReserved)
+    $("#events").append(eventDiv)
   }
 });
