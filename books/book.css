@@ -169,7 +169,7 @@ gap: 30px;
 /* Arrow Styles */
 .scroll-arrow {
   position: absolute;
-  top: 103%;
+  top: 111%;
   transform: translateY(-50%);
   cursor: pointer;
   transition: opacity 0.3s ease;
@@ -181,7 +181,7 @@ gap: 30px;
 }
 
 .right-arrow {
-  right: 110px; /* Position the right arrow to the side of the carousel */
+  right: 120px; /* Position the right arrow to the side of the carousel */
 }
 
 .scroll-arrow img {

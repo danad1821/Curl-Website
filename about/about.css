@@ -199,5 +199,179 @@ footer {
     z-index: 2;
     top: 20px;
   }
+
+
+
+
+
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1240px){
+
+  #landingSection img{
+    width: 30%;
+  }
+
+  #aboutUsSection{
+    margin-top: 3%;
+  }
+
+}
+
+
+@media (max-width: 1200px){
+  #LandingText{
+    margin-top: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-right: 10%;
+  }
+  #LandingText h1{
+    font-family: "New Class";
+    font-size: 100px;
+    font-weight: 400;
+    margin-bottom: 0;
+  }
   
+  #LandingText p{
+    text-align: center;
+    font-size: 15px;
+    font-weight: 500;
+    width: 35%;
+    margin-top: -2%;
+    margin-top: 8px;
+  }
+
+  
+  #landingSection img{
+    top: 170px;
+    right: 160px;
+  }
+  
+
+}
+
+
+@media (max-width: 1000px){
+  #landingSection img{
+    display: none;
+  }
+
+  #LandingText{
+    margin-right:0;
+  }
+
+
+
+}
+
+
+
+@media (max-width: 951px){
+  #aboutUsSection{
+    padding: 12%;
+  }
+  .aboutUsDiv{
+    gap: 10px !important;
+  }
+  #aboutUsSection p{
+    font-size: 13px;
+  }
+
+  #aboutUsSection h4{
+    font-size: 16px;
+  }
+}
+@media (max-width: 732px){
+  #aboutUsSection img{
+    display: none;
+  }
+
+  .aboutUsDiv:nth-child(2){
+    flex-direction: row;
+}
+
+  .aboutUsDiv{
+    margin-bottom: 5%;
+  }
+}
+@media (max-width: 600px){
+
+  #LandingText h1{
+    font-size: 90px !important;
+  }
+
+  #LandingText p{
+    font-size: 12px !important;
+    width: 70% !important;
+  }
+
+ 
+}
+@media (max-width: 370px){
+
+  .aboutUsDiv p{
+    width: 300px;
+  }
+
+}
+
+
+
+
+
+
+
+@media (max-width: 855px) {
+  .contact {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 1080px) {
+  .contact {
+    margin-right: 0px;
+  }
+}
+
+@media (max-width: 750px) {
+  footer {
+    align-items: center;
+    width: 100%;
+    background-image: none;
+    background-color: #f1eae4;
+    height: fit-content;
+    margin-top: 0;
+    padding-top: 10px;
+  }
+  .footer-content {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 10px;
+    width: auto;
+  }
+  footer {
+    background-image: none;
+    background-color: #f1eae4;
+    height: fit-content;
+    margin-top: 0;
+    padding-top: 5px;
+  }
+}
+
+@media (max-width: 600px) {
+  footer {
+    align-items: center;
+    width: 100%;
+  }
+  .footer-content {
+    flex-direction: column !important;
+    justify-content: center;
+    /* align-items: flex-start; */
+    padding: 10px;
+  }
+}
   

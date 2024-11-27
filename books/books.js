@@ -46,6 +46,7 @@ $(document).ready(function () {
     // Load and display books categorized by genre
     $.getJSON("../data.json", function (data) {
         const genresToShow = ["Fantasy", "Mystery", "Romance", "Young Adult", "Comedy", "Thriller", "Family", "Philosophy", "Psychology", "Science-Fiction"];
+        let selectedTypes = [];
         const books = data.books.filter((book) =>
             book.genres.some((genre) => genresToShow.includes(genre))
         );
@@ -65,6 +66,8 @@ $(document).ready(function () {
             });
             return acc;
         }, {});
+
+
 
         // Initialize the slider with the range of prices
         const allPrices = books.map(book => book.price);
@@ -94,10 +97,12 @@ $(document).ready(function () {
         });
 
         //Filter books by price
-        function filterBooksByPrice(currentMax) {
+        function filterBooksByPrice(currentMax, maxPrice) {
+            console.log(books)
             // Filter books whose price is <= currentMax
             const filteredBooks = books.filter((book) => book.price <= currentMax);
 
+            console.log("filtered", filteredBooks)
             // Group filtered books by genre
             const booksByGenreFiltered = filteredBooks.reduce((acc, book) => {
                 book.genres.forEach((genre) => {
@@ -150,8 +155,8 @@ $(document).ready(function () {
             const $booksList = $(`.books-list[data-genre="${genre}"]`);
             $booksList.empty();
 
-            const cart = JSON.parse(localStorage.getItem("cart")) || { books: [], menuItems: [], merch: [] };
-            const wishlist = JSON.parse(localStorage.getItem("wishlist")) || { books: [], menuItems: [], merch: [] };
+            // const cart = JSON.parse(localStorage.getItem("cart")) || { books: [], menuItems: [], merch: [] };
+            // const wishlist = JSON.parse(localStorage.getItem("wishlist")) || { books: [], menuItems: [], merch: [] };
 
             const booksToDisplay = booksForGenre.slice(
                 currentBookIndexes[genre],
@@ -159,7 +164,7 @@ $(document).ready(function () {
             );
 
             booksToDisplay.forEach(function (book) {
-                const isInWishlist = wishlist.books.some(b => b.id === book.id);
+                // const isInWishlist = wishlist.books.some(b => b.id === book.id);
                 const bookHTML = `
                     <div class="book" data-book-id="${book.id}">
                         <div class="book-image">
@@ -188,7 +193,7 @@ $(document).ready(function () {
             });
 
             // Add a click event to the book to store information and redirect
-            $booksList.find('.book').click(function () {
+            $booksList.find('.book').click(function (e) {
                 e.stopPropagation(); // Prevent the click from bubbling up to the parent book div
                 const bookId = $(this).data('book-id');
                 const bookData = booksForGenre.find(book => book.id === bookId);
