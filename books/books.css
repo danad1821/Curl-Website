@@ -291,7 +291,9 @@ a.active {
 .search-input::placeholder{
   color: #F1EAE4;
 }
-
+.search-item{
+  cursor: pointer;
+}
 
 #sort-popup {
   display: none;

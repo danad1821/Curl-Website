@@ -11,7 +11,7 @@ $(document).ready(function () {
     "wishlist",
     JSON.stringify({ books: [], menuItems: [], merch: [] })
   );
-  localStorage.setItem("book", JSON.stringify({}));
+  localStorage.setItem("selectedBook", JSON.stringify({}));
 
   let bestsellers = [];
   let booksDisplay = $("#booksDisplay");
@@ -215,7 +215,7 @@ $(document).ready(function () {
     bookImg.click(function () {
       const clickedIndex = $(this).index();
       const selectedBook = bestsellers[clickedIndex];
-      localStorage.setItem("book", JSON.stringify(selectedBook));
+      localStorage.setItem("selectedBook", JSON.stringify(selectedBook));
       $(location).prop("href", "books/book.html");
 
     });

@@ -257,7 +257,7 @@
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqoc1ax4A5Osy7vxNSSRsEVNxFh39M1dtYTg&s",
       "title": "The Lord of the Rings",
       "author": "J.R.R. Tolkien",
-      "price": 30,
+      "price": 30.0,
       "rating": 4.5,
       "availability": 20,
       "type": ["ebook", "book", "audio"],
