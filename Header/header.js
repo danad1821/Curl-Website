@@ -2,7 +2,7 @@
 const $modal = $("#signInModal");
 const $btn = $("#signInBtn");
 const $closeBtn = $(".close");
-localStorage.setItem("loggenInUser", "");
+
 
 // Show the modal when the "Sign In" button is clicked
 $btn.on("click", function (event) {
@@ -39,7 +39,7 @@ $searchIcon.on("click", function (e) {
 $closeIcon.on("click", function (e) {
   e.preventDefault();
   $searchContainer.removeClass("focused");
-  $searchInput.val('');
+  $searchInput.val("");
   $searchInput.blur();
   $searchResults.empty();
 });
@@ -48,15 +48,15 @@ $closeIcon.on("click", function (e) {
 let data = {};
 
 $.ajax({
-  url: '../data.json',
-  method: 'GET',
-  dataType: 'json',
+  url: "../data.json",
+  method: "GET",
+  dataType: "json",
   success: function (jsonData) {
     data = jsonData;
   },
   error: function (xhr, status, error) {
-    console.error('Error loading data:', error);
-  }
+    console.error("Error loading data:", error);
+  },
 });
 
 // Handle search input
@@ -68,20 +68,16 @@ $searchInput.on("input", function () {
     return;
   }
 
-  const allData = [
-    ...data.books,
-    ...data.menu,
-    ...data.merch,
-    ...data.quotes
-  ];
+  const allData = [...data.books, ...data.menu, ...data.merch, ...data.quotes];
 
-  const filteredResults = allData.filter(item => {
+  const filteredResults = allData.filter((item) => {
     // Search for books
     if (item.title || item.author || item.genres) {
       return (
         (item.title && item.title.toLowerCase().includes(query)) ||
         (item.author && item.author.toLowerCase().includes(query)) ||
-        (item.genres && item.genres.some(genre => genre.toLowerCase().includes(query)))
+        (item.genres &&
+          item.genres.some((genre) => genre.toLowerCase().includes(query)))
       );
     }
 
@@ -89,15 +85,16 @@ $searchInput.on("input", function () {
     if (item.name || item.categories) {
       return (
         (item.name && item.name.toLowerCase().includes(query)) ||
-        (item.categories && item.categories.some(category => category.toLowerCase().includes(query)))
+        (item.categories &&
+          item.categories.some((category) =>
+            category.toLowerCase().includes(query)
+          ))
       );
     }
 
     // Search for merch
     if (item.name) {
-      return (
-        (item.name && item.name.toLowerCase().includes(query))
-      );
+      return item.name && item.name.toLowerCase().includes(query);
     }
 
     // Search for quotes
@@ -113,7 +110,7 @@ $searchInput.on("input", function () {
 
   $searchResults.empty();
 
-  filteredResults.forEach(item => {
+  filteredResults.forEach((item) => {
     const $listItem = $("<li>").addClass("search-item");
 
     let imgElement = "";
@@ -126,21 +123,27 @@ $searchInput.on("input", function () {
       title = item.title;
       description = truncateText(item.summary); // Shorten the summary to 6 words
       author = item.author ? `By: ${item.author}` : ""; // Include author if available
-      imgElement = item.img ? `<img src="${item.img}" alt="Book image" class="search-image">` : "";
+      imgElement = item.img
+        ? `<img src="${item.img}" alt="Book image" class="search-image">`
+        : "";
     }
 
     // Handle menu items
     else if (item.name) {
       title = item.name;
       description = truncateText(item.description); // Shorten the description to 6 words
-      imgElement = item.img ? `<img src="${item.img}" alt="Menu item image" class="search-image">` : "";
+      imgElement = item.img
+        ? `<img src="${item.img}" alt="Menu item image" class="search-image">`
+        : "";
     }
 
     // Handle merch
     else if (item.name) {
       title = item.name;
       description = truncateText(item.description); // Shorten the description to 6 words
-      imgElement = item.img ? `<img src="${item.img}" alt="Merch image" class="search-image">` : "";
+      imgElement = item.img
+        ? `<img src="${item.img}" alt="Merch image" class="search-image">`
+        : "";
     }
 
     // Handle quotes
@@ -175,60 +178,62 @@ function truncateText(text) {
 }
 
 //burger js
-$(document).ready(function() {
-  $('#burgerIcon').click(function() {
-      $("#navList").slideToggle();
-      $('#closeIcon').slideToggle();
+$(document).ready(function () {
+  $("#burgerIcon").click(function () {
+    $("#navList").slideToggle();
+    $("#closeIcon").slideToggle();
   });
 
-  $('#closeIcon').click(function() {
-      $('#navList').slideToggle();
-      $(this).slideToggle();
-      $('#burgerIcon').show();
+  $("#closeIcon").click(function () {
+    $("#navList").slideToggle();
+    $(this).slideToggle();
+    $("#burgerIcon").show();
   });
 
   //get all users
-  let allUsers=[];
+  let allUsers = [];
   $.ajax({
     url: "../user.json",
-  type: "GET",
-  dataType: "json",
-  success: function (data) {
-    allUsers=data.users;
-  },
-  error: function (error) {
-    console.error("Error loading data:", error);
-  }
-  })
+    type: "GET",
+    dataType: "json",
+    success: function (data) {
+      allUsers = data.users;
+    },
+    error: function (error) {
+      console.error("Error loading data:", error);
+    },
+  });
 
   //sign in
-  if(localStorage.getItem("loggedInUser")==""){
+
+  
     $("#userProfileBtn").hide();
     $("#signInBtn").show();
-  }
-  else{
+  if(sessionStorage.getItem("loggedInUser")){
     $("#userProfileBtn").show();
-      $("#signInBtn").hide();
+    $("#signInBtn").hide();
   }
-  
-  $("#sign-in-submit-btn").click(function(e){
-    e.preventDefault()
-    let usernameOrEmail=$("#username").val();
-    let password=$("#password").val();
-    let userData=allUsers.find((user)=>(user.username == usernameOrEmail || user.email ==usernameOrEmail) && user.password==password);
-    if(userData){
+
+  $("#sign-in-submit-btn").click(function (e) {
+    e.preventDefault();
+    let usernameOrEmail = $("#username").val();
+    let password = $("#password").val();
+    let userData = allUsers.find(
+      (user) =>
+        (user.username == usernameOrEmail || user.email == usernameOrEmail) &&
+        user.password == password
+    );
+    if (userData) {
       $("#userProfileBtn").show();
       $("#signInBtn").hide();
-      localStorage.setItem("loggedInUser", JSON.stringify(userData))
+      sessionStorage.setItem("loggedInUser", JSON.stringify(userData));
+      $modal.hide()
+    } else {
+      console.log("error");
     }
-    else{
-      console.log("error")
-    }
-  })
+  });
 
-  $("#userProfileBtn").click(function(){
+  $("#userProfileBtn").click(function () {
     $(location).prop("href", "../profile/profile.html");
-  })
-
+  });
 });
-
