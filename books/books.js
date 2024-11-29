@@ -320,9 +320,81 @@ $(document).ready(function () {
       displayGenres();
       updateSelectedGenresDisplay();
     });
+
+    // Toggle the popup when the sort button is clicked
+    $("#sort-btn").click(function (e) {
+      e.stopPropagation(); // Prevent click from propagating to other elements
+      $("#sort-popup").toggle(); // Toggle visibility of the popup
+    });
+
+    // Hide the popup when clicking outside of it
+    $(document).click(function () {
+      $("#sort-popup").hide(); // Hide the popup
+    });
+
+    // Prevent the popup from closing when clicking inside it
+    $("#sort-popup").click(function (e) {
+      e.stopPropagation(); // Prevent the document click from hiding the popup
+    });
+
+    // Add event listener for sort options
+    $(".sort-option").on("click", function () {
+      const sortOption = $(this).data("sort"); // Get the selected sort option
+      // const activeGenre = $(".genre-title").text().trim(); // Get the currently visible genre
+      // const activeGenre = $(this).closest(".genre-section").find(".genre-title").text().trim();
+      // const activeGenre = selectedGenres.length > 0 ? selectedGenres[0] : null;
+
+      // console.log("Active Genre:", activeGenre);
+
+
+      // if (!activeGenre || !booksByGenre[activeGenre]) {
+      //   return; // Do nothing if no genre is active
+      // }
+
+      // // Sort the books based on the selected option
+      // booksByGenre[activeGenre] = sortBooks(booksByGenre[activeGenre], sortOption);
+
+      // // Re-display the books in the carousel
+      // currentBookIndexes[activeGenre] = 0; // Reset the index to start
+      // displayBooksForGenre(activeGenre, booksByGenre[activeGenre]);
+
+      // Loop through each selected genre and sort the books for that genre
+      selectedGenres.forEach((genre) => {
+        // Check if books exist for this genre
+        if (booksByGenre[genre]) {
+          console.log("Sorting genre:", genre);
+
+          // Sort the books for this genre based on the selected option
+          booksByGenre[genre] = sortBooks(booksByGenre[genre], sortOption);
+
+          // Re-display the books for the genre in the carousel
+          currentBookIndexes[genre] = 0; // Reset the index to start
+          displayBooksForGenre(genre, booksByGenre[genre]);
+        }
+      });
+    });
+
+    // Function to sort books based on the selected option
+    function sortBooks(books, sortOption) {
+      switch (sortOption) {
+        // case "new-to-old":
+        //   return books.sort((a, b) => new Date(b.publishDate) - new Date(a.publishDate));
+        // case "old-to-new":
+        //   return books.sort((a, b) => new Date(a.publishDate) - new Date(b.publishDate));
+        case "high-to-low":
+          return books.sort((a, b) => b.price - a.price);
+        case "low-to-high":
+          return books.sort((a, b) => a.price - b.price);
+        default:
+          return books; // Default is no sorting
+      }
+    }
   }).fail(function (error) {
     console.error("Error loading books:", error);
   });
+
+
+
 
   // Search function
   const $searchSortDiv = $("#search-sort");
@@ -395,18 +467,17 @@ $(document).ready(function () {
           `<div class="text-container">
                             <h3>${title}</h3>
                             <p>${description}</p>
-                            ${
-                              author
-                                ? `<p class="author-name">${author}</p>`
-                                : ""
-                            }
+                            ${author
+            ? `<p class="author-name">${author}</p>`
+            : ""
+          }
                     </div>`
         );
 
         // Add the book's data to a custom data attribute for identification
         $listItem.data("book", book);
         // Use event delegation for dynamic elements
-        
+
 
         $searchResults.append($listItem);
       });
@@ -415,9 +486,34 @@ $(document).ready(function () {
         if (book) {
           console.log("Book clicked:", book); // Debugging: Confirm click event
           localStorage.setItem("selectedBook", JSON.stringify(book));
-          $(location).prop("href","book.html") ;
+          $(location).prop("href", "book.html");
         }
       });
+    });
+
+    // Close search results and input when clicking outside
+    $(document).on("mousedown", function (event) {
+      if (
+        !$(event.target).closest($searchInput).length && // Click outside input
+        !$(event.target).closest($searchResults).length // Click outside results
+      ) {
+        // Replace the input with the original Search button
+        const $newButton = $(
+          `<button>Search <i class="fa-solid fa-magnifying-glass" style="color: #f1eae4;"></i></button>`
+        );
+
+        $searchInput.replaceWith($newButton);
+        $searchResults.empty(); // Clear search results
+
+        // Rebind the button click handler to repeat the process
+        $newButton.on("click", function (e) {
+          e.preventDefault();
+          $searchSortDiv.find("button:first-child").trigger("click");
+        });
+
+        // Unbind the mousedown event to avoid duplicate bindings
+        $(document).off("mousedown");
+      }
     });
 
     // // Replace input with the original Search button on blur
@@ -448,72 +544,4 @@ $(document).ready(function () {
     }
     return text;
   }
-  const $booksContainer = $("#books-container");
-
-  // Show the sort popup when the "Sort By" button is clicked
-  $("#sort-btn").click(function (e) {
-    e.preventDefault();
-    $("#sort-popup").toggle(); // Toggle visibility of the popup
-  });
-
-  // Hide the sort popup when clicking outside of it
-  $(document).click(function (e) {
-    if (!$(e.target).closest("#sort-popup, #sort-btn").length) {
-      $("#sort-popup").hide(); // Hide the sort popup if clicked outside
-    }
-  });
-
-  // Handle sorting options
-  $(".sort-option").click(function () {
-    const sortType = $(this).data("sort");
-    $("#sort-popup").hide(); // Hide the popup after selection
-
-    // Get the list of books displayed in the container
-    const books = $booksContainer.children(".book").get(); // Get all book elements
-
-    // Sort the book elements based on the selected option
-    switch (sortType) {
-      case "new-to-old":
-        books.sort((a, b) => {
-          const dateA = new Date($(a).find(".book-info p:last").text()); // Extract date from the book info
-          const dateB = new Date($(b).find(".book-info p:last").text());
-          return dateB - dateA; // Sort by date descending
-        });
-        break;
-      case "old-to-new":
-        books.sort((a, b) => {
-          const dateA = new Date($(a).find(".book-info p:last").text());
-          const dateB = new Date($(b).find(".book-info p:last").text());
-          return dateA - dateB; // Sort by date ascending
-        });
-        break;
-      case "high-to-low":
-        books.sort((a, b) => {
-          const priceA = parseFloat(
-            $(a).find(".book-info p:first").text().replace("Price: $", "")
-          );
-          const priceB = parseFloat(
-            $(b).find(".book-info p:first").text().replace("Price: $", "")
-          );
-          return priceB - priceA; // Sort by price descending
-        });
-        break;
-      case "low-to-high":
-        books.sort((a, b) => {
-          const priceA = parseFloat(
-            $(a).find(".book-info p:first").text().replace("Price: $", "")
-          );
-          const priceB = parseFloat(
-            $(b).find(".book-info p:first").text().replace("Price: $", "")
-          );
-          return priceA - priceB; // Sort by price ascending
-        });
-        break;
-      default:
-        break;
-    }
-
-    // Reorder the book elements in the DOM based on the sorted array
-    $booksContainer.append(books); // Append the sorted books back to the container
-  });
 });
