@@ -59,11 +59,12 @@ $(document).ready(function () {
                                 <button class="quantity-btn increase" data-id="${id}">+</button>
                             </div>
                             <span class="cart-price">$${totalPrice}</span>
-                            <button class="remove-btn" data-id="${id}" aria-label="Remove item">
+                            <button class="remove-btns" data-id="${id}" aria-label="Remove item">
                                 <svg width="256px" height="256px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M9 9L11.9999 11.9999M11.9999 11.9999L14.9999 14.9999M11.9999 11.9999L9 14.9999M11.9999 11.9999L14.9999 9M12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                                 </svg>
                             </button>
+                            <hr class="custom-hr">
                         </div>
                     `;
                     cartContainer.append(cartItem);
@@ -76,7 +77,8 @@ $(document).ready(function () {
 
             // Calculate and display the total price
             const totalPrice = calculateTotalPrice();
-            $("#total-price").text(`Total: $${totalPrice}`);
+            $("#total-price").html(`Total&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$${totalPrice}`);
+            
         }
 
         // Event listener for increase and decrease buttons
@@ -94,7 +96,7 @@ $(document).ready(function () {
         });
 
         // Event listener for remove buttons
-        cartContainer.on("click", ".remove-btn", function () {
+        cartContainer.on("click", ".remove-btns", function () {
             const id = $(this).data("id");
             delete cartData[id];
             updateCartStorage();

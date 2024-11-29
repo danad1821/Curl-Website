@@ -33,13 +33,25 @@
     <div class="cart">
         <div class="mycart">
             <h2>My Cart</h2>
+
+            <div class="title">
+                <h6>Product</h6>
+                <h6>Quantity</h6>
+                <h6>Price</h6>
+            </div>
+
+            <hr class="custom-hr">
+
             <div id="cart-items-container">
                 <div id="cart-items">
                     <div class="card-item-1"></div>
                     <div class="card-item-2"></div>
                     <div class="card-item-3"></div>
                 </div>
+                
             </div>
+            <hr class="total-hr">
+            <div id="total-price">Total $0</div>
         </div>
 
         <div class="ship-pay">
@@ -48,11 +60,11 @@
                 <div id="span-container">
                     <span>Items <span id="cart-item-count">0</span></span>
                 </div>
-                <hr>
+                <hr class="hr">
                 <form>
                     <label for="email"><b>Email</b></label>
                     <input type="email" id="email" name="email" required placeholder="razz56@gmail.com">
-                    <label for="address"><b>Adress</b></label>
+                    <label for="address"><b>Address</b></label>
                     <input type="text" id="address" name="address" required placeholder="St.,Beirut,Lebanon">
                     <br>
                 </form>
@@ -63,7 +75,7 @@
                 <div id="span-container">
                     <span>Card Information</span>
                 </div>
-                <hr>
+                <hr class="hr">
                 <form>
                     <div class="input-container">
                         <label class="card-number" for="card-number"><b>Card Number</b></label>
@@ -104,8 +116,7 @@
                         <div class="end-date">
                             <label for="End Date"><b>End Date</b></label>
                             <div class="inputs">
-                                <input type="number" id="month" name="month" required placeholder="mm">
-                                <input type="number" id="year" name="year" required placeholder="yyyy">
+                                <input type="number" id="month" name="month" required placeholder="mm | yyyy">
                             </div>
                         </div>
             
@@ -125,7 +136,6 @@
                             </div>
                             <span>I have read and accept the terms of use and privacy policy</span>
                         </div>
-                        <div id="total-price">Total: $0.00</div>
                     </div>
                 </form>
             </div>

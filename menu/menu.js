@@ -95,7 +95,11 @@ $(document).ready(function () {
                 existingWish[id] = { id: id, quantity: 1 };
             }
             localStorage.setItem("wishData", JSON.stringify(existingWish));
+        
+            // Trigger the update for the wishlist UI immediately
+            displayWish(); // Ensure this is calling the displayWish function from wish.js
         }
+        
 
 $(document).ready(function () {
     let currentIndex = 0; // Index to keep track of the current displayed items

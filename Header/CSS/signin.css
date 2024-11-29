@@ -37,6 +37,22 @@
     border-radius: 50px;
 }
 
+.remove-btn {
+    background-color: transparent;
+    border: none;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    left: 77%;
+    top: -30%;
+}
+
+.remove-btn svg {
+    width: 30px;
+    height: 30px;
+    opacity: 1;
+}
+
 .girl-sitting{
     margin-right: 200px !important;
     margin-left: -200px !important;
@@ -146,9 +162,14 @@ label {
     .SignIn a{
         font-size: 23px;
     }
+    
 }
 
 @media (min-width: 1024px) {
+    .remove-btn {
+        left: 77%;
+        top: -30%;
+    }
 
     .girl-sitting{
         margin-right: 50px !important;
@@ -183,6 +204,16 @@ label {
 }
 
 @media (max-width: 912px) {
+
+    .modal{
+        margin-top: -15%;
+    }
+
+    .remove-btn {
+        left: 85%;
+        top: -20%;
+    }
+
     .SignIn {
         padding: 6px 12px;
         margin-right: -30px;
@@ -221,6 +252,16 @@ label {
 }
 
 @media (max-width: 860px) {
+
+    .modal{
+        margin-top: -15%;
+    }
+
+    .remove-btn {
+        left: 78%;
+        top: -20%;
+    }
+
     .SignIn {
         padding: 6px 12px;
         margin-right: -30px;
@@ -259,6 +300,16 @@ label {
 }
 
 @media (max-width: 768px) {
+
+    .modal{
+        margin-top: -15%;
+    }
+
+    .remove-btn {
+        left: 65%;
+        top: -25%;
+    }
+
     .SignIn {
         padding: 6px 12px;
         margin-right: -30px;
@@ -297,6 +348,15 @@ label {
 }
 
 @media (max-width: 540px) {
+    .modal{
+        margin-top: 0;
+    }
+
+    .remove-btn {
+        left: 70%;
+        top: -30%;
+    }
+
     .SignIn {
         padding: 6px 12px;
         margin-right: -30px;
