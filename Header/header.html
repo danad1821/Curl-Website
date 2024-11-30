@@ -156,7 +156,7 @@
       <div class="inner-modal">
         <img class="girl-sitting" src="/designImages/Girl Sitting.png" alt="" />
         <div class="inner-modal-2">
-          <h1><b> Welcome! </b></h1>
+          <h1><b> Welcome Back! </b></h1>
           <div class="modal-content">
             <form>
               <label for="username"><b>Username/Email</b></label>
@@ -188,7 +188,65 @@
               </div>
               
             </form>
-            <p class="bottomSignFormText">Don't have an account? <button class="bottomSignFormLink">Sign Up</button></p>
+            <p class="bottomSignFormText">Don't have an account? <button class="bottomSignFormLink" id="signUpBtn">Sign Up</button></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="signUpModal" class="modal">
+      <div class="inner-modal">
+        <img class="girl-sitting" src="/designImages/Girl Sitting.png" alt="" />
+        <div class="inner-modal-2">
+          <h1><b> Welcome! </b></h1>
+          <div class="modal-content">
+            <form>
+              <label for="username"><b>Username</b></label>
+              <input
+                type="text"
+                id="username"
+                name="username"
+                required
+                placeholder="ilovebooks15"
+              />
+              <label for="email"><b>Email</b></label>
+              <input
+                type="text"
+                id="email"
+                name="email"
+                required
+                placeholder="razz56@gmail.com"
+              />
+              <label for="password"><b>Password</b></label>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                required
+                placeholder="abcd123"
+              />
+              <label for="confirm-password"><b>Password Confirnation</b></label>
+              <input
+                type="password"
+                id="password-confirmation"
+                name="password-confirmation"
+                required
+                placeholder="abcd123"
+              />
+              <br />
+              <button type="submit" id="sign-in-submit-btn"><b> Sign Up </b></button>
+              <h6>or</h6>
+              <div class="google-signin">
+                <img
+                  src="/designImages/Google.png"
+                  alt="Google Logo"
+                  class="google-logo"
+                />
+                <span>Sign in with Google</span>
+              </div>
+              
+            </form>
+            <p class="bottomSignFormText">Already have an account? <button class="bottomSignFormLink" id="signInBtnInModal">Sign In</button></p>
           </div>
         </div>
       </div>

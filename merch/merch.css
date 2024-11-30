@@ -1,11 +1,12 @@
+/* Reset styles */
 *{
     padding: 0;
     margin: 0;
     color: #37474f;
     font-family: "Poppins", sans-serif;
-  }
+}
   
-  body{
+  .body{
     background-color: #c0dde5;
     overflow-x: hidden;
   }
@@ -16,9 +17,16 @@
     flex-direction: row;
   }
   
+  .girl{
+    width: 40%;
+    height: 50%;
+    margin-left: -200px;
+  
+  }
   .merch-label {
-    width: 540px;
-    height: 201px;
+    width: 500px;
+    height: 150px;
+    margin-left: -10%;
     
 
   }
@@ -29,8 +37,10 @@
     
   }
   .merch-div p{
-    width: 80%;
+    width: 90%;
     text-align: center;
+    margin-top: 50px;
+    margin-left: -20px;
   }
   
   /* General styles */
@@ -39,6 +49,7 @@
     
     margin: 0;
     padding: 0;
+    background-color: #c0dde5;
   }
   
   h2 {
@@ -73,8 +84,8 @@
   }
   
   .product-image {
-    width: 100px;
-    height: auto;
+    width: 170px;
+    height: 260px;
     margin-bottom: 10px;
   }
   
@@ -105,15 +116,16 @@
     align-items: center;
     justify-content: center;
     gap: 8px;
+    margin-top: 10px;
   }
   
   .minus-btn,
   .plus-btn {
     background-color: #f9d6ba;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     font-size: 14px;
-    padding: 5px 10px;
+    padding: 5px 15px;
     cursor: pointer;
     transition: background-color 0.3s ease;
   }
@@ -165,7 +177,7 @@
   .control-btn {
     background: none;
     border: none;
-    color: #333;
+    color: white;
     font-size: 18px;
     cursor: pointer;
     font-weight: bold;
@@ -179,27 +191,29 @@
   .quantity-label {
     font-size: 16px;
     font-weight: bold;
-    color: #555;
+    color: white;
+    margin-bottom: 0px;
   }
   
   /* Styles for the Add button */
   .add-btn {
     background-color: #f9d6ba;
     border: none;
-    color: #333;
+    color: white;
     font-size: 16px;
     font-weight: bold;
-    border-radius: 50%;
+    border-radius: 45%;
     padding: 10px 15px;
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease;
+    
   }
   
   .add-btn:hover {
     background-color: #f4b996;
-    color: #222;
+    color: white;
   }
-  
+
 
 /* styling header*/
 .navbar {
