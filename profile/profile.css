@@ -137,7 +137,7 @@ h4{
 #userInfoForm>.mb-3{
   width: 100%;
 }
-#nameinputs{
+#nameinputs, .sideBySideInputs{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -282,6 +282,11 @@ footer {
     height: fit-content;
     margin-top: 0;
     padding-top: 5px;
+  }
+}
+@media (max-width: 620px){
+  .sideBySideInputs>div, #userProfileSection{
+    width: 100%;
   }
 }
 
