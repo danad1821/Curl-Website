@@ -9,7 +9,7 @@
     opacity: 0;
     transition: width 0.4s ease, opacity 0.2s ease, background-color 0.4s ease;
     border: 2px solid transparent;
-    margin-left: 15px;
+    /* margin-left: 15px; */
 }
 
 .search-container.focused { 
