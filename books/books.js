@@ -232,33 +232,39 @@ $(document).ready(function () {
 
 
       booksToDisplay.forEach(function (book) {
-        // const isInWishlist = wishlist.books.some(b => b.id === book.id);
+        const isInWishlist = wishlist.books.some(b => b.id === book.id);
         const bookHTML = `
-                    <div class="book" data-book-id="${book.id}">
-                        <div class="book-image">
-                            <a href="book.html" class="book-link">
-                                <img src="${book.img}" alt="${book.title}" class="book-img">
-                            </a>
-                        </div>
-                        <div class="book-info">
-                            <div class="book-details">
-                                <a href="book.html" class="book-link">
-                                    <p>${book.title}</p>
-                                 </a>
-                                <p class="book-author">Author: <span>${book.author}</span></p>
-                            </div>
-                            <div class="price-div">
-                                <p class="book-price">$${book.price}</p>
-                                <div>
-                                    <i class="far fa-heart add-to-wishlist"></i>
-                                    <button class="add-to-cart-btn">Add</button>
-                                </div>
-                            </div>
+            <div class="book" data-book-id="${book.id}">
+                <div class="book-image">
+                    <a href="book.html" class="book-link">
+                        <img src="${book.img}" alt="${book.title}" class="book-img">
+                    </a>
+                </div>
+                <div class="book-info">
+                    <div class="book-details">
+                        <a href="book.html" class="book-link">
+                            <p>${book.title}</p>
+                        </a>
+                        <p class="book-author">Author: <span>${book.author}</span></p>
+                    </div>
+                    <div class="price-div">
+                        <p class="book-price">$${book.price}</p>
+                        <div>
+                            <!-- Unfilled Heart Icon -->
+                            <img src="../designImages/books/Wishlist Heart.svg" alt="Heart Icon" class="heart-icon unfilled ${isInWishlist ? 'hidden' : 'visible'}">
+                            
+                            <!-- Filled Heart Icon (visible only when in wishlist) -->
+                            <img src="../designImages/books/icon-filled.png" alt="Filled Heart Icon" class="heart-icon filled ${isInWishlist ? 'visible' : 'hidden'}">
+                            
+                            <button class="add-to-cart-btn">Add</button>
                         </div>
                     </div>
-                `;
+                </div>
+            </div>
+        `;
         $booksList.append(bookHTML);
       });
+
 
       //click event to the book to store information and redirect
       $booksList.find(".book").click(function (e) {
@@ -270,6 +276,82 @@ $(document).ready(function () {
 
         // Redirect to the book details page
         window.location.href = "book.html";
+      });
+
+
+      // $booksList.on("click", ".heart-icon", function (e) {
+      //   e.stopPropagation(); // Prevent event bubbling
+      //   const $heartIcon = $(this);
+      //   const bookId = $heartIcon.closest(".book").data("book-id");
+      //   const bookData = booksForGenre.find((book) => book.id === bookId);
+
+      //   // Toggle wishlist state
+      //   const isInWishlist = wishlist.books.some(b => b.id === bookData.id);
+      //   if (isInWishlist) {
+      //     // Remove from wishlist
+      //     wishlist.books = wishlist.books.filter(b => b.id !== bookData.id);
+      //     $heartIcon.removeClass("filled");
+      //     $heartIcon.siblings(".heart-icon").addClass("visible");  // Show unfilled
+      //   } else {
+      //     // Add to wishlist
+      //     wishlist.books.push(bookData);
+      //     $heartIcon.addClass("filled");
+      //     $heartIcon.siblings(".heart-icon").removeClass("visible");  // Hide unfilled
+      //   }
+
+      //   // Save updated wishlist to localStorage
+      //   localStorage.setItem("wishlist", JSON.stringify(wishlist));
+      // });
+
+      $booksList.on("click", ".heart-icon", function (e) {
+        e.stopPropagation(); // Prevent event bubbling
+        e.preventDefault();  // Prevent the default action (which would be the link redirect)
+
+        const $heartIcon = $(this);
+        const bookId = $heartIcon.closest(".book").data("book-id");
+        const bookData = booksForGenre.find((book) => book.id === bookId);
+
+        // Check if the book is already in the wishlist
+        const isInWishlist = wishlist.books.some(b => b.id === bookData.id);
+
+        if (isInWishlist) {
+          // Remove from wishlist
+          wishlist.books = wishlist.books.filter(b => b.id !== bookData.id);
+
+          // Switch heart icons: show unfilled and hide filled
+          $heartIcon.siblings(".unfilled").removeClass("hidden").addClass("visible");
+          $heartIcon.siblings(".filled").removeClass("visible").addClass("hidden");
+        } else {
+          // Add to wishlist
+          wishlist.books.push(bookData);
+
+          // Switch heart icons: show filled and hide unfilled
+          $heartIcon.siblings(".filled").removeClass("hidden").addClass("visible");
+          $heartIcon.siblings(".unfilled").removeClass("visible").addClass("hidden");
+        }
+
+        // Save updated wishlist to localStorage
+        localStorage.setItem("wishlist", JSON.stringify(wishlist));
+      });
+
+
+
+
+      // Click event to add to cart
+      $booksList.find(".add-to-cart-btn").click(function (e) {
+        e.stopPropagation(); // Prevent the click from triggering other events
+        const bookId = $(this).closest(".book").data("book-id");
+        const bookData = booksForGenre.find((book) => book.id === bookId);
+
+        // Check if the book is already in the cart
+        const isInCart = cart.books.some(b => b.id === bookData.id);
+        if (!isInCart) {
+          cart.books.push(bookData);
+          localStorage.setItem("cart", JSON.stringify(cart));
+          alert(`${bookData.title} has been added to the cart.`);
+        } else {
+          alert(`${bookData.title} is already in the cart.`);
+        }
       });
 
       // Show or hide arrows depending on the total number of books
