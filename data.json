@@ -10,7 +10,8 @@
         "availability": 20,
         "type": ["ebook", "book", "audio"],
         "genres": ["Fantasy", "Adventure", "Alchemy"],
-        "summary": "Explore a world where alchemy shapes lives, as characters embark on a transformative journey filled with magic and mystery."
+        "summary": "Explore a world where alchemy shapes lives, as characters embark on a transformative journey filled with magic and mystery.",
+        "publication_date": "2023-05-15"
       },
       {
         "id": 2,
@@ -22,7 +23,9 @@
         "availability": 20,
         "type": ["ebook", "book", "audio"],
         "genres": ["Romance", "Contemporary", "Drama"],
-        "summary": "An emotional dive into the art of letting go and the bittersweet beauty of love that wasn't meant to last."
+        "summary": "An emotional dive into the art of letting go and the bittersweet beauty of love that wasn't meant to last.",
+        "publication_date": "2023-05-15"
+
       },
       {
         "id": 3,
@@ -34,7 +37,9 @@
         "availability": 20,
         "type": ["book"],
         "genres": ["Fiction", "Romance", "Contemporary"],
-        "summary": "Lily's story of love and resilience as she navigates a complex relationship, drawing strength from her past."
+        "summary": "Lily's story of love and resilience as she navigates a complex relationship, drawing strength from her past.",
+        "publication_date": "2016-08-02"
+
       },
       {
         "id": 4,
@@ -46,7 +51,8 @@
         "availability": 40,
         "type": ["ebook", "book"],
         "genres": ["Fiction", "Children", "Adventure", "Fantasy"],
-        "summary": "An orphaned boy discovers a magical peach, leading to a whimsical adventure with newfound insect friends."
+        "summary": "An orphaned boy discovers a magical peach, leading to a whimsical adventure with newfound insect friends.",
+        "publication_date": "1961-07-01"
       },
       {
         "id": 5,
@@ -58,7 +64,9 @@
         "availability": 9,
         "type": ["ebook", "book", "audio"],
         "genres": ["Fiction", "Fantasy", "Epic", "Adventure"],
-        "summary": "Frodo Baggins embarks on a perilous journey to destroy the One Ring and save Middle-earth from darkness."
+        "summary": "Frodo Baggins embarks on a perilous journey to destroy the One Ring and save Middle-earth from darkness.",
+        "publication_date": "1954-07-29"
+
       },
       {
         "id": 6,
@@ -70,7 +78,9 @@
         "availability": 3,
         "type": ["book"],
         "genres": ["Romance", "Contemporary", "Drama"],
-        "summary": "A heartfelt story of love, sacrifice, and the power of human connection."
+        "summary": "A heartfelt story of love, sacrifice, and the power of human connection.",
+        "publication_date": "2020-05-01"
+
       },
       {
         "id": 7,
@@ -94,7 +104,8 @@
         "availability": 34,
            "type": ["ebook", "book", "audio"],
         "genres": ["Fiction", "Mystery", "Crime", "Classic"],
-        "summary": "Detective Hercule Poirot investigates a murder aboard the luxurious Orient Express."
+        "summary": "Detective Hercule Poirot investigates a murder aboard the luxurious Orient Express.",
+        "publication_date": "1934-01-01"
       },
       {
         "id": 9,
@@ -106,7 +117,8 @@
         "availability": 31,
         "type": ["ebook", "book"],
         "genres": ["Fiction", "Contemporary", "Romance", "Drama"],
-        "summary": "The complex relationship of Marianne and Connell as they navigate love, class, and personal growth."
+        "summary": "The complex relationship of Marianne and Connell as they navigate love, class, and personal growth.",
+        "publication_date": "2018-08-28"
       },
       {
         "id": 10,
@@ -118,7 +130,8 @@
         "availability": 1,
         "type": ["ebook", "book", "audio"],
         "genres": ["Fantasy", "Romance", "Adventure"],
-        "summary": "With a mighty dragon looming over the kingdom and a battle threatening to unfold over the throne, the young prince struggles to face his brothers."
+        "summary": "With a mighty dragon looming over the kingdom and a battle threatening to unfold over the throne, the young prince struggles to face his brothers.",
+        "publication_date": "2021-11-01"
       },
       {
         "id": 11,
@@ -130,7 +143,8 @@
         "availability": 20,
         "type": ["ebook", "book", "audio"],
         "genres": ["Fiction", "Fantasy", "Philosophy", "Contemporary"],
-        "summary": "Nora Seed discovers a library between life and death, exploring the infinite possibilities of her life choices."
+        "summary": "Nora Seed discovers a library between life and death, exploring the infinite possibilities of her life choices.",
+         "publication_date": "2020-08-13"
       },    
     {
       "id": 12,
@@ -142,7 +156,8 @@
       "availability": 40,
       "type": ["ebook", "book", "audio"],
       "genres": ["Fiction", "Young adult", "Contemporary", "LGBTQ+", "Bestseller"],
-      "summary": "Mateo and Rufus are total strangers, but, for different reasons, they're both looking to make a new friend on their End Day. The good news: There's an app for that. It's called the Last Friend, and through it, Rufus and Mateo are about to meet up for one last great adventure—to live a lifetime in a single day."
+      "summary": "Mateo and Rufus are total strangers, but, for different reasons, they're both looking to make a new friend on their End Day. The good news: There's an app for that. It's called the Last Friend, and through it, Rufus and Mateo are about to meet up for one last great adventure—to live a lifetime in a single day.",
+      "publication_date": "2017-09-05"
     },
     {
       "id": 13,
@@ -166,7 +181,9 @@
       "availability": 4,
       "type": ["ebook", "book"],
       "genres": ["Fiction", "Mystery", "Classic"],
-      "summary": "Just after midnight, a snowdrift stops the luxurious Orient Express on its journey from Istanbul to London. The opulent train is now isolated, and an American tycoon lies dead in his compartment, stabbed multiple times. Poirot, a renowned detective aboard the train, volunteers to solve the murder before the train resumes its journey."
+      "summary": "Just after midnight, a snowdrift stops the luxurious Orient Express on its journey from Istanbul to London. The opulent train is now isolated, and an American tycoon lies dead in his compartment, stabbed multiple times. Poirot, a renowned detective aboard the train, volunteers to solve the murder before the train resumes its journey.",
+      "publication_date": "1934-01-01"
+
     },
     {
       "id": 15,
@@ -178,7 +195,8 @@
       "availability": 6,
       "type": ["book"],
       "genres": ["Fiction", "Historical Fiction", "Mythology", "Bestseller"],
-      "summary": "In the timeless world of Greek myth, Circe, the daughter of a powerful Titan and a nymph, is cast out to a deserted island for defying the gods. With her knowledge of herbs and forbidden magic, Circe transforms her exile into a kingdom, ruling over fantastical creatures and encountering famous heroes and mythical beings from Odysseus to Jason."
+      "summary": "In the timeless world of Greek myth, Circe, the daughter of a powerful Titan and a nymph, is cast out to a deserted island for defying the gods. With her knowledge of herbs and forbidden magic, Circe transforms her exile into a kingdom, ruling over fantastical creatures and encountering famous heroes and mythical beings from Odysseus to Jason.",
+       "publication_date": "1934-01-01"
     },
     {
       "id": 16,
@@ -202,7 +220,8 @@
       "availability": 3,
       "type": ["audio"],
       "genres": ["Fiction", "Contemporary", "Romance", "Bestseller"],
-      "summary": "Two former lovers, a writer and an editor, reconnect after several years apart. As they reminisce and explore their current lives, they must grapple with unresolved feelings and the possibility of rekindling their relationship."
+      "summary": "Two former lovers, a writer and an editor, reconnect after several years apart. As they reminisce and explore their current lives, they must grapple with unresolved feelings and the possibility of rekindling their relationship.",
+      "publication_date": "2020-07-28"
     },
     {
       "id": 18,
@@ -262,7 +281,8 @@
       "availability": 20,
       "type": ["ebook", "book", "audio"],
       "genres": ["Fantasy", "Fiction"],
-      "summary": "A young hobbit, Frodo Baggins, inherits a simple ring and finds himself embroiled in a perilous quest to destroy it in the fires of Mount Doom, before the Dark Lord Sauron reclaims it."
+      "summary": "A young hobbit, Frodo Baggins, inherits a simple ring and finds himself embroiled in a perilous quest to destroy it in the fires of Mount Doom, before the Dark Lord Sauron reclaims it.",
+       "publication_date": "1954-07-29"
     },
     {
       "id": 23,
@@ -274,7 +294,8 @@
       "availability": 2,
       "type": ["ebook"],
       "genres": ["Fiction", "Mystery", "Coming-of-Age", "Bestseller"],
-      "summary": "A quiet girl, raised alone in the marsh, becomes a suspect in the murder of a popular boy. As the story unfolds, we learn about her life, her love for nature, and the secrets she harbors."
+      "summary": "A quiet girl, raised alone in the marsh, becomes a suspect in the murder of a popular boy. As the story unfolds, we learn about her life, her love for nature, and the secrets she harbors.",
+      "publication_date": "2018-08-14"
     },
     {
       "id": 25,
@@ -286,7 +307,8 @@
       "availability": 10,
       "type": ["book"],
       "genres": ["Psychological Thriller", "Mystery"],
-      "summary": "Alia, a famous painter, stops speaking after a shocking act of violence. Theo Faber, a forensic psychotherapist, becomes obsessed with understanding her silence and unraveling the truth behind the tragedy."
+      "summary": "Alia, a famous painter, stops speaking after a shocking act of violence. Theo Faber, a forensic psychotherapist, becomes obsessed with understanding her silence and unraveling the truth behind the tragedy.",
+       "publication_date": "2019-02-05"
     },
     {
       "id": 26,
@@ -298,7 +320,8 @@
       "availability": 10,
       "type": ["book"],
       "genres": ["Mystery", "Thriller", "Fiction", "Bestseller"],
-      "summary": "A glamorous wedding on a remote island turns deadly when a storm cuts off all escape routes and a shocking murder takes place."
+      "summary": "A glamorous wedding on a remote island turns deadly when a storm cuts off all escape routes and a shocking murder takes place.",
+      "publication_date": "2020-06-02"
     },
     {
       "id": 27,
@@ -310,7 +333,8 @@
       "availability": 4,
       "type": ["ebook", "book", "audio"],
       "genres": ["Fiction", "Historical Fiction", "Romance"],
-      "summary": "Aging Hollywood star Evelyn Hugo chooses a young, unknown journalist to reveal the truth about her glamorous life, her seven marriages, and the secrets she's kept for decades."
+      "summary": "Aging Hollywood star Evelyn Hugo chooses a young, unknown journalist to reveal the truth about her glamorous life, her seven marriages, and the secrets she's kept for decades.",
+      "publication_date": "2017-06-13"
     },
     {
       "id": 28,
@@ -322,7 +346,8 @@
       "availability": 2,
       "type": ["book", "audio"],
       "genres": ["Fiction", "Science-Fiction", "Fantasy"],
-      "summary": "Set on the desert planet Arrakis, Dune follows the story of Paul Atreides, a young noble whose family is given control of the planet. As he navigates political intrigue, ecological challenges, and a powerful drug called Spice, Paul's destiny intertwines with the fate of the universe."
+      "summary": "Set on the desert planet Arrakis, Dune follows the story of Paul Atreides, a young noble whose family is given control of the planet. As he navigates political intrigue, ecological challenges, and a powerful drug called Spice, Paul's destiny intertwines with the fate of the universe.",
+       "publication_date": "1965-08-01"
     },
     {
       "id": 29,
@@ -346,7 +371,8 @@
       "availability": 8,
       "type": ["ebook", "book", "audio"],
       "genres": ["Dystopian", "Fiction", "Young Adult"],
-      "summary": "In the dystopian nation of Panem, two teenagers from District 12, Katniss Everdeen and Peeta Mellark, are selected to compete in the annual Hunger Games, a televised event where young tributes fight to the death."
+      "summary": "In the dystopian nation of Panem, two teenagers from District 12, Katniss Everdeen and Peeta Mellark, are selected to compete in the annual Hunger Games, a televised event where young tributes fight to the death.",
+      "publication_date": "2008-09-14"
     },
     {
       "id": 31,
@@ -418,7 +444,8 @@
       "availability": 6,
       "type": ["ebook", "book", "audio"],
       "genres": ["Fiction", "Young Adult", "Romance"],
-      "summary": "A heart-wrenching love story between two teenagers, Hazel Grace Lancaster and Augustus Waters, who meet in a cancer support group and navigate the complexities of life, love, and loss."
+      "summary": "A heart-wrenching love story between two teenagers, Hazel Grace Lancaster and Augustus Waters, who meet in a cancer support group and navigate the complexities of life, love, and loss.",
+      "publication_date": "2012-01-10"
     },
     {
       "id": 37,
@@ -430,7 +457,8 @@
       "availability": 6,
       "type": ["ebook", "book", "audio"],
       "genres": ["Fiction", "Young Adult", "Dystopian", "Science-Fiction"],
-      "summary": "In a future Chicago divided into five factions, Beatrice Prior discovers that she doesn't fit into any of them and must choose a new path that could lead to danger and rebellion."
+      "summary": "In a future Chicago divided into five factions, Beatrice Prior discovers that she doesn't fit into any of them and must choose a new path that could lead to danger and rebellion.",
+      "publication_date": "2011-04-25"
     },
     {
       "id": 39,
@@ -442,7 +470,8 @@
       "rating": 4.3,
       "availability": 20,
       "type": ["ebook", "book", "audio"],
-      "summary": "A historical fantasy novel about a woman cursed with immortality, who spends centuries longing for connection."
+      "summary": "A historical fantasy novel about a woman cursed with immortality, who spends centuries longing for connection.",
+      "publication_date": "2020-10-06"
     },
     {
       "id": 40,
@@ -466,7 +495,8 @@
       "rating": 4.1,
       "availability": 1,
       "type": ["ebook", "book", "audio"],
-      "summary": "A suspenseful thriller that follows a group of night shift workers who become entangled in a dangerous mystery."
+      "summary": "A suspenseful thriller that follows a group of night shift workers who become entangled in a dangerous mystery.",
+      "publication_date": "2022-03-01"
     },
     {
       "id": 42,
@@ -490,7 +520,8 @@
       "rating": 4.3,
       "availability": 30,
       "type": ["ebook", "book", "audio"],
-      "summary": "A magical and dangerous competition where Scarlett Dragna must navigate a treacherous world to find her sister and win the game."
+      "summary": "A magical and dangerous competition where Scarlett Dragna must navigate a treacherous world to find her sister and win the game.",
+       "publication_date": "2017-01-31"
     },
     {
       "id": 44,
@@ -502,7 +533,8 @@
       "rating": 4.4,
       "availability": 30,
       "type": ["ebook", "book", "audio"],
-      "summary": "Tella Dragna enters Caraval to uncover dangerous secrets about her mother and makes a deal with the mysterious and deadly Prince of Hearts."
+      "summary": "Tella Dragna enters Caraval to uncover dangerous secrets about her mother and makes a deal with the mysterious and deadly Prince of Hearts.",
+      "publication_date": "2018-05-29"
     },
     {
       "id": 45,
@@ -514,7 +546,9 @@
       "rating": 4.2,
       "availability": 30,
       "type": ["ebook", "book", "audio"],
-      "summary": "The final game unfolds, where sisters Scarlett and Tella must fight for their lives and find love, balancing hope and heartbreak."
+      "summary": "The final game unfolds, where sisters Scarlett and Tella must fight for their lives and find love, balancing hope and heartbreak.",
+      "publication_date": "2019-05-07"
+
     },
     {
       "id": 46,
@@ -526,7 +560,8 @@
       "rating": 4.5,
       "availability": 30,
       "type": ["ebook", "book", "audio"],
-      "summary": "Evangeline Fox makes a dangerous bargain with the Prince of Hearts to mend her broken heart, thrusting her into a world of magic and curses."
+      "summary": "Evangeline Fox makes a dangerous bargain with the Prince of Hearts to mend her broken heart, thrusting her into a world of magic and curses.",
+       "publication_date": "2021-09-28"
     },
     {
       "id": 47,
@@ -538,7 +573,8 @@
       "rating": 4.6,
       "availability": 30,
       "type": ["ebook", "book", "audio"],
-      "summary": "Evangeline must navigate her feelings for the cursed Prince of Hearts while unraveling deadly secrets that could change the fate of their world."
+      "summary": "Evangeline must navigate her feelings for the cursed Prince of Hearts while unraveling deadly secrets that could change the fate of their world.",
+        "publication_date": "2022-09-13"
     },
     {
       "id": 48,
@@ -550,7 +586,8 @@
       "rating": 4.7,
       "availability": 30,
       "type": ["ebook", "book", "audio"],
-      "summary": "The epic conclusion to Evangeline and Jacks' story, where curses, betrayals, and true love converge in a race against destiny."
+      "summary": "The epic conclusion to Evangeline and Jacks' story, where curses, betrayals, and true love converge in a race against destiny.",
+       "publication_date": "2023-02-28"
     },
     {
       "id": 49,
@@ -562,7 +599,9 @@
       "rating": 4.1,
       "availability": 3,
       "type": ["book"],
-      "summary": "A young boy’s life changes forever when a tragedy leaves him with a priceless painting and a web of intrigue spanning years."
+      "summary": "A young boy’s life changes forever when a tragedy leaves him with a priceless painting and a web of intrigue spanning years.",
+      "publication_date": "2013-10-22"
+
     },
     {
       "id": 50,
@@ -574,7 +613,9 @@
       "rating": 4.8,
       "availability": 2,
       "type": ["book"],
-      "summary": "The witty and spirited Elizabeth Bennet navigates society, family, and her feelings for the seemingly arrogant Mr. Darcy."
+      "summary": "The witty and spirited Elizabeth Bennet navigates society, family, and her feelings for the seemingly arrogant Mr. Darcy.",
+      "publication_date": "1813-01-28"
+
     },
     {
       "id": 51,
@@ -586,7 +627,9 @@
       "rating": 4.9,
       "availability": 6,
       "type": ["ebook", "book", "audio"],
-      "summary": "A powerful exploration of racial injustice in the American South, seen through the eyes of a young girl named Scout Finch."
+      "summary": "A powerful exploration of racial injustice in the American South, seen through the eyes of a young girl named Scout Finch.",
+      "publication_date": "1960-07-11"
+
     },
     {
       "id": 52,
@@ -634,7 +677,9 @@
       "rating": 4.3,
       "availability": 7,
       "type": ["ebook", "book", "audio"],
-      "summary": "An enchanting circus that appears without warning becomes the stage for a magical duel between two young magicians, whose destinies are intertwined."
+      "summary": "An enchanting circus that appears without warning becomes the stage for a magical duel between two young magicians, whose destinies are intertwined.",
+      "publication_date": "2011-09-13"
+
     },
 
     {
@@ -647,7 +692,9 @@
       "rating": 4.5,
       "availability": 4,
       "type": ["book"],
-      "summary": "The story of an orphaned young woman who becomes a governess, finding love and independence despite the hardships and secrets of Thornfield Hall."
+      "summary": "The story of an orphaned young woman who becomes a governess, finding love and independence despite the hardships and secrets of Thornfield Hall.",
+      "publication_date": "1847-10-16"
+
     },
     {
       "id": 58,
@@ -659,7 +706,9 @@
       "rating": 4.7,
       "availability": 10,
       "type": ["ebook", "book", "audio"],
-      "summary": "Bilbo Baggins, a simple hobbit, is swept into an epic quest to reclaim the lost Dwarf Kingdom of Erebor from the dragon Smaug."
+      "summary": "Bilbo Baggins, a simple hobbit, is swept into an epic quest to reclaim the lost Dwarf Kingdom of Erebor from the dragon Smaug.",
+      "publication_date": "1937-09-21"
+
     },
     {
       "id": 59,
@@ -779,7 +828,8 @@
       "rating": 4.4,
       "availability": 20,
       "type": ["ebook", "book", "audio"],
-      "summary": "Jude, a mortal girl, is swept into the dangerous and seductive world of Faerie, where she must defy and outmaneuver cruel faeries to find her place at the High Court."
+      "summary": "Jude, a mortal girl, is swept into the dangerous and seductive world of Faerie, where she must defy and outmaneuver cruel faeries to find her place at the High Court.",
+      "publication_date": "2018-01-02"
     },
     {
       "id": 69,
@@ -791,7 +841,8 @@
       "rating": 4.5,
       "availability": 20,
       "type": ["ebook", "book", "audio"],
-      "summary": "As the power dynamics of the Faerie world shift, Jude must stay one step ahead of her enemies and her own emotions as she navigates the politics of the High Court."
+      "summary": "As the power dynamics of the Faerie world shift, Jude must stay one step ahead of her enemies and her own emotions as she navigates the politics of the High Court.",
+      "publication_date": "2019-01-08"
     },
     {
       "id": 70,
@@ -803,7 +854,9 @@
       "rating": 4.3,
       "availability": 20,
       "type": ["ebook", "book", "audio"],
-      "summary": "Exiled and betrayed, Jude returns to the Faerie realm to reclaim her power, confront old enemies, and battle for her future in a final showdown."
+      "summary": "Exiled and betrayed, Jude returns to the Faerie realm to reclaim her power, confront old enemies, and battle for her future in a final showdown.",
+      "publication_date": "2019-11-19"
+
     },
     {
       "id": 71,
@@ -815,7 +868,9 @@
       "rating": 4.6,
       "availability": 20,
       "type": ["ebook", "book", "audio"],
-      "summary": "A beautifully illustrated collection of tales following Cardan, the High King of Elfhame, as he recalls pivotal moments from his past and reflects on the love and hatred that shaped him."
+      "summary": "A beautifully illustrated collection of tales following Cardan, the High King of Elfhame, as he recalls pivotal moments from his past and reflects on the love and hatred that shaped him.",
+      "publication_date": "2020-11-24"
+
     }
   ],
 
