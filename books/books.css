@@ -538,7 +538,6 @@ footer {
   position: relative;
   background-color: #c0dde5;
   align-self: flex-end;
-  
 }
 
 .footer-content {
@@ -612,11 +611,50 @@ footer {
   top: 20px;
 }
 
-
-
-
 @media (max-width: 1157px) {
   .Book {
     background-color: #c0dde5;
+  }
+}
+@media (max-width: 855px) {
+  .contact {
+    margin-left: 0;
+  }
+}
+@media (max-width: 1080px) {
+  .contact {
+    margin-right: 0px;
+  }
+}
+
+@media (max-width: 750px) {
+  footer {
+    align-items: center;
+    width: 100%;
+    background-color: #f1eae4;
+    height: fit-content;
+    margin-top: 0;
+    padding-top: 10px;
+  }
+  .footer-content {
+    display: contents;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 10px;
+    width: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  footer {
+    align-items: center;
+    width: 100%;
+  }
+  .footer-content {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 10px;
+    width: auto;
   }
 }
