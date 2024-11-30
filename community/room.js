@@ -7,10 +7,7 @@ $(document).ready(function () {
   let roomName = $(
     "<h1 class='roomName'>" + room.roomName.toLowerCase() + "</h1>"
   ).addClass("roomName");
-  let postBtn = $(
-    "<button data-bs-toggle='modal' data-bs-target='#newPostModal'><img src='../designImages/Group 226.png'/> New Post</button>"
-  ).addClass("postBtn");
-  $("#topSection").append(roomName, postBtn);
+  $("#topSection").append(roomName);
   //makes new post popup appear
   $("#newPostModal").on("shown.bs.modal", function () {
     postBtn.focus();
@@ -23,12 +20,12 @@ $(document).ready(function () {
 
       reader.onload = (e) => {
         try {
-          $("#inputImg").css("display", "block")
+          $("#inputImg").css("display", "block");
           $("#inputImg").attr("src", e.target.result).width("100%").height(150);
-          $("#fileInputDiv>label").css({"margin": "0px", "width": "100%"})
-          $("#fileInputDiv>label>p").css({"display": "none"});
+          $("#fileInputDiv>label").css({ margin: "0px", width: "100%" });
+          $("#fileInputDiv>label>p").css({ display: "none" });
           $("#inputImg").css("border-radius", "27px");
-           $("#fileInputDiv").css("padding", "0px")
+          $("#fileInputDiv").css("padding", "0px");
         } catch (error) {
           console.error("Error displaying image:", error);
         }
@@ -64,12 +61,16 @@ $(document).ready(function () {
       let postMainSection = $("<div>").addClass("postMainContent");
       let postImg = $("<img src='" + post.img + "'/>").addClass("postImg");
       let postInnerDiv = $("<div>").html(
-        "<div><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' class='heartIcon heartPostIcon icon'><path d='M225.8 468.2l-2.5-2.3L48.1 303.2C17.4 274.7 0 234.7 0 192.8l0-3.3c0-70.4 50-130.8 119.2-144C158.6 37.9 198.9 47 231 69.6c9 6.4 17.4 13.8 25 22.3c4.2-4.8 8.7-9.2 13.5-13.3c3.7-3.2 7.5-6.2 11.5-9c0 0 0 0 0 0C313.1 47 353.4 37.9 392.8 45.4C462 58.6 512 119.1 512 189.5l0 3.3c0 41.9-17.4 81.9-48.1 110.4L288.7 465.9l-2.5 2.3c-8.2 7.6-19 11.9-30.2 11.9s-22-4.2-30.2-11.9zM239.1 145c-.4-.3-.7-.7-1-1.1l-17.8-20-.1-.1s0 0 0 0c-23.1-25.9-58-37.7-92-31.2C81.6 101.5 48 142.1 48 189.5l0 3.3c0 28.5 11.9 55.8 32.8 75.2L256 430.7 431.2 268c20.9-19.4 32.8-46.7 32.8-75.2l0-3.3c0-47.3-33.6-88-80.1-96.9c-34-6.5-69 5.4-92 31.2c0 0 0 0-.1 .1s0 0-.1 .1l-17.8 20c-.3 .4-.7 .7-1 1.1c-4.5 4.5-10.6 7-16.9 7s-12.4-2.5-16.9-7z'/></svg>" +
+        "<div>" +
+          "<div class='heart-div'><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' class='heartIcon heartPostIcon icon'><path d='M225.8 468.2l-2.5-2.3L48.1 303.2C17.4 274.7 0 234.7 0 192.8l0-3.3c0-70.4 50-130.8 119.2-144C158.6 37.9 198.9 47 231 69.6c9 6.4 17.4 13.8 25 22.3c4.2-4.8 8.7-9.2 13.5-13.3c3.7-3.2 7.5-6.2 11.5-9c0 0 0 0 0 0C313.1 47 353.4 37.9 392.8 45.4C462 58.6 512 119.1 512 189.5l0 3.3c0 41.9-17.4 81.9-48.1 110.4L288.7 465.9l-2.5 2.3c-8.2 7.6-19 11.9-30.2 11.9s-22-4.2-30.2-11.9zM239.1 145c-.4-.3-.7-.7-1-1.1l-17.8-20-.1-.1s0 0 0 0c-23.1-25.9-58-37.7-92-31.2C81.6 101.5 48 142.1 48 189.5l0 3.3c0 28.5 11.9 55.8 32.8 75.2L256 430.7 431.2 268c20.9-19.4 32.8-46.7 32.8-75.2l0-3.3c0-47.3-33.6-88-80.1-96.9c-34-6.5-69 5.4-92 31.2c0 0 0 0-.1 .1s0 0-.1 .1l-17.8 20c-.3 .4-.7 .7-1 1.1c-4.5 4.5-10.6 7-16.9 7s-12.4-2.5-16.9-7z'/></svg>" +
+          "<img class='icon iconImg' src='../designImages/likedHeart.png'/></div>" +
           post.likes +
           "</div>"
       );
       postInnerDiv.append(
-        "<div><svg class='icon commentIcon' data-bs-toggle='modal' data-bs-target='#commentModal' viewBox='0 0 48 48' xmlns='http://www.w3.org/2000/svg'><title>comment-blank</title><g id='Layer_2' data-name='Layer 2'><g id='invisible_box' data-name='invisible box'><rect width='48' height='48' fill='none'/></g><g id='icons_Q2' data-name='icons Q2'><path d='M40,8V32H13.6l-1.2,1.1L8,37.3V8H40m2-4H6A2,2,0,0,0,4,6V42a2,2,0,0,0,2,2,2,2,0,0,0,1.4-.6L15.2,36H42a2,2,0,0,0,2-2V6a2,2,0,0,0-2-2Z'/></g></g></svg>"+post.comments.length+"</div>"
+        "<div><svg class='icon commentIcon' data-bs-toggle='modal' data-bs-target='#commentModal' viewBox='0 0 48 48' xmlns='http://www.w3.org/2000/svg'><title>comment-blank</title><g id='Layer_2' data-name='Layer 2'><g id='invisible_box' data-name='invisible box'><rect width='48' height='48' fill='none'/></g><g id='icons_Q2' data-name='icons Q2'><path d='M40,8V32H13.6l-1.2,1.1L8,37.3V8H40m2-4H6A2,2,0,0,0,4,6V42a2,2,0,0,0,2,2,2,2,0,0,0,1.4-.6L15.2,36H42a2,2,0,0,0,2-2V6a2,2,0,0,0-2-2Z'/></g></g></svg>" +
+          post.comments.length +
+          "</div>"
       );
       postInnerDiv.addClass("postInnerDiv");
       let postCaption = $("<p>" + post.caption + "</p>").addClass(
@@ -111,29 +112,45 @@ $(document).ready(function () {
       posting.append(postDiv, commentsDiv);
       postsSection.append(posting);
 
-
       $("#commentModal").on("shown.bs.modal", function () {
         $(".commentIcon").focus();
       });
     }
-    $(".heartPostIcon").click(function() {
-        const heart = $(this);
-      
-        // Toggle the "liked" class
-        heart.toggleClass("liked");
-      
-        // Apply styles based on the "liked" class
-        if (heart.hasClass("liked")) {
-          heart.css({
-            backgroundColor: "rgb(233, 185, 185)",
-            clipPath: "path('M13 5.248c-5.148-5.402-12-3.825-12 3.944 1 6.661 8.571 11.427 12 14.808 6.43-6.381 12-11.147 11-15.808 0-6.792-8.875-8.306-12-2.944z')"
-          });
-        } else {
-          heart.css({
-            backgroundColor: "#f1eae4",
-            clipPath: "none"
-          });
-        }
-      });
+    $(".heartPostIcon").click(function () {
+      let likeIcon= $(this).siblings();
+      let heart=$(this)
+      if(heart.css("display")=="none"){
+        heart.css("display", "block");
+        likeIcon.css("display", "none");
+      }
+      else{
+        heart.css("display", "none");
+        likeIcon.css("display", "block");
+      }
+    });
+    $(".iconImg").click(function () {
+      let likeIcon= $(this);
+      let heart=$(this).siblings();
+      if(heart.css("display")=="none"){
+        heart.css("display", "block");
+        likeIcon.css("display", "none");
+      }
+      else{
+        heart.css("display", "none");
+        likeIcon.css("display", "block");
+      }
+    });
   }
+
+  $(".postPost").click(function(){
+    $("#description").val("")
+  })
+
+  $(".postComment").click(function(){
+    $("#commentInput").val("");
+  })
+
+  $(".postReply").click(function(){
+    $("#replyInput").val("");
+  })
 });

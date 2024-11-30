@@ -8,13 +8,19 @@
       "lastName": "Ibrahim",
       "address": "Beirut, Lebanon",
       "phone": "71 393 384",
-      "profilePicture": "",
+      "profilePicture": "../designImages/profile/Frame 3.png",
       "events": [
         {
           "day": "Sep 18",
           "startTime": "2:00 p.m",
           "endTime": "6:00 p.m",
           "name": "Creative Writing Workshop"
+        },
+        {
+          "day": "Feb 20",
+          "startTime": "2:00 p.m",
+          "endTime": "6:00 p.m",
+          "name": "A love letter Workshop"
         }
       ],
       "wishlist": [

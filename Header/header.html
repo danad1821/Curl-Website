@@ -45,24 +45,10 @@
           <button class="SignIn" id="signInBtn">
             <a href="#"> Sign in </a>
           </button>
-          <button class="SignIn" id="userProfileBtn">
-            <p id="usernameDisplay">booknerd23</p>
-            <svg
-                width="20"
-                height="20"
-                viewBox="0 0 39 39"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M11.1291 34.507L12.617 35.3386V33.6341V27.383C12.617 25.279 13.769 23.4428 15.4814 22.4729L16.7399 21.7601L15.6286 20.8344C14.2937 19.7225 13.4468 18.051 13.4468 16.1809C13.4468 12.8378 16.1569 10.1277 19.5 10.1277C22.8431 10.1277 25.5532 12.8378 25.5532 16.1809C25.5532 18.051 24.7063 19.7225 23.3714 20.8344L22.2601 21.7601L23.5186 22.4729C25.231 23.4428 26.383 25.279 26.383 27.383V33.6341V35.3386L27.8709 34.507C33.1249 31.5704 36.6809 25.9512 36.6809 19.5C36.6809 10.0113 28.9887 2.31915 19.5 2.31915C10.0113 2.31915 2.31915 10.0113 2.31915 19.5C2.31915 25.9512 5.87513 31.5704 11.1291 34.507ZM38 19.5C38 29.7173 29.7173 38 19.5 38C9.28273 38 1 29.7173 1 19.5C1 9.28273 9.28273 1 19.5 1C29.7173 1 38 9.28273 38 19.5ZM19.5 20.9149C22.1145 20.9149 24.234 18.7954 24.234 16.1809C24.234 13.5663 22.1145 11.4468 19.5 11.4468C16.8855 11.4468 14.766 13.5663 14.766 16.1809C14.766 18.7954 16.8855 20.9149 19.5 20.9149ZM18.2553 23.0638C15.8699 23.0638 13.9362 24.9976 13.9362 27.383V34.0213C13.9362 35.0318 14.7554 35.8511 15.766 35.8511H23.234C24.2446 35.8511 25.0638 35.0318 25.0638 34.0213V27.383C25.0638 24.9976 23.1301 23.0638 20.7447 23.0638H18.2553Z"
-                  fill="#37474F"
-                  stroke="#37474F"
-                  stroke-width="2"
-                />
-              </svg>
-          </button>
           <ul class="icons">
+            <button id="userProfileBtn">
+              <img src="../designImages/profile/Frame 4.png" alt="">
+            </button>
             <li id="icon" class="searchIcon">
               <div class="search-container">
                 <input
@@ -170,7 +156,7 @@
       <div class="inner-modal">
         <img class="girl-sitting" src="/designImages/Girl Sitting.png" alt="" />
         <div class="inner-modal-2">
-          <h1><b> Welcome! </b></h1>
+          <h1><b> Welcome Back! </b></h1>
           <div class="modal-content">
             <form>
               <label for="username"><b>Username/Email</b></label>
@@ -202,7 +188,65 @@
               </div>
               
             </form>
-            <p class="bottomSignFormText">Don't have an account? <button class="bottomSignFormLink">Sign Up</button></p>
+            <p class="bottomSignFormText">Don't have an account? <button class="bottomSignFormLink" id="signUpBtn">Sign Up</button></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="signUpModal" class="modal">
+      <div class="inner-modal">
+        <img class="girl-sitting" src="/designImages/Girl Sitting.png" alt="" />
+        <div class="inner-modal-2">
+          <h1><b> Welcome! </b></h1>
+          <div class="modal-content">
+            <form>
+              <label for="username"><b>Username</b></label>
+              <input
+                type="text"
+                id="username"
+                name="username"
+                required
+                placeholder="ilovebooks15"
+              />
+              <label for="email"><b>Email</b></label>
+              <input
+                type="text"
+                id="email"
+                name="email"
+                required
+                placeholder="razz56@gmail.com"
+              />
+              <label for="password"><b>Password</b></label>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                required
+                placeholder="abcd123"
+              />
+              <label for="confirm-password"><b>Password Confirnation</b></label>
+              <input
+                type="password"
+                id="password-confirmation"
+                name="password-confirmation"
+                required
+                placeholder="abcd123"
+              />
+              <br />
+              <button type="submit" id="sign-in-submit-btn"><b> Sign Up </b></button>
+              <h6>or</h6>
+              <div class="google-signin">
+                <img
+                  src="/designImages/Google.png"
+                  alt="Google Logo"
+                  class="google-logo"
+                />
+                <span>Sign in with Google</span>
+              </div>
+              
+            </form>
+            <p class="bottomSignFormText">Already have an account? <button class="bottomSignFormLink" id="signInBtnInModal">Sign In</button></p>
           </div>
         </div>
       </div>
