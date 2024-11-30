@@ -7,10 +7,7 @@ $(document).ready(function () {
   let roomName = $(
     "<h1 class='roomName'>" + room.roomName.toLowerCase() + "</h1>"
   ).addClass("roomName");
-  let postBtn = $(
-    "<button data-bs-toggle='modal' data-bs-target='#newPostModal'><img src='../designImages/Group 226.png'/> New Post</button>"
-  ).addClass("postBtn");
-  $("#topSection").append(roomName, postBtn);
+  $("#topSection").append(roomName);
   //makes new post popup appear
   $("#newPostModal").on("shown.bs.modal", function () {
     postBtn.focus();
@@ -144,4 +141,16 @@ $(document).ready(function () {
       }
     });
   }
+
+  $(".postPost").click(function(){
+    $("#description").val("")
+  })
+
+  $(".postComment").click(function(){
+    $("#commentInput").val("");
+  })
+
+  $(".postReply").click(function(){
+    $("#replyInput").val("");
+  })
 });

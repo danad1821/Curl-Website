@@ -32,12 +32,15 @@
   </head>
   <body>
     <div id="header"></div>
-    <section id="topSection">
-      <!-- changes depending on the room  -->
-    </section>
-    <section id="postsSection">
-      <!-- posts are added here  -->
-    </section>
+    <main>
+      <button class="postBtn" data-bs-toggle='modal' data-bs-target='#newPostModal'><img src='../designImages/Group 226.png'/> New Post</button>
+        <section id="topSection">
+          <!-- changes depending on the room  -->
+        </section>
+      <section id="postsSection">
+        <!-- posts are added here  -->
+      </section>
+    </main>
 
     <!-- Footer -->
     <footer>
@@ -84,7 +87,7 @@
                 placeholder="Type here..."
               />
             </div>
-            <button class="btn smallPostBtn" data-bs-dismiss="modal">Post</button>
+            <button class="btn smallPostBtn postPost" data-bs-dismiss="modal">Post</button>
           </div>
         </div>
       </div>
@@ -96,7 +99,7 @@
           <div class="modal-body">
             <label for="commentInput" class="form-label">Comment:</label>
             <textarea id="commentInput" placeholder="Type here..." ></textarea>
-            <button class="btn smallPostBtn" data-bs-dismiss="modal">Post</button>
+            <button class="btn smallPostBtn postComment" data-bs-dismiss="modal">Post</button>
           </div>
         </div>
       </div>
@@ -108,7 +111,7 @@
           <div class="modal-body">
             <label for="replyInput" class="form-label">Reply:</label>
             <textarea id="replyInput" placeholder="Type here..." ></textarea>
-            <button class="btn smallPostBtn" data-bs-dismiss="modal">Post</button>
+            <button class="btn smallPostBtn postReply" data-bs-dismiss="modal">Post</button>
           </div>
         </div>
       </div>

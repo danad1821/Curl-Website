@@ -72,10 +72,7 @@ $(document).ready(function () {
   // save button
   $("#saveBtn").click(function (e) {
     e.preventDefault();
-    currentUser.firstName = $("#firstName").val();
-    currentUser.lastName = $("#lastName").val();
-    currentUser.address = $("#address").val();
-    currentUser.phone = $("#phoneNumber").val();
+
     $.ajax({
       url: "../user.json",
       type: "GET",
@@ -87,16 +84,19 @@ $(document).ready(function () {
           (isExistingUsername(data, $("#username").val()) == false &&
             isExistingEmail(data, $("#email").val()) == false)
         ) {
+          currentUser.firstName = $("#firstName").val();
+          currentUser.lastName = $("#lastName").val();
+          currentUser.address = $("#address").val();
+          currentUser.phone = $("#phoneNumber").val();
           currentUser.email = $("#email").val();
           currentUser.username = $("#username").val();
           sessionStorage.setItem("loggedInUser", JSON.stringify(currentUser));
+          displayCurrentUser();
         }
       },
       error: function (error) {
         console.error("Error loading data:", error);
       },
     });
-
-    displayCurrentUser();
   });
 });

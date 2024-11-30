@@ -4,36 +4,47 @@
   color: #37474f;
   font-family: "Poppins", sans-serif;
 }
+
+main{
+  overflow: scroll;
+  max-height: 300vh;
+}
+main::-webkit-scrollbar{
+  display: none;
+}
 /* Top section of room  */
 #topSection {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   margin: 0 30px;
-  padding: 20px 0;
-  position: sticky;
-  top: 14%;
-  z-index: 5;
+  padding: 10px 0;
   background-color: #c0dde5;
 }
 .roomName {
-  font-family: "New Class", sans-serif;
+  font-family: "New Class", sans-serif;;
 }
 .postBtn {
   background-color: #e9b9b9;
   color: #f1eae4;
   font-size: 20px;
   display: flex;
+  align-items: center;
+  max-height: min-content;
   padding: 5px 15px;
   border: none;
+  max-width: 160px;
   border-radius: 27px;
   font-weight: 600;
+  position: fixed;
+  top: 19%;
+  right: 5%;
+  z-index: 1000;
 }
 .postBtn > img {
-  width: 25px;
-  height: 25px;
-  margin-right: 3px;
+  width: 22px;
+  height: 22px;
+  margin-right: 5px;
 }
 .postBtn:hover, .smallPostBtn:hover, #fileInputDiv > label>p:hover {
   background-color: #37474f;
@@ -123,14 +134,10 @@
   display: flex;
   flex-direction: column;
   gap: 30px;
-  max-height: 295vh;
-  overflow: scroll;
   width: 100vw;
   align-self: center;
 }
-#postsSection::-webkit-scrollbar{
-  display: none;
-}
+
 .post{
   display: flex;
   justify-content: center;

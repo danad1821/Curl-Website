@@ -39,8 +39,15 @@ $(document).ready(function () {
       ).addClass("roomImg"); // Replace 'error.jpg' with your desired error image
       const roomTitle=$("<p>"+room.roomName+"</p>").addClass('roomTitle')
       roomButton.click(function () {
-        localStorage.setItem("room", JSON.stringify(room))
-        $(location).prop('href', 'room.html')
+        if(sessionStorage.getItem("loggedInUser")){
+          $("#signInModal").removeClass("show");
+          localStorage.setItem("room", JSON.stringify(room))
+          $(location).prop('href', 'room.html')
+        }
+        else{
+          $("#signInModal").addClass("show");
+        }
+        
       });
       roomInnerDiv.append(roomImage, roomTitle);
       roomDiv.append(roomInnerDiv, roomDesc, roomButton);
