@@ -35,15 +35,16 @@
             <h2>User Profile</h2>
             <section id="user" class="userProfileSections">
               <img src="" alt="" id="userImg">
-              <div>
+              <div id="userContent">
                 <h3 id="fullName"></h3>
                 <p id="location"></p>
+                <section class="userProfileSections" id="wishlist">
+                  <img src="../designImages/profile/Icon.png" alt="" id="heartIcon">
+                  <p id="wishlistItems"></p>
+                </section>
               </div>
             </section>
-            <section class="userProfileSections">
-              <img src="../designImages/profile/Icon.png" alt="" id="heartIcon">
-              <p id="wishlistItems"></p>
-            </section>
+            
             <section>
               <h4>Rooms</h4>
               <div id="rooms">
@@ -60,7 +61,7 @@
         <section id="userInfoSection">
             <h2>User Info</h2>
             <form action="" id="userInfoForm">
-              <div id="nameinputs">
+              <div id="nameinputs" class="sideBySideInputs">
                 <div class="mb-3">
                   <label for="firstName" class="form-label">First Name</label>
                   <input type="text" class="form-control" id="firstName" placeholder="John">
@@ -70,10 +71,16 @@
                   <input type="text" class="form-control" id="lastName" placeholder="Doe">
                 </div>                
               </div>
-              <div class="mb-3">
-                <label for="username" class="form-label">Username</label>
-                <input type="text" class="form-control" id="username" placeholder="curlTheDog">
-              </div>  
+              <div id="nameinputs" class="sideBySideInputs">
+                <div class="mb-3">
+                  <label for="username" class="form-label">Username</label>
+                  <input type="text" class="form-control" id="username" placeholder="curlTheDog">
+                </div>  
+                <div class="mb-3">
+                  <label for="phoneNumber" class="form-label">Phone Number</label>
+                  <input type="text" class="form-control" id="phoneNumber" placeholder="71 *** ***">
+                </div>                
+              </div>
               <div class="mb-3">
                 <label for="email" class="form-label">Email</label>
                 <input type="email" class="form-control" id="email" placeholder="johndoe@gmail.com">
@@ -81,10 +88,6 @@
               <div class="mb-3">
                 <label for="address" class="form-label">Address</label>
                 <input type="text" class="form-control" id="address" placeholder="Beirut, Lebanon">
-              </div>  
-              <div class="mb-3">
-                <label for="phoneNumber" class="form-label">Phone Number</label>
-                <input type="text" class="form-control" id="phoneNumber" placeholder="71 *** ***">
               </div>  
               <button type="submit" class="btn" id="saveBtn">Save Changes</button>
             </form>
