@@ -506,7 +506,7 @@ a.active {
 .heart-icon{
   height: 20px;
 }
-
+/* 
 .heart-icon {
   width: 24px;
   height: 24px;
@@ -526,8 +526,7 @@ a.active {
 
 .unfilled.hidden {
   display: none;
-}
-
+} */
 
 
 /* FOOTER */
