@@ -3,6 +3,10 @@ const $modal = $("#signInModal");
 const $btn = $("#signInBtn");
 const $closeBtn = $(".close");
 
+const $singUpBtn = $("#signUpBtn");
+const $signUpModal = $("#signUpModal");
+
+const $signInBtnInModal = $("#signInBtnInModal");
 
 // Show the modal when the "Sign In" button is clicked
 $btn.on("click", function (event) {
@@ -13,12 +17,28 @@ $btn.on("click", function (event) {
 // Hide the modal when the close button is clicked
 $closeBtn.on("click", function () {
   $modal.removeClass("show");
+  $signUpModal.removeClass("show");
 });
+
+$singUpBtn.on("click", function(event) {
+  event.preventDefault();
+  $signUpModal.addClass("show");
+  $modal.removeClass("show");
+})
+
+$signInBtnInModal.on("click", function(event) {
+  event.preventDefault();
+  $signUpModal.removeClass("show");
+  $modal.addClass("show");
+})
 
 // Hide the modal if clicking outside the modal content
 $(window).on("click", function (event) {
   if ($(event.target).is($modal)) {
     $modal.removeClass("show");
+  }
+  if ($(event.target).is($signUpModal)) {
+    $signUpModal.removeClass("show");
   }
 });
 
