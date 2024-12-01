@@ -6,6 +6,8 @@ $(document).ready(function () {
 });
 const reserveButtons = document.querySelectorAll('.reserve-btn');
 const reservationForm = document.getElementById('reservationForm');
+const closeButton = document.querySelector('.close-btn');
+
 
 reserveButtons.forEach(button => {
   button.addEventListener('click', () => {
@@ -17,4 +19,8 @@ reservationForm.addEventListener('click', (event) => {
   if (event.target === reservationForm) {
     reservationForm.style.display = 'none';
   }
+});
+closeButton.addEventListener('click', (event) => {
+  event.stopPropagation(); // Prevent the click event from bubbling up
+  reservationForm.style.display = 'none';
 });
