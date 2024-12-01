@@ -85,7 +85,7 @@ h4{
   flex-direction: column;
   overflow: scroll;
   border: 2px solid #37474f;
-  padding: 10px;
+  padding: 5px 3px;
   border-radius:30px;
 }
 #events::-webkit-scrollbar{
@@ -94,7 +94,7 @@ h4{
 .eventDiv{
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   gap: 40px;
   margin: 10px;
