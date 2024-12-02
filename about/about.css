@@ -1,0 +1,377 @@
+* {
+    margin: 0;
+    padding: 0;
+    color: #37474f;
+    font-family: "Poppins", sans-serif;
+  }
+  
+body {
+  background-color: #C0DDE5 !important;
+}
+
+.About{
+  background-color: #f1eae4;
+  border-radius: 25px;
+  padding: 4px 10px;
+  text-align: center;
+}
+
+/* LANDING STYLES */
+#LandingText{
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-right: 10%;
+  }
+  #LandingText h1{
+    font-family: "New Class";
+    font-size: 150px;
+    font-weight: 400;
+    margin-bottom: 0;
+  }
+  
+  #LandingText p{
+    text-align: center;
+    font-size: 20px;
+    font-weight: 500;
+    width: 35%;
+    margin-top: -2%;
+    margin-top: 12px;
+  }
+  
+  #LandingText p span{
+    font-weight: 700;
+  }
+
+  #landingSection img{
+    position: absolute;
+    top: 140px;
+    right: 110px;
+    width: 40%;
+  }
+
+
+/* ABOUT US SECTION STYLES */
+#aboutUsSection{
+    margin: 150px 0 150px 0;
+    background-color: #F1EAE4;
+    border-radius: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10% 0 8% 0;
+}
+
+.aboutUsDiv{
+    display: flex;
+    margin-bottom: 80px;
+    gap: 70px;
+}
+
+.aboutUsDiv:nth-child(2){
+    flex-direction: row-reverse;
+}
+
+.aboutUsDiv img{
+    width: 60%;
+}
+
+.aboutUsDiv h4{
+    font-weight: bold;
+}
+
+.aboutUsDiv p{
+    width: 400px;
+}
+
+.aboutUsDiv p span{
+    font-weight: bold;
+}
+
+.imgDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#woof{
+    margin-top: -10%;
+}
+
+#Nisrine{
+    margin-top: -12%;
+}
+
+#mission{
+    margin-top: -11%;
+}
+
+.aboutUsDiv:last-child{
+    margin-bottom: 0;
+}
+
+
+
+/* FOOTER STYLES */
+
+
+/* FOOTER */
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+    background-color: #F1EAE4;
+    align-self: flex-end;    
+  }
+  
+  .footer-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    position: relative;
+    padding: 10px 0;
+    z-index: 2;
+    height: 250px;
+  }
+  
+  .logo {
+    text-align: center;
+  }
+  
+  .logo-circle {
+    background-color: #C0DDE5;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .logo-circle img {
+    width: 120px;
+    height: 74px;
+  }
+  
+  .logo-circle p {
+    font-size: 14px;
+    color: black;
+  }
+  
+  .about,
+  .contact {
+    text-align: left;
+  }
+  
+  .about h3,
+  .contact h3 {
+    font-size: 20px;
+    color: black;
+    margin-bottom: 5px;
+    margin-top: 15px;
+    font-weight: bold;
+  }
+  
+  .about p,
+  .contact p {
+    font-size: 14px;
+    color: black;
+    margin: 4px 0;
+  }
+  
+  .copyright {
+    background-color: #C0DDE5;
+    font-size: 12px;
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    position: relative;
+    z-index: 2;
+    top: 20px;
+  }
+
+
+
+
+
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1240px){
+
+  #landingSection img{
+    width: 30%;
+  }
+
+  #aboutUsSection{
+    margin-top: 3%;
+  }
+
+}
+
+
+@media (max-width: 1200px){
+  #LandingText{
+    margin-top: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-right: 10%;
+  }
+  #LandingText h1{
+    font-family: "New Class";
+    font-size: 100px;
+    font-weight: 400;
+    margin-bottom: 0;
+  }
+  
+  #LandingText p{
+    text-align: center;
+    font-size: 15px;
+    font-weight: 500;
+    width: 35%;
+    margin-top: -2%;
+    margin-top: 8px;
+  }
+
+  
+  #landingSection img{
+    top: 170px;
+    right: 160px;
+  }
+  
+
+}
+
+
+@media (max-width: 1000px){
+  #landingSection img{
+    display: none;
+  }
+
+  #LandingText{
+    margin-right:0;
+  }
+
+
+
+}
+
+
+
+@media (max-width: 951px){
+  #aboutUsSection{
+    padding: 12%;
+  }
+  .aboutUsDiv{
+    gap: 10px !important;
+  }
+  #aboutUsSection p{
+    font-size: 13px;
+  }
+
+  #aboutUsSection h4{
+    font-size: 16px;
+  }
+}
+@media (max-width: 732px){
+  #aboutUsSection img{
+    display: none;
+  }
+
+  .aboutUsDiv:nth-child(2){
+    flex-direction: row;
+}
+
+  .aboutUsDiv{
+    margin-bottom: 5%;
+  }
+}
+@media (max-width: 600px){
+
+  #LandingText h1{
+    font-size: 90px !important;
+  }
+
+  #LandingText p{
+    font-size: 12px !important;
+    width: 70% !important;
+  }
+
+ 
+}
+@media (max-width: 370px){
+
+  .aboutUsDiv p{
+    width: 300px;
+  }
+
+}
+
+
+
+
+
+
+
+@media (max-width: 855px) {
+  .contact {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 1080px) {
+  .contact {
+    margin-right: 0px;
+  }
+}
+
+@media (max-width: 750px) {
+  footer {
+    align-items: center;
+    width: 100%;
+    background-image: none;
+    background-color: #f1eae4;
+    height: fit-content;
+    margin-top: 0;
+    padding-top: 10px;
+  }
+  .footer-content {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 10px;
+    width: auto;
+  }
+  footer {
+    background-image: none;
+    background-color: #f1eae4;
+    height: fit-content;
+    margin-top: 0;
+    padding-top: 5px;
+  }
+}
+
+@media (max-width: 600px) {
+  footer {
+    align-items: center;
+    width: 100%;
+  }
+  .footer-content {
+    flex-direction: column !important;
+    justify-content: center;
+    /* align-items: flex-start; */
+    padding: 10px;
+  }
+}
+  

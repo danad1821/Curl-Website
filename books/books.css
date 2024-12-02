@@ -15,6 +15,12 @@ body {
   top: 0;
   z-index: 999;
 }
+.Book{
+  background-color: #f1eae4;
+  border-radius: 25px;
+  padding: 4px 10px;
+  text-align: center;
+}
 
 /* LANDING STYLES */
 #LandingText{
@@ -80,16 +86,17 @@ body {
 
 #main{
   background-color: #F1EAE4;
-  margin-top: 35%;
-  position: absolute;
   display: flex;
   flex-direction: row;
   width: 100%;
+  margin-top: 35%; /* Adjust as needed for your layout */
+  position: relative; /* Remove `absolute` */
+  padding-bottom: 50px;
 }
 
 #filters{
   flex: 1;
-  margin: 0 10% 0 8%;
+  margin: 0 5% 0 8%;
 }
 
 #books{
@@ -109,6 +116,11 @@ body {
   flex-direction: column;
   padding-left: 0;
 }
+
+#TypesOfBooks li{
+  list-style-type: none;
+  margin-bottom: 20px;
+}
 #TypesOfBooks a, #Genre a{
   text-decoration: none;
   color: #37474f;
@@ -117,7 +129,7 @@ body {
 
 }
 
-#TypesOfBooks a:last-child, #Genre a:last-child{
+#TypesOfBooks a:last-child, #Genre a:last-child, #TypesOfBooks li:last-child{
   margin-bottom: 0%;
   
 }
@@ -132,11 +144,88 @@ a.active {
 }
 
 
+/* Customizing the jQuery UI Slider */
+#slider {
+  width: 100%;
+  margin: 20px 0;
+  background: #37474f;
+  height: 5px;
+  width: 180px;
+  position: relative;
+}
+
+#slider .ui-slider-range {
+  background-color: #E9B9B9;
+  height: 5px;
+}
+
+/* Customizing the slider's handle*/
+#slider .ui-slider-handle {
+  background-color: #E9B9B9;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  border: none;
+  position: absolute; /* Make sure it's positioned on the track */
+  margin-left: -10px; /* Center the handle over the track */
+  z-index: 2; 
+}
+
+/* Positioning the labels for min and max */
+#min-price, #max-price {
+  font-size: 14px;
+  color: #37474f;
+  /* position: absolute; */
+  top: 20px;
+}
+
+/* Min price label (left side) */
+#min-price {
+  left: 0;
+}
+
+/* Max price label (right side) */
+#max-price {
+  right: 0;
+}
+
+/* Positioning the current value label */
+#current-price {
+  font-size: 14px;
+  color: #000;
+  font-weight: bold;
+  /* position: absolute; */
+  top: -30px; /* Position above the slider */
+  left: 50%; /* Center it above the slider */
+  transform: translateX(-50%); /* Adjust for centering */
+}
+
+/* Customizing the highlighted area (between the handle and max value) */
+#slider .ui-slider-range-min {
+  background-color: #E9B9B9;
+}
+
+
+#slider .ui-slider-handle:hover {
+  background-color: #E9B9B9;
+}
+
+/* Customizing the price range text */
+#price-range {
+  font-size: 16px;
+  width: 180px;
+  font-weight: bold;
+  color: #37474f;
+  display: flex;
+  justify-content: space-between;
+}
+
 /* books section styles */
 #booksTop{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   width: 80%;
 }
 
@@ -145,13 +234,29 @@ a.active {
   flex-direction: row;
 }
 
-#bookFilteredGenres:first-child{
+#bookFilteredGenres p{
   margin-right: 30px;
   font-weight: bold;
   font-size: 18px;
+  margin-bottom: 0%;
 }
 
-#search-sort button{
+#selected-genres-container{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+#search-sort {
+  display: flex; /* Use flexbox to keep items in a row */
+  align-items: center; /* Vertically align items */
+  gap: 10px; /* Add spacing between elements */
+
+}
+
+
+#search-sort button, 
+#search-sort .search-input {
   background-color: #E9B9B9;
   color: #F1EAE4;
   font-weight: 700;
@@ -160,64 +265,396 @@ a.active {
   border: none;
   font-size: 15px;
 }
-#search-sort button:first-child{
+/* #search-sort button:first-child{
   margin-right: 10px;
+} */
+
+#search-sort .search-input {
+  flex-grow: 1; /* Makes the input field responsive */
+  max-width: 300px; /* Optional: Restrict the width */
 }
 
-
-
-
-.genre-section{
-  overflow-y: hidden;
-  overflow-x: scroll;
+#search-sort button:last-child {
+  flex-shrink: 0; /* Prevents "Sort By" button from shrinking */
+  min-width: 100px; /* Set a minimum width for consistent sizing */
 }
 
-.books-list{
-  display: flex;
-  flex-direction: row;
-
+#search-results {
+  position: absolute;
+  /* width: 34.8%; */
+  width: 25%  !important;
+  z-index: 999;
+  right: 170px;
+  top: 70px;
 }
 
+.search-input::placeholder{
+  color: #F1EAE4;
+}
+.search-item{
+  cursor: pointer;
+}
 
-.book{
+#sort-popup {
+  display: none;
+  position: absolute;
+  top: 70px;
+  right: 180px;
+  background-color: #E9B9B9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  z-index: 999;
+  padding: 0;
+}
+
+#sort-popup ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#sort-popup li {
+  padding: 12px;
+  cursor: pointer;
+  color: #F1EAE4;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+#sort-popup li:hover {
+  background-color: #F1EAE4;
+  color: #37474f;
+}
+
+#sort-popup li:active {
+  background-color: #E9B9B9;
+  color: #37474f;
+}
+
+/* General Layout Styles */
+#books-container {
+  position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 300px;
+  align-items: flex-start;
 }
 
+/* Genre Section Styles */
+#genre-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
 
-.book-img{
-  width: 150px;
-  height: 240px;
+.genre-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+  align-items: flex-start;
+  margin-bottom: 30px;
+}
+
+.genre-section::-webkit-scrollbar {
+  display: none;
+}
+
+.genre-title {
+  font-weight: bold;
+  margin: 30px 0; /* Combined margin for top and bottom */
+  text-align: left;
+  align-self: flex-start; /* Align the title to the start of the container */
+}
+
+/* Adjust genre section alignment to the books' top */
+.genre-books {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  overflow: hidden;
+  justify-content: flex-start; /* Ensure books are aligned to the left */
+  align-items: flex-start; /* Align books with the top of the genre title */
+}
+
+/* Carousel and Books Display */
+.books-list {
+  display: flex;
+  flex-direction: row;
+  /* gap: 50px; */
+  overflow: hidden; /* Prevent items from overflowing outside the carousel */
+  justify-content: flex-start;
+
+  transition: transform 0.5s ease; /* Smooth transition for sliding */
+
+}
+
+.carousel-inner {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.carousel-item {
+  flex: 0 0 auto;
+  display: flex;
+}
+
+/* Arrow Styles */
+.scroll-arrow {
+  position: absolute;
+  top: 50%; /* Center arrows vertically */
+  transform: translateY(-50%);
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+  z-index: 1; /* Ensure arrows appear above the books */
+}
+
+.left-arrow {
+  left: -130px; /* Position the left arrow to the side of the carousel */
+}
+
+.right-arrow {
+  right: -15px; /* Position the right arrow to the side of the carousel */
+}
+
+.scroll-arrow img {
+  width: 50px;
+  height: auto;
+}
+
+.scroll-arrow:hover {
+  opacity: 0.8; /* Slight fade effect on hover */
+}
+
+/* Book Item Styles */
+.book {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 270px;
+  /* width: max-content; */
+
+}
+
+.book-link{
+  text-decoration: none;
+}
+
+.book-img {
+  width: 160px;
+  height: 220px;
   border-radius: 15px;
 }
 
-.book-details{
-  margin-top: 10px;
+.book-details {
+  margin-top: 20px;
   line-height: 10px;
+  font-size: 14px;
 }
+
 .book-details p:first-child{
+  max-width: 200px;
+}
+
+.book-details p:first-child {
+  font-weight: bold;
+  line-height: 18px;
+  min-height: 40px;
+  margin-bottom: 0;
+}
+
+.book-author span {
   font-weight: bold;
 }
 
-.book-author span{
-  font-weight: bold;
-}
-
-.price-div{
+.price-div {
   display: flex;
   flex-direction: row;
+  align-items: center;
   justify-content: space-between;
+  width: 170px;
 }
 
-.add-to-cart-btn{
+.price-div p {
+  margin-bottom: 0;
+}
+
+.price-div div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+
+.price-div i {
+  font-size: 18px;
+}
+
+.add-to-cart-btn {
   border: none;
-  background-color: #E9B9B9;
-  color: #F1EAE4;
+  background-color: #e9b9b9;
+  color: #f1eae4;
   font-weight: 700;
-  padding: 2px 13px 2px 13px;
+  padding: 3px 10px;
   border-radius: 20px;
   font-size: 14px;
+}
+
+.heart-icon{
+  height: 20px;
+}
+/* 
+.heart-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.unfilled {
+  display: block;
+}
+
+.filled {
+  display: none;
+}
+
+.filled.visible {
+  display: block;
+}
+
+.unfilled.hidden {
+  display: none;
+} */
+
+
+/* FOOTER */
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+  background-color: #c0dde5;
+  align-self: flex-end;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  position: relative;
+  padding: 10px 0;
+  z-index: 2;
+  height: 250px;
+}
+
+.logo {
+  text-align: center;
+}
+
+.logo-circle {
+  background-color: #F1EAE4;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-circle img {
+  width: 120px;
+  height: 74px;
+}
+
+.logo-circle p {
+  font-size: 14px;
+  color: black;
+}
+
+.about,
+.contact {
+  text-align: left;
+}
+
+.about h3,
+.contact h3 {
+  font-size: 20px;
+  color: black;
+  margin-bottom: 5px;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+.about p,
+.contact p {
+  font-size: 14px;
+  color: black;
+  margin: 4px 0;
+}
+
+.copyright {
+  background-color: #F1EAE4;
+  font-size: 12px;
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+  position: relative;
+  z-index: 2;
+  top: 20px;
+}
+
+@media (max-width: 1157px) {
+  .Book {
+    background-color: #c0dde5;
+  }
+}
+@media (max-width: 855px) {
+  .contact {
+    margin-left: 0;
+  }
+}
+@media (max-width: 1080px) {
+  .contact {
+    margin-right: 0px;
+  }
+}
+
+@media (max-width: 750px) {
+  footer {
+    align-items: center;
+    width: 100%;
+    background-color: #f1eae4;
+    height: fit-content;
+    margin-top: 0;
+    padding-top: 10px;
+  }
+  .footer-content {
+    display: contents;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 10px;
+    width: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  footer {
+    align-items: center;
+    width: 100%;
+  }
+  .footer-content {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 10px;
+    width: auto;
+  }
 }
