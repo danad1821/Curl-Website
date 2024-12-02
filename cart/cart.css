@@ -10,6 +10,13 @@ body {
     overflow-x: hidden;
 }
 
+#CartIcon{
+    background-color: #f1eae4;
+  border-radius: 25px;
+  padding: 4px 10px;
+  text-align: center;
+}
+
 .cartIcon {
     background-color: #F1EAE4;
     border-radius: 25px;
@@ -23,6 +30,7 @@ body {
     border-radius: 90px;
     padding: 40px;
     width: 100%;
+    margin: 50px 0;
 }
 
 .mycart, .ship-pay {

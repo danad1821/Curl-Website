@@ -875,44 +875,25 @@
   ],
 
 
-  "menu": [
-
+  "menu_menu": [
     {
-      "id": 68,
-      "img": "../designImages/Drinks/Iced coffee.png",
-      "name": "Iced Coffee",
-      "description": "Ice, a splash of milk and rich espresso-like coffee",
-      "price": 5,
-      "categories": ["Drink", "Cold", "Coffee"]
-    },
-    {
-      "id": 75,
+      "id": 170,
       "img": "../designImages/Pastries/Fruit croissant.png",
       "name": "Fruit Croissant",
       "description": "Crispy pastry with fruits of your choice",
       "price": 5,
       "categories": ["Food", "Pastry"]
     },
-
     {
-      "id": 81,
-      "img": "../designImages/sweet/Carrot Cake.png",
-      "name": "Carrot Cake",
-      "description": "Fresh carrots with fluffy white cream.",
+      "id": 171,
+      "img": "../designImages/Pastries/croissant.png",
+      "name": "Plain Croissant",
+      "description": "Buttery, flasky pastry with a light and airy texture",
       "price": 4,
-      "categories": ["Food", "cake", "sweet"]
+      "categories": ["Food", "Pastry"]
     },
     {
-      "id": 71,
-      "img": "../designImages/Drinks/Lemonade.png",
-      "name": "Lemonade",
-      "description": "Classic lemon with ice and sugar",
-      "price": 4,
-      "categories": ["Drink", "Cold"]
-    },
-
-    {
-      "id": 78,
+      "id": 172,
       "img": "../designImages/Pastries/Glazed Donut.png",
       "name": "Glazed Donut",
       "description": "Classic glazed donut",
@@ -920,40 +901,126 @@
       "categories": ["Food", "Donut", "Pastry"]
     },
     {
-      "id": 65,
+      "id": 173,
+      "img": "../designImages/Pastries/Puff pastry.png",
+      "name": "Puff Pastry",
+      "description": "Fluffy crisp pastry with vanilla cream",
+      "price": 4,
+      "categories": ["Food", "Pastry"]
+    },
+    {
+      "id": 174,
+      "img": "../designImages/Pastries/Blueberry maffin.png",
+      "name": "Blueberry Muffin",
+      "description": "Fresh blueberries baked into a vanilla muffin",
+      "price": 2,
+      "categories": ["Food", "Pastry"]
+    },
+    {
+      "id": 175,
+      "img": "../designImages/Pastries/Strawberry Tart.png",
+      "name": "Strawberry Tart",
+      "description": "Sweet strawberries with cream and sugar",
+      "price": 6,
+      "categories": ["Food", "Pastry"]
+    },
+
+    {
+      "id": 160,
+      "img": "../designImages/Drinks/Iced coffee.png",
+      "name": "Iced Coffee",
+      "description": "Ice, a splash of milk and rich espresso-like coffee",
+      "price": 5,
+      "categories": ["Drink", "Cold", "Coffee"]
+    },
+    {
+      "id": 161,
+      "img": "../designImages/Drinks/Lemonade.png",
+      "name": "Lemonade",
+      "description": "Classic lemon with ice and sugar",
+      "price": 4,
+      "categories": ["Drink", "Cold"]
+    },
+    {
+      "id": 162,
       "img": "../designImages/Drinks/Cappuccino.png",
       "name": "Cappuccino",
       "description": "Creamy espresso topped with a layer of frothed milk",
       "price": 3,
       "categories": ["Drink", "Hot", "Coffee"]
     },
-
     {
-      "id": 72,
-      "img": "../designImages/Pastries/croissant.png",
-      "name": "Plain Croissant",
-      "description": "Buttery, flasky pastry with a light and airy texture",
+      "id": 163,
+      "img": "../designImages/Drinks/Hot Chocolate.png",
+      "name": "Hot Chocolate",
+      "description": "Dark and milk chocolate mix with whipped cream",
       "price": 4,
-      "categories": ["Food", "Pastry"]
+      "categories": ["Drink", "Hot", "Coffee"]
+    },
+    {
+      "id": 164,
+      "img": "../designImages/Drinks/Americano.png",
+      "name": "Americano",
+      "description": "Classic coffee with extra shots of expresso",
+      "price": 5,
+      "categories": ["Drink", "Hot", "Coffee"]
+    },
+    {
+      "id": 165,
+      "img": "../designImages/Drinks/Iced Tea.png",
+      "name": "Iced Tea",
+      "description": "Flavors include fruits, peach, berries and lemon",
+      "price": 3,
+      "categories": ["Drink", "Cold", "Tea"]
     },
 
-
     {
-      "id": 80,
+      "id": 180,
       "img": "../designImages/sweet/chocolate cookie.png",
       "name": "Chocolate Chip Cookie",
       "description": "Chewy chocolate chip cookie",
       "price": 3,
       "categories": ["Food", "cookies", "sweet"]
     },
-
     {
-      "id": 82,
+      "id": 181,
+      "img": "../designImages/sweet/Carrot Cake.png",
+      "name": "Carrot Cake",
+      "description": "Fresh carrots with fluffy white cream.",
+      "price": 4,
+      "categories": ["Food", "cake", "sweet"]
+    },
+    {
+      "id": 182,
       "img": "../designImages/sweet/lazycake.png",
       "name": "Lazy Cake",
       "description": "Rich chocolate biscut dessert perfectly dense",
       "price": 5,
       "categories": ["Food", "cake", "sweet"]
+    },
+    {
+      "id": 183,
+      "img": "../designImages/sweet/Macaron.png",
+      "name": "Macaron",
+      "description": "Crispy, soft layer with strawberry jam filling",
+      "price": 6,
+      "categories": ["Food", "sweet"]
+    },
+    {
+      "id": 184,
+      "img": "../designImages/sweet/Chocolate Cake.png",
+      "name": "Chocolate Cake",
+      "description": "Whipped cream with spongy cake",
+      "price": 5,
+      "categories": ["Food", "cake", "sweet"]
+    },
+    {
+      "id": 185,
+      "img": "../designImages/sweet/Icecream.png",
+      "name": "Icecream",
+      "description": "Any flavor with biscuit crumbs and fruit ",
+      "price": 7,
+      "categories": ["Food", "Icecream", "sweet"]
     }
   ],
 
