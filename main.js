@@ -251,7 +251,7 @@ $(document).ready(function () {
     let bookImg = $(".bookImg");
     //allows user to navigate to the page about the books by ppressng on the books image
     bookImg.click(function () {
-      const clickedIndex = $(this).index();
+      const clickedIndex = $(this).parent().index();
       const selectedBook = bestsellers[clickedIndex];
       localStorage.setItem("selectedBook", JSON.stringify(selectedBook));
       $(location).prop("href", "books/book.html");
