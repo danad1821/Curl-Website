@@ -351,3 +351,49 @@ footer {
   z-index: 2;
   top: 20px;
 }
+
+@media (max-width: 1325px){
+  #chosenBookSection{
+    flex-direction: column;
+  }
+  #imagesContainer .girlImg{
+    display: none;
+  }
+
+  #imagesContainer #book-image{
+    position: relative;
+  }
+
+  .bookMain{
+    padding-left: 0%;
+    margin-bottom: 50px;
+  }
+}
+
+@media (max-width: 640px){
+  .description{
+    width: 80%;
+
+  }
+
+  .purchasingBookSection{
+    max-width: 80%;
+  }
+}
+
+
+/* .books-list {
+  display: flex;
+  transition: transform 0.3s ease-in-out;
+  overflow: hidden;
+  position: relative;
+}
+
+.books-list.transition {
+  will-change: transform;
+}
+
+.book {
+  flex: 0 0 25%;
+  box-sizing: border-box;
+} */

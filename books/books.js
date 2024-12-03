@@ -186,10 +186,16 @@ $(document).ready(function () {
       const cart = JSON.parse(localStorage.getItem("cart")) || { books: [], menuItems: [], merch: [] };
       const wishlist = JSON.parse(localStorage.getItem("wishlist")) || { books: [], menuItems: [], merch: [] };
 
+      // const booksToDisplay = booksForGenre.filter((book) => {
+      //   // Check if the selectedTypes array includes any type in the book's type array
+      //   return book.type.some((t) => selectedTypes.includes(t));
+      // }).slice(currentBookIndexes[genre], currentBookIndexes[genre] + 3); // Show 3 books at a time
+
       const booksToDisplay = booksForGenre.filter((book) => {
         // Check if the selectedTypes array includes any type in the book's type array
         return book.type.some((t) => selectedTypes.includes(t));
-      }).slice(currentBookIndexes[genre], currentBookIndexes[genre] + 3); // Show 3 books at a time
+      }).slice(currentBookIndexes[genre], currentBookIndexes[genre] +
+        (window.innerWidth < 584 ? 1 : window.innerWidth < 930 ? 2 : 3)); // Show 1 book on very small screens, 2 on medium, and 3 on large screens
 
 
       booksToDisplay.forEach(function (book) {
@@ -270,14 +276,28 @@ $(document).ready(function () {
         const bookData = booksForGenre.find((book) => book.id === bookId);
 
         // Check if the book is already in the cart
-        const isInCart = cart.books.some(b => b.id === bookData.id);
-        if (!isInCart) {
-          cart.books.push(bookData);
-          localStorage.setItem("cart", JSON.stringify(cart));
-          alert(`${bookData.title} has been added to the cart.`);
+        // const isInCart = cart.books.some(b => b.id === bookData.id);
+        // if (!isInCart) {
+        //   cart.books.push(bookData);
+        //   localStorage.setItem("cart", JSON.stringify(cart));
+        //   alert(`${bookData.title} has been added to the cart.`);
+        // } else {
+        //   alert(`${bookData.title} is already in the cart.`);
+        // }
+
+        // Check if the book is already in the cart
+        const existingItem = cart.books.find((book) => book.id === bookData.id);
+
+        if (existingItem) {
+          // If the book is already in the cart, increase the quantity by 1
+          existingItem.quantity++;
         } else {
-          alert(`${bookData.title} is already in the cart.`);
+          // If the book isn't in the cart, add it with a quantity of 1
+          bookData.quantity = 1;
+          cart.books.push(bookData);
         }
+
+        localStorage.setItem("cart", JSON.stringify(cart));
       });
 
       // Show or hide arrows depending on the total number of books

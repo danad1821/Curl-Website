@@ -106,7 +106,7 @@ body {
 #TypesOfBooks, #Genre{
   margin-bottom: 50px;
 }
-#TypesOfBooks h3, #Genre h3{
+#TypesOfBooks h3, #Genre h3, #price h3{
   font-weight: 900;
   margin-bottom: 20px;
 }
@@ -248,9 +248,9 @@ a.active {
 }
 
 #search-sort {
-  display: flex; /* Use flexbox to keep items in a row */
-  align-items: center; /* Vertically align items */
-  gap: 10px; /* Add spacing between elements */
+  display: flex;
+  align-items: center;
+  gap: 10px;
 
 }
 
@@ -270,13 +270,13 @@ a.active {
 } */
 
 #search-sort .search-input {
-  flex-grow: 1; /* Makes the input field responsive */
-  max-width: 300px; /* Optional: Restrict the width */
+  flex-grow: 1;
+  max-width: 300px;
 }
 
 #search-sort button:last-child {
   flex-shrink: 0; /* Prevents "Sort By" button from shrinking */
-  min-width: 100px; /* Set a minimum width for consistent sizing */
+  min-width: 100px;
 }
 
 #search-results {
@@ -363,19 +363,18 @@ a.active {
 
 .genre-title {
   font-weight: bold;
-  margin: 30px 0; /* Combined margin for top and bottom */
+  margin: 30px 0;
   text-align: left;
-  align-self: flex-start; /* Align the title to the start of the container */
+  align-self: flex-start;
 }
 
-/* Adjust genre section alignment to the books' top */
 .genre-books {
   display: flex;
   flex-direction: row;
   gap: 30px;
   overflow: hidden;
-  justify-content: flex-start; /* Ensure books are aligned to the left */
-  align-items: flex-start; /* Align books with the top of the genre title */
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
 /* Carousel and Books Display */
@@ -656,5 +655,54 @@ footer {
     align-items: flex-start;
     padding: 10px;
     width: auto;
+  }
+}
+
+@media (max-width: 1250px){
+  #main{
+    margin-top: 30%;
+  }
+}
+
+@media (max-width: 1148px){
+  .book{
+    width: 250px;
+  }
+}
+
+@media (max-width: 1062px){
+  .book{
+    width: 200px;
+  }
+
+  .right-arrow {
+    right: -25px;
+  }
+  
+}
+
+@media (max-width: 684px){
+
+#TypesOfBooks, #Genre{
+  margin-bottom: 50px;
+}
+#TypesOfBooks h3, #Genre h3, #price h3{
+  font-size: 20px;
+}
+
+a.active {
+  padding: 5px 0 5px 10px;
+
+}
+
+#filters{
+  margin: 0 5% 0 5%;
+}
+}
+
+@media (max-width: 420px){
+
+  #bookFilteredGenres{
+    display: none;
   }
 }
