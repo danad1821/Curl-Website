@@ -4,21 +4,25 @@ $(document).ready(function () {
   // Select all links
   const links = document.querySelectorAll("ul a");
   let selectedGenres = ["Fantasy", "Romance", "Mystery"]; // Default genres
+  let selectedTypes = ["book", "ebook", "audio"]; // Default to all types selected
+
+  console.log("Initial selected genres:", selectedGenres);
+
   let currentBookIndexes = {}; // Tracks the current index of books for each genre
 
   //Color links when selected
-  links.forEach((link) => {
-    link.addEventListener("click", function (event) {
-      event.preventDefault();
+  // links.forEach((link) => {
+  //   link.addEventListener("click", function (event) {
+  //     event.preventDefault();
 
-      // Toggle the 'active' class
-      if (this.classList.contains("active")) {
-        this.classList.remove("active");
-      } else {
-        this.classList.add("active");
-      }
-    });
-  });
+  //     // Toggle the 'active' class
+  //     if (this.classList.contains("active")) {
+  //       this.classList.remove("active");
+  //     } else {
+  //       this.classList.add("active");
+  //     }
+  //   });
+  // });
 
   // Function to update the selected genres container (in book top)
   function updateSelectedGenresDisplay() {
@@ -55,8 +59,6 @@ $(document).ready(function () {
       "Psychology",
       "Science-Fiction",
     ];
-    let selectedTypes = ["book", "ebook", "audio"]; // Default to all types selected
-
 
 
     const books = data.books.filter((book) =>
@@ -79,43 +81,7 @@ $(document).ready(function () {
       return acc;
     }, {});
 
-    // Initialize the active class for type links based on selectedTypes
-    $('.filter-link').each(function () {
-      const selectedType = $(this).data('type');
-      if (selectedTypes.includes(selectedType)) {
-        $(this).addClass('active'); // Apply the 'active' class to selected types
-      }
-    });
 
-    // Handle type selection clicks
-    $('.filter-link').click(function (e) {
-      e.preventDefault();
-      const selectedType = $(this).data('type'); // Get the selected type (e.g., "book", "ebook", "audio")
-
-      // Toggle the selected type in the array
-      if (selectedTypes.includes(selectedType)) {
-        // Remove the selected type from the array if it's already there
-        selectedTypes = selectedTypes.filter(type => type !== selectedType);
-        $(this).removeClass('active'); // Remove the active class
-
-      } else {
-        // Add the selected type to the array if it's not already there
-        selectedTypes.push(selectedType);
-        $(this).addClass('active'); // Add the active class
-
-      }
-
-      console.log("Updated Selected Types: ", selectedTypes); // Debugging line
-
-      // Re-render books for all genres with the updated selected types
-      $booksContainer.empty();
-      selectedGenres.forEach((genre) => {
-        if (booksByGenre[genre] && booksByGenre[genre].length > 0) {
-          createGenreCarousel(genre, booksByGenre[genre]);
-          displayBooksForGenre(genre, booksByGenre[genre]);
-        }
-      });
-    });
 
     // Initialize the slider with the range of prices
     const allPrices = books.map((book) => book.price);
@@ -220,53 +186,10 @@ $(document).ready(function () {
       const cart = JSON.parse(localStorage.getItem("cart")) || { books: [], menuItems: [], merch: [] };
       const wishlist = JSON.parse(localStorage.getItem("wishlist")) || { books: [], menuItems: [], merch: [] };
 
-      // const booksToDisplay = booksForGenre.slice(
-      //   currentBookIndexes[genre],
-      //   currentBookIndexes[genre] + 3 // Show 3 books at a time
-      // );
-
       const booksToDisplay = booksForGenre.filter((book) => {
         // Check if the selectedTypes array includes any type in the book's type array
         return book.type.some((t) => selectedTypes.includes(t));
       }).slice(currentBookIndexes[genre], currentBookIndexes[genre] + 3); // Show 3 books at a time
-
-
-      // booksToDisplay.forEach(function (book) {
-      //   const isInWishlist = wishlist.books.some(b => b.id === book.id);
-      //   const bookHTML = `
-      //       <div class="book" data-book-id="${book.id}">
-      //           <div class="book-image">
-      //               <a href="book.html" class="book-link">
-      //                   <img src="${book.img}" alt="${book.title}" class="book-img">
-      //               </a>
-      //           </div>
-      //           <div class="book-info">
-      //               <div class="book-details">
-      //                   <a href="book.html" class="book-link">
-      //                       <p>${book.title}</p>
-      //                   </a>
-      //                   <p class="book-author">Author: <span>${book.author}</span></p>
-      //               </div>
-      //               <div class="price-div">
-      //                   <p class="book-price">$${book.price}</p>
-      //                   <div>
-      //                       <!-- Unfilled Heart Icon -->
-      //                       <img src="../designImages/books/Wishlist Heart.svg" alt="Heart Icon" class="heart-icon unfilled ${isInWishlist ? 'hidden' : 'visible'}">
-
-      //                       <!-- Filled Heart Icon (visible only when in wishlist) -->
-      //                       <img src="../designImages/books/icon-filled.png" alt="Filled Heart Icon" class="heart-icon filled ${isInWishlist ? 'visible' : 'hidden'}">
-
-      //                       <button class="add-to-cart-btn">Add</button>
-      //                   </div>
-      //               </div>
-      //           </div>
-      //       </div>
-      //   `;
-      //   $booksList.append(bookHTML);
-      // });
-
-
-      //click event to the book to store information and redirect
 
 
       booksToDisplay.forEach(function (book) {
@@ -340,10 +263,6 @@ $(document).ready(function () {
       });
 
 
-
-
-
-
       // Click event to add to cart
       $booksList.find(".add-to-cart-btn").click(function (e) {
         e.stopPropagation(); // Prevent the click from triggering other events
@@ -407,6 +326,7 @@ $(document).ready(function () {
       }
     });
 
+
     // Handle genre link clicks
     $("#Genre a").click(function (e) {
       e.preventDefault();
@@ -415,12 +335,14 @@ $(document).ready(function () {
 
       // If the genre is already selected, remove it; otherwise, add it
       if (selectedGenres.includes(genre)) {
+
         selectedGenres = selectedGenres.filter((g) => g !== genre);
         $(this).removeClass("active"); // Remove active class if unselected
       } else if (selectedGenres.length < 3) {
         selectedGenres.push(genre);
         $(this).addClass("active"); // Add active class if newly selected
       }
+      console.log("SELECTED GENRES inside function:", selectedGenres)
 
       // Display books for selected genres
       displayGenres();
@@ -432,6 +354,44 @@ $(document).ready(function () {
       } else {
         $("#Genre a").css("pointer-events", "auto");
       }
+    });
+
+    // Initialize the active class for type links based on selectedTypes
+    $('.filter-link').each(function () {
+      const selectedType = $(this).data('type');
+      if (selectedTypes.includes(selectedType)) {
+        $(this).addClass('active'); // Apply the 'active' class to selected types
+      }
+    });
+
+    // Handle type selection clicks
+    $('.filter-link').click(function (e) {
+      e.preventDefault();
+      const selectedType = $(this).data('type'); // Get the selected type (e.g., "book", "ebook", "audio")
+
+      // Toggle the selected type in the array
+      if (selectedTypes.includes(selectedType)) {
+        // Remove the selected type from the array if it's already there
+        selectedTypes = selectedTypes.filter(type => type !== selectedType);
+        $(this).removeClass('active'); // Remove the active class
+
+      } else {
+        // Add the selected type to the array if it's not already there
+        selectedTypes.push(selectedType);
+        $(this).addClass('active'); // Add the active class
+
+      }
+
+      console.log("Updated Selected Types: ", selectedTypes); // Debugging line
+
+      // Re-render books for all genres with the updated selected types
+      $booksContainer.empty();
+      selectedGenres.forEach((genre) => {
+        if (booksByGenre[genre] && booksByGenre[genre].length > 0) {
+          createGenreCarousel(genre, booksByGenre[genre]);
+          displayBooksForGenre(genre, booksByGenre[genre]);
+        }
+      });
     });
 
     // Arrow functionality for scrolling books
