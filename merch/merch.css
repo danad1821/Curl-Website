@@ -135,7 +135,7 @@
   
   .minus-btn:hover,
   .plus-btn:hover {
-    background-color: #f4b996;
+    background-color: #E9B9B9;
   }
   
   .quantity-label {
@@ -169,7 +169,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #f9d6ba;
+    background-color:#E9B9B9;
     border-radius: 50px;
     padding: 5px 15px;
     gap: 10px;
@@ -198,7 +198,7 @@
   
   /* Styles for the Add button */
   .add-btn {
-    background-color: #f9d6ba;
+    background-color: #E9B9B9;
     border: none;
     color: white;
     font-size: 16px;
