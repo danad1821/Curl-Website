@@ -11,7 +11,7 @@ $(document).ready(function () {
     // Fetch the data from data.json
     $.getJSON("../data.json", function (data) {
         // Filter the items with "Pastry" in their categories
-        const pastries = data.menu.filter(item =>
+        const pastries = data.menu_menu.filter(item =>
             item.categories.includes("Pastry")
         );
 
@@ -108,7 +108,7 @@ $(document).ready(function () {
     // Fetch the data from data.json
     $.getJSON("../data.json", function (data) {
         // Filter the items with "Drink" in their categories
-        const drinks = data.menu.filter(item =>
+        const drinks = data.menu_menu.filter(item =>
             item.categories.includes("Drink")
         );
 
@@ -181,7 +181,7 @@ $(document).ready(function () {
     // Fetch the data from data.json
     $.getJSON("../data.json", function (data) {
         // Filter the items with "Sweet" in their categories
-        const sweets = data.menu.filter(item =>
+        const sweets = data.menu_menu.filter(item =>
             item.categories.includes("sweet")
         );
 
