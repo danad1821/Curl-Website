@@ -341,9 +341,9 @@ $(document).ready(function () {
       }
 
       // Ensure the selectedGenres array includes the default genres
-      if (!selectedGenres.includes(genre)) {
-        selectedGenres.push(genre);
-      }
+      // if (!selectedGenres.includes(genre)) {
+      //   selectedGenres.push(genre);
+      // }
     });
 
 
