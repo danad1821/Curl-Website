@@ -117,40 +117,77 @@ $(document).ready(function () {
       });
     }
     $(".heartPostIcon").click(function () {
-      let likeIcon= $(this).siblings();
-      let heart=$(this)
-      if(heart.css("display")=="none"){
+      let likeIcon = $(this).siblings();
+      let heart = $(this);
+      if (heart.css("display") == "none") {
         heart.css("display", "block");
         likeIcon.css("display", "none");
-      }
-      else{
+      } else {
         heart.css("display", "none");
         likeIcon.css("display", "block");
       }
     });
     $(".iconImg").click(function () {
-      let likeIcon= $(this);
-      let heart=$(this).siblings();
-      if(heart.css("display")=="none"){
+      let likeIcon = $(this);
+      let heart = $(this).siblings();
+      if (heart.css("display") == "none") {
         heart.css("display", "block");
         likeIcon.css("display", "none");
-      }
-      else{
+      } else {
         heart.css("display", "none");
         likeIcon.css("display", "block");
       }
     });
   }
 
-  $(".postPost").click(function(){
-    $("#description").val("")
-  })
+  $(".postPost").click(function () {
+    $("#description").val("");
+  });
 
-  $(".postComment").click(function(){
+  $(".postComment").click(function () {
     $("#commentInput").val("");
-  })
+  });
 
-  $(".postReply").click(function(){
+  $(".postReply").click(function () {
     $("#replyInput").val("");
-  })
+  });
+  let initialScrollPosition = $(window).scrollTop();
+console.log($(window).scrollTop())
+  $(window).scroll(function () {
+    console.log($(window).scrollTop())
+    // Debounce the scroll event handler
+    if (this.scrollTimer) {
+      clearTimeout(this.scrollTimer);
+    }
+
+    this.scrollTimer = setTimeout(() => {
+      const currentScrollPosition = $(window).scrollTop();
+      if (currentScrollPosition !== initialScrollPosition) {
+        $("#newPostBtn > p").hide();
+        $("#newPostBtn").css({"padding": "10px"})
+        $("#newPostBtn>img").css({"margin-right": "0px"})
+      }
+    }, 10); // Adjust the debounce delay as needed
+  });
+
+  $("main").scroll(function () {
+    console.log($("main").scrollTop())
+    // Debounce the scroll event handler
+    if (this.scrollTimer) {
+      clearTimeout(this.scrollTimer);
+    }
+
+    this.scrollTimer = setTimeout(() => {
+      const currentScrollPosition = $("main").scrollTop();
+      if (currentScrollPosition !== 0) {
+        $("#newPostBtn > p").hide();
+        $("#newPostBtn").css({"padding": "10px"})
+        $("#newPostBtn>img").css({"margin-right": "0px"})
+      } else {
+        $("#newPostBtn > p").show();
+        $("#newPostBtn").css({"background-color": "#e9b9b9","padding": "5px 15px"})
+        $("#newPostBtn>img").css({"margin-right": "5px"})
+      }
+    }, 10); // Adjust the debounce delay as needed
+  });
 });

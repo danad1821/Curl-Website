@@ -33,7 +33,7 @@
   <body>
     <div id="header"></div>
     <main>
-      <button class="postBtn" data-bs-toggle='modal' data-bs-target='#newPostModal'><img src='../designImages/Group 226.png'/> New Post</button>
+      <button class="postBtn" data-bs-toggle='modal' data-bs-target='#newPostModal' id="newPostBtn"><img src='../designImages/Group 226.png'/> <p style="margin: 0; color:inherit;">New Post</p></button>
         <section id="topSection">
           <!-- changes depending on the room  -->
         </section>
@@ -72,6 +72,9 @@
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-body">
+            <svg width="35px" height="35px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="closeBtn" data-bs-dismiss="modal">
+              <path d="M9 9L11.9999 11.9999M11.9999 11.9999L14.9999 14.9999M11.9999 11.9999L9 14.9999M11.9999 11.9999L14.9999 9M12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
             <div id="fileInputDiv">
               <label for="fileInput"><p>Upload Image</p> <img src="#" alt="" id="inputImg" /></label>
               <input type="file" id="fileInput" name="fileInput" accept="image/*" />
@@ -97,6 +100,9 @@
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-body">
+            <svg width="35px" height="35px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="closeBtn" data-bs-dismiss="modal">
+              <path d="M9 9L11.9999 11.9999M11.9999 11.9999L14.9999 14.9999M11.9999 11.9999L9 14.9999M11.9999 11.9999L14.9999 9M12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
             <label for="commentInput" class="form-label">Comment:</label>
             <textarea id="commentInput" placeholder="Type here..." ></textarea>
             <button class="btn smallPostBtn postComment" data-bs-dismiss="modal">Post</button>
@@ -109,6 +115,9 @@
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-body">
+            <svg width="35px" height="35px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="closeBtn" data-bs-dismiss="modal">
+              <path d="M9 9L11.9999 11.9999M11.9999 11.9999L14.9999 14.9999M11.9999 11.9999L9 14.9999M11.9999 11.9999L14.9999 9M12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
             <label for="replyInput" class="form-label">Reply:</label>
             <textarea id="replyInput" placeholder="Type here..." ></textarea>
             <button class="btn smallPostBtn postReply" data-bs-dismiss="modal">Post</button>

@@ -43,8 +43,8 @@ $(document).ready(function () {
     // user info section
     $("#firstName").val(currentUser.firstName);
     $("#lastName").val(currentUser.lastName);
-    $("#username").val(currentUser.username);
-    $("#email").val(currentUser.email);
+    $("#usernameProfile").val(currentUser.username);
+    $("#emailProfile").val(currentUser.email);
     $("#address").val(currentUser.address);
     $("#phoneNumber").val(currentUser.phone);
   }
@@ -79,17 +79,18 @@ $(document).ready(function () {
       dataType: "json",
       success: function (data) {
         if (
-          ($("#username").val() == currentUser.username &&
-            $("#email").val() == currentUser.email) ||
-          (isExistingUsername(data, $("#username").val()) == false &&
-            isExistingEmail(data, $("#email").val()) == false)
+          ($("#usernameProfile").val() == currentUser.username &&
+            $("#emailProfile").val() == currentUser.email) ||
+          (isExistingUsername(data, $("#usernameProfile").val()) == false &&
+            isExistingEmail(data, $("#emailProfile").val()) == false)
         ) {
           currentUser.firstName = $("#firstName").val();
           currentUser.lastName = $("#lastName").val();
           currentUser.address = $("#address").val();
           currentUser.phone = $("#phoneNumber").val();
-          currentUser.email = $("#email").val();
-          currentUser.username = $("#username").val();
+          currentUser.email = $("#emailProfile").val();
+          currentUser.username = $("#usernameProfile").val();
+          console.log(currentUser)
           sessionStorage.setItem("loggedInUser", JSON.stringify(currentUser));
           displayCurrentUser();
         }
