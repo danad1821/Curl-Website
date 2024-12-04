@@ -175,6 +175,11 @@ body {
   text-align: center;
   margin: 20px 0;
 }
+.closeBtn{
+  align-self: flex-end;
+  stroke: #37474f;
+  cursor: pointer;
+}
 /* Footer Section */
 
 footer {
