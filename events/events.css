@@ -144,7 +144,7 @@
     position: absolute; /* Position relative to the event-box */
     top: 20px; /* Distance from the top */
     right: 20px; /* Distance from the right */
-    background-color: #ffb3c1;
+    background-color: #E9B9B9;
     border: none;
     padding: 5px 10px;
     border-radius: 20px;
@@ -157,7 +157,7 @@
   }
   
   .reserve-btn:hover {
-    background-color: #ff99ad;
+    background-color: #37474f;
   }
   
   
