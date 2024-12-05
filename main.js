@@ -20,7 +20,7 @@ $(document).ready(function () {
       getTopMerch(data);
       getBestsellers(data);
       displayBestSellingBooks(bestsellers);
-      updateHeartIcons()
+      updateHeartIcons();
     },
     error: function (error) {
       console.error("Error loading data:", error);
@@ -119,23 +119,23 @@ $(document).ready(function () {
   });
 
   // Check and update heart icons based on wishlist items
-function updateHeartIcons() {
-  let wishlist = JSON.parse(localStorage.getItem("wishData")) || {};
+  function updateHeartIcons() {
+    let wishlist = JSON.parse(localStorage.getItem("wishData")) || {};
 
-  $(".bookHeartIcon").each(function () {
-    const clickedId = $(this).parent().parent().parent().parent().data("id");
-    const heart = $(this);
-    const likeIcon = $(this).siblings(".iconImg");
+    $(".bookHeartIcon").each(function () {
+      const clickedId = $(this).parent().parent().parent().parent().data("id");
+      const heart = $(this);
+      const likeIcon = $(this).siblings(".iconImg");
 
-    if (wishlist[clickedId]) {
-      heart.css("display", "none");
-      likeIcon.css("display", "block");
-    } else {
-      heart.css("display", "block");
-      likeIcon.css("display", "none");
-    }
-  });
-}
+      if (wishlist[clickedId]) {
+        heart.css("display", "none");
+        likeIcon.css("display", "block");
+      } else {
+        heart.css("display", "block");
+        likeIcon.css("display", "none");
+      }
+    });
+  }
 
   // creates the carousel items which will be display when a user presses the prev or next btn
   function displayBestSellingBooks(data) {
@@ -178,7 +178,7 @@ function updateHeartIcons() {
     $(".bookHeartIcon").click(function () {
       // Get the current wishlist data from localStorage
       let wishlist = JSON.parse(localStorage.getItem("wishData")) || {};
-      // Get the id of the clicked book 
+      // Get the id of the clicked book
       const clickedId = $(this).parent().parent().parent().parent().data("id");
       let likeIcon = $(this).siblings();
       let heart = $(this);
@@ -210,20 +210,17 @@ function updateHeartIcons() {
     bestsellerAddBtn.click(function () {
       let cart = JSON.parse(localStorage.getItem("cartData")) || {};
 
-      // Gets the index of the clicked book in the bestsellers array
-      const clickedIndex = $(this).parent().parent().parent().index();
-      // Gets the selected book
-      const selectedBook = bestsellers[clickedIndex];
+      const clickedId = $(this).parent().parent().parent().parent().data("id");
 
-      if (cart[selectedBook.id]) {
+      if (cart[clickedId]) {
         console.log("added");
         // Increases the quantity of the existing book by one
         //only by one since quanity changing isn't an option
-        cart[selectedBook.id].quantity++;
+        cart[clickedId].quantity++;
       } else {
         // Add the book to the cart with quantity 1
-        const extended = { id: selectedBook.id, quantity: 1 };
-        cart[selectedBook.id] = extended;
+        const extended = { id: clickedId, quantity: 1 };
+        cart[clickedId] = extended;
       }
       // Updates the cart data in localStorage
       localStorage.setItem("cartData", JSON.stringify(cart));
@@ -347,7 +344,9 @@ function updateHeartIcons() {
             <div class="item-price">
               <p>$${item.price}</p>
               <div>
-                <button class="homePageBtn add-btn">Add</button>
+                <button class="homePageBtn add-btn addMenuItem" data-id="${
+                  item.id
+                }">Add</button>
                 <i class="far fa-heart"></i>
               </div>
 
@@ -355,6 +354,24 @@ function updateHeartIcons() {
           </div>
         </div>
       `;
+
+      $(".addMenuItem").click(function () {
+        let cart = JSON.parse(localStorage.getItem("cartData")) || {};
+
+        const clickedId = $(this).data("id");
+        if (cart[clickedId]) {
+          console.log("added");
+          // Increases the quantity of the existing book by one
+          //only by one since quanity changing isn't an option
+          cart[clickedId].quantity++;
+        } else {
+          // Add the book to the cart with quantity 1
+          const extended = { id: clickedId, quantity: 1 };
+          cart[clickedId] = extended;
+        }
+        // Updates the cart data in localStorage
+        localStorage.setItem("cartData", JSON.stringify(cart));
+      });
 
       // Append to the menu container
       $menuContainer.append(itemHTML);
