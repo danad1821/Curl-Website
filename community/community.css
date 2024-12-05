@@ -177,6 +177,7 @@ body {
 }
 .closeBtn{
   align-self: flex-end;
+  fill: none;
   stroke: #37474f;
   cursor: pointer;
 }
