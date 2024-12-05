@@ -635,3 +635,56 @@ $(document).ready(function () {
   }
 
 });
+
+
+$(document).ready(function () {
+  // Check the screen width and enable swipe functionality for small screens
+  const enableSwipe = () => {
+    if (window.innerWidth <= 400) {
+      $(".books-list").each(function () {
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+
+        // Mouse events
+        $(this)
+          .on("mousedown", function (e) {
+            isDown = true;
+            $(this).addClass("active");
+            startX = e.pageX - $(this).offset().left;
+            scrollLeft = $(this).scrollLeft();
+          })
+          .on("mouseleave mouseup", function () {
+            isDown = false;
+            $(this).removeClass("active");
+          })
+          .on("mousemove", function (e) {
+            if (!isDown) return;
+            e.preventDefault();
+            const x = e.pageX - $(this).offset().left;
+            const walk = (x - startX) * 2; // Adjust scroll speed
+            $(this).scrollLeft(scrollLeft - walk);
+          });
+
+        // Touch events
+        let startTouchX;
+        let startScrollLeft;
+
+        $(this)
+          .on("touchstart", function (e) {
+            startTouchX = e.originalEvent.touches[0].pageX;
+            startScrollLeft = $(this).scrollLeft();
+          })
+          .on("touchmove", function (e) {
+            const touchX = e.originalEvent.touches[0].pageX;
+            const walk = (startTouchX - touchX) * 1.5; // Adjust scroll speed
+            $(this).scrollLeft(startScrollLeft + walk);
+          });
+      });
+    }
+  };
+
+  // Initialize swipe functionality and recheck on window resize
+  enableSwipe();
+  $(window).resize(enableSwipe);
+});

@@ -265,6 +265,15 @@ a.active {
   border: none;
   font-size: 15px;
 }
+
+#search-sort button p{
+  color: #F1EAE4;
+  font-weight: 700;
+  font-size: 15px;
+  margin: 0;
+  display: inline;
+
+}
 /* #search-sort button:first-child{
   margin-right: 10px;
 } */
@@ -681,6 +690,35 @@ footer {
   
 }
 
+@media (max-width: 768px){
+  #bookFilteredGenres{
+    display: none;
+  }
+
+  #main{
+    margin-top: 35%;
+  }
+
+  #landingSection img:nth-of-type(4){
+    top: 63%;
+  }
+  #landingSection img:nth-of-type(5){
+    top: 55%;
+  }
+
+  #landingSection img:nth-of-type(2){
+    left: 15%;
+  }
+  
+  #landingSection img:nth-of-type(3){
+    right: 13%;
+  }
+
+  #TypesOfBooks h3, #Genre h3, #price h3{
+    font-size: 19px;
+  }
+}
+
 @media (max-width: 684px){
 
 #TypesOfBooks, #Genre{
@@ -703,6 +741,54 @@ a.active {
 @media (max-width: 420px){
 
   #bookFilteredGenres{
+    display: none;
+  }
+}
+
+
+@media (max-width: 400px){
+  #LandingText h1{
+    font-size: 80px;
+  }
+  
+  #LandingText p{
+    font-size: 15px;
+    width: 50%;
+    margin-top: -2%;
+  }
+  #main{
+    margin-top: 37%;
+  }
+
+  .scroll-arrow {
+    display: none !important;
+  }
+  #landingSection img:nth-of-type(1){
+    top: 48%;
+  }
+
+  #landingSection img:nth-of-type(4){
+    top: 58%;
+  }
+  #landingSection img:nth-of-type(5){
+    top: 53%;
+  }
+
+  #landingSection img:nth-of-type(2){
+    top: 30%;
+    left: 15%;
+  }
+  
+  #landingSection img:nth-of-type(3){
+    right: 13%;
+    top: 30%;
+  }
+
+  #TypesOfBooks h3, #Genre h3, #price h3{
+    font-size: 19px;
+  }
+
+  #search-sort button p{
     display: none;
   }
 }
