@@ -286,7 +286,7 @@ body {
   cursor: pointer;
 }
 .iconImg{
-  width: 20px;
+  width: 20.2px;
   height: 18px;
   display: none;
 }
@@ -403,7 +403,7 @@ button.add-to-cart {
   /* height: 345px; */
   height: 245px;
   background-color: #e9b9b9;
-  margin-bottom: 1000px;
+  margin-bottom: 1100px;
 }
 
 #community div {
@@ -498,6 +498,12 @@ button.add-to-cart {
   width: 30px;
   height: 30px;
   fill: #37474f;
+}
+.closeBtn{
+  align-self: flex-end;
+  fill: none;
+  stroke: #37474f;
+  cursor: pointer;
 }
 
 @media (max-width: 500px) {

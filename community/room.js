@@ -166,12 +166,20 @@ console.log($(window).scrollTop())
         $("#newPostBtn > p").hide();
         $("#newPostBtn").css({"padding": "10px"})
         $("#newPostBtn>img").css({"margin-right": "0px"})
+      }else {
+        $("#newPostBtn > p").show();
+        $("#newPostBtn").css({"background-color": "#e9b9b9","padding": "5px 15px"})
+        $("#newPostBtn>img").css({"margin-right": "5px"})
       }
-    }, 10); // Adjust the debounce delay as needed
+      if($(window).width()<=375){
+        $("#newPostBtn > p").hide();
+        $("#newPostBtn").css({"padding": "10px"})
+        $("#newPostBtn>img").css({"margin-right": "0px"})
+      }
+    }, 10); 
   });
 
   $("main").scroll(function () {
-    console.log($("main").scrollTop())
     // Debounce the scroll event handler
     if (this.scrollTimer) {
       clearTimeout(this.scrollTimer);
@@ -179,7 +187,8 @@ console.log($(window).scrollTop())
 
     this.scrollTimer = setTimeout(() => {
       const currentScrollPosition = $("main").scrollTop();
-      if (currentScrollPosition !== 0) {
+      const currentScrollPositionWindow = $(window).scrollTop();
+      if (currentScrollPosition !== 0 || currentScrollPosition !== initialScrollPosition) {
         $("#newPostBtn > p").hide();
         $("#newPostBtn").css({"padding": "10px"})
         $("#newPostBtn>img").css({"margin-right": "0px"})
@@ -188,6 +197,17 @@ console.log($(window).scrollTop())
         $("#newPostBtn").css({"background-color": "#e9b9b9","padding": "5px 15px"})
         $("#newPostBtn>img").css({"margin-right": "5px"})
       }
-    }, 10); // Adjust the debounce delay as needed
+      if($(window).width()<=375){
+        $("#newPostBtn > p").hide();
+        $("#newPostBtn").css({"padding": "10px"})
+        $("#newPostBtn>img").css({"margin-right": "0px"})
+      }
+    }, 10); 
   });
+
+  if($(window).width()<=375){
+    $("#newPostBtn > p").hide();
+    $("#newPostBtn").css({"padding": "10px"})
+    $("#newPostBtn>img").css({"margin-right": "0px"})
+  }
 });
