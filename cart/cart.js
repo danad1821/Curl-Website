@@ -12,7 +12,7 @@ $(document).ready(function () {
 
     // Fetch data.json to get item details
     $.getJSON("../data.json", function (data) {
-        const allItems = data.menu_menu;
+        const allItems = data.menu_menu.concat(data.books, data.merch);
 
         // Function to update the cart in localStorage
         function updateCartStorage() {
@@ -46,8 +46,8 @@ $(document).ready(function () {
                 if (product) {
                     // Calculate total price for the item
                     const totalPrice = (product.price * item.quantity);
-
-                    const cartItem = `
+                    if(product?.categories?.includes("Drink" || "Food")){
+                        const cartItem = `
                         <div class="cart-item">
                             <img src="${product.img}" alt="${product.name}" class="cart-img">
                             <h3 class="cart-name">${product.name}</h3>
@@ -68,6 +68,32 @@ $(document).ready(function () {
                         </div>
                     `;
                     cartContainer.append(cartItem);
+                    }
+                    else if(product?.author){
+                        const cartItem = `
+                        <div class="cart-item">
+                            <img src="${product.img}" alt="${product.title}" class="cart-img">
+                            <h3 class="cart-name">${product.title}</h3>
+                            <div class="quantity-control">
+                                <button class="quantity-btn decrease" data-id="${id}" ${
+                                    item.quantity === 1 ? "disabled" : ""
+                                }>-</button>
+                                <span class="quantity">${item.quantity}</span>
+                                <button class="quantity-btn increase" data-id="${id}">+</button>
+                            </div>
+                            <span class="cart-price">$${totalPrice}</span>
+                            <button class="remove-btns" data-id="${id}" aria-label="Remove item">
+                                <svg width="256px" height="256px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9 9L11.9999 11.9999M11.9999 11.9999L14.9999 14.9999M11.9999 11.9999L9 14.9999M11.9999 11.9999L14.9999 9M12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>
+                            </button>
+                            <hr class="custom-hr">
+                        </div>
+                    `;
+                    cartContainer.append(cartItem);
+
+                    }
+                    
                 }
             });
 

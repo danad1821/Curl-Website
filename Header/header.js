@@ -1,7 +1,7 @@
 //signin js
 const $modal = $("#signInModal");
 const $btn = $("#signInBtn");
-const $closeBtn = $(".close");
+const $closeBtn = $(".remove-signin");
 
 const $singUpBtn = $("#signUpBtn");
 const $signUpModal = $("#signUpModal");
@@ -17,7 +17,6 @@ $btn.on("click", function (event) {
 // Hide the modal when the close button is clicked
 $closeBtn.on("click", function () {
   $modal.removeClass("show");
-  $signUpModal.removeClass("show");
 });
 
 $singUpBtn.on("click", function(event) {
@@ -31,16 +30,6 @@ $signInBtnInModal.on("click", function(event) {
   $signUpModal.removeClass("show");
   $modal.addClass("show");
 })
-
-// Hide the modal if clicking outside the modal content
-$(window).on("click", function (event) {
-  if ($(event.target).is($modal)) {
-    $modal.removeClass("show");
-  }
-  if ($(event.target).is($signUpModal)) {
-    $signUpModal.removeClass("show");
-  }
-});
 
 const $searchContainer = $(".search-container");
 const $searchInput = $(".search-input");
@@ -255,5 +244,106 @@ $(document).ready(function () {
 
   $("#userProfileBtn").click(function () {
     $(location).prop("href", "../profile/profile.html");
+  });
+});
+
+//wish
+$(document).ready(function () {
+  const wishContainer = $("#wish-items");
+  const wishlistCount = $("#wishlistItems");
+  let wishData = JSON.parse(localStorage.getItem("wishData")) || {};
+
+  // Fetch wishlist data and update the modal
+  $.getJSON("../data.json", function (data) {
+      const allItems = data.menu_menu.concat(data.books, data.merch);
+
+      // Function to update localStorage with new wishData
+      function updateWishStorage() {
+          localStorage.setItem("wishData", JSON.stringify(wishData));
+      }
+
+      // Function to update wishlist count
+      function updateWishlistCount() {
+          wishlistCount.text(Object.keys(wishData).length + " items");
+      }
+
+      // Function to render wishlist items in the UI
+      function displayWish() {
+          wishContainer.empty(); // Clear the current displayed items
+          const wishItemsArray = Object.entries(wishData);
+
+          const wishSpan = $(".wish-span");
+
+          if (wishItemsArray.length === 0) {
+              wishContainer.addClass("empty"); // Show empty state
+              wishSpan.css({
+                  "margin-top": "40px",
+              });
+          } else {
+              wishContainer.removeClass("empty"); // Remove empty state
+              wishSpan.css({
+                  "margin-top": "-20px",
+              });
+              wishItemsArray.forEach(([id, item]) => {
+                  const product = allItems.find((p) => p.id == id);
+                  if (product) {
+                      const wishItem = `
+                          <div class="wish-item">
+                              <img src="${product.img}" alt="${product.name}" class="wish-img">
+                              <button class="remove-wish" data-id="${id}" aria-label="Remove item">
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="40" height="35" viewBox="0 0 40 35" fill="none" class='heartIcon'>
+                                      <path d="M36.9156 3.09425C35.9382 2.11329 34.7778 1.33511 33.5005 0.804189C32.2233 0.273267 30.8543 0 29.4718 0C28.0892 0 26.7202 0.273267 25.443 0.804189C24.1657 1.33511 23.0053 2.11329 22.0279 3.09425L19.9995 5.12916L17.9711 3.09425C15.9968 1.11369 13.3192 0.00102659 10.5272 0.00102661C7.73523 0.00102664 5.05759 1.11369 3.08335 3.09425C1.10911 5.07481 2.0802e-08 7.76103 0 10.562C-2.0802e-08 13.3629 1.10911 16.0491 3.08335 18.0297L19.9995 35L36.9156 18.0297C37.8935 17.0492 38.6691 15.885 39.1984 14.6037C39.7276 13.3223 40 11.9489 40 10.562C40 9.17499 39.7276 7.80161 39.1984 6.52027C38.6691 5.23894 37.8935 4.07476 36.9156 3.09425Z" fill="#E9B9B9"/>
+                                  </svg>
+                              </button>
+                          </div>
+                      `;
+                      wishContainer.append(wishItem);
+                  }
+              });
+          }
+          updateWishlistCount(); // Update wishlist count
+      }
+
+      // Remove an item from the wishlist
+      wishContainer.on("click", ".remove-wish", function () {
+          const id = $(this).data("id");
+          delete wishData[id];
+          updateWishStorage();
+          displayWish(); // Re-render the wishlist after removal
+      });
+
+      // Initial render of the wishlist
+      displayWish();
+
+      // Update wishlist when an item is added to the wish list
+      window.AddtoWish = function (id) {
+          if (!wishData[id]) {
+              wishData[id] = { id: id, quantity: 1 };
+          } else {
+              delete wishData[id]; // Remove if it already exists
+          }
+          updateWishStorage();
+          displayWish(); // Re-render the wishlist after adding/removing an item
+      };
+  });
+
+  // Open wishlist modal when the heart icon is clicked
+  $("#wishlist-btn").click(function () {
+      $("#wishlist-modal").fadeIn();
+  });
+
+  $("#close-modal-btn").click(function () {
+      $("#wishlist-modal").fadeOut();
+
+      // Refresh all hearts in the menu
+      const wishData = JSON.parse(localStorage.getItem("wishData")) || {};
+      document.querySelectorAll(".heart-icon").forEach((heart) => {
+          const id = heart.getAttribute("data-id");
+          if (wishData[id]) {
+              heart.classList.add("active");
+          } else {
+              heart.classList.remove("active");
+          }
+      });
   });
 });

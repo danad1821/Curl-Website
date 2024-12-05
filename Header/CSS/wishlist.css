@@ -1,0 +1,215 @@
+* {
+    padding: 0;
+    margin: 0;
+    color: #37474f;
+    font-family: "Poppins", sans-serif;
+}
+
+.wishlist-modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.wishlist-modal-content {
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    justify-content: flex-start; /* Align content inside the modal */
+    align-items: center;
+    padding: 40px;
+    border-radius: 20px;
+    width: 90%; /* Adjust width to ensure proper containment */
+    max-width: 800px; /* Ensure it doesn't exceed modal's width */
+    overflow: hidden; /* Prevent overflow */
+    position: relative;
+    margin-left: 20%;
+    margin-top: 5%;
+    min-height: 700px; /* Ensure minimum height even when empty */
+}
+
+.mywish {
+    flex: 1;
+    border-radius: 5px;
+    overflow: hidden; /* Prevent overflow */
+    height: 300px;
+}
+
+.close-modal {
+    background: none;
+    border: none;
+    width: 10px;
+    height: 10px;
+    position: relative;
+    bottom: 0;
+    left: 90%;
+    cursor: pointer;
+}
+
+.close-modal svg{
+    width: 30px;
+    height: 30px;
+    opacity: 1;
+}
+
+.wish {
+    background: linear-gradient(to bottom, #E9B9B9 25%, #F1EAE4 20%);
+    display: flex;
+    border-radius: 50px;
+    padding: 30px;
+    width: 72%;
+    justify-content: center;
+}
+
+.remove-btn {
+    background-color: transparent;
+    border: none;
+    width: 30px;
+    height: 30px;
+    position: relative;
+}
+
+.remove-btn svg {
+    width: 30px;
+    height: 30px;
+    opacity: 1;
+}
+
+.mywish h2 {
+    font-weight: 700;
+    font-size: 27px;
+    margin-bottom: 40px;
+    margin-left: -20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#wish-items-container {
+    display: flex;
+    overflow-x: auto; /* Allow horizontal scroll */
+    overflow-y: hidden; /* Disable vertical scroll */
+    gap: 1rem;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 10px; /* Prevent scrollbar overlap */
+    max-width: 100%; /* Ensure it doesn't extend past the container */
+    margin-top: 70px;
+    margin-bottom: -20px;
+}
+
+#wish-items-container::-webkit-scrollbar {
+    display: none; /* Hide the scrollbar */
+}
+
+.card-item-1, .card-item-2, .card-item-3 {
+    height: 100px;
+}
+
+#wish-items {
+    display: flex;
+    margin-left: -20px;
+    gap: 3rem;
+    flex-wrap: nowrap;
+    align-items: center;
+    overflow-x: scroll; /* Enable horizontal scrolling */
+    padding-bottom: 10px; /* Optional: space at the bottom for smooth scroll */
+    height: 200px; /* Fixed height for the wishlist */
+    -webkit-overflow-scrolling: touch; /* For smooth scrolling on iOS */
+    scrollbar-width: none; /* For Firefox */
+    -ms-overflow-style: none; /* For Internet Explorer and Edge */
+}
+
+#wish-items::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari, and Opera */
+}
+
+.wish-item {
+    width: 300px; /* Adjust width to fit 3 items at once */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+    border-radius: 5px;
+    position: relative;
+}
+
+#wish-items.empty {
+    justify-content: center; /* Center content when empty */
+    text-align: center;
+    color: #E9B9B9;
+    min-height: 140px; /* Ensure minimum height */
+    height: auto; /* Allow it*/
+}
+
+
+#wish-items.empty .wish-item {
+    display: none; /* Hide the wish-item div when empty */
+}
+
+.wish-img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin-top: 10px;
+}
+
+.remove-wish {
+    position: absolute;
+    top: 0;
+    left: 80%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.remove-wish svg {
+    width: 25px;
+    height: 25px;
+    transition: stroke 0.2s ease;
+}
+
+/* Limit to displaying 3 items at once */
+#wish-items-container {
+    display: flex; 
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    gap: 1rem;
+    max-width: calc(3 * 220px); /* 3 items, including margin */
+}
+
+/* Ensure horizontal scrolling works */
+#wish-items {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+}
+
+#wish-span{
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    margin-bottom: -30px;
+}
+
+.wish-span{
+    color: #E9B9B9;
+    font-size: 15px;
+    margin-top: -20px;
+}

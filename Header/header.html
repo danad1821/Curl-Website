@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="../Header/CSS/search.css" />
     <link rel="stylesheet" href="../Header/CSS/signin.css" />
     <link rel="stylesheet" href="../Header/CSS/burger.css" />
-  </head>
+    <link rel="stylesheet" href="../Header/CSS/wishlist.css">  
+</head>
   <body>
     <nav class="navbar">
       <div class="navdiv">
@@ -101,25 +102,16 @@
                 </svg>
               </a>
             </li>
-            <li id="icon">
-              <a href="#">
-                <svg
-                  width="20"
-                  height="20"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
+            <li id="icon" class="wishIcon">
+              <a href="javascript:void(0);" id="wishlist-btn">
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round"
+                  stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path
-                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
-                  ></path>
-                </svg>
+                  d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                  </path>
+              </svg>
               </a>
-            </li>
+          </li>
             <li id="icon" >
               <a href="../cart/cart.html" id="CartIcon">
                 <svg
@@ -153,6 +145,11 @@
     <div id="search-results"></div>
 
     <div id="signInModal" class="modal">
+      <button class="remove-signin" data-id="${id}" aria-label="Remove item">
+        <svg width="256px" height="256px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9 9L11.9999 11.9999M11.9999 11.9999L14.9999 14.9999M11.9999 11.9999L9 14.9999M11.9999 11.9999L14.9999 9M12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+    </button>
       <div class="inner-modal">
         <img class="girl-sitting" src="/designImages/Girl Sitting.png" alt="" />
         <div class="inner-modal-2">
@@ -194,7 +191,13 @@
       </div>
     </div>
 
+
     <div id="signUpModal" class="modal">
+      <button class="remove-signin" data-id="${id}" aria-label="Remove item">
+        <svg width="256px" height="256px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9 9L11.9999 11.9999M11.9999 11.9999L14.9999 14.9999M11.9999 11.9999L9 14.9999M11.9999 11.9999L14.9999 9M12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+    </button>
       <div class="inner-modal">
         <img class="girl-sitting" src="/designImages/Girl Sitting.png" alt="" />
         <div class="inner-modal-2">
@@ -251,6 +254,29 @@
         </div>
       </div>
     </div>
+
+    <div id="wishlist-modal" class="wishlist-modal">
+      <div class="wishlist-modal-content">
+          <div class="wish">
+              <button class="close-modal" id="close-modal-btn" data-id="${id}" aria-label="Remove item">
+                  <svg width="256px" height="256px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M9 9L11.9999 11.9999M11.9999 11.9999L14.9999 14.9999M11.9999 11.9999L9 14.9999M11.9999 11.9999L14.9999 9M12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg>
+              </button>
+              <div class="mywish">
+                  <div class="mywish-h2">
+                      <h2>My Wishlist</h2>
+                  </div>
+                  <div id="wish-items-container">
+                      <div id="wish-items"></div>
+                  </div>
+                  <div id="wish-span">
+                      <span class="wish-span">Remember it is always to have a wish</span>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="../Header/header.js"></script>
