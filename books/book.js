@@ -45,92 +45,92 @@ $(document).ready(function () {
     }
 
     // Function to create the similar books carousel
-    function createBooksCarousel(similarBooks) {
-        const $similarBooksContainer = $('#similar-books-container');
-        const scrollLeft = $(`<div class="scroll-arrow left-arrow" style="display: none;">
-            <img src="../designImages/books/LeftArrow.png" alt="Left Arrow" />
-        </div>`);
-        const scrollRight = $(`<div class="scroll-arrow right-arrow" style="display: none;">
-            <img src="../designImages/books/RightArrow.png" alt="Right Arrow" />
-        </div>`);
-        const booksList = $(`<div class="books-list carousel" data-bs-ride="carousel"></div>`);
+    // function createBooksCarousel(similarBooks) {
+    //     const $similarBooksContainer = $('#similar-books-container');
+    //     const scrollLeft = $(`<div class="scroll-arrow left-arrow" style="display: none;">
+    //         <img src="../designImages/books/LeftArrow.png" alt="Left Arrow" />
+    //     </div>`);
+    //     const scrollRight = $(`<div class="scroll-arrow right-arrow" style="display: none;">
+    //         <img src="../designImages/books/RightArrow.png" alt="Right Arrow" />
+    //     </div>`);
+    //     const booksList = $(`<div class="books-list carousel" data-bs-ride="carousel"></div>`);
 
-        $similarBooksContainer.empty(); // Clear any existing content
-        $similarBooksContainer.append(scrollLeft, booksList, scrollRight);
+    //     $similarBooksContainer.empty(); // Clear any existing content
+    //     $similarBooksContainer.append(scrollLeft, booksList, scrollRight);
 
-        let currentIndex = 0;
+    //     let currentIndex = 0;
 
-        function displayBooks() {
-            booksList.empty(); // Clear existing books
+    //     function displayBooks() {
+    //         booksList.empty(); // Clear existing books
 
-            const booksToDisplay = similarBooks.slice(currentIndex, currentIndex + 4);
+    //         const booksToDisplay = similarBooks.slice(currentIndex, currentIndex + 4);
 
-            booksToDisplay.forEach(book => {
-                const bookHTML = `
-                    <div class="book" data-book-id="${book.id}">
-                        <div class="book-image">
-                            <img src="${book.img}" alt="${book.title}" class="book-img">
-                        </div>
-                        <div class="book-info">
-                            <div class="book-details">
-                                <p>${book.title}</p>
-                                <p class="book-author">Author: <span>${book.author}</span></p>
-                            </div>
-                            <div class="price-div">
-                                <p class="book-price">$${book.price}</p>
-                                <div>
-                                    <i class="far fa-heart"></i>
-                                    <button class="add-to-cart-btn">Add</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                `;
-                booksList.append(bookHTML);
-            });
+    //         booksToDisplay.forEach(book => {
+    //             const bookHTML = `
+    //                 <div class="book" data-book-id="${book.id}">
+    //                     <div class="book-image">
+    //                         <img src="${book.img}" alt="${book.title}" class="book-img">
+    //                     </div>
+    //                     <div class="book-info">
+    //                         <div class="book-details">
+    //                             <p>${book.title}</p>
+    //                             <p class="book-author">Author: <span>${book.author}</span></p>
+    //                         </div>
+    //                         <div class="price-div">
+    //                             <p class="book-price">$${book.price}</p>
+    //                             <div>
+    //                                 <i class="far fa-heart"></i>
+    //                                 <button class="add-to-cart-btn">Add</button>
+    //                             </div>
+    //                         </div>
+    //                     </div>
+    //                 </div>
+    //             `;
+    //             booksList.append(bookHTML);
+    //         });
 
-            // Show or hide arrows
-            if (currentIndex > 0) {
-                scrollLeft.show();
-            } else {
-                scrollLeft.hide();
-            }
+    //         // Show or hide arrows
+    //         if (currentIndex > 0) {
+    //             scrollLeft.show();
+    //         } else {
+    //             scrollLeft.hide();
+    //         }
 
-            if (currentIndex + 4 < similarBooks.length) {
-                scrollRight.show();
-            } else {
-                scrollRight.hide();
-            }
-        }
+    //         if (currentIndex + 4 < similarBooks.length) {
+    //             scrollRight.show();
+    //         } else {
+    //             scrollRight.hide();
+    //         }
+    //     }
 
-        // Initial display
-        displayBooks();
+    //     // Initial display
+    //     displayBooks();
 
-        // Arrow click events
-        scrollLeft.click(function () {
-            if (currentIndex > 0) {
-                currentIndex -= 4;
-                displayBooks();
-            }
-        });
+    //     // Arrow click events
+    //     scrollLeft.click(function () {
+    //         if (currentIndex > 0) {
+    //             currentIndex -= 4;
+    //             displayBooks();
+    //         }
+    //     });
 
-        scrollRight.click(function () {
-            if (currentIndex + 4 < similarBooks.length) {
-                currentIndex += 4;
-                displayBooks();
-            }
-        });
+    //     scrollRight.click(function () {
+    //         if (currentIndex + 4 < similarBooks.length) {
+    //             currentIndex += 4;
+    //             displayBooks();
+    //         }
+    //     });
 
-        // Add click event to redirect to a new book
-        booksList.on('click', '.book', function () {
-            const bookId = $(this).data('book-id');
-            const bookData = similarBooks.find(book => book.id === bookId);
+    //     // Add click event to redirect to a new book
+    //     booksList.on('click', '.book', function () {
+    //         const bookId = $(this).data('book-id');
+    //         const bookData = similarBooks.find(book => book.id === bookId);
 
-            localStorage.setItem('selectedBook', JSON.stringify(bookData));
+    //         localStorage.setItem('selectedBook', JSON.stringify(bookData));
 
-            window.location.href = 'book.html';
-        });
-    }
+    //         window.location.href = 'book.html';
+    //     });
+    // }
 
     // JAVASCRIPT TRANSITION WORKS HERE
     // function createBooksCarousel(similarBooks) {
@@ -219,6 +219,107 @@ $(document).ready(function () {
     //         window.location.href = 'book.html';
     //     });
     // }
+
+    function createBooksCarousel(similarBooks) {
+        const $similarBooksContainer = $('#similar-books-container');
+        const scrollLeft = $(`<div class="scroll-arrow left-arrow" style="display: none;">
+            <img src="../designImages/books/LeftArrow.png" alt="Left Arrow" />
+        </div>`);
+        const scrollRight = $(`<div class="scroll-arrow right-arrow" style="display: none;">
+            <img src="../designImages/books/RightArrow.png" alt="Right Arrow" />
+        </div>`);
+        const booksList = $(`<div class="books-list carousel" data-bs-ride="carousel"></div>`);
+
+        $similarBooksContainer.empty(); // Clear any existing content
+        $similarBooksContainer.append(scrollLeft, booksList, scrollRight);
+
+        let currentIndex = 0;
+
+        function getBooksPerView() {
+            const width = window.innerWidth;
+
+            if (width <= 400) return 1; // Show 1 book at 400px or less
+            if (width <= 768) return 2; // Show 2 books at 768px or less
+            return 4; // Default to 4 books
+        }
+
+        function displayBooks() {
+            booksList.empty(); // Clear existing books
+
+            const booksPerView = getBooksPerView();
+            const booksToDisplay = similarBooks.slice(currentIndex, currentIndex + booksPerView);
+
+            booksToDisplay.forEach(book => {
+                const bookHTML = `
+                    <div class="book" data-book-id="${book.id}">
+                        <div class="book-image">
+                            <img src="${book.img}" alt="${book.title}" class="book-img">
+                        </div>
+                        <div class="book-info">
+                            <div class="book-details">
+                                <p>${book.title}</p>
+                                <p class="book-author">Author: <span>${book.author}</span></p>
+                            </div>
+                            <div class="price-div">
+                                <p class="book-price">$${book.price}</p>
+                                <div>
+                                    <i class="far fa-heart"></i>
+                                    <button class="add-to-cart-btn">Add</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                booksList.append(bookHTML);
+            });
+
+            // Show or hide arrows
+            if (currentIndex > 0) {
+                scrollLeft.show();
+            } else {
+                scrollLeft.hide();
+            }
+
+            if (currentIndex + booksPerView < similarBooks.length) {
+                scrollRight.show();
+            } else {
+                scrollRight.hide();
+            }
+        }
+
+        // Initial display
+        displayBooks();
+
+        // Arrow click events
+        scrollLeft.click(function () {
+            const booksPerView = getBooksPerView();
+            if (currentIndex > 0) {
+                currentIndex -= booksPerView;
+                displayBooks();
+            }
+        });
+
+        scrollRight.click(function () {
+            const booksPerView = getBooksPerView();
+            if (currentIndex + booksPerView < similarBooks.length) {
+                currentIndex += booksPerView;
+                displayBooks();
+            }
+        });
+
+        // Add click event to redirect to a new book
+        booksList.on('click', '.book', function () {
+            const bookId = $(this).data('book-id');
+            const bookData = similarBooks.find(book => book.id === bookId);
+
+            localStorage.setItem('selectedBook', JSON.stringify(bookData));
+
+            window.location.href = 'book.html';
+        });
+
+        // Adjust books display on window resize
+        $(window).resize(displayBooks);
+    }
 
 
 

@@ -201,7 +201,11 @@ footer {
   }
 
 
-
+  @media (max-width: 1157px) {
+    .About {
+      background-color: #c0dde5;
+    }
+  }
 
 
 

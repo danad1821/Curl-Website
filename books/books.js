@@ -300,6 +300,52 @@ $(document).ready(function () {
         localStorage.setItem("cart", JSON.stringify(cart));
       });
 
+      // // Add to wishlist functionality
+      // $booksList.on("click", ".add-to-wishlist", function (e) {
+      //   e.stopPropagation(); // Prevent the click from triggering other events
+      //   e.preventDefault();
+
+      //   const $heartIcon = $(this);
+      //   const itemId = $heartIcon.data("id");
+
+      //   // Get the existing wishlist from localStorage
+      //   let wishlist = JSON.parse(localStorage.getItem("wishData")) || {};
+
+      //   if (wishlist[itemId]) {
+      //     // Remove from wishlist
+      //     delete wishlist[itemId];
+      //     $heartIcon.removeClass("fas").addClass("far"); // Change to outlined heart
+      //     $heartIcon.css("color", ""); // Reset the color when removed from wishlist
+      //   } else {
+      //     // Add to wishlist
+      //     wishlist[itemId] = { id: itemId };
+      //     $heartIcon.removeClass("far").addClass("fas"); // Change to filled heart
+      //     $heartIcon.css("color", "#e9b9b9"); // Set the color when added to wishlist
+      //   }
+
+      //   // Updates the wishlist data in localStorage
+      //   localStorage.setItem("wishData", JSON.stringify(wishlist));
+      // });
+      // // Add item to cart functionality
+      // $booksList.on("click", ".add-to-cart-btn", function () {
+      //   let cart = JSON.parse(localStorage.getItem("cartData")) || {};
+
+      //   // Get the id of the clicked item
+      //   const bookId = $(this).closest(".book").data("book-id");
+
+      //   if (cart[bookId]) {
+      //     // Increment the quantity if item already in cart
+      //     cart[bookId].quantity++;
+      //   } else {
+      //     // Add the item to the cart with quantity 1
+      //     cart[bookId] = { id: bookId, quantity: 1 };
+      //   }
+
+      //   // Updates the cart data in localStorage
+      //   localStorage.setItem("cartData", JSON.stringify(cart));
+      //   console.log("Cart updated:", cart); // Debugging output
+      // });
+
       // Show or hide arrows depending on the total number of books
       const totalBooks = booksForGenre.length;
       const $leftArrow = $(`.left-arrow[data-genre="${genre}"]`);
