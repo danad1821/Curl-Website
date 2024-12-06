@@ -1,16 +1,29 @@
 $(document).ready(function () {
   $("#header").load("../Header/header.html");
+
   $("#logOut").click(function () {
     sessionStorage.removeItem("loggedInUser");
     $("#userProfileBtn").hide();
     $("#signInBtn").show();
     $(location).prop("href", "../index.html");
   });
+
   let currentUser = JSON.parse(sessionStorage.getItem("loggedInUser"));
+
+  // Update user profile details
   $("#userImg").attr("src", currentUser.profilePicture);
   $("#fullName").text(currentUser.firstName + " " + currentUser.lastName);
   $("#location").text(currentUser.address);
-  $("#wishlistItems").text(currentUser.wishlist.length + " items");
+
+  // Count wishlist items and update #wishlistItems
+  function updateWishlistCount() {
+    const wishlistCount = currentUser.wishlist.length || 0; // Handle empty wishlist
+    $("#wishlistItems").text(`${wishlistCount} items`);
+  }
+
+  updateWishlistCount(); // Initial update
+
+  // Render rooms
   for (const room of currentUser.rooms) {
     let roomBtn = $("<button>").text(room.roomName).addClass("roomBtn btn");
     $("#rooms").append(roomBtn);
@@ -19,6 +32,8 @@ $(document).ready(function () {
       $(location).prop("href", "../community/room.html");
     });
   }
+
+  // Render events
   for (const event of currentUser.events) {
     let eventDiv = $("<div>").addClass("eventDiv");
     let eventTextDiv = $("<div>").html(
@@ -40,7 +55,6 @@ $(document).ready(function () {
   }
 
   function displayCurrentUser() {
-    // user info section
     $("#firstName").val(currentUser.firstName);
     $("#lastName").val(currentUser.lastName);
     $("#usernameProfile").val(currentUser.username);
@@ -51,25 +65,17 @@ $(document).ready(function () {
 
   displayCurrentUser();
 
+  // Check if username exists
   function isExistingUsername(data, username) {
-    for (const user of data.users) {
-      if (user.username == username) {
-        return true;
-      }
-    }
-    return false;
+    return data.users.some((user) => user.username === username);
   }
 
+  // Check if email exists
   function isExistingEmail(data, email) {
-    for (const user of data.users) {
-      if (user.email == email) {
-        return true;
-      }
-    }
-    return false;
+    return data.users.some((user) => user.email === email);
   }
 
-  // save button
+  // Save button click event
   $("#saveBtn").click(function (e) {
     e.preventDefault();
 
@@ -79,10 +85,10 @@ $(document).ready(function () {
       dataType: "json",
       success: function (data) {
         if (
-          ($("#usernameProfile").val() == currentUser.username &&
-            $("#emailProfile").val() == currentUser.email) ||
-          (isExistingUsername(data, $("#usernameProfile").val()) == false &&
-            isExistingEmail(data, $("#emailProfile").val()) == false)
+          ($("#usernameProfile").val() === currentUser.username &&
+            $("#emailProfile").val() === currentUser.email) ||
+          (!isExistingUsername(data, $("#usernameProfile").val()) &&
+            !isExistingEmail(data, $("#emailProfile").val()))
         ) {
           currentUser.firstName = $("#firstName").val();
           currentUser.lastName = $("#lastName").val();
@@ -90,7 +96,7 @@ $(document).ready(function () {
           currentUser.phone = $("#phoneNumber").val();
           currentUser.email = $("#emailProfile").val();
           currentUser.username = $("#usernameProfile").val();
-          console.log(currentUser)
+
           sessionStorage.setItem("loggedInUser", JSON.stringify(currentUser));
           displayCurrentUser();
         }

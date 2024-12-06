@@ -6,7 +6,7 @@
 }
 
 body{
-    background-color:#C0dde5;
+    background-color: #c0dde5;
     overflow-x: hidden;
 }
 
@@ -73,7 +73,6 @@ body{
     background-color: #F1EAE4;
     border-radius: 150px;
     margin-top: -1%;
-    margin-bottom: 50px;
 }
 
 .menu h1{
@@ -193,16 +192,20 @@ body{
     background-color: #37474f;
 }
 
-.heartIcon {
-    fill: #37474f;
-    width: 30px;
-    height: 30px;
+.heart-icon {
+    fill: transparent; /* Make heart transparent */
+    stroke: #37474f; /* Border color */
+    stroke-width: 2; /* Border width */
+    transition: fill 0.3s ease, stroke 0.3s ease;
     cursor: pointer;
-    transition: fill 0.3s;
 }
 
-.heartIcon:hover {
-    fill: red;
+.heart-icon:hover {
+    fill: #E9B9B9; /* Hover fill color */
+}
+
+.heart-icon.active {
+    fill: #E9B9B9; /* Active fill color */
 }
 
 .arrow-container{
@@ -216,7 +219,7 @@ body{
 
 .arrow{
     width: 60px;
-    margin-left: -130%;
+    margin-left: -400%;
     cursor: pointer;
 }
 

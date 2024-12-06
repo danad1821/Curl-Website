@@ -20,6 +20,7 @@ $(document).ready(function () {
       getTopMerch(data);
       getBestsellers(data);
       displayBestSellingBooks(bestsellers);
+      updateHeartIcons();
     },
     error: function (error) {
       console.error("Error loading data:", error);
@@ -117,6 +118,25 @@ $(document).ready(function () {
     touch: true,
   });
 
+  // Check and update heart icons based on wishlist items
+  function updateHeartIcons() {
+    let wishlist = JSON.parse(localStorage.getItem("wishData")) || {};
+
+    $(".bookHeartIcon").each(function () {
+      const clickedId = $(this).parent().parent().parent().parent().data("id");
+      const heart = $(this);
+      const likeIcon = $(this).siblings(".iconImg");
+
+      if (wishlist[clickedId]) {
+        heart.css("display", "none");
+        likeIcon.css("display", "block");
+      } else {
+        heart.css("display", "block");
+        likeIcon.css("display", "none");
+      }
+    });
+  }
+
   // creates the carousel items which will be display when a user presses the prev or next btn
   function displayBestSellingBooks(data) {
     let numOfSections = Math.ceil(bestsellers.length / numberOfDisplayedBooks);
@@ -129,7 +149,7 @@ $(document).ready(function () {
         section.addClass("active");
       }
       for (let i = startBooks; i <= endBooks; i++) {
-        let bookDiv = $("<div>");
+        let bookDiv = $("<div data-id='" + data[i].id + "'>");
         bookDiv.addClass("bookCard");
         let bookImg = $("<img>");
         bookImg.prop("src", data[i]?.img);
@@ -154,61 +174,34 @@ $(document).ready(function () {
       endBooks = endBooks + numberOfDisplayedBooks;
       booksDisplay.append(section);
     }
+
     $(".bookHeartIcon").click(function () {
       // Get the current wishlist data from localStorage
       let wishlist = JSON.parse(localStorage.getItem("wishData")) || {};
-      // Get the index of the clicked book in the bestsellers array
-      const clickedIndex = $(this).parent().parent().parent().parent().index();
-      //get selected book
-      const selectedBook = bestsellers[clickedIndex];
+      // Get the id of the clicked book
+      const clickedId = $(this).parent().parent().parent().parent().data("id");
       let likeIcon = $(this).siblings();
       let heart = $(this);
-      if (heart.css("display") == "none") {
-        // Filter wishlist.bookks to remove the selected book
-        wishlist = wishlist.filter(
-          (item) => item.id !== selectedBook.id
-        );
-        heart.css("display", "block");
-        likeIcon.css("display", "none");
-      } else {
-        // Checks if the index is valid (within the bestsellers array)
-        if (clickedIndex >= 0 && clickedIndex < bestsellers.length) {
-          // Adds the selected book directly to the wishlist.books array
-          if (!wishlist[selectedBook.id]) {
-            wishlist[selectedBook.id]={id: selectedBook.id, quantity: 1};
-          }
-          heart.css("display", "none");
-          likeIcon.css("display", "block");
-        }
+
+      // Adds the selected book directly to the wishlist.books array
+      if (!wishlist[clickedId]) {
+        wishlist[clickedId] = { id: clickedId, quantity: 1 };
       }
+      heart.css("display", "none");
+      likeIcon.css("display", "block");
       localStorage.setItem("wishData", JSON.stringify(wishlist));
     });
     $(".iconImg").click(function () {
       // Get the current wishlist data from localStorage
       let wishlist = JSON.parse(localStorage.getItem("wishData")) || {};
-      // Get the index of the clicked book in the bestsellers array
-      const clickedIndex = $(this).parent().parent().parent().parent().index();
-      //get selected book
-      const selectedBook = bestsellers[clickedIndex];
+      const clickedId = $(this).parent().parent().parent().parent().data("id");
       let likeIcon = $(this);
       let heart = $(this).siblings();
       if (heart.css("display") == "none") {
-        // Filter wishlist.bookks to remove the selected book
-        wishlist = wishlist.filter(
-          (item) => item.id !== selectedBook.id
-        );
+        // Remove the book from the wishlist
+        delete wishlist[clickedId];
         heart.css("display", "block");
         likeIcon.css("display", "none");
-      } else {
-        // Checks if the index is valid (within the bestsellers array)
-        if (clickedIndex >= 0 && clickedIndex < bestsellers.length) {
-          // Adds the selected book directly to the wishlist.books array
-          if (!wishlist[selectedBook.id]) {
-            wishlist[selectedBook.id]={id: selectedBook.id, quantity: 1};
-          }
-          heart.css("display", "none");
-          likeIcon.css("display", "block");
-        }
       }
       localStorage.setItem("wishlist", JSON.stringify(wishlist));
     });
@@ -217,22 +210,17 @@ $(document).ready(function () {
     bestsellerAddBtn.click(function () {
       let cart = JSON.parse(localStorage.getItem("cartData")) || {};
 
-      // Gets the index of the clicked book in the bestsellers array
-      const clickedIndex = $(this).parent().parent().parent().index();
-      // Gets the selected book
-      const selectedBook = bestsellers[clickedIndex];
-      
+      const clickedId = $(this).parent().parent().parent().parent().data("id");
 
-      if (cart[selectedBook.id]) {
-        console.log("added")
+      if (cart[clickedId]) {
+        console.log("added");
         // Increases the quantity of the existing book by one
         //only by one since quanity changing isn't an option
-        cart[selectedBook.id].quantity++;
+        cart[clickedId].quantity++;
       } else {
-        
         // Add the book to the cart with quantity 1
-        const extended = { id: selectedBook.id, quantity: 1 };
-        cart[selectedBook.id]=extended;
+        const extended = { id: clickedId, quantity: 1 };
+        cart[clickedId] = extended;
       }
       // Updates the cart data in localStorage
       localStorage.setItem("cartData", JSON.stringify(cart));
@@ -245,7 +233,6 @@ $(document).ready(function () {
       const selectedBook = bestsellers[clickedIndex];
       localStorage.setItem("selectedBook", JSON.stringify(selectedBook));
       $(location).prop("href", "books/book.html");
-
     });
   }
 
@@ -320,7 +307,6 @@ $(document).ready(function () {
     const $menuContainer = $("#menu-items");
     $menuContainer.empty();
 
-
     menuItems.forEach(function (item) {
       // Choosing hand image based on category
       let handImage;
@@ -358,7 +344,9 @@ $(document).ready(function () {
             <div class="item-price">
               <p>$${item.price}</p>
               <div>
-                <button class="homePageBtn add-btn">Add</button>
+                <button class="homePageBtn add-btn addMenuItem" data-id="${
+                  item.id
+                }">Add</button>
                 <i class="far fa-heart"></i>
               </div>
 
@@ -367,16 +355,28 @@ $(document).ready(function () {
         </div>
       `;
 
+      $(".addMenuItem").click(function () {
+        let cart = JSON.parse(localStorage.getItem("cartData")) || {};
+
+        const clickedId = $(this).data("id");
+        if (cart[clickedId]) {
+          console.log("added");
+          // Increases the quantity of the existing book by one
+          //only by one since quanity changing isn't an option
+          cart[clickedId].quantity++;
+        } else {
+          // Add the book to the cart with quantity 1
+          const extended = { id: clickedId, quantity: 1 };
+          cart[clickedId] = extended;
+        }
+        // Updates the cart data in localStorage
+        localStorage.setItem("cartData", JSON.stringify(cart));
+      });
+
       // Append to the menu container
       $menuContainer.append(itemHTML);
     });
   }).fail(function (error) {
     console.error("Error loading menu:", error);
   });
-
-
-
-
-
 });
-

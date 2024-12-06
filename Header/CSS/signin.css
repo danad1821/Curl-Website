@@ -50,6 +50,22 @@
   border-radius: 50px;
 }
 
+.remove-signin {
+  background-color: transparent;
+  border: none;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  left: 77%;
+  top: -30%;
+}
+
+.remove-signin svg {
+  width: 30px;
+  height: 30px;
+  opacity: 1;
+}
+
 .girl-sitting {
   margin-right: 200px !important;
   margin-left: -200px !important;
