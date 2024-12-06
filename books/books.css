@@ -393,7 +393,7 @@ a.active {
   /* gap: 50px; */
   overflow: hidden; /* Prevent items from overflowing outside the carousel */
   justify-content: flex-start;
-
+overflow-x: auto;
   transition: transform 0.5s ease; /* Smooth transition for sliding */
 
 }
@@ -434,6 +434,7 @@ a.active {
 .scroll-arrow:hover {
   opacity: 0.8; /* Slight fade effect on hover */
 }
+
 
 /* Book Item Styles */
 .book {
@@ -639,7 +640,6 @@ footer {
   footer {
     align-items: center;
     width: 100%;
-    background-color: #f1eae4;
     height: fit-content;
     margin-top: 0;
     padding-top: 10px;
@@ -648,7 +648,7 @@ footer {
     display: contents;
     justify-content: center;
     align-items: flex-start;
-    padding: 10px;
+    /* padding: 10px; */
     width: auto;
   }
 }
@@ -662,7 +662,6 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    padding: 10px;
     width: auto;
   }
 }
@@ -790,5 +789,17 @@ a.active {
 
   #search-sort button p{
     display: none;
+  }
+
+  .book{
+    width: 170px;
+  }
+
+  #Genre a, #TypesOfBooks a{
+    width: 110px;
+  }
+
+  #slider, #price-range {
+    width: 130px;
   }
 }

@@ -219,7 +219,7 @@ $(document).ready(function () {
                         <div>
                             <i class="fa-heart add-to-wishlist ${isInWishlist ? 'fas' : 'far'}" style="color: ${isInWishlist ? '#e9b9b9' : ''};"></i>
 
-                            
+
                             <button class="add-to-cart-btn">Add</button>
                         </div>
                     </div>
@@ -317,6 +317,8 @@ $(document).ready(function () {
         $rightArrow.hide();
       }
     }
+
+
 
     // Function to display selected genres
     function displayGenres() {

@@ -221,6 +221,9 @@ $(document).ready(function () {
     // }
 
 
+
+
+
     let quantity = 1;  // Initial quantity
 
     // Update quantity on increase
