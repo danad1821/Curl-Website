@@ -372,11 +372,22 @@ main::-webkit-scrollbar{
     width: 70%;
   }
 }
+@media(max-width: 600px){
+
+    #newPostBtn{
+      top: 45%;
+    }
+}
 @media (max-width: 500px){
   .postDiv, .commentsDiv{
     width: 80%;
   }
   .topCommentSectionUser>h3, .topCommentSectionActions>p, .commentMainSection{
     font-size: 14px;
+  }
+}
+@media(max-width: 376px){
+  #newPostBtn{
+    top: 35%;
   }
 }

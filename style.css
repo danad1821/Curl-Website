@@ -499,6 +499,12 @@ button.add-to-cart {
   height: 30px;
   fill: #37474f;
 }
+.closeBtn{
+  align-self: flex-end;
+  fill: none;
+  stroke: #37474f;
+  cursor: pointer;
+}
 
 @media (max-width: 500px) {
   #community p {

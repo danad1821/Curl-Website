@@ -52,6 +52,7 @@ main h3{
   width: 32px;
   height: 30px;
   margin-right: 10px;
+  cursor: pointer;
 }
 p{
   margin: 0;
