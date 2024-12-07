@@ -170,7 +170,7 @@ console.log($(window).scrollTop())
         $("#newPostBtn").css({"background-color": "#e9b9b9","padding": "5px 15px"})
         $("#newPostBtn>img").css({"margin-right": "5px"})
       }
-      if($(window).width()<=375){
+      if($(window).width()<=450){
         $("#newPostBtn > p").hide();
         $("#newPostBtn").css({"padding": "10px"})
         $("#newPostBtn>img").css({"margin-right": "0px"})
@@ -196,7 +196,11 @@ console.log($(window).scrollTop())
         $("#newPostBtn").css({"background-color": "#e9b9b9","padding": "5px 15px"})
         $("#newPostBtn>img").css({"margin-right": "5px"})
       }
-      
+      if($(window).width()<=450){
+        $("#newPostBtn > p").hide();
+        $("#newPostBtn").css({"padding": "10px"})
+        $("#newPostBtn>img").css({"margin-right": "0px"})
+      }
     }, 10); // Adjust the debounce delay as needed
   });
 

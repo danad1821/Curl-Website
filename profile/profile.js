@@ -99,6 +99,7 @@ $(document).ready(function () {
 
           sessionStorage.setItem("loggedInUser", JSON.stringify(currentUser));
           displayCurrentUser();
+          window.location.reload();
         }
       },
       error: function (error) {
