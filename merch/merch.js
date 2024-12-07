@@ -126,12 +126,32 @@ document.addEventListener("DOMContentLoaded", () => {
                 filledHeartIcon.appendChild(filledHeartPath);
 
                 // Add hover event to toggle between the two SVGs
-                hollowHeartIcon.addEventListener("mouseenter", function () {
-                    hollowHeartIcon.replaceWith(filledHeartIcon);
+                // hollowHeartIcon.addEventListener("mouseenter", function () {
+                //     hollowHeartIcon.replaceWith(filledHeartIcon);
+                // });
+
+                // filledHeartIcon.addEventListener("mouseleave", function () {
+                //     filledHeartIcon.replaceWith(hollowHeartIcon);
+                // });
+
+                let isFilled = false;
+
+                hollowHeartIcon.addEventListener("click", function () {
+                    if (isFilled) {
+                        filledHeartIcon.replaceWith(hollowHeartIcon);
+                    } else {
+                        hollowHeartIcon.replaceWith(filledHeartIcon);
+                    }
+                    isFilled = !isFilled;
                 });
 
-                filledHeartIcon.addEventListener("mouseleave", function () {
-                    filledHeartIcon.replaceWith(hollowHeartIcon);
+                filledHeartIcon.addEventListener("click", function () {
+                    if (isFilled) {
+                        filledHeartIcon.replaceWith(hollowHeartIcon);
+                    } else {
+                        hollowHeartIcon.replaceWith(filledHeartIcon);
+                    }
+                    isFilled = !isFilled;
                 });
 
                 quantityControl.appendChild(minusBtn);

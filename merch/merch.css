@@ -5,7 +5,14 @@
     color: #37474f;
     font-family: "Poppins", sans-serif;
 }
-  
+
+.Merch{
+    background-color: #F1EAE4;
+    border-radius: 25px;
+    padding: 4px 10px;
+    text-align: center;
+}
+
   .body{
     background-color: #c0dde5;
     overflow-x: hidden;
