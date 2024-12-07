@@ -11,6 +11,13 @@
     background-color: #c0dde5;
   }
   
+  .Events {
+    background-color: #f1eae4;
+    border-radius: 25px;
+    padding: 4px 10px;
+    text-align: center;
+  }
+
   .events-label {
     width: 500px;
     height: 161px;
@@ -98,12 +105,72 @@
   }
 
   .event-box img {
-    width: 100%;
-    height: auto;
+    width: 438px;
+    height: 270px;
     border-radius: 20px;
     margin-top: 80px;
     margin-bottom: 20px;
   }
+
+  .event-overlay {
+    position: absolute; /* Positions the overlay over the image */
+    top: 90px;
+    width: 438px; /* Covers the entire container */
+    height: 280px; /* Covers the entire container */
+    background-color: white; /* White overlay */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease; /* Smooth transition for hover effect */
+    pointer-events: none; /* Allows clicks to pass through to the image */
+    display: flex; /* Enables Flexbox */
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+  }
+  .event-box:hover .event-overlay {
+    opacity: 0.5; /* Semi-transparent white overlay on hover */
+  }
+
+  .event-text {
+    color: #37474F;
+    font-size: 20px;
+    font-weight: bolder;
+    font-size: 1.5rem;
+    text-align: center;
+    
+  }
+  
+  /* .event-img {
+    width: 438px;
+    height: 270px;
+    border-radius: 20px;
+    margin-top: 80px;
+    margin-bottom: 20px;
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    position: relative; 
+    overflow: hidden; /* Ensures content doesn't overflow 
+    transition: filter 0.3s ease;
+  }
+
+  .event-img:hover {
+    filter: brightness(4.5); /* Whitens the image *
+  }
+  
+  .hover-text {
+    position: absolute; /* Positions text over the div 
+    top: 50%; /* Centers text vertically *
+    left: 50%; /* Centers text horizontally *
+    transform: translate(-50%, -50%); /* Centers text precisely *
+    color: white; /* Text color *
+    font-size: 1.5rem; /* Adjust font size as needed *
+    font-weight: bold; /* Makes the text bold *
+    opacity: 0; /* Initially hidden *
+    transition: opacity 0.3s ease; /* Smooth fade-in for text *
+  }
+  
+  .event-img:hover .hover-text {
+    opacity: 1; /* Shows the text on hover *
+  } */
   
   .event-box h2 {
     position: absolute; /* Position relative to the event-box */
