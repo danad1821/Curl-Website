@@ -91,10 +91,11 @@
   }
   
   .product-image {
-    width: 170px;
+    width: auto;
     height: 250px;
     margin-bottom: 10px;
   }
+  
   
   .product-name {
     font-size: 14px;
@@ -224,7 +225,68 @@
     background-color: #37474f;
     color: white;
   }
-
+  #merch-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Shrinks further for smaller screens */
+    gap: 20px;
+    padding: 50px;
+    margin: 0 auto;
+    background-color: #F1EAE4;
+    border-radius: 400px;
+  }
+  
+  /* Adjustments for smaller screens */
+  @media (max-width: 768px) {
+    #merch-content {
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Shrinks cards more for tablets */
+      padding: 20px;
+    }
+  
+    .product-image {
+      height: 200px; /* Smaller height for images */
+    }
+  
+    .add-btn {
+      font-size: 14px;
+      padding: 5px 10px; /* Smaller button sizes */
+    }
+  
+    .merch-label {
+      width: 80%; /* Allow text containers to shrink */
+    }
+  
+    .girl {
+      width: 70%;
+      margin-left: 0; /* Centered for smaller devices */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    #merch-content {
+      grid-template-columns: 1fr; /* One column layout for mobile */
+      padding: 10px;
+    }
+  
+    .product-image {
+      height: 150px;
+      width: auto; /* Even smaller images */
+    }
+  
+    .price-and-selector-container {
+      flex-direction: column; /* Stack price and buttons */
+      align-items: center;
+    }
+  
+    .add-btn {
+      font-size: 12px; /* Adjust button font size */
+      padding: 5px; /* Compact padding */
+    }
+    .merch-label{
+        width: 70%;
+        margin-top: 65px;
+        margin-right: 50px;
+    }
+  }
 
 /* styling header*/
 .navbar {
