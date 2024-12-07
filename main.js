@@ -479,7 +479,7 @@ $(document).ready(function () {
         $heartIcon.css("color", ""); // Reset the color when removed from wishlist
       } else {
         // Add to wishlist
-        wishlist[itemId] = { id: itemId };
+        wishlist[itemId] = { id: itemId, quantity: 1 };
         $heartIcon.removeClass("far").addClass("fas"); // Change to filled heart
         $heartIcon.css("color", "#e9b9b9"); // Set the color when added to wishlist
       }

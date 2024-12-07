@@ -1,8 +1,4 @@
-
 $(document).ready(function () {
-    let cart = JSON.parse(localStorage.getItem("cart")) || { books: [] };
-    let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
-
     // Retrieve the book data from localStorage
     const selectedBook = JSON.parse(localStorage.getItem('selectedBook'));
 
@@ -321,11 +317,39 @@ $(document).ready(function () {
         $(window).resize(displayBooks);
     }
 
+    // Retrieve wishlist from localStorage or initialize it as an empty object
+    const wishlist = JSON.parse(localStorage.getItem("wishData")) || {};
 
+    // Add to wishlist functionality
+    $('#wishlist-btn').click(function () {
+        const $heartIcon = $(this);
+        const bookId = selectedBook.id;
 
+        // Toggle the wishlist state
+        const isInWishlist = wishlist[bookId];
+        if (isInWishlist) {
+            // Remove from wishlist
+            delete wishlist[bookId];
+            $heartIcon.removeClass("fas").addClass("far"); // Change to outlined heart
+            $heartIcon.css("color", ""); // Reset the color when removed from wishlist
+            alert(`${selectedBook.title} has been removed from the wishlist.`);
+        } else {
+            // Add to wishlist
+            wishlist[bookId] = selectedBook;
+            $heartIcon.removeClass("far").addClass("fas"); // Change to filled heart
+            $heartIcon.css("color", "#e9b9b9"); // Set the color when added to wishlist
+            alert(`${selectedBook.title} has been added to the wishlist.`);
+        }
 
+        // Save the updated wishlist to localStorage
+        localStorage.setItem("wishData", JSON.stringify(wishlist));
+    });
 
-    let quantity = 1;  // Initial quantity
+    // Retrieve cart from localStorage or initialize it as an empty object
+    const cart = JSON.parse(localStorage.getItem("cartData")) || {};
+
+    // Initialize quantity
+    let quantity = 1;
 
     // Update quantity on increase
     $('.increase').click(function () {
@@ -336,16 +360,17 @@ $(document).ready(function () {
     // Update quantity on decrease
     $('.decrease').click(function () {
         if (quantity > 1) {
-            quantity--;  // Prevent quantity from going below 1
+            quantity--; // Prevent quantity from going below 1
             $('#quantity').text(quantity);
         }
     });
 
-
     // Add to cart functionality
     $('.add-to-cart-btn').click(function () {
+        const bookId = selectedBook.id;
+
         // Check if the book is already in the cart
-        const existingItem = cart.books.find(book => book.id === selectedBook.id);
+        const existingItem = cart[bookId];
 
         if (existingItem) {
             // Update the quantity in the cart
@@ -353,38 +378,13 @@ $(document).ready(function () {
         } else {
             // Add the book to the cart with the specified quantity
             selectedBook.quantity = quantity;
-            cart.books.push(selectedBook);
+            cart[bookId] = selectedBook;
         }
 
         // Save the updated cart to localStorage
-        localStorage.setItem("cart", JSON.stringify(cart));
+        localStorage.setItem("cartData", JSON.stringify(cart));
+        alert(`${selectedBook.title} has been added to the cart.`);
     });
-
-    // Add to wishlist functionality
-    $('#wishlist-btn').click(function () {
-        const $heartIcon = $(this);
-        // Toggle the wishlist state
-        const isInWishlist = wishlist.books.some(b => b.id === selectedBook.id);
-        if (isInWishlist) {
-            // Remove from wishlist
-            wishlist.books = wishlist.books.filter(b => b.id !== bookData.id);
-            $heartIcon.removeClass("fas").addClass("far"); // Change to outlined heart
-            $heartIcon.css("color", ""); // Reset the color when removed from wishlist
-
-        } else {
-            // Add to wishlist
-            wishlist.books.push(selectedBook);
-            $heartIcon.removeClass("far").addClass("fas"); // Change to filled heart
-            $heartIcon.css("color", "#e9b9b9"); // Set the color when added to wishlist
-
-        }
-
-        // Save updated wishlist to localStorage
-        localStorage.setItem("wishlist", JSON.stringify(wishlist));
-    });
-
-
-
 
 });
 

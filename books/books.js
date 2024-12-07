@@ -183,8 +183,8 @@ $(document).ready(function () {
       const $booksList = $(`.books-list[data-genre="${genre}"]`);
       $booksList.empty();
 
-      let cart = JSON.parse(localStorage.getItem("cartData")) || { };
-      let wishlist = JSON.parse(localStorage.getItem("wishData")) || { };
+      let cart = JSON.parse(localStorage.getItem("cartData")) || {};
+      let wishlist = JSON.parse(localStorage.getItem("wishData")) || {};
 
       // const booksToDisplay = booksForGenre.filter((book) => {
       //   // Check if the selectedTypes array includes any type in the book's type array
@@ -258,7 +258,7 @@ $(document).ready(function () {
 
         } else {
           // Add to wishlist
-          wishlist[bookData.id]=bookData;
+          wishlist[bookData.id] = bookData;
           $heartIcon.removeClass("far").addClass("fas"); // Change to filled heart
           $heartIcon.css("color", "#e9b9b9"); // Set the color when added to wishlist
 
@@ -276,16 +276,6 @@ $(document).ready(function () {
         const bookData = booksForGenre.find((book) => book.id === bookId);
 
         // Check if the book is already in the cart
-        // const isInCart = cart.books.some(b => b.id === bookData.id);
-        // if (!isInCart) {
-        //   cart.books.push(bookData);
-        //   localStorage.setItem("cart", JSON.stringify(cart));
-        //   alert(`${bookData.title} has been added to the cart.`);
-        // } else {
-        //   alert(`${bookData.title} is already in the cart.`);
-        // }
-
-        // Check if the book is already in the cart
         const existingItem = cart[bookData.id];
 
         if (existingItem) {
@@ -294,7 +284,7 @@ $(document).ready(function () {
         } else {
           // If the book isn't in the cart, add it with a quantity of 1
           bookData.quantity = 1;
-          cart[bookData.id]=bookData;
+          cart[bookData.id] = bookData;
         }
 
         localStorage.setItem("cartData", JSON.stringify(cart));
