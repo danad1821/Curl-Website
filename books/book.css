@@ -260,12 +260,18 @@ gap: 30px;
   padding: 3px 10px;
   border-radius: 20px;
   font-size: 14px;
+  transition: background-color 0.3s, color 0.3s;
+
 }
 
+.books-list.transition {
+  transition: transform 0.3s ease-in-out;
+}
 
-
-
-
+.add-to-cart-btn:hover {
+  background-color: #37474f;
+  color: #f1eae4;
+}
 
 
 /* FOOTER */
@@ -386,6 +392,10 @@ footer {
   .right-arrow {
     right: 120px;
   }
+
+  #book-image{
+    margin-left: 130px !important;
+  }
   
 }
 
@@ -399,4 +409,63 @@ footer {
     max-width: 80%;
   }
 }
+@media (max-width: 400px){
+  .description, .purchasingBookSection{
+    width: 370px;
+  }
 
+  .bookMain{
+    padding-left: 5%;
+  }
+
+  .purchasingBookSection{
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 20px;
+    
+  }
+  #wishlist-btn{
+    font-size: 20px;
+  }
+
+  #book-image{
+    margin-left: 125px !important;
+  }
+
+  .similar-books-section{
+    margin-left: 0%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .book{
+    width: fit-content;
+    justify-content: center;
+    align-items: center;
+  }
+
+  
+  .scroll-arrow {
+    top: 145%;
+  }
+  
+  .left-arrow {
+    left: 40px;
+  }
+  
+  .right-arrow {
+    right: 40px;
+  }
+
+  footer{
+    padding-top: 30px;
+  }
+  .footer-content {
+    display: contents;
+    justify-content: center;
+    align-items: flex-start;
+  }
+}

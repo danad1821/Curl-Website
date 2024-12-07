@@ -510,32 +510,16 @@ overflow-x: auto;
   padding: 3px 10px;
   border-radius: 20px;
   font-size: 14px;
+  transition: background-color 0.3s, color 0.3s;
+}
+.add-to-cart-btn:hover {
+  background-color: #37474f;
+  color: #f1eae4;
 }
 
 .heart-icon{
   height: 20px;
 }
-/* 
-.heart-icon {
-  width: 24px;
-  height: 24px;
-}
-
-.unfilled {
-  display: block;
-}
-
-.filled {
-  display: none;
-}
-
-.filled.visible {
-  display: block;
-}
-
-.unfilled.hidden {
-  display: none;
-} */
 
 
 /* FOOTER */

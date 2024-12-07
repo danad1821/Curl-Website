@@ -19,13 +19,13 @@ $closeBtn.on("click", function () {
   $modal.removeClass("show");
 });
 
-$singUpBtn.on("click", function(event) {
+$singUpBtn.on("click", function (event) {
   event.preventDefault();
   $signUpModal.addClass("show");
   $modal.removeClass("show");
 })
 
-$signInBtnInModal.on("click", function(event) {
+$signInBtnInModal.on("click", function (event) {
   event.preventDefault();
   $signUpModal.removeClass("show");
   $modal.addClass("show");
@@ -215,10 +215,10 @@ $(document).ready(function () {
 
   //sign in
 
-  
-    $("#userProfileBtn").hide();
-    $("#signInBtn").show();
-  if(sessionStorage.getItem("loggedInUser")){
+
+  $("#userProfileBtn").hide();
+  $("#signInBtn").show();
+  if (sessionStorage.getItem("loggedInUser")) {
     $("#userProfileBtn").show();
     $("#signInBtn").hide();
   }
@@ -255,39 +255,39 @@ $(document).ready(function () {
 
   // Fetch wishlist data and update the modal
   $.getJSON("../data.json", function (data) {
-      const allItems = data.menu_menu.concat(data.books, data.merch);
+    const allItems = data.menu_menu.concat(data.books, data.merch);
 
-      // Function to update localStorage with new wishData
-      function updateWishStorage() {
-          localStorage.setItem("wishData", JSON.stringify(wishData));
-      }
+    // Function to update localStorage with new wishData
+    function updateWishStorage() {
+      localStorage.setItem("wishData", JSON.stringify(wishData));
+    }
 
-      // Function to update wishlist count
-      function updateWishlistCount() {
-          wishlistCount.text(Object.keys(wishData).length + " items");
-      }
+    // Function to update wishlist count
+    function updateWishlistCount() {
+      wishlistCount.text(Object.keys(wishData).length + " items");
+    }
 
-      // Function to render wishlist items in the UI
-      function displayWish() {
-          wishContainer.empty(); // Clear the current displayed items
-          const wishItemsArray = Object.entries(wishData);
+    // Function to render wishlist items in the UI
+    function displayWish() {
+      wishContainer.empty(); // Clear the current displayed items
+      const wishItemsArray = Object.entries(wishData);
 
-          const wishSpan = $(".wish-span");
+      const wishSpan = $(".wish-span");
 
-          if (wishItemsArray.length === 0) {
-              wishContainer.addClass("empty"); // Show empty state
-              wishSpan.css({
-                  "margin-top": "40px",
-              });
-          } else {
-              wishContainer.removeClass("empty"); // Remove empty state
-              wishSpan.css({
-                  "margin-top": "-20px",
-              });
-              wishItemsArray.forEach(([id, item]) => {
-                  const product = allItems.find((p) => p.id == id);
-                  if (product) {
-                      const wishItem = `
+      if (wishItemsArray.length === 0) {
+        wishContainer.addClass("empty"); // Show empty state
+        wishSpan.css({
+          "margin-top": "40px",
+        });
+      } else {
+        wishContainer.removeClass("empty"); // Remove empty state
+        wishSpan.css({
+          "margin-top": "-20px",
+        });
+        wishItemsArray.forEach(([id, item]) => {
+          const product = allItems.find((p) => p.id == id);
+          if (product) {
+            const wishItem = `
                           <div class="wish-item">
                               <img src="${product.img}" alt="${product.name}" class="wish-img">
                               <button class="remove-wish" data-id="${id}" aria-label="Remove item">
@@ -297,53 +297,53 @@ $(document).ready(function () {
                               </button>
                           </div>
                       `;
-                      wishContainer.append(wishItem);
-                  }
-              });
+            wishContainer.append(wishItem);
           }
-          updateWishlistCount(); // Update wishlist count
+        });
       }
+      updateWishlistCount(); // Update wishlist count
+    }
 
-      // Remove an item from the wishlist
-      wishContainer.on("click", ".remove-wish", function () {
-          const id = $(this).data("id");
-          delete wishData[id];
-          updateWishStorage();
-          displayWish(); // Re-render the wishlist after removal
-      });
+    // Remove an item from the wishlist
+    wishContainer.on("click", ".remove-wish", function () {
+      const id = $(this).data("id");
+      delete wishData[id];
+      updateWishStorage();
+      displayWish(); // Re-render the wishlist after removal
+    });
 
-      // Initial render of the wishlist
-      displayWish();
+    // Initial render of the wishlist
+    displayWish();
 
-      // Update wishlist when an item is added to the wish list
-      window.AddtoWish = function (id) {
-          if (!wishData[id]) {
-              wishData[id] = { id: id, quantity: 1 };
-          } else {
-              delete wishData[id]; // Remove if it already exists
-          }
-          updateWishStorage();
-          displayWish(); // Re-render the wishlist after adding/removing an item
-      };
+    // Update wishlist when an item is added to the wish list
+    window.AddtoWish = function (id) {
+      if (!wishData[id]) {
+        wishData[id] = { id: id, quantity: 1 };
+      } else {
+        delete wishData[id]; // Remove if it already exists
+      }
+      updateWishStorage();
+      displayWish(); // Re-render the wishlist after adding/removing an item
+    };
   });
 
   // Open wishlist modal when the heart icon is clicked
   $("#wishlist-btn").click(function () {
-      $("#wishlist-modal").fadeIn();
+    $("#wishlist-modal").fadeIn();
   });
 
   $("#close-modal-btn").click(function () {
-      $("#wishlist-modal").fadeOut();
+    $("#wishlist-modal").fadeOut();
 
-      // Refresh all hearts in the menu
-      const wishData = JSON.parse(localStorage.getItem("wishData")) || {};
-      document.querySelectorAll(".heart-icon").forEach((heart) => {
-          const id = heart.getAttribute("data-id");
-          if (wishData[id]) {
-              heart.classList.add("active");
-          } else {
-              heart.classList.remove("active");
-          }
-      });
+    // Refresh all hearts in the menu
+    const wishData = JSON.parse(localStorage.getItem("wishData")) || {};
+    document.querySelectorAll(".heart-icon").forEach((heart) => {
+      const id = heart.getAttribute("data-id");
+      if (wishData[id]) {
+        heart.classList.add("active");
+      } else {
+        heart.classList.remove("active");
+      }
+    });
   });
 });

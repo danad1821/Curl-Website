@@ -8,7 +8,7 @@
         "price": 15.0,
         "rating": 4.2,
         "availability": 20,
-        "type": ["ebook", "book", "audio"],
+        "type": ["book", "audio"],
         "genres": ["Fantasy", "Adventure", "Alchemy"],
         "summary": "Explore a world where alchemy shapes lives, as characters embark on a transformative journey filled with magic and mystery.",
         "publication_date": "2023-05-15"
@@ -62,7 +62,7 @@
         "price": 15.0,
         "rating": 4.8,
         "availability": 9,
-        "type": ["ebook", "book", "audio"],
+        "type": ["book", "audio"],
         "genres": ["Fiction", "Fantasy", "Epic", "Adventure"],
         "summary": "Frodo Baggins embarks on a perilous journey to destroy the One Ring and save Middle-earth from darkness.",
         "publication_date": "1954-07-29"
@@ -128,7 +128,7 @@
         "price": 16.0,
         "rating": 4.5,
         "availability": 1,
-        "type": ["ebook", "book", "audio"],
+        "type": ["ebook", "book"],
         "genres": ["Fantasy", "Romance", "Adventure"],
         "summary": "With a mighty dragon looming over the kingdom and a battle threatening to unfold over the throne, the young prince struggles to face his brothers.",
         "publication_date": "2021-11-01"
@@ -141,7 +141,7 @@
         "price": 11.0,
         "rating": 4.6,
         "availability": 20,
-        "type": ["ebook", "book", "audio"],
+        "type": ["book"],
         "genres": ["Fiction", "Fantasy", "Philosophy", "Contemporary"],
         "summary": "Nora Seed discovers a library between life and death, exploring the infinite possibilities of her life choices.",
          "publication_date": "2020-08-13"
@@ -279,7 +279,7 @@
       "price": 30.0,
       "rating": 4.5,
       "availability": 20,
-      "type": ["ebook", "book", "audio"],
+      "type": ["book", "audio"],
       "genres": ["Fantasy", "Fiction"],
       "summary": "A young hobbit, Frodo Baggins, inherits a simple ring and finds himself embroiled in a perilous quest to destroy it in the fires of Mount Doom, before the Dark Lord Sauron reclaims it.",
        "publication_date": "1954-07-29"
