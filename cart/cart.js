@@ -46,7 +46,7 @@ $(document).ready(function () {
                 if (product) {
                     // Calculate total price for the item
                     const totalPrice = (product.price * item.quantity);
-                    if(product?.categories?.includes("Drink" || "Food")){
+                    if(product?.categories?.includes("Drink") || product?.categories?.includes("Food")){
                         const cartItem = `
                         <div class="cart-item">
                             <img src="${product.img}" alt="${product.name}" class="cart-img">

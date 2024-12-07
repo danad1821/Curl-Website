@@ -199,7 +199,7 @@ $(document).ready(function () {
 
 
       booksToDisplay.forEach(function (book) {
-        const isInWishlist = wishlist.some(b => b.id === book.id);
+        const isInWishlist = wishlist[book.id];
         const bookHTML = `
             <div class="book" data-book-id="${book.id}">
                 <div class="book-image">
@@ -286,7 +286,7 @@ $(document).ready(function () {
         // }
 
         // Check if the book is already in the cart
-        const existingItem = cart.books.find((book) => book.id === bookData.id);
+        const existingItem = cart[bookData.id];
 
         if (existingItem) {
           // If the book is already in the cart, increase the quantity by 1
@@ -294,10 +294,10 @@ $(document).ready(function () {
         } else {
           // If the book isn't in the cart, add it with a quantity of 1
           bookData.quantity = 1;
-          cart.books.push(bookData);
+          cart[bookData.id]=bookData;
         }
 
-        localStorage.setItem("cart", JSON.stringify(cart));
+        localStorage.setItem("cartData", JSON.stringify(cart));
       });
 
       // // Add to wishlist functionality
