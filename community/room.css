@@ -386,6 +386,22 @@ main::-webkit-scrollbar{
     font-size: 14px;
   }
 }
+@media (max-width: 450px){
+  #newPostBtn > p {
+    display: none;
+  }
+  
+  #newPostBtn {
+    padding: 10px;
+  }
+  
+  #newPostBtn > img {
+    margin-right: 0px;
+  }
+  #newPostBtn{
+    top: 35%;
+  }
+}
 @media(max-width: 376px){
   #newPostBtn{
     top: 35%;
