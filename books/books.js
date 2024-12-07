@@ -183,8 +183,8 @@ $(document).ready(function () {
       const $booksList = $(`.books-list[data-genre="${genre}"]`);
       $booksList.empty();
 
-      const cart = JSON.parse(localStorage.getItem("cart")) || { books: [], menuItems: [], merch: [] };
-      const wishlist = JSON.parse(localStorage.getItem("wishlist")) || { books: [], menuItems: [], merch: [] };
+      let cart = JSON.parse(localStorage.getItem("cartData")) || { };
+      let wishlist = JSON.parse(localStorage.getItem("wishData")) || { };
 
       // const booksToDisplay = booksForGenre.filter((book) => {
       //   // Check if the selectedTypes array includes any type in the book's type array
@@ -199,7 +199,7 @@ $(document).ready(function () {
 
 
       booksToDisplay.forEach(function (book) {
-        const isInWishlist = wishlist.books.some(b => b.id === book.id);
+        const isInWishlist = wishlist.some(b => b.id === book.id);
         const bookHTML = `
             <div class="book" data-book-id="${book.id}">
                 <div class="book-image">
@@ -249,23 +249,23 @@ $(document).ready(function () {
         const bookData = booksForGenre.find((book) => book.id === bookId);
 
         // Toggle the wishlist state
-        const isInWishlist = wishlist.books.some(b => b.id === bookData.id);
+        const isInWishlist = wishlist[bookData.id];
         if (isInWishlist) {
           // Remove from wishlist
-          wishlist.books = wishlist.books.filter(b => b.id !== bookData.id);
+          delete wishlist[bookData.id];
           $heartIcon.removeClass("fas").addClass("far"); // Change to outlined heart
           $heartIcon.css("color", ""); // Reset the color when removed from wishlist
 
         } else {
           // Add to wishlist
-          wishlist.books.push(bookData);
+          wishlist[bookData.id]=bookData;
           $heartIcon.removeClass("far").addClass("fas"); // Change to filled heart
           $heartIcon.css("color", "#e9b9b9"); // Set the color when added to wishlist
 
         }
 
         // Save updated wishlist to localStorage
-        localStorage.setItem("wishlist", JSON.stringify(wishlist));
+        localStorage.setItem("wishData", JSON.stringify(wishlist));
       });
 
 
