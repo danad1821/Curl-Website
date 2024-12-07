@@ -255,7 +255,7 @@ $(document).ready(function () {
 
   // Fetch wishlist data and update the modal
   $.getJSON("../data.json", function (data) {
-    const allItems = data.menu_menu.concat(data.books, data.merch);
+    const allItems = data.menu_menu.concat(data.books, data.merch, data.menu);
 
     // Function to update localStorage with new wishData
     function updateWishStorage() {

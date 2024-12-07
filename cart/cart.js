@@ -12,7 +12,7 @@ $(document).ready(function () {
 
     // Fetch data.json to get item details
     $.getJSON("../data.json", function (data) {
-        const allItems = data.menu_menu.concat(data.books, data.merch);
+        const allItems = data.menu_menu.concat(data.books, data.merch, data.menu);
 
         // Function to update the cart in localStorage
         function updateCartStorage() {
@@ -31,7 +31,7 @@ $(document).ready(function () {
                 if (product) {
                     return total + (product.price * item.quantity);
                 }
-                return total;
+                return total.toFixed(2);
             }, 0);
         }
 
@@ -69,7 +69,7 @@ $(document).ready(function () {
                     `;
                     cartContainer.append(cartItem);
                     }
-                    else if(product?.author){
+                    else if(product?.title){
                         const cartItem = `
                         <div class="cart-item">
                             <img src="${product.img}" alt="${product.title}" class="cart-img">
