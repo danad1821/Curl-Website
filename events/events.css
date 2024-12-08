@@ -126,16 +126,17 @@
     align-items: center; /* Centers content vertically */
   }
   .event-box:hover .event-overlay {
-    opacity: 0.5; /* Semi-transparent white overlay on hover */
+    opacity: 0.8; /* Semi-transparent white overlay on hover */
   }
 
   .event-text {
     color: #37474F;
-    font-size: 20px;
-    font-weight: bolder;
-   
+    font-size: 24px;
+    text-shadow: -1px 0, 0 1px, 1px 0, 0 -1px, -1px -1px, 1px 1px, -1px 1px, 1px -1px #37474F;
     text-align: center;
-    
+    position: absolute;
+    z-index: 2;
+    letter-spacing: 1px;
   }
   
   /* .event-img {
