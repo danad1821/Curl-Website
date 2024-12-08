@@ -5,14 +5,7 @@
     color: #37474f;
     font-family: "Poppins", sans-serif;
 }
-
-.Merch{
-    background-color: #F1EAE4;
-    border-radius: 25px;
-    padding: 4px 10px;
-    text-align: center;
-}
-
+  
   .body{
     background-color: #c0dde5;
     overflow-x: hidden;
@@ -30,26 +23,25 @@
     margin-left: -200px;
   
   }
+
+  
+
   .merch-label {
     width: 500px;
     height: 150px;
-    margin-left: -10%;
-    
 
   }
   .merch-div{
     margin-left: -80px;
-    position: relative;
-    top: -100px;
+    margin-top: -100px;
     
   }
   .merch-div p{
-    width: 90%;
     text-align: center;
-    margin-top: 50px;
-    margin-left: -20px;
+    margin-top: 20px;
+    margin-left: 0px;
   }
-  
+
   /* General styles */
   body {
     font-family: 'Arial', sans-serif;
@@ -68,14 +60,11 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
     background-color: #F1EAE4;
-    border-top-left-radius: 400px;
-    border-top-right-radius: 400px;
-    border-bottom-left-radius: 400px;
-    border-bottom-right-radius:400px ;
+    border-radius: 20vw;
      gap: 20px;
     padding: 150px;
     margin: 0 auto;
-    margin-top: -150px;
+    margin-top: -10vw;
   }
   
   /* Product card */
@@ -91,17 +80,15 @@
   }
   
   .product-image {
-    width: auto;
+    width: 170px;
     height: 250px;
     margin-bottom: 10px;
   }
-  
   
   .product-name {
     font-size: 14px;
     color: #333;
     margin: 10px 0;
-    font-weight:bold;
   }
   
   /* Price and selector container */
@@ -153,18 +140,15 @@
     color: #555;
   }
   
-  /* Heart icon */
   .heartIcon {
-    margin-top: 10px;
-    width: 24px;
-    height: 24px;
+    fill: #37474f;
+    width: 35px;
+    height: 35px;
     cursor: pointer;
-    transition: fill 0.3s ease;
-    margin-left: 7px;
-    fill: #37474F;
-  }
-  
-
+    transition: fill 0.3s;
+    margin-left:10px;
+    margin-top: 10px;
+}
   /* General styles for the selector */
 .selector {
     margin-top: 10px;
@@ -178,14 +162,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color:#E9B9B9;
+    background-color: #E9B9B9;
     border-radius: 50px;
     padding: 5px 15px;
     gap: 10px;
   }
-  .quantity-control:hover{
-    background-color: #37474f;
-  }
+  
   .control-btn {
     background: none;
     border: none;
@@ -196,9 +178,6 @@
     transition: color 0.3s ease;
   }
   
-  .control-btn:hover {
-    color: #37474f;
-  }
   
   .quantity-label {
     font-size: 16px;
@@ -225,67 +204,9 @@
     background-color: #37474f;
     color: white;
   }
-  #merch-content {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Shrinks further for smaller screens */
-    gap: 20px;
-    padding: 50px;
-    margin: 0 auto;
-    background-color: #F1EAE4;
-    border-radius: 400px;
-  }
-  
-  /* Adjustments for smaller screens */
-  @media (max-width: 768px) {
-    #merch-content {
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Shrinks cards more for tablets */
-      padding: 20px;
-    }
-  
-    .product-image {
-      height: 200px; /* Smaller height for images */
-    }
-  
-    .add-btn {
-      font-size: 14px;
-      padding: 5px 10px; /* Smaller button sizes */
-    }
-  
-    .merch-label {
-      width: 80%; /* Allow text containers to shrink */
-    }
-  
-    .girl {
-      width: 70%;
-      margin-left: 0; /* Centered for smaller devices */
-    }
-  }
-  
-  @media (max-width: 480px) {
-    #merch-content {
-      grid-template-columns: 1fr; /* One column layout for mobile */
-      padding: 10px;
-    }
-  
-    .product-image {
-      height: 150px;
-      width: auto; /* Even smaller images */
-    }
-  
-    .price-and-selector-container {
-      flex-direction: column; /* Stack price and buttons */
-      align-items: center;
-    }
-  
-    .add-btn {
-      font-size: 12px; /* Adjust button font size */
-      padding: 5px; /* Compact padding */
-    }
-    .merch-label{
-        width: 70%;
-        margin-top: 65px;
-        margin-right: 50px;
-    }
+  .merchHeartIcon {
+    width: 17px;
+    height: 17px;
   }
 
 /* styling header*/
@@ -1117,3 +1038,33 @@ label {
         width: 80%;
     }
 }
+
+@media (max-width: 990px) {
+    .merch-div {
+        margin-top: -60px;
+    }
+    .merch-label {
+        width: 400px;
+        height: 120px;
+    }
+    .merch-div p{
+        font-size: 16px;
+    }
+  }
+  @media (max-width: 800px) {
+    .girl {
+        display: none;
+    }
+    #merch-content {
+        margin-top: 0px;
+        padding: 50px;
+    }
+    .merch-div {
+        margin-top: 20px;
+        width: 500px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0px;
+    }
+  }
