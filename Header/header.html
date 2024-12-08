@@ -1,102 +1,284 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../Header/CSS/header.css">
-    <link rel="stylesheet" href="../Header/CSS/search.css">
-    <link rel="stylesheet" href="../Header/CSS/signin.css">
-    <link rel="stylesheet" href="../Header/CSS/burger.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Header</title>
+    <link rel="stylesheet" href="../Header/CSS/header.css" />
+    <link rel="stylesheet" href="../Header/CSS/search.css" />
+    <link rel="stylesheet" href="../Header/CSS/signin.css" />
+    <link rel="stylesheet" href="../Header/CSS/burger.css" />
+    <link rel="stylesheet" href="../Header/CSS/wishlist.css">  
 </head>
-<body>
+  <body>
     <nav class="navbar">
-        <div class="navdiv">
-            <div class="Logo">
-                <img src="/designImages/Logo[1].png" alt="Curl_Logo" class="Logo">
-            </div>
-    
-            <div class="list">
-                <ul class="center-nav" id="navList">
-                    <div class="close" id="closeIcon" style="display: none;">✖</div>
-                    <li id="nav" class="Home"><a href="../index.html"> Home </a> </li>
-                    <li id="nav" class="About"> <a href="../about/about.html"> About us </a> </li>
-                    <li id="nav" class="Community"> <a href="../community/community.html"> Community </a> </li>
-                    <li id="nav" class="Events"> <a href="../events/events.html"> Events </a> </li>
-                    <li id="nav" class="Menu"> <a href="../menu/menu.html"> Menu </a> </li>
-                    <li id="nav" class="Book"> <a href="../books/books.html"> Books </a> </li>
-                    <li id="nav" class="Merch"> <a href="../merch/merch.html"> Merch </a> </li>
-                </ul>
-            </div>
-
-            <div class="right-section" id="right-section">
-                <button class="SignIn" id="signInBtn"> <a href="#"> Sign in </a> </button>
-                <ul class="icons">
-                        <li id="icon" class="searchIcon">
-                            <div class="search-container">
-                                <input type="text" placeholder="Search..." class="search-input" id="search-input" aria-label="Search" />
-                                <a href="#" class="close-icon" id="close-icon" aria-label="Close search">
-                                    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round"
-                                        stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M6 18L18 6M6 6l12 12" />
-                                    </svg>
-                                </a>
-                            </div>
-                            <a href="#" class="search-icon" id="search-icon" aria-label="Search">
-                                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round"
-                                    stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M11 3a8 8 0 1 0 0 16 8 8 0 1 0 0-16z"></path>
-                                    <path d="m21 21-4.35-4.35"></path>
-                                </svg>
-                            </a>
-                        </li>
-                        <li id="icon">
-                            <a href="#">
-                            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round"
-                                stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
-                                </path>
-                            </svg>
-                            </a>
-                        </li>
-                        <li id="icon">
-                            <a href="#">
-                            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round"
-                                stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M9 20a1 1 0 1 0 0 2 1 1 0 1 0 0-2z"></path>
-                                <path d="M20 20a1 1 0 1 0 0 2 1 1 0 1 0 0-2z"></path>
-                                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
-                            </svg>
-                            </a>
-                        </li>
-                        <div class="burger" id="burgerIcon">
-                            <div class="line"></div>
-                            <div class="line"></div>
-                            <div class="line"></div>
-                        </div>
-                </ul>
-                
-            </div>
+      <div class="navdiv">
+        <div class="Logo">
+          <img src="../designImages/Logo[1].png" alt="Curl_Logo" class="Logo" />
         </div>
+
+        <div class="list">
+          <ul class="center-nav" id="navList">
+            <div class="close" id="closeIcon" style="display: none">✖</div>
+            <li id="nav" class="Home"><a href="../index.html"> Home </a></li>
+            <li id="nav" class="About">
+              <a href="../about/about.html"> About us </a>
+            </li>
+            <li id="nav" class="Community">
+              <a href="../community/community.html"> Community </a>
+            </li>
+            <li id="nav" class="Events">
+              <a href="../events/events.html"> Events </a>
+            </li>
+            <li id="nav" class="Menu">
+              <a href="../menu/menu.html"> Menu </a>
+            </li>
+            <li id="nav" class="Book">
+              <a href="../books/books.html"> Books </a>
+            </li>
+            <li id="nav" class="Merch">
+              <a href="../merch/merch.html"> Merch </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="right-section" id="right-section">
+          <button class="SignIn" id="signInBtn">
+            <a href="#"> Sign in </a>
+          </button>
+          <ul class="icons">
+            <button id="userProfileBtn">
+              <img src="../designImages/profile/Frame 4.png" alt="">
+            </button>
+            <li id="icon" class="searchIcon">
+              <div class="search-container">
+                <input
+                  type="text"
+                  placeholder="Search..."
+                  class="search-input"
+                  id="search-input"
+                  aria-label="Search"
+                />
+                <a
+                  href="#"
+                  class="close-icon"
+                  id="close-icon"
+                  aria-label="Close search"
+                >
+                  <svg
+                    width="20"
+                    height="20"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </a>
+              </div>
+              <a
+                href="#"
+                class="search-icon"
+                id="search-icon"
+                aria-label="Search"
+              >
+                <svg
+                  width="20"
+                  height="20"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path d="M11 3a8 8 0 1 0 0 16 8 8 0 1 0 0-16z"></path>
+                  <path d="m21 21-4.35-4.35"></path>
+                </svg>
+              </a>
+            </li>
+            <li id="icon" class="wishIcon">
+              <a href="javascript:void(0);" id="wishlist-btn">
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round"
+                  stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                  d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                  </path>
+              </svg>
+              </a>
+          </li>
+            <li id="icon" >
+              <a href="../cart/cart.html" id="CartIcon">
+                <svg
+                  width="20"
+                  height="20"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path d="M9 20a1 1 0 1 0 0 2 1 1 0 1 0 0-2z"></path>
+                  <path d="M20 20a1 1 0 1 0 0 2 1 1 0 1 0 0-2z"></path>
+                  <path
+                    d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"
+                  ></path>
+                </svg>
+              </a>
+            </li>
+            <div class="burger" id="burgerIcon">
+              <div class="line"></div>
+              <div class="line"></div>
+              <div class="line"></div>
+            </div>
+          </ul>
+        </div>
+      </div>
     </nav>
     <div id="search-results"></div>
 
     <div id="signInModal" class="modal">
-        <div class="modal-content">
-            
-            <h2>Sign In</h2>
+      <button class="remove-signin" data-id="${id}" aria-label="Remove item">
+        <svg width="256px" height="256px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9 9L11.9999 11.9999M11.9999 11.9999L14.9999 14.9999M11.9999 11.9999L9 14.9999M11.9999 11.9999L14.9999 9M12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+    </button>
+      <div class="inner-modal">
+        <img class="girl-sitting" src="/designImages/Girl Sitting.png" alt="" />
+        <div class="inner-modal-2">
+          <h1><b> Welcome Back! </b></h1>
+          <div class="modal-content">
             <form>
-                <label for="username">Username</label>
-                <input type="text" id="username" name="username" required>
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password" required>
-                <button type="submit">Sign In</button>
+              <label for="username"><b>Username/Email</b></label>
+              <input
+                type="text"
+                id="username"
+                name="username"
+                required
+                placeholder="ilovebooks15"
+              />
+              <label for="password"><b>Password</b></label>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                required
+                placeholder="abcd123"
+              />
+              <br />
+              <button type="submit" class="sign-in-submit-btn"><b> Sign In </b></button>
+              <h6>or</h6>
+              <div class="google-signin">
+                <img
+                  src="/designImages/Google.png"
+                  alt="Google Logo"
+                  class="google-logo"
+                />
+                <span>Sign in with Google</span>
+              </div>
+              
             </form>
+            <p class="bottomSignFormText">Don't have an account? <button class="bottomSignFormLink" id="signUpBtn">Sign Up</button></p>
+          </div>
         </div>
+      </div>
     </div>
+
+
+    <div id="signUpModal" class="modal">
+      <button class="remove-signin" data-id="${id}" aria-label="Remove item">
+        <svg width="256px" height="256px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9 9L11.9999 11.9999M11.9999 11.9999L14.9999 14.9999M11.9999 11.9999L9 14.9999M11.9999 11.9999L14.9999 9M12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+    </button>
+      <div class="inner-modal">
+        <img class="girl-sitting" src="/designImages/Girl Sitting.png" alt="" />
+        <div class="inner-modal-2">
+          <h1><b> Welcome! </b></h1>
+          <div class="modal-content">
+            <form>
+              <label for="usernameSignUp"><b>Username</b></label>
+              <input
+                type="text"
+                id="usernameSignUp"
+                name="usernameSignUp"
+                required
+                placeholder="ilovebooks15"
+              />
+              <label for="emailSignUp"><b>Email</b></label>
+              <input
+                type="text"
+                id="emailSignUp"
+                name="emailSignUp"
+                required
+                placeholder="razz56@gmail.com"
+              />
+              <label for="passwordSignUp"><b>Password</b></label>
+              <input
+                type="password"
+                id="passwordSignUp"
+                name="passwordSignUp"
+                required
+                placeholder="abcd123"
+              />
+              <label for="confirm-password"><b>Password Confirnation</b></label>
+              <input
+                type="password"
+                id="password-confirmation"
+                name="password-confirmation"
+                required
+                placeholder="abcd123"
+              />
+              <br />
+              <button type="submit" class="sign-in-submit-btn"><b> Sign Up </b></button>
+              <h6>or</h6>
+              <div class="google-signin">
+                <img
+                  src="/designImages/Google.png"
+                  alt="Google Logo"
+                  class="google-logo"
+                />
+                <span>Sign in with Google</span>
+              </div>
+              
+            </form>
+            <p class="bottomSignFormText">Already have an account? <button class="bottomSignFormLink" id="signInBtnInModal">Sign In</button></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="wishlist-modal" class="wishlist-modal">
+      <div class="wishlist-modal-content">
+          <div class="wish">
+              <button class="close-modal" id="close-modal-btn" data-id="${id}" aria-label="Remove item">
+                  <svg width="256px" height="256px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M9 9L11.9999 11.9999M11.9999 11.9999L14.9999 14.9999M11.9999 11.9999L9 14.9999M11.9999 11.9999L14.9999 9M12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg>
+              </button>
+              <div class="mywish">
+                  <div class="mywish-h2">
+                      <h2>My Wishlist</h2>
+                  </div>
+                  <div id="wish-items-container">
+                      <div id="wish-items"></div>
+                  </div>
+                  <div id="wish-span">
+                      <span class="wish-span">Remember it is always to have a wish</span>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="../Header/header.js"></script>
-</body>
+  </body>
 </html>

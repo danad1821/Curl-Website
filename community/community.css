@@ -1,0 +1,493 @@
+* {
+  margin: 0;
+  padding: 0;
+  color: #37474f;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #c0dde5;
+  overflow-x: hidden;
+}
+
+#header {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.Community {
+  background-color: #f1eae4;
+  border-radius: 25px;
+  padding: 4px 10px;
+  text-align: center;
+}
+
+/* Landing Display  */
+
+.landingCommunitySection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 79vh;
+}
+.landingCommunitySection h1 {
+  font-family: "New Class", sans-serif;
+  font-size: 13dvw;
+  font-weight: 300;
+  position: absolute;
+  top: 20%;
+  left: 17%;
+}
+.landingCommunitySection > img,
+.landingCommunitySection > div {
+  position: absolute;
+}
+#manImage {
+  width: 38%;
+  left: 13%;
+  top: -3%;
+}
+.landingCommunitySection > div {
+  width: 30%;
+  bottom: 33%;
+  right: 32%;
+  text-align: center;
+  font-size: 24px;
+}
+#curledCat {
+  left: 1%;
+  width: 20%;
+  bottom: -15%;
+  transform: rotate(-45deg);
+}
+#girlWithBook {
+  left: 12%;
+  width: 23%;
+  bottom: -5%;
+}
+#arms {
+  width: 19%;
+  left: 24%;
+  top: 17%;
+}
+#chatBubbles {
+  top: 10%;
+  right: 16%;
+  width: 10%;
+}
+#girlsWithBook {
+  bottom: -15%;
+  right: 3%;
+  width: 30%;
+}
+#catOnN {
+  top: 12%;
+  width: 8%;
+  right: 34.5%;
+}
+#strechingCat {
+  width: 15%;
+  bottom: -9%;
+  left: 30%;
+}
+#sleepingCat {
+  width: 15%;
+  bottom: -9%;
+  right: 33%;
+}
+
+/* Main Content  */
+.mainContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.communityPageBtn {
+  color: #f1eae4;
+  font-size: 18px;
+  background-color: #e9b9b9;
+  border-radius: 159px;
+  padding: 10px 16px;
+  border: none;
+  font-weight: 600;
+}
+
+.communityPageBtn:hover {
+  background-color: #37474f;
+  color: #f1eae4;
+}
+
+.communityPageBtn {
+  transition: background-color 0.3s, color 0.3s;
+}
+#createBtn{
+  margin-top: 50px;
+  padding: 12px 18px;
+}
+
+#roomsDisplay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+.roomDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 40px;
+}
+.roomInnerDiv {
+  background-color: #f1eae4;
+  border-radius: 50px;
+  width: 300px;
+  height: 300px;
+  position: relative;
+}
+
+.roomImg {
+  border-radius: 50px;
+  width: 100%;
+  height: 100%;
+}
+.roomTitle{
+  position: absolute;
+  bottom: 7%;
+  background-color: #e9b9b9;
+  width: 100%;
+  text-align: center;
+  padding: 5px 0;
+  color: #F1EAE4;
+  font-weight: 600;
+}
+.joinBtn{
+  padding: 5px 16px;
+}
+.roomDesc{
+  width: 250px;
+  text-align: center;
+  margin: 20px 0;
+}
+.closeBtn{
+  align-self: flex-end;
+  fill: none;
+  stroke: #37474f;
+  cursor: pointer;
+}
+/* Footer Section */
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+  background-color: #f1eae4;
+  align-self: flex-end;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  position: relative;
+  padding: 10px 0;
+  z-index: 2;
+}
+
+.logo {
+  text-align: center;
+}
+
+.logo-circle {
+  background-color: #c0dde5;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-circle img {
+  width: 120px;
+  height: 74px;
+}
+
+.logo-circle p {
+  font-size: 14px;
+  color: black;
+}
+
+.about,
+.contact {
+  text-align: left;
+}
+
+.about h3,
+.contact h3 {
+  font-size: 20px;
+  color: black;
+  margin-bottom: 5px;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+.about p,
+.contact p {
+  font-size: 16px;
+  color: black;
+  margin: 4px 0;
+}
+
+.copyright {
+  background-color: #c0dde5;
+  font-size: 12px;
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+  position: relative;
+  z-index: 2;
+  top: 20px;
+}
+
+/* create room popup */
+#createRoomPopup .modal-content{
+  background-color: #F1EAE4;
+}
+#createRoomPopup .modal-body>div{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 10px 0;
+}
+#createRoomPopup .modal-body>div label{
+  font-weight: 600;
+}
+#createRoomPopup .modal-body>div input{
+  border: 2px solid black;
+  border-radius: 20px;
+  padding: 6px 20px;
+  background-color: #F1EAE4;
+}
+#createRoomPopup .modal-body>div:nth-child(2) input, #createRoomPopup .modal-body>div:nth-child(3) input{
+  height: 70px;
+  border-radius: 50px;
+}
+#createRoomPopup .modal-body>div:nth-child(3) input{
+  width: 90%;
+}
+#createRoomPopup .modal-body>div:nth-child(3)>div{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#createRoomPopup .modal-body>button{
+  background-color: #e9b9b9;
+  color: #f1eae4;
+  padding: 5px 20px;
+  border: none;
+  border-radius: 27px;
+  font-weight: 600;
+  transition: background-color 0.3s, color 0.3s;
+  margin-top: 15px;
+}
+#createRoomPopup .modal-body>button:hover {
+  background-color: #37474f;
+  color: #f1eae4;
+}
+#createRoomPopup .modal-body>div:nth-child(3)>div>button{
+  border-radius: 100%;
+  border: 2px solid black;
+  padding: 10px 10px;
+}
+.linkIcon{
+  width: 30px;
+  height: 30px;
+  fill: #37474f;
+}
+@media(max-width: 1250px){
+  #manImage {
+    width: 38%;
+    left: 13%;
+    top: -3%;
+  }
+  .landingCommunitySection > div {
+    width: 30%;
+    bottom: 40%;
+    right: 32%;
+    text-align: center;
+    font-size: 20px;
+  }
+  #curledCat {
+    left: 3%;
+    width: 20%;
+    bottom: -10%;
+  }
+  #girlWithBook {
+    left: 12%;
+    width: 23%;
+    bottom: 5%;
+  }
+  #arms {
+    width: 19%;
+    left: 24%;
+    top: 15%;
+  }
+  #girlsWithBook {
+    bottom: -10%;
+    right: 3%;
+    width: 30%;
+  }
+  #catOnN {
+    top: 12%;
+    width: 8%;
+    right: 34.5%;
+  }
+  #strechingCat {
+    width: 15%;
+    bottom: 0%;
+    left: 30%;
+  }
+  #sleepingCat {
+    width: 15%;
+    bottom: 0%;
+    right: 33%;
+  }
+ 
+}
+@media(max-width: 1180px){
+  .landingCommunitySection{
+    height: 73vh;
+  }
+ 
+}
+@media (max-width: 1157px) {
+  .Community {
+    background-color: #c0dde5;
+  }
+}
+@media(max-width: 1110px){
+  .landingCommunitySection{
+    height:70vh;
+  }
+  .landingCommunitySection>div{
+    font-size: 18px;
+  }
+}
+@media(max-width: 1080px){
+  .landingCommunitySection{
+    height: 68vh;
+  }
+  #girlWithBook{
+    bottom: 3%;
+  }
+}
+@media(max-width: 1045px){
+  .landingCommunitySection{
+    height: 66vh;
+  }
+}
+@media (max-width: 1000px) {
+  #manImage, #arms, #girlWithBook, #girlsWithBook, #curledCat, #sleepingCat, #strechingCat, #catOnN, #chatBubbles{
+    display: none;
+  }
+  .landingCommunitySection{
+    height: 45vh;
+    display: flex;
+    flex-direction: column;
+  }
+  .landingCommunitySection h1 {
+    font-family: "New Class", sans-serif;
+    font-size: 15dvw;
+    font-weight: 300;
+    position: static;
+  }
+  .landingCommunitySection>div{
+    position: static;
+    width: 50vw;
+    margin-top: -20px;
+  }
+  #createBtn{
+    margin-top: 5px;
+  }
+}
+
+@media (max-width: 855px) {
+  .communityPageBtn {
+    font-size: 14px;
+  }
+  .contact {
+    margin-left: 0;
+  }
+}
+@media (max-width: 650px) {
+  .communityPageBtn {
+    color: #f1eae4;
+    font-size: 12px;
+  }
+}
+@media (max-width: 1080px) {
+  .contact {
+    margin-right: 0px;
+  }
+}
+
+@media (max-width: 750px) {
+  footer {
+    align-items: center;
+    width: 100%;
+    background-image: none;
+    background-color: #f1eae4;
+    height: fit-content;
+    margin-top: 0;
+    padding-top: 10px;
+  }
+  .footer-content {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 10px;
+    width: auto;
+  }
+  footer {
+    background-image: none;
+    background-color: #f1eae4;
+    height: fit-content;
+    margin-top: 0;
+    padding-top: 5px;
+  }
+}
+
+@media (max-width: 600px) {
+  footer {
+    align-items: center;
+    width: 100%;
+  }
+  .footer-content {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 10px;
+    width: auto;
+  }
+}
+
+@media (max-width: 374px) {
+  .roomDiv{
+    margin-left: 0;
+    margin-right: 0;
+  }
+}

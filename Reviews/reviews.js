@@ -4,7 +4,7 @@ fetch('../data.json') // Go up one level to fetch data.json
         const reviews = data.reviews;
         reviews.forEach((review, index) => {
             const reviewCard = document.getElementById(`review-${index + 1}`);
-            
+
             // Create star rating
             const starsDiv = document.createElement('div');
             starsDiv.className = 'star-rating';
