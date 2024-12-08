@@ -5,8 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Curl</title>
-    <link rel="stylesheet" href="books.css">
-    <link rel="stylesheet" href="style.css" />
 
     <!-- poppins font used on webpage  -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -19,6 +17,9 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <!-- <link rel="stylesheet" href="../Header/CSS/search.css"> -->
+    <link rel="stylesheet" href="books.css">
 
 </head>
 
@@ -48,9 +49,13 @@
             <div id="TypesOfBooks">
                 <h3>Types of Books</h3>
                 <ul>
-                    <a href="">Books</a>
-                    <a href="">Ebooks</a>
-                    <a href="">Audio Books</a>
+                    <!-- <li><a href="#">Books</a></li>
+                    <li><a href="#">Ebooks</a></li>
+                    <li><a href="#">Audio Books</a></li> -->
+
+                    <a href="#" class="filter-link" data-type="book">Books</a>
+                    <a href="#" class="filter-link" data-type="ebook">Ebooks</a>
+                    <a href="#" class="filter-link" data-type="audio">Audio Books</a>
                 </ul>
             </div>
 
@@ -61,36 +66,89 @@
                     <a href="">Romance</a>
                     <a href="">Young Adult</a>
                     <a href="">Mystery</a>
-                    <a href="">Comedy</a>
+                    <!-- <a href="">Comedy</a>
                     <a href="">Thriller</a>
                     <a href="">Family</a>
                     <a href="">Philosophy</a>
                     <a href="">Psychology</a>
-                    <a href="">Science-Fiction</a>
+                    <a href="">Science-Fiction</a> -->
                 </ul>
             </div>
 
             <div id="price">
                 <h3>Price</h3>
             </div>
+
+            <div id="price-slider">
+                <span id="current-price"></span>
+                <div id="slider"></div>
+                <div id="price-range">
+                    <span id="min-price"></span>
+                    <span id="max-price"></span>
+                </div>
+            </div>
+
         </div>
         <div id="books">
             <div id="booksTop">
                 <div id="bookFilteredGenres">
                     <p>Books</p>
+                    <div id="selected-genres-container"></div>
                 </div>
 
                 <div id="search-sort">
-                    <button>Search <i class="fa-solid fa-magnifying-glass" style="color: #f1eae4;"></i></button>
-                    <button>Sort By</button>
+                    <button>
+                        <p>Search</p> <i class="fa-solid fa-magnifying-glass" style="color: #f1eae4;"></i>
+                    </button>
+                    <button id="sort-btn">Sort By</button>
+                </div>
+                <div id="search-results"></div>
+
+                <!-- Sort options popup -->
+                <div id="sort-popup" class="sort-popup">
+                    <ul>
+                        <li class="sort-option" data-sort="new-to-old">New to Old</li>
+                        <li class="sort-option" data-sort="old-to-new">Old to New</li>
+                        <li class="sort-option" data-sort="high-to-low">High to Low Price</li>
+                        <li class="sort-option" data-sort="low-to-high">Low to High Price</li>
+                    </ul>
                 </div>
             </div>
 
-            <div id="books-container"></div>
-
+            <div id="books-container">
+                <!-- books appear here -->
+            </div>
         </div>
 
     </section>
+
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="logo">
+                <div class="logo-circle">
+                    <img src="../designImages/Logo[1].png" alt="" />
+                </div>
+            </div>
+            <div class="about">
+                <h3>About us</h3>
+                <p>Bookstore/Coffee shop</p>
+                <p>Events</p>
+                <p>Community</p>
+                <p>Badaro St., Beirut, Lebanon</p>
+            </div>
+            <div class="contact">
+                <h3>Contact Us</h3>
+                <p>curlcoffee</p>
+                <p>Curl book & coffee shop</p>
+                <h3>Help</h3>
+                <p>hello@curlcoffee.com</p>
+            </div>
+        </div>
+        <p class="copyright">© Copyright</p>
+    </footer>
 
 
 
@@ -100,8 +158,10 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-    <!-- our js file  -->
-    <!-- <script src="main.js"></script> -->
+
+
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="books.js"></script>
 </body>
 

@@ -4,42 +4,57 @@
   color: #37474f;
   font-family: "Poppins", sans-serif;
 }
+
+main{
+  overflow: scroll;
+  max-height: 300vh;
+  overflow-x: hidden;
+  padding: 10px 0;
+}
+main::-webkit-scrollbar{
+  display: none;
+}
 /* Top section of room  */
 #topSection {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   margin: 0 30px;
+  padding: 10px 0;
+  background-color: #c0dde5;
 }
 .roomName {
-  font-family: "New Class", sans-serif;
+  font-family: "New Class", sans-serif;;
 }
 .postBtn {
   background-color: #e9b9b9;
   color: #f1eae4;
   font-size: 20px;
   display: flex;
+  align-items: center;
+  max-height: min-content;
   padding: 5px 15px;
   border: none;
+  max-width: 160px;
   border-radius: 27px;
   font-weight: 600;
+  position: fixed;
+  top: 19%;
+  right: 5%;
+  z-index: 1000;
 }
 .postBtn > img {
-  width: 25px;
-  height: 25px;
-  margin-right: 3px;
+  width: 22px;
+  height: 22px;
+  margin-right: 5px;
 }
-.postBtn:hover, .smallPostBtn:hover, #fileInputDiv > label:hover {
+.postBtn:hover, .smallPostBtn:hover, #fileInputDiv > label>p:hover {
   background-color: #37474f;
   color: #f1eae4;
 }
 
-.postBtn, .smallPostBtn, #fileInputDiv > label{
+.postBtn, .smallPostBtn, #fileInputDiv > label>p{
   transition: background-color 0.3s, color 0.3s;
-}
-.mainUserIcon {
-  width: 100px;
-  height: 100px;
 }
 /* Post popup */
 .modal {
@@ -67,11 +82,18 @@
   align-items: center;
   width: 70%;
 }
-#fileInputDiv > label {
+#fileInputDiv>label{
+  cursor: pointer;
+}
+#fileInputDiv > label>p {
   background-color: #e9b9b9;
   color: white;
   padding: 5px 18px;
   border-radius: 50px;
+  margin: 0;
+}
+#inputImg{
+  display: none;
 }
 #fileInput {
   display: none;
@@ -105,7 +127,7 @@
   padding: 4px 15px;
   color: #ffff;
   border-radius: 25px;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 
@@ -113,23 +135,29 @@
 #postsSection{
   display: flex;
   flex-direction: column;
+  gap: 30px;
+  width: 100vw;
+  align-self: center;
 }
+
 .post{
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 25px 10px;
-  max-height: 70vh;
-  gap: 40px;
+  /* max-height: 70vh; */
+  gap: 30px;
+  flex-wrap: wrap;
 }
 .postDiv{
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 40%;
+  width: 45%;
   background-color: #f1eae4;
   border-radius: 40px;
+  min-width: 300px;
 }
 .topPostSection{
   display: flex;
@@ -143,7 +171,7 @@
   padding: 10px;
 }
 .topPostSection>h2{
-  font-size: 24px;
+  font-size: 18px;
   font-weight: 700;
   margin: 0;
 }
@@ -151,7 +179,7 @@
   width: 50px;
   height: 50px;
   margin-left: 7%;
-  margin-right: 5px;
+  margin-right: 10px;
 }
 .postMainContent{
   display: flex;
@@ -177,8 +205,9 @@
   display: flex;
   align-items: center;
   margin-right: 10px;
+  font-weight: 600;
 }
-.heartIcon{
+.heartIcon, .commentIcon{
   margin-right: 5px;
 }
 .icon{
@@ -187,18 +216,26 @@
   fill: #37474f;
   cursor: pointer;
 }
+.iconImg{
+  height: 21.5px;
+  width: 25px;
+  display: none;
+  margin-right: 5px;
+}
 
 /* comments  */
 .commentsDiv{
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   background-color: #f1eae4;
   width: 30%;
-  border-radius: 30px;
-  height: 70vh;
+  min-width: 300px;
+  border-radius: 35px;
+  height: 70dvh;
   overflow-y: scroll;
+  min-width:200px;
 }
 .commentsDiv::-webkit-scrollbar{
   display: none;
@@ -206,11 +243,12 @@
 .topCommentSection{
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   background-color: #e9b9b9;
-  border-radius: 50px;
+  border-radius: 48px;
   width: 100%;
-  padding: 5px 0;
+  padding: 5.2px 30px;
+  font-weight: 600;
 }
 .topCommentSectionUser, .topCommentSectionActions{
   display: flex;
@@ -221,14 +259,151 @@
   width: 50px;
   height: 50px;
 }
+.topCommentSectionActions{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.topCommentSectionActions>svg{
+  width: 25px;
+  height: 25px;
+  margin: 0 5px;
+}
 .topCommentSectionUser>h3, .topCommentSectionActions>p{
   margin: 0%;
   font-size: 20px;
   font-weight: 700;
+  margin-right: 5px;
+}
+.topCommentSectionUser>h3{
+  margin-left: 10px;
+  font-size: 16px;
 }
 .replyIcon{
   transform: scaleX(-1);
 }
 .commentMainSection{
   margin: 20px 25px;
+}
+
+/* comment and reply popups  */
+#commentModal .modal-content, #replyModal .modal-content{
+  background-color: #f1eae4;
+}
+#commentModal .modal-body, #replyModal .modal-body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+#commentModal label, #replyModal label{
+  font-weight: 600;
+}
+#commentModal textarea, #replyModal textarea{
+  width: 100%;
+  padding: 10px 30px;
+  height: 150px;
+  background-color: #f1eae4;
+  border-radius: 30px;
+  resize: none;
+  border: 2px solid black;
+
+}
+
+@media (max-width: 1195px){
+  .commentsDiv{
+    width: 35%;
+  }
+  .postDiv{
+    width: 50%;
+  }
+}
+@media(max-width: 980px){
+  .commentsDiv{
+    width: 37%;
+  }
+  .postDiv{
+    width: 52%;
+  }
+}
+@media(max-width: 950px){
+  .commentsDiv{
+    width: 39%;
+  }
+  .postDiv{
+    width: 54%;
+  }
+}
+@media(max-width: 910px){
+  .post{
+    gap: 0;
+  }
+  .commentsDiv{
+    width: 56%;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    height: 30vh;
+    min-width: 300px;
+  }
+  .postDiv{
+    width: 56%;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  #postsSection{
+    gap: 15px;
+  }
+ 
+}
+@media(max-width: 630px){
+  .topCommentSectionActions>p, .topCommentSectionUser>h3{
+    font-size: 16px;
+  }
+  .topCommentSectionUser>img{
+    width: 35px;
+    height: 35px;
+  }
+  .topCommentSectionActions>svg {
+    width: 20px;
+    height: 20px;
+    margin: 0 4px;
+  }
+  .commentsDiv,.postDiv{
+    width: 70%;
+  }
+}
+@media(max-width: 600px){
+
+    #newPostBtn{
+      top: 45%;
+    }
+}
+@media (max-width: 500px){
+  .postDiv, .commentsDiv{
+    width: 80%;
+  }
+  .topCommentSectionUser>h3, .topCommentSectionActions>p, .commentMainSection{
+    font-size: 14px;
+  }
+}
+@media (max-width: 450px){
+  #newPostBtn > p {
+    display: none;
+  }
+  
+  #newPostBtn {
+    padding: 10px;
+  }
+  
+  #newPostBtn > img {
+    margin-right: 0px;
+  }
+  #newPostBtn{
+    top: 35%;
+  }
+}
+@media(max-width: 376px){
+  #newPostBtn{
+    top: 35%;
+  }
 }

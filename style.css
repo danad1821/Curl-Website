@@ -276,12 +276,19 @@ body {
 .pinkAddBtn {
   font-size: 16px;
 }
-
+.heart-div{
+  position: relative;
+}
 .heartIcon {
   fill: #37474f;
   width: 20px;
   height: 20px;
   cursor: pointer;
+}
+.iconImg{
+  width: 20px;
+  height: 18px;
+  display: none;
 }
 
 /* Top Merch Section */
@@ -491,6 +498,12 @@ button.add-to-cart {
   width: 30px;
   height: 30px;
   fill: #37474f;
+}
+.closeBtn{
+  align-self: flex-end;
+  fill: none;
+  stroke: #37474f;
+  cursor: pointer;
 }
 
 @media (max-width: 500px) {
@@ -865,17 +878,24 @@ button.add-to-cart {
 
 .menu-item:last-child {
   padding-right: 5%;
-  margin-left: 0;
+  /* margin-left: 0; */
 }
-
+/* 
 .menu-item:last-child .info-section {
   margin-left: 60px;
+} */
+
+#menu-items .menu-item:nth-child(3) {
+  margin: 0 3% 0 -1% !important;
 }
 
+.menu-item:nth-child(3) .info-section{
+  margin-left: 55px;
+}
 .carrot-cake-image {
   width: 160%;
   top: -55%;
-  left: -1%;
+  left: -2%;
   z-index: 3;
 }
 

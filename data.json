@@ -8,8 +8,10 @@
         "price": 15.0,
         "rating": 4.2,
         "availability": 20,
+        "type": ["book", "audio"],
         "genres": ["Fantasy", "Adventure", "Alchemy"],
-        "summary": "Explore a world where alchemy shapes lives, as characters embark on a transformative journey filled with magic and mystery."
+        "summary": "Explore a world where alchemy shapes lives, as characters embark on a transformative journey filled with magic and mystery.",
+        "publication_date": "2023-05-15"
       },
       {
         "id": 2,
@@ -19,8 +21,11 @@
         "price": 12.0,
         "rating": 4.0,
         "availability": 20,
+        "type": ["ebook", "book", "audio"],
         "genres": ["Romance", "Contemporary", "Drama"],
-        "summary": "An emotional dive into the art of letting go and the bittersweet beauty of love that wasn't meant to last."
+        "summary": "An emotional dive into the art of letting go and the bittersweet beauty of love that wasn't meant to last.",
+        "publication_date": "2023-05-15"
+
       },
       {
         "id": 3,
@@ -30,8 +35,11 @@
         "price": 11.0,
         "rating": 4.6,
         "availability": 20,
+        "type": ["book"],
         "genres": ["Fiction", "Romance", "Contemporary"],
-        "summary": "Lily's story of love and resilience as she navigates a complex relationship, drawing strength from her past."
+        "summary": "Lily's story of love and resilience as she navigates a complex relationship, drawing strength from her past.",
+        "publication_date": "2016-08-02"
+
       },
       {
         "id": 4,
@@ -41,8 +49,10 @@
         "price": 9.0,
         "rating": 4.7,
         "availability": 40,
+        "type": ["ebook", "book"],
         "genres": ["Fiction", "Children", "Adventure", "Fantasy"],
-        "summary": "An orphaned boy discovers a magical peach, leading to a whimsical adventure with newfound insect friends."
+        "summary": "An orphaned boy discovers a magical peach, leading to a whimsical adventure with newfound insect friends.",
+        "publication_date": "1961-07-01"
       },
       {
         "id": 5,
@@ -52,8 +62,11 @@
         "price": 15.0,
         "rating": 4.8,
         "availability": 9,
+        "type": ["book", "audio"],
         "genres": ["Fiction", "Fantasy", "Epic", "Adventure"],
-        "summary": "Frodo Baggins embarks on a perilous journey to destroy the One Ring and save Middle-earth from darkness."
+        "summary": "Frodo Baggins embarks on a perilous journey to destroy the One Ring and save Middle-earth from darkness.",
+        "publication_date": "1954-07-29"
+
       },
       {
         "id": 6,
@@ -63,8 +76,11 @@
         "price": 11.0,
         "rating": 4.1,
         "availability": 3,
+        "type": ["book"],
         "genres": ["Romance", "Contemporary", "Drama"],
-        "summary": "A heartfelt story of love, sacrifice, and the power of human connection."
+        "summary": "A heartfelt story of love, sacrifice, and the power of human connection.",
+        "publication_date": "2020-05-01"
+
       },
       {
         "id": 7,
@@ -74,6 +90,7 @@
         "price": 8.0,
         "rating": 4.1,
         "availability": 6,
+        "type": ["ebook", "book", "audio"],
         "genres": ["Fiction", "Children", "Adventure"],
         "summary": "A spirited girl’s adventure as she navigates mysteries and challenges in her fantastical world."
       },
@@ -85,8 +102,10 @@
         "price": 10.0,
         "rating": 4.7,
         "availability": 34,
+           "type": ["ebook", "book", "audio"],
         "genres": ["Fiction", "Mystery", "Crime", "Classic"],
-        "summary": "Detective Hercule Poirot investigates a murder aboard the luxurious Orient Express."
+        "summary": "Detective Hercule Poirot investigates a murder aboard the luxurious Orient Express.",
+        "publication_date": "1934-01-01"
       },
       {
         "id": 9,
@@ -96,8 +115,10 @@
         "price": 12.0,
         "rating": 4.4,
         "availability": 31,
+        "type": ["ebook", "book"],
         "genres": ["Fiction", "Contemporary", "Romance", "Drama"],
-        "summary": "The complex relationship of Marianne and Connell as they navigate love, class, and personal growth."
+        "summary": "The complex relationship of Marianne and Connell as they navigate love, class, and personal growth.",
+        "publication_date": "2018-08-28"
       },
       {
         "id": 10,
@@ -107,8 +128,10 @@
         "price": 16.0,
         "rating": 4.5,
         "availability": 1,
+        "type": ["ebook", "book"],
         "genres": ["Fantasy", "Romance", "Adventure"],
-        "summary": "A gripping tale of power, betrayal, and love in a magical realm where the fate of the fae king’s throne hangs in balance."
+        "summary": "With a mighty dragon looming over the kingdom and a battle threatening to unfold over the throne, the young prince struggles to face his brothers.",
+        "publication_date": "2021-11-01"
       },
       {
         "id": 11,
@@ -118,8 +141,10 @@
         "price": 11.0,
         "rating": 4.6,
         "availability": 20,
+        "type": ["book"],
         "genres": ["Fiction", "Fantasy", "Philosophy", "Contemporary"],
-        "summary": "Nora Seed discovers a library between life and death, exploring the infinite possibilities of her life choices."
+        "summary": "Nora Seed discovers a library between life and death, exploring the infinite possibilities of her life choices.",
+         "publication_date": "2020-08-13"
       },    
     {
       "id": 12,
@@ -129,8 +154,10 @@
       "price": 10.0,
       "rating": 4.5,
       "availability": 40,
+      "type": ["ebook", "book", "audio"],
       "genres": ["Fiction", "Young adult", "Contemporary", "LGBTQ+", "Bestseller"],
-      "summary": "Mateo and Rufus are total strangers, but, for different reasons, they're both looking to make a new friend on their End Day. The good news: There's an app for that. It's called the Last Friend, and through it, Rufus and Mateo are about to meet up for one last great adventure—to live a lifetime in a single day."
+      "summary": "Mateo and Rufus are total strangers, but, for different reasons, they're both looking to make a new friend on their End Day. The good news: There's an app for that. It's called the Last Friend, and through it, Rufus and Mateo are about to meet up for one last great adventure—to live a lifetime in a single day.",
+      "publication_date": "2017-09-05"
     },
     {
       "id": 13,
@@ -140,7 +167,8 @@
       "price": 15.99,
       "rating": 4.7,
       "availability": 10,
-      "genres": ["Fiction", "Science Fiction", "Bestseller"],
+      "type": ["ebook"],
+      "genres": ["Fiction", "Science-Fiction", "Bestseller"],
       "summary": "Ryland Grace wakes up disoriented on a spaceship drifting millions of miles from Earth, with no memory of how he got there or what his mission is. As he reconstructs his fragmented memories, he discovers that he is the sole crew member on a desperate mission to save the sun from mysteriously diminishing."
     },
     {
@@ -148,11 +176,14 @@
       "img": "https://bookaddictslb.com/wp-content/uploads/2024/01/murder-on-the-orient-express_cover.webp",
       "title": "Murder on the Orient Express",
       "author": "Agatha Christie",
-      "price": 7.99,
+      "price": 7,
       "rating": 4.8,
       "availability": 4,
+      "type": ["ebook", "book"],
       "genres": ["Fiction", "Mystery", "Classic"],
-      "summary": "Just after midnight, a snowdrift stops the luxurious Orient Express on its journey from Istanbul to London. The opulent train is now isolated, and an American tycoon lies dead in his compartment, stabbed multiple times. Poirot, a renowned detective aboard the train, volunteers to solve the murder before the train resumes its journey."
+      "summary": "Just after midnight, a snowdrift stops the luxurious Orient Express on its journey from Istanbul to London. The opulent train is now isolated, and an American tycoon lies dead in his compartment, stabbed multiple times. Poirot, a renowned detective aboard the train, volunteers to solve the murder before the train resumes its journey.",
+      "publication_date": "1934-01-01"
+
     },
     {
       "id": 15,
@@ -162,8 +193,10 @@
       "price": 12.5,
       "rating": 4.2,
       "availability": 6,
+      "type": ["book"],
       "genres": ["Fiction", "Historical Fiction", "Mythology", "Bestseller"],
-      "summary": "In the timeless world of Greek myth, Circe, the daughter of a powerful Titan and a nymph, is cast out to a deserted island for defying the gods. With her knowledge of herbs and forbidden magic, Circe transforms her exile into a kingdom, ruling over fantastical creatures and encountering famous heroes and mythical beings from Odysseus to Jason."
+      "summary": "In the timeless world of Greek myth, Circe, the daughter of a powerful Titan and a nymph, is cast out to a deserted island for defying the gods. With her knowledge of herbs and forbidden magic, Circe transforms her exile into a kingdom, ruling over fantastical creatures and encountering famous heroes and mythical beings from Odysseus to Jason.",
+       "publication_date": "1934-01-01"
     },
     {
       "id": 16,
@@ -173,6 +206,7 @@
       "price": 15.99,
       "rating": 4.6,
       "availability": 20,
+      "type": ["ebook", "book", "audio"],
       "genres": ["Fiction", "Historical Fiction", "Mythology", "LGBTQ+"],
       "summary": "Achilles, the fierce warrior of Greek myth, is young, handsome, and gifted. Patroclus is an awkward young prince ostracized by his family. Their fates are intertwined when Patroclus is exiled to Achilles' court. What starts as a friendship blossoms into a love that will endure through life and death."
     },
@@ -184,8 +218,10 @@
       "price": 12.0,
       "rating": 4.2,
       "availability": 3,
+      "type": ["audio"],
       "genres": ["Fiction", "Contemporary", "Romance", "Bestseller"],
-      "summary": "Two former lovers, a writer and an editor, reconnect after several years apart. As they reminisce and explore their current lives, they must grapple with unresolved feelings and the possibility of rekindling their relationship."
+      "summary": "Two former lovers, a writer and an editor, reconnect after several years apart. As they reminisce and explore their current lives, they must grapple with unresolved feelings and the possibility of rekindling their relationship.",
+      "publication_date": "2020-07-28"
     },
     {
       "id": 18,
@@ -195,6 +231,7 @@
       "price": 18.95,
       "rating": 4.1,
       "availability": 21,
+      "type": ["ebook", "book", "audio"],
       "genres": ["Fiction", "Postcolonial Literature", "Magical Realism", "Bestseller"],
       "summary": "Set in the Guyanese rainforest, Palace of the Peacock explores themes of identity, memory, and the relationship between the human world and the natural world. The narrative is fragmented and dreamlike, challenging readers to actively participate in the creation of meaning."
     },
@@ -206,7 +243,8 @@
       "price": 14.99,
       "rating": 4.2,
       "availability": 5,
-      "genres": ["Fiction", "Science Fiction", "Utopian", "Dystopian"],
+      "type": ["audio"],
+      "genres": ["Fiction", "Science-Fiction", "Utopian", "Dystopian"],
       "summary": "Shevek, a physicist from the anarchist moon of Anarres, travels to the capitalist world of Urras. There, he encounters a society with stark contrasts to his own, facing challenges that force him to question his ideals and the possibility of utopia."
     },
     {
@@ -217,6 +255,7 @@
       "price": 16.99,
       "rating": 4.3,
       "availability": 3,
+      "type": ["book"],
       "genres": ["Fiction", "Coming-of-Age", "Family", "Bestseller"],
       "summary": "Giovanna, a twelve-year-old girl in Naples, becomes obsessed with the disappearance of her beloved father"
     },
@@ -228,7 +267,8 @@
       "price": 8.99,
       "rating": 4.2,
       "availability": 30,
-      "genres": ["Dystopian", "Fiction", "Science Fiction"],
+      "type": ["ebook", "book", "audio"],
+      "genres": ["Dystopian", "Fiction", "Science-Fiction"],
       "summary": "Set in a totalitarian state, 1984 follows the life of Winston Smith, a low-ranking government employee who begins to question the oppressive regime and its constant surveillance."
     },
     {
@@ -236,11 +276,13 @@
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqoc1ax4A5Osy7vxNSSRsEVNxFh39M1dtYTg&s",
       "title": "The Lord of the Rings",
       "author": "J.R.R. Tolkien",
-      "price": 29.99,
+      "price": 30.0,
       "rating": 4.5,
       "availability": 20,
+      "type": ["book", "audio"],
       "genres": ["Fantasy", "Fiction"],
-      "summary": "A young hobbit, Frodo Baggins, inherits a simple ring and finds himself embroiled in a perilous quest to destroy it in the fires of Mount Doom, before the Dark Lord Sauron reclaims it."
+      "summary": "A young hobbit, Frodo Baggins, inherits a simple ring and finds himself embroiled in a perilous quest to destroy it in the fires of Mount Doom, before the Dark Lord Sauron reclaims it.",
+       "publication_date": "1954-07-29"
     },
     {
       "id": 23,
@@ -250,19 +292,10 @@
       "price": 13.99,
       "rating": 4.4,
       "availability": 2,
+      "type": ["ebook"],
       "genres": ["Fiction", "Mystery", "Coming-of-Age", "Bestseller"],
-      "summary": "A quiet girl, raised alone in the marsh, becomes a suspect in the murder of a popular boy. As the story unfolds, we learn about her life, her love for nature, and the secrets she harbors."
-    },
-    {
-      "id": 24,
-      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQs4EEPYbDupdhm2d_x7wTPWn8oNarNvC5fFw&s",
-      "title": "It Ends With Us",
-      "author": "Colleen Hoover",
-      "price": 12.99,
-      "rating": 4.3,
-      "availability": 0,
-      "genres": ["Contemporary", "Romance", "Tragedy"],
-      "summary": "A love story between Lily and Ryle, a neurosurgeon, is complicated by Lily's past and the toxic patterns she struggles to break free from."
+      "summary": "A quiet girl, raised alone in the marsh, becomes a suspect in the murder of a popular boy. As the story unfolds, we learn about her life, her love for nature, and the secrets she harbors.",
+      "publication_date": "2018-08-14"
     },
     {
       "id": 25,
@@ -272,8 +305,10 @@
       "price": 14.99,
       "rating": 4.2,
       "availability": 10,
+      "type": ["book"],
       "genres": ["Psychological Thriller", "Mystery"],
-      "summary": "Alia, a famous painter, stops speaking after a shocking act of violence. Theo Faber, a forensic psychotherapist, becomes obsessed with understanding her silence and unraveling the truth behind the tragedy."
+      "summary": "Alia, a famous painter, stops speaking after a shocking act of violence. Theo Faber, a forensic psychotherapist, becomes obsessed with understanding her silence and unraveling the truth behind the tragedy.",
+       "publication_date": "2019-02-05"
     },
     {
       "id": 26,
@@ -283,8 +318,10 @@
       "price": 15.99,
       "rating": 4.1,
       "availability": 10,
+      "type": ["book"],
       "genres": ["Mystery", "Thriller", "Fiction", "Bestseller"],
-      "summary": "A glamorous wedding on a remote island turns deadly when a storm cuts off all escape routes and a shocking murder takes place."
+      "summary": "A glamorous wedding on a remote island turns deadly when a storm cuts off all escape routes and a shocking murder takes place.",
+      "publication_date": "2020-06-02"
     },
     {
       "id": 27,
@@ -294,8 +331,10 @@
       "price": 14.99,
       "rating": 4.5,
       "availability": 4,
+      "type": ["ebook", "book", "audio"],
       "genres": ["Fiction", "Historical Fiction", "Romance"],
-      "summary": "Aging Hollywood star Evelyn Hugo chooses a young, unknown journalist to reveal the truth about her glamorous life, her seven marriages, and the secrets she's kept for decades."
+      "summary": "Aging Hollywood star Evelyn Hugo chooses a young, unknown journalist to reveal the truth about her glamorous life, her seven marriages, and the secrets she's kept for decades.",
+      "publication_date": "2017-06-13"
     },
     {
       "id": 28,
@@ -305,8 +344,10 @@
       "price": 12.99,
       "rating": 4.4,
       "availability": 2,
-      "genres": ["Fiction", "Science Fiction", "Fantasy"],
-      "summary": "Set on the desert planet Arrakis, Dune follows the story of Paul Atreides, a young noble whose family is given control of the planet. As he navigates political intrigue, ecological challenges, and a powerful drug called Spice, Paul's destiny intertwines with the fate of the universe."
+      "type": ["book", "audio"],
+      "genres": ["Fiction", "Science-Fiction", "Fantasy"],
+      "summary": "Set on the desert planet Arrakis, Dune follows the story of Paul Atreides, a young noble whose family is given control of the planet. As he navigates political intrigue, ecological challenges, and a powerful drug called Spice, Paul's destiny intertwines with the fate of the universe.",
+       "publication_date": "1965-08-01"
     },
     {
       "id": 29,
@@ -316,7 +357,8 @@
       "price": 8.99,
       "rating": 4.2,
       "availability": 20,
-      "genres": ["Fiction", "Science Fiction", "Comedy", "Satire"],
+      "type": ["audio"],
+      "genres": ["Fiction", "Science-Fiction", "Comedy", "Satire"],
       "summary": "Arthur Dent, an ordinary man, finds his life turned upside down when Earth is demolished to make way for a hyperspace bypass. With the help of his eccentric friend Ford Prefect, he embarks on a hilarious and often absurd journey through the cosmos."
     },
     {
@@ -327,8 +369,10 @@
       "price": 9.99,
       "rating": 4.3,
       "availability": 8,
+      "type": ["ebook", "book", "audio"],
       "genres": ["Dystopian", "Fiction", "Young Adult"],
-      "summary": "In the dystopian nation of Panem, two teenagers from District 12, Katniss Everdeen and Peeta Mellark, are selected to compete in the annual Hunger Games, a televised event where young tributes fight to the death."
+      "summary": "In the dystopian nation of Panem, two teenagers from District 12, Katniss Everdeen and Peeta Mellark, are selected to compete in the annual Hunger Games, a televised event where young tributes fight to the death.",
+      "publication_date": "2008-09-14"
     },
     {
       "id": 31,
@@ -338,6 +382,7 @@
       "price": 16.99,
       "rating": 4.4,
       "availability": 4,
+      "type": ["audio"],
       "genres": ["Non-Fiction", "Self-Help", "Personal Development", "Bestseller"],
       "summary": "A practical guide to building good habits and breaking bad ones, focusing on small, incremental changes that lead to significant results."
     },
@@ -349,6 +394,7 @@
       "price": 15.99,
       "rating": 4.4,
       "availability": 7,
+      "type": ["book", "audio"],
       "genres": ["Non-Fiction", "History", "Science"],
       "summary": "A sweeping history of humankind from the Stone Age to the Information Age, exploring our species' unique abilities and their impact on the world."
     },
@@ -360,6 +406,7 @@
       "price": 9.99,
       "rating": 4.1,
       "availability": 5,
+      "type": ["audio"],
       "genres": ["Non-Fiction", "Self-Help", "Business"],
       "summary": "A classic self-help book that explores the principles of success, including thought, desire, faith, and persistence."
     },
@@ -371,6 +418,7 @@
       "price": 9.99,
       "rating": 4.6,
       "availability": 6,
+      "type": ["ebook", "book", "audio"],
       "genres": ["Non-Fiction", "Psychology", "Philosophy"],
       "summary": "A memoir of Viktor Frankl's experiences as a prisoner in Nazi concentration camps and his exploration of the human will to survive and find meaning in even the most horrific circumstances."
     },
@@ -382,6 +430,7 @@
       "price": 14.99,
       "rating": 4.0,
       "availability": 7,
+      "type": ["ebook", "book", "audio"],
       "genres": ["Non-Fiction", "Psychology"],
       "summary": "An exploration of the strengths and challenges faced by introverted individuals, advocating for a better understanding and appreciation of quiet personalities."
     },
@@ -393,8 +442,10 @@
       "price": 12.99,
       "rating": 4.5,
       "availability": 6,
+      "type": ["ebook", "book", "audio"],
       "genres": ["Fiction", "Young Adult", "Romance"],
-      "summary": "A heart-wrenching love story between two teenagers, Hazel Grace Lancaster and Augustus Waters, who meet in a cancer support group and navigate the complexities of life, love, and loss."
+      "summary": "A heart-wrenching love story between two teenagers, Hazel Grace Lancaster and Augustus Waters, who meet in a cancer support group and navigate the complexities of life, love, and loss.",
+      "publication_date": "2012-01-10"
     },
     {
       "id": 37,
@@ -404,19 +455,10 @@
       "price": 12.99,
       "rating": 4.1,
       "availability": 6,
-      "genres": ["Fiction", "Young Adult", "Dystopian", "Science Fiction"],
-      "summary": "In a future Chicago divided into five factions, Beatrice Prior discovers that she doesn't fit into any of them and must choose a new path that could lead to danger and rebellion."
-    },
-    {
-      "id": 38,
-      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-XewEIDM-yCiLLSynORoahhkJwn0CiHT7qg&s",
-      "title": "The Midnight Library",
-      "author": "Matt Haig",
-      "genres": ["Fiction", "Fantasy", "Philosophy"],
-      "price": 15.99,
-      "rating": 4.2,
-      "availability": 6,
-      "summary": "A heartwarming and philosophical novel about a woman who has the chance to explore infinite possibilities of her life."
+      "type": ["ebook", "book", "audio"],
+      "genres": ["Fiction", "Young Adult", "Dystopian", "Science-Fiction"],
+      "summary": "In a future Chicago divided into five factions, Beatrice Prior discovers that she doesn't fit into any of them and must choose a new path that could lead to danger and rebellion.",
+      "publication_date": "2011-04-25"
     },
     {
       "id": 39,
@@ -427,7 +469,9 @@
       "price": 14.99,
       "rating": 4.3,
       "availability": 20,
-      "summary": "A historical fantasy novel about a woman cursed with immortality, who spends centuries longing for connection."
+      "type": ["ebook", "book", "audio"],
+      "summary": "A historical fantasy novel about a woman cursed with immortality, who spends centuries longing for connection.",
+      "publication_date": "2020-10-06"
     },
     {
       "id": 40,
@@ -438,6 +482,7 @@
       "price": 16.99,
       "rating": 4.5,
       "availability": 1,
+      "type": [ "audio"],
       "summary": "A heartwarming story about two lifelong friends who create video games together."
     },
     {
@@ -449,7 +494,9 @@
       "price": 14.99,
       "rating": 4.1,
       "availability": 1,
-      "summary": "A suspenseful thriller that follows a group of night shift workers who become entangled in a dangerous mystery."
+      "type": ["ebook", "book", "audio"],
+      "summary": "A suspenseful thriller that follows a group of night shift workers who become entangled in a dangerous mystery.",
+      "publication_date": "2022-03-01"
     },
     {
       "id": 42,
@@ -460,6 +507,7 @@
       "price": 12.99,
       "rating": 4.5,
       "availability": 30,
+      "type": ["ebook", "book", "audio"],
       "summary": "A classic tale of revenge and redemption, where a wrongly imprisoned man escapes and returns to seek justice against those who betrayed him."
     },
     {
@@ -471,7 +519,9 @@
       "price": 10.99,
       "rating": 4.3,
       "availability": 30,
-      "summary": "A magical and dangerous competition where Scarlett Dragna must navigate a treacherous world to find her sister and win the game."
+      "type": ["ebook", "book", "audio"],
+      "summary": "A magical and dangerous competition where Scarlett Dragna must navigate a treacherous world to find her sister and win the game.",
+       "publication_date": "2017-01-31"
     },
     {
       "id": 44,
@@ -482,7 +532,9 @@
       "price": 11.99,
       "rating": 4.4,
       "availability": 30,
-      "summary": "Tella Dragna enters Caraval to uncover dangerous secrets about her mother and makes a deal with the mysterious and deadly Prince of Hearts."
+      "type": ["ebook", "book", "audio"],
+      "summary": "Tella Dragna enters Caraval to uncover dangerous secrets about her mother and makes a deal with the mysterious and deadly Prince of Hearts.",
+      "publication_date": "2018-05-29"
     },
     {
       "id": 45,
@@ -493,7 +545,10 @@
       "price": 12.99,
       "rating": 4.2,
       "availability": 30,
-      "summary": "The final game unfolds, where sisters Scarlett and Tella must fight for their lives and find love, balancing hope and heartbreak."
+      "type": ["ebook", "book", "audio"],
+      "summary": "The final game unfolds, where sisters Scarlett and Tella must fight for their lives and find love, balancing hope and heartbreak.",
+      "publication_date": "2019-05-07"
+
     },
     {
       "id": 46,
@@ -504,7 +559,9 @@
       "price": 11.99,
       "rating": 4.5,
       "availability": 30,
-      "summary": "Evangeline Fox makes a dangerous bargain with the Prince of Hearts to mend her broken heart, thrusting her into a world of magic and curses."
+      "type": ["ebook", "book", "audio"],
+      "summary": "Evangeline Fox makes a dangerous bargain with the Prince of Hearts to mend her broken heart, thrusting her into a world of magic and curses.",
+       "publication_date": "2021-09-28"
     },
     {
       "id": 47,
@@ -515,7 +572,9 @@
       "price": 12.99,
       "rating": 4.6,
       "availability": 30,
-      "summary": "Evangeline must navigate her feelings for the cursed Prince of Hearts while unraveling deadly secrets that could change the fate of their world."
+      "type": ["ebook", "book", "audio"],
+      "summary": "Evangeline must navigate her feelings for the cursed Prince of Hearts while unraveling deadly secrets that could change the fate of their world.",
+        "publication_date": "2022-09-13"
     },
     {
       "id": 48,
@@ -526,7 +585,9 @@
       "price": 13.99,
       "rating": 4.7,
       "availability": 30,
-      "summary": "The epic conclusion to Evangeline and Jacks' story, where curses, betrayals, and true love converge in a race against destiny."
+      "type": ["ebook", "book", "audio"],
+      "summary": "The epic conclusion to Evangeline and Jacks' story, where curses, betrayals, and true love converge in a race against destiny.",
+       "publication_date": "2023-02-28"
     },
     {
       "id": 49,
@@ -537,7 +598,10 @@
       "price": 14.99,
       "rating": 4.1,
       "availability": 3,
-      "summary": "A young boy’s life changes forever when a tragedy leaves him with a priceless painting and a web of intrigue spanning years."
+      "type": ["book"],
+      "summary": "A young boy’s life changes forever when a tragedy leaves him with a priceless painting and a web of intrigue spanning years.",
+      "publication_date": "2013-10-22"
+
     },
     {
       "id": 50,
@@ -548,7 +612,10 @@
       "price": 9.99,
       "rating": 4.8,
       "availability": 2,
-      "summary": "The witty and spirited Elizabeth Bennet navigates society, family, and her feelings for the seemingly arrogant Mr. Darcy."
+      "type": ["book"],
+      "summary": "The witty and spirited Elizabeth Bennet navigates society, family, and her feelings for the seemingly arrogant Mr. Darcy.",
+      "publication_date": "1813-01-28"
+
     },
     {
       "id": 51,
@@ -559,7 +626,10 @@
       "price": 8.99,
       "rating": 4.9,
       "availability": 6,
-      "summary": "A powerful exploration of racial injustice in the American South, seen through the eyes of a young girl named Scout Finch."
+      "type": ["ebook", "book", "audio"],
+      "summary": "A powerful exploration of racial injustice in the American South, seen through the eyes of a young girl named Scout Finch.",
+      "publication_date": "1960-07-11"
+
     },
     {
       "id": 52,
@@ -570,6 +640,7 @@
       "price": 10.49,
       "rating": 4.4,
       "availability": 2,
+      "type": ["book"],
       "summary": "The story of the mysterious Jay Gatsby and his love for Daisy Buchanan, set in the opulence of the Roaring Twenties."
     },
     {
@@ -581,6 +652,7 @@
       "price": 9.49,
       "rating": 4.2,
       "availability": 8,
+      "type": ["audio"],
       "summary": "Holden Caulfield's rebellious journey through New York City, dealing with loss, isolation, and the complexities of adulthood."
     },
     {
@@ -592,6 +664,7 @@
       "price": 11.99,
       "rating": 4.6,
       "availability": 5,
+      "type": ["ebook", "book", "audio"],
       "summary": "A young shepherd named Santiago travels from Spain to Egypt in search of treasure, discovering his personal legend along the way."
     },
     {
@@ -603,19 +676,12 @@
       "price": 12.49,
       "rating": 4.3,
       "availability": 7,
-      "summary": "An enchanting circus that appears without warning becomes the stage for a magical duel between two young magicians, whose destinies are intertwined."
+      "type": ["ebook", "book", "audio"],
+      "summary": "An enchanting circus that appears without warning becomes the stage for a magical duel between two young magicians, whose destinies are intertwined.",
+      "publication_date": "2011-09-13"
+
     },
-    {
-      "id": 56,
-      "img": "https://thecirclebookshop.com/cdn/shop/files/9780575081505_39825e29-f4b2-4a4f-be88-c784b1cd4e45_500x500_crop_center.jpg?v=1722662092",
-      "title": "Dune",
-      "author": "Frank Herbert",
-      "genres": ["Science Fiction", "Fantasy", "Adventure"],
-      "price": 13.99,
-      "rating": 4.6,
-      "availability": 5,
-      "summary": "Set in the distant future, young Paul Atreides navigates political intrigue and mysticism on the desert planet Arrakis, the only source of the universe’s most valuable substance."
-    },
+
     {
       "id": 57,
       "img": "https://thecirclebookshop.com/cdn/shop/files/9781840221985_d6cff5f5-8a84-49ef-a625-3c8d7348d6b0_500x500_crop_center.jpg?v=1722649385",
@@ -625,7 +691,10 @@
       "price": 10.99,
       "rating": 4.5,
       "availability": 4,
-      "summary": "The story of an orphaned young woman who becomes a governess, finding love and independence despite the hardships and secrets of Thornfield Hall."
+      "type": ["book"],
+      "summary": "The story of an orphaned young woman who becomes a governess, finding love and independence despite the hardships and secrets of Thornfield Hall.",
+      "publication_date": "1847-10-16"
+
     },
     {
       "id": 58,
@@ -636,7 +705,10 @@
       "price": 11.49,
       "rating": 4.7,
       "availability": 10,
-      "summary": "Bilbo Baggins, a simple hobbit, is swept into an epic quest to reclaim the lost Dwarf Kingdom of Erebor from the dragon Smaug."
+      "type": ["ebook", "book", "audio"],
+      "summary": "Bilbo Baggins, a simple hobbit, is swept into an epic quest to reclaim the lost Dwarf Kingdom of Erebor from the dragon Smaug.",
+      "publication_date": "1937-09-21"
+
     },
     {
       "id": 59,
@@ -647,6 +719,7 @@
       "price": 14.99,
       "rating": 4.6,
       "availability": 6,
+      "type": ["audio"],
       "summary": "An exploration of the history of humankind, from the Stone Age to the modern era, examining how biology and culture have shaped our world."
     },
     {
@@ -658,6 +731,7 @@
       "price": 13.99,
       "rating": 4.7,
       "availability": 10,
+      "type": ["audio"],
       "summary": "A memoir of a woman who grows up in a strict and abusive household in rural Idaho but eventually escapes to learn about the wider world through education."
     },
     {
@@ -669,6 +743,7 @@
       "price": 12.49,
       "rating": 4.6,
       "availability": 2,
+      "type": ["ebook", "book", "audio"],
       "summary": "A spiritual guide that emphasizes the importance of living in the present moment to find peace and enlightenment, drawing from various spiritual traditions."
     },
     {
@@ -680,6 +755,7 @@
       "price": 17.99,
       "rating": 4.9,
       "availability": 10,
+      "type": ["ebook", "book", "audio"],
       "summary": "The former First Lady shares the experiences that shaped her, from her childhood in Chicago to her years in the White House."
     },
     {
@@ -691,6 +767,7 @@
       "price": 15.49,
       "rating": 4.4,
       "availability": 10,
+      "type": ["ebook", "book", "audio"],
       "summary": "A counterintuitive approach to living a good life, encouraging readers to embrace challenges and focus on what truly matters."
     },
     {
@@ -702,6 +779,7 @@
       "price": 13.49,
       "rating": 4.5,
       "availability": 7,
+      "type": ["ebook", "book", "audio"],
       "summary": "An analysis of the factors that contribute to high levels of success, from culture and family to timing and opportunities."
     },
     {
@@ -713,6 +791,7 @@
       "price": 10.99,
       "rating": 4.6,
       "availability": 1,
+      "type": ["ebook"],
       "summary": "The true story of Henrietta Lacks, whose cells were used for scientific breakthroughs without her consent, exploring the ethical issues of scientific research."
     },
     {
@@ -724,6 +803,7 @@
       "price": 14.49,
       "rating": 4.7,
       "availability": 1,
+      "type": ["ebook", "book", "audio"],
       "summary": "A compelling argument about the value of introverts, how society undervalues them, and why the world needs their unique skills and perspectives."
     },
     {
@@ -735,6 +815,7 @@
       "price": 16.49,
       "rating": 4.5,
       "availability": 3,
+      "type": ["ebook", "book", "audio"],
       "summary": "A fascinating tour of the human body, exploring how it works and the marvels and mysteries of our biological makeup."
     },
     {
@@ -746,7 +827,9 @@
       "price": 10.99,
       "rating": 4.4,
       "availability": 20,
-      "summary": "Jude, a mortal girl, is swept into the dangerous and seductive world of Faerie, where she must defy and outmaneuver cruel faeries to find her place at the High Court."
+      "type": ["ebook", "book", "audio"],
+      "summary": "Jude, a mortal girl, is swept into the dangerous and seductive world of Faerie, where she must defy and outmaneuver cruel faeries to find her place at the High Court.",
+      "publication_date": "2018-01-02"
     },
     {
       "id": 69,
@@ -757,7 +840,9 @@
       "price": 11.99,
       "rating": 4.5,
       "availability": 20,
-      "summary": "As the power dynamics of the Faerie world shift, Jude must stay one step ahead of her enemies and her own emotions as she navigates the politics of the High Court."
+      "type": ["ebook", "book", "audio"],
+      "summary": "As the power dynamics of the Faerie world shift, Jude must stay one step ahead of her enemies and her own emotions as she navigates the politics of the High Court.",
+      "publication_date": "2019-01-08"
     },
     {
       "id": 70,
@@ -768,7 +853,10 @@
       "price": 12.99,
       "rating": 4.3,
       "availability": 20,
-      "summary": "Exiled and betrayed, Jude returns to the Faerie realm to reclaim her power, confront old enemies, and battle for her future in a final showdown."
+      "type": ["ebook", "book", "audio"],
+      "summary": "Exiled and betrayed, Jude returns to the Faerie realm to reclaim her power, confront old enemies, and battle for her future in a final showdown.",
+      "publication_date": "2019-11-19"
+
     },
     {
       "id": 71,
@@ -779,7 +867,10 @@
       "price": 13.49,
       "rating": 4.6,
       "availability": 20,
-      "summary": "A beautifully illustrated collection of tales following Cardan, the High King of Elfhame, as he recalls pivotal moments from his past and reflects on the love and hatred that shaped him."
+      "type": ["ebook", "book", "audio"],
+      "summary": "A beautifully illustrated collection of tales following Cardan, the High King of Elfhame, as he recalls pivotal moments from his past and reflects on the love and hatred that shaped him.",
+      "publication_date": "2020-11-24"
+
     }
   ],
 
@@ -795,22 +886,6 @@
       "categories": ["Drink", "Cold", "Coffee"]
     },
     {
-      "id": 71,
-      "img": "../designImages/Drinks/Lemonade.png",
-      "name": "Lemonade",
-      "description": "Classic lemon with ice and sugar",
-      "price": 4,
-      "categories": ["Drink", "Cold"]
-    },
-    {
-      "id": 65,
-      "img": "../designImages/Drinks/Cappuccino.png",
-      "name": "Cappuccino",
-      "description": "Creamy espresso topped with a layer of frothed milk",
-      "price": 3,
-      "categories": ["Drink", "Hot", "Coffee"]
-    },
-    {
       "id": 75,
       "img": "../designImages/Pastries/Fruit croissant.png",
       "name": "Fruit Croissant",
@@ -818,31 +893,7 @@
       "price": 5,
       "categories": ["Food", "Pastry"]
     },
-    {
-      "id": 72,
-      "img": "../designImages/Pastries/croissant.png",
-      "name": "Plain Croissant",
-      "description": "Buttery, flasky pastry with a light and airy texture",
-      "price": 4,
-      "categories": ["Food", "Pastry"]
-    },
-    {
-      "id": 78,
-      "img": "../designImages/Pastries/Glazed Donut.png",
-      "name": "Glazed Donut",
-      "description": "Classic glazed donut",
-      "price": 6,
-      "categories": ["Food", "Donut", "Pastry"]
-    },
 
-    {
-      "id": 80,
-      "img": "../designImages/sweet/chocolate cookie.png",
-      "name": "Chocolate Chip Cookie",
-      "description": "Chewy chocolate chip cookie",
-      "price": 3,
-      "categories": ["Food", "cookies", "sweet"]
-    },
     {
       "id": 81,
       "img": "../designImages/sweet/Carrot Cake.png",
@@ -852,12 +903,206 @@
       "categories": ["Food", "cake", "sweet"]
     },
     {
+      "id": 71,
+      "img": "../designImages/Drinks/Lemonade.png",
+      "name": "Lemonade",
+      "description": "Classic lemon with ice and sugar",
+      "price": 4,
+      "categories": ["Drink", "Cold"]
+    },
+
+    {
+      "id": 78,
+      "img": "../designImages/Pastries/Glazed Donut.png",
+      "name": "Glazed Donut",
+      "description": "Classic glazed donut",
+      "price": 6,
+      "categories": ["Food", "Donut", "Pastry"]
+    },
+    {
+      "id": 65,
+      "img": "../designImages/Drinks/Cappuccino.png",
+      "name": "Cappuccino",
+      "description": "Creamy espresso topped with a layer of frothed milk",
+      "price": 3,
+      "categories": ["Drink", "Hot", "Coffee"]
+    },
+
+    {
+      "id": 72,
+      "img": "../designImages/Pastries/croissant.png",
+      "name": "Plain Croissant",
+      "description": "Buttery, flasky pastry with a light and airy texture",
+      "price": 4,
+      "categories": ["Food", "Pastry"]
+    },
+
+
+    {
+      "id": 80,
+      "img": "../designImages/sweet/chocolate cookie.png",
+      "name": "Chocolate Chip Cookie",
+      "description": "Chewy chocolate chip cookie",
+      "price": 3,
+      "categories": ["Food", "cookies", "sweet"]
+    },
+
+    {
       "id": 82,
       "img": "../designImages/sweet/lazycake.png",
       "name": "Lazy Cake",
       "description": "Rich chocolate biscut dessert perfectly dense",
       "price": 5,
       "categories": ["Food", "cake", "sweet"]
+    }
+  ],
+
+  "menu_menu": [
+    {
+      "id": 170,
+      "img": "../designImages/Pastries/Fruit croissant.png",
+      "name": "Fruit Croissant",
+      "description": "Crispy pastry with fruits of your choice",
+      "price": 5,
+      "categories": ["Food", "Pastry"]
+    },
+    {
+      "id": 171,
+      "img": "../designImages/Pastries/croissant.png",
+      "name": "Plain Croissant",
+      "description": "Buttery, flasky pastry with a light and airy texture",
+      "price": 4,
+      "categories": ["Food", "Pastry"]
+    },
+    {
+      "id": 172,
+      "img": "../designImages/Pastries/Glazed Donut.png",
+      "name": "Glazed Donut",
+      "description": "Classic glazed donut",
+      "price": 6,
+      "categories": ["Food", "Donut", "Pastry"]
+    },
+    {
+      "id": 173,
+      "img": "../designImages/Pastries/Puff pastry.png",
+      "name": "Puff Pastry",
+      "description": "Fluffy crisp pastry with vanilla cream",
+      "price": 4,
+      "categories": ["Food", "Pastry"]
+    },
+    {
+      "id": 174,
+      "img": "../designImages/Pastries/Blueberry maffin.png",
+      "name": "Blueberry Muffin",
+      "description": "Fresh blueberries baked into a vanilla muffin",
+      "price": 2,
+      "categories": ["Food", "Pastry"]
+    },
+    {
+      "id": 175,
+      "img": "../designImages/Pastries/Strawberry Tart.png",
+      "name": "Strawberry Tart",
+      "description": "Sweet strawberries with cream and sugar",
+      "price": 6,
+      "categories": ["Food", "Pastry"]
+    },
+
+    {
+      "id": 160,
+      "img": "../designImages/Drinks/Iced coffee.png",
+      "name": "Iced Coffee",
+      "description": "Ice, a splash of milk and rich espresso-like coffee",
+      "price": 5,
+      "categories": ["Drink", "Cold", "Coffee"]
+    },
+    {
+      "id": 161,
+      "img": "../designImages/Drinks/Lemonade.png",
+      "name": "Lemonade",
+      "description": "Classic lemon with ice and sugar",
+      "price": 4,
+      "categories": ["Drink", "Cold"]
+    },
+    {
+      "id": 162,
+      "img": "../designImages/Drinks/Cappuccino.png",
+      "name": "Cappuccino",
+      "description": "Creamy espresso topped with a layer of frothed milk",
+      "price": 3,
+      "categories": ["Drink", "Hot", "Coffee"]
+    },
+    {
+      "id": 163,
+      "img": "../designImages/Drinks/Hot Chocolate.png",
+      "name": "Hot Chocolate",
+      "description": "Dark and milk chocolate mix with whipped cream",
+      "price": 4,
+      "categories": ["Drink", "Hot", "Coffee"]
+    },
+    {
+      "id": 164,
+      "img": "../designImages/Drinks/Americano.png",
+      "name": "Americano",
+      "description": "Classic coffee with extra shots of expresso",
+      "price": 5,
+      "categories": ["Drink", "Hot", "Coffee"]
+    },
+    {
+      "id": 165,
+      "img": "../designImages/Drinks/Iced Tea.png",
+      "name": "Iced Tea",
+      "description": "Flavors include fruits, peach, berries and lemon",
+      "price": 3,
+      "categories": ["Drink", "Cold", "Tea"]
+    },
+
+    {
+      "id": 180,
+      "img": "../designImages/sweet/chocolate cookie.png",
+      "name": "Chocolate Chip Cookie",
+      "description": "Chewy chocolate chip cookie",
+      "price": 3,
+      "categories": ["Food", "cookies", "sweet"]
+    },
+    {
+      "id": 181,
+      "img": "../designImages/sweet/Carrot Cake.png",
+      "name": "Carrot Cake",
+      "description": "Fresh carrots with fluffy white cream.",
+      "price": 4,
+      "categories": ["Food", "cake", "sweet"]
+    },
+    {
+      "id": 182,
+      "img": "../designImages/sweet/lazycake.png",
+      "name": "Lazy Cake",
+      "description": "Rich chocolate biscut dessert perfectly dense",
+      "price": 5,
+      "categories": ["Food", "cake", "sweet"]
+    },
+    {
+      "id": 183,
+      "img": "../designImages/sweet/Macaron.png",
+      "name": "Macaron",
+      "description": "Crispy, soft layer with strawberry jam filling",
+      "price": 6,
+      "categories": ["Food", "sweet"]
+    },
+    {
+      "id": 184,
+      "img": "../designImages/sweet/Chocolate Cake.png",
+      "name": "Chocolate Cake",
+      "description": "Whipped cream with spongy cake",
+      "price": 5,
+      "categories": ["Food", "cake", "sweet"]
+    },
+    {
+      "id": 185,
+      "img": "../designImages/sweet/Icecream.png",
+      "name": "Icecream",
+      "description": "Any flavor with biscuit crumbs and fruit ",
+      "price": 7,
+      "categories": ["Food", "Icecream", "sweet"]
     }
   ],
 
