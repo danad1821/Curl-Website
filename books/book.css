@@ -106,9 +106,12 @@ gap: 30px;
   color: #F1EAE4;
   font-weight:bold ;
   background-color: #E9B9B9;
-  padding: 5px 20px 5px 20px;
+  padding: 15px 25px 15px 25px;
 }
 
+#wishlist-btn{
+  font-size: 20px;
+}
 
 .counter{
   display: flex;
