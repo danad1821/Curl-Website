@@ -10,19 +10,6 @@ $(document).ready(function () {
 
   let currentBookIndexes = {}; // Tracks the current index of books for each genre
 
-  //Color links when selected
-  // links.forEach((link) => {
-  //   link.addEventListener("click", function (event) {
-  //     event.preventDefault();
-
-  //     // Toggle the 'active' class
-  //     if (this.classList.contains("active")) {
-  //       this.classList.remove("active");
-  //     } else {
-  //       this.classList.add("active");
-  //     }
-  //   });
-  // });
 
   // Function to update the selected genres container (in book top)
   function updateSelectedGenresDisplay() {
@@ -95,7 +82,6 @@ $(document).ready(function () {
       value: 12,
       slide: function (event, ui) {
         // Update the price range label
-        // $("#price-range").text(`$${ui.values[0]} - $${ui.values[1]}`);
         console.log("Slider value: ", ui.value);
         $("#current-price").text(`$${ui.value}`);
 
@@ -142,7 +128,7 @@ $(document).ready(function () {
         }
       });
 
-      // Now update the books display for each genre
+      // update the books display for each genre
       selectedGenres.forEach((genre) => {
         if (booksByGenreFiltered[genre] && booksByGenreFiltered[genre].length > 0) {
           displayBooksForGenre(genre, booksByGenreFiltered[genre]);
@@ -172,7 +158,6 @@ $(document).ready(function () {
       genreDiv.append(genreTitle, scrollLeft, booksList, scrollRight);
       $booksContainer.append(genreDiv);
 
-      // Initialize the current index for this genre
       currentBookIndexes[genre] = 0;
 
       displayBooksForGenre(genre, booksForGenre);
@@ -186,18 +171,15 @@ $(document).ready(function () {
       let cart = JSON.parse(localStorage.getItem("cartData")) || {};
       let wishlist = JSON.parse(localStorage.getItem("wishData")) || {};
 
-      // const booksToDisplay = booksForGenre.filter((book) => {
-      //   // Check if the selectedTypes array includes any type in the book's type array
-      //   return book.type.some((t) => selectedTypes.includes(t));
-      // }).slice(currentBookIndexes[genre], currentBookIndexes[genre] + 3); // Show 3 books at a time
 
       const booksToDisplay = booksForGenre.filter((book) => {
         // Check if the selectedTypes array includes any type in the book's type array
         return book.type.some((t) => selectedTypes.includes(t));
       }).slice(currentBookIndexes[genre], currentBookIndexes[genre] +
-        (window.innerWidth < 584 ? 1 : window.innerWidth < 930 ? 2 : 3)); // Show 1 book on very small screens, 2 on medium, and 3 on large screens
+        (window.innerWidth < 584 ? 1 : window.innerWidth < 930 ? 2 : 3));
 
 
+      // book card structure
       booksToDisplay.forEach(function (book) {
         const isInWishlist = wishlist[book.id];
         const bookHTML = `
@@ -230,7 +212,7 @@ $(document).ready(function () {
       });
 
       $booksList.find(".book").click(function (e) {
-        e.stopPropagation(); // Prevent the click from bubbling up to the parent book div
+        e.stopPropagation();
         const bookId = $(this).data("book-id");
         const bookData = booksForGenre.find((book) => book.id === bookId);
 
@@ -243,7 +225,7 @@ $(document).ready(function () {
 
       // Click event to toggle wishlist
       $booksList.find(".add-to-wishlist").click(function (e) {
-        e.stopPropagation(); // Prevent the click from triggering other events
+        e.stopPropagation();
         const $heartIcon = $(this);
         const bookId = $(this).closest(".book").data("book-id");
         const bookData = booksForGenre.find((book) => book.id === bookId);
@@ -253,14 +235,14 @@ $(document).ready(function () {
         if (isInWishlist) {
           // Remove from wishlist
           delete wishlist[bookData.id];
-          $heartIcon.removeClass("fas").addClass("far"); // Change to outlined heart
-          $heartIcon.css("color", ""); // Reset the color when removed from wishlist
+          $heartIcon.removeClass("fas").addClass("far");
+          $heartIcon.css("color", ""); // reset the color when removed from wishlist
 
         } else {
           // Add to wishlist
           wishlist[bookData.id] = bookData;
-          $heartIcon.removeClass("far").addClass("fas"); // Change to filled heart
-          $heartIcon.css("color", "#e9b9b9"); // Set the color when added to wishlist
+          $heartIcon.removeClass("far").addClass("fas");
+          $heartIcon.css("color", "#e9b9b9"); // set the color when added to wishlist
 
         }
 
@@ -271,11 +253,11 @@ $(document).ready(function () {
 
       // Click event to add to cart
       $booksList.find(".add-to-cart-btn").click(function (e) {
-        e.stopPropagation(); // Prevent the click from triggering other events
+        e.stopPropagation();
         const bookId = $(this).closest(".book").data("book-id");
         const bookData = booksForGenre.find((book) => book.id === bookId);
 
-        // Check if the book is already in the cart
+        // check if the book is already in the cart
         const existingItem = cart[bookData.id];
 
         if (existingItem) {
@@ -289,52 +271,6 @@ $(document).ready(function () {
 
         localStorage.setItem("cartData", JSON.stringify(cart));
       });
-
-      // // Add to wishlist functionality
-      // $booksList.on("click", ".add-to-wishlist", function (e) {
-      //   e.stopPropagation(); // Prevent the click from triggering other events
-      //   e.preventDefault();
-
-      //   const $heartIcon = $(this);
-      //   const itemId = $heartIcon.data("id");
-
-      //   // Get the existing wishlist from localStorage
-      //   let wishlist = JSON.parse(localStorage.getItem("wishData")) || {};
-
-      //   if (wishlist[itemId]) {
-      //     // Remove from wishlist
-      //     delete wishlist[itemId];
-      //     $heartIcon.removeClass("fas").addClass("far"); // Change to outlined heart
-      //     $heartIcon.css("color", ""); // Reset the color when removed from wishlist
-      //   } else {
-      //     // Add to wishlist
-      //     wishlist[itemId] = { id: itemId };
-      //     $heartIcon.removeClass("far").addClass("fas"); // Change to filled heart
-      //     $heartIcon.css("color", "#e9b9b9"); // Set the color when added to wishlist
-      //   }
-
-      //   // Updates the wishlist data in localStorage
-      //   localStorage.setItem("wishData", JSON.stringify(wishlist));
-      // });
-      // // Add item to cart functionality
-      // $booksList.on("click", ".add-to-cart-btn", function () {
-      //   let cart = JSON.parse(localStorage.getItem("cartData")) || {};
-
-      //   // Get the id of the clicked item
-      //   const bookId = $(this).closest(".book").data("book-id");
-
-      //   if (cart[bookId]) {
-      //     // Increment the quantity if item already in cart
-      //     cart[bookId].quantity++;
-      //   } else {
-      //     // Add the item to the cart with quantity 1
-      //     cart[bookId] = { id: bookId, quantity: 1 };
-      //   }
-
-      //   // Updates the cart data in localStorage
-      //   localStorage.setItem("cartData", JSON.stringify(cart));
-      //   console.log("Cart updated:", cart); // Debugging output
-      // });
 
       // Show or hide arrows depending on the total number of books
       const totalBooks = booksForGenre.length;
@@ -377,11 +313,6 @@ $(document).ready(function () {
       if (selectedGenres.includes(genre)) {
         $(this).addClass("active"); // Apply the active class for default genres
       }
-
-      // Ensure the selectedGenres array includes the default genres
-      // if (!selectedGenres.includes(genre)) {
-      //   selectedGenres.push(genre);
-      // }
     });
 
 
@@ -395,10 +326,10 @@ $(document).ready(function () {
       if (selectedGenres.includes(genre)) {
 
         selectedGenres = selectedGenres.filter((g) => g !== genre);
-        $(this).removeClass("active"); // Remove active class if unselected
+        $(this).removeClass("active");
       } else if (selectedGenres.length < 3) {
         selectedGenres.push(genre);
-        $(this).addClass("active"); // Add active class if newly selected
+        $(this).addClass("active");
       }
       console.log("SELECTED GENRES inside function:", selectedGenres)
 
@@ -418,29 +349,29 @@ $(document).ready(function () {
     $('.filter-link').each(function () {
       const selectedType = $(this).data('type');
       if (selectedTypes.includes(selectedType)) {
-        $(this).addClass('active'); // Apply the 'active' class to selected types
+        $(this).addClass('active');
       }
     });
 
-    // Handle type selection clicks
+    // type selection clicks
     $('.filter-link').click(function (e) {
       e.preventDefault();
-      const selectedType = $(this).data('type'); // Get the selected type (e.g., "book", "ebook", "audio")
+      const selectedType = $(this).data('type');
 
       // Toggle the selected type in the array
       if (selectedTypes.includes(selectedType)) {
         // Remove the selected type from the array if it's already there
         selectedTypes = selectedTypes.filter(type => type !== selectedType);
-        $(this).removeClass('active'); // Remove the active class
+        $(this).removeClass('active');
 
       } else {
         // Add the selected type to the array if it's not already there
         selectedTypes.push(selectedType);
-        $(this).addClass('active'); // Add the active class
+        $(this).addClass('active');
 
       }
 
-      console.log("Updated Selected Types: ", selectedTypes); // Debugging line
+      console.log("Updated Selected Types: ", selectedTypes);
 
       // Re-render books for all genres with the updated selected types
       $booksContainer.empty();
@@ -470,7 +401,7 @@ $(document).ready(function () {
       }
     });
 
-    // Handle removing genres from selected container
+    // removing genres
     $("#selected-genres-container").on("click", ".remove-genre", function () {
       const genre = $(this).data("genre");
 
@@ -484,37 +415,37 @@ $(document).ready(function () {
 
 
 
-    // Toggle the popup when the sort button is clicked
+    //sort popup toggle
     $("#sort-btn").click(function (e) {
-      e.stopPropagation(); // Prevent click from propagating to other elements
-      $("#sort-popup").toggle(); // Toggle visibility of the popup
+      e.stopPropagation();
+      $("#sort-popup").toggle();
     });
 
     // Hide the popup when clicking outside of it
     $(document).click(function () {
-      $("#sort-popup").hide(); // Hide the popup
+      $("#sort-popup").hide();
     });
 
     // Prevent the popup from closing when clicking inside it
     $("#sort-popup").click(function (e) {
-      e.stopPropagation(); // Prevent the document click from hiding the popup
+      e.stopPropagation(); // Prevent the document click from closing popup
     });
 
     // Add event listener for sort options
     $(".sort-option").on("click", function () {
       const sortOption = $(this).data("sort"); // Get the selected sort option
 
-      // Loop through each selected genre and sort the books for that genre
+      // Looping through each selected genre and sort the books for that genre
       selectedGenres.forEach((genre) => {
-        // Check if books exist for this genre
+        // Checking if books exist for this genre
         if (booksByGenre[genre]) {
           console.log("Sorting genre:", genre);
 
-          // Sort the books for this genre based on the selected option
+          // Sorting the books for this genre based on the selected option
           booksByGenre[genre] = sortBooks(booksByGenre[genre], sortOption);
 
           // Re-display the books for the genre in the carousel
-          currentBookIndexes[genre] = 0; // Reset the index to start
+          currentBookIndexes[genre] = 0;
           displayBooksForGenre(genre, booksByGenre[genre]);
         }
       });
@@ -532,7 +463,7 @@ $(document).ready(function () {
         case "low-to-high":
           return books.sort((a, b) => a.price - b.price);
         default:
-          return books; // Default is no sorting
+          return books;
       }
     }
   }).fail(function (error) {
@@ -620,9 +551,7 @@ $(document).ready(function () {
                     </div>`
         );
 
-        // Add the book's data to a custom data attribute for identification
         $listItem.data("book", book);
-        // Use event delegation for dynamic elements
 
 
         $searchResults.append($listItem);
@@ -630,7 +559,7 @@ $(document).ready(function () {
       $(".search-item").click(function () {
         const book = $(this).data("book"); // Retrieve the book data from the clicked item
         if (book) {
-          console.log("Book clicked:", book); // Debugging: Confirm click event
+          console.log("Book clicked:", book);
           localStorage.setItem("selectedBook", JSON.stringify(book));
           $(location).prop("href", "book.html");
         }
@@ -640,8 +569,8 @@ $(document).ready(function () {
     // Close search results and input when clicking outside
     $(document).on("mousedown", function (event) {
       if (
-        !$(event.target).closest($searchInput).length && // Click outside input
-        !$(event.target).closest($searchResults).length // Click outside results
+        !$(event.target).closest($searchInput).length &&
+        !$(event.target).closest($searchResults).length
       ) {
         // Replace the input with the original Search button
         const $newButton = $(
@@ -649,7 +578,7 @@ $(document).ready(function () {
         );
 
         $searchInput.replaceWith($newButton);
-        $searchResults.empty(); // Clear search results
+        $searchResults.empty();
 
         // Rebind the button click handler to repeat the process
         $newButton.on("click", function (e) {
@@ -676,7 +605,7 @@ $(document).ready(function () {
 
 
 $(document).ready(function () {
-  // Check the screen width and enable swipe functionality for small screens
+  // Checks the screen width and enables swipe functionality for small screens
   const enableSwipe = () => {
     if (window.innerWidth <= 400) {
       $(".books-list").each(function () {
@@ -700,7 +629,7 @@ $(document).ready(function () {
             if (!isDown) return;
             e.preventDefault();
             const x = e.pageX - $(this).offset().left;
-            const walk = (x - startX) * 2; // Adjust scroll speed
+            const walk = (x - startX) * 2; // scroll speed
             $(this).scrollLeft(scrollLeft - walk);
           });
 
@@ -715,14 +644,14 @@ $(document).ready(function () {
           })
           .on("touchmove", function (e) {
             const touchX = e.originalEvent.touches[0].pageX;
-            const walk = (startTouchX - touchX) * 1.5; // Adjust scroll speed
+            const walk = (startTouchX - touchX) * 1.5; //scroll speed
             $(this).scrollLeft(startScrollLeft + walk);
           });
       });
     }
   };
 
-  // Initialize swipe functionality and recheck on window resize
+  //initializing swipe function
   enableSwipe();
   $(window).resize(enableSwipe);
 });

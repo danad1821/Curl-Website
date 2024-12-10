@@ -15,6 +15,8 @@ body {
   top: 0;
   z-index: 999;
 }
+
+/* to highlight books link in nav */
 .Book{
   background-color: #f1eae4;
   border-radius: 25px;
@@ -89,8 +91,8 @@ body {
   display: flex;
   flex-direction: row;
   width: 100%;
-  margin-top: 35%; /* Adjust as needed for your layout */
-  position: relative; /* Remove `absolute` */
+  margin-top: 35%;
+  position: relative;
   padding-bottom: 50px;
 }
 
@@ -134,7 +136,7 @@ body {
   
 }
 
-/* Pink background when clicked */
+/* Pink background when genre/type link is clicked */
 a.active {
   background-color: #E9B9B9;
   padding: 5px 0 5px 10px;
@@ -166,12 +168,11 @@ a.active {
   width: 20px;
   height: 20px;
   border: none;
-  position: absolute; /* Make sure it's positioned on the track */
-  margin-left: -10px; /* Center the handle over the track */
+  position: absolute; 
+  margin-left: -10px;
   z-index: 2; 
 }
 
-/* Positioning the labels for min and max */
 #min-price, #max-price {
   font-size: 14px;
   color: #37474f;
@@ -179,28 +180,26 @@ a.active {
   top: 20px;
 }
 
-/* Min price label (left side) */
 #min-price {
   left: 0;
 }
 
-/* Max price label (right side) */
 #max-price {
   right: 0;
 }
 
-/* Positioning the current value label */
+
 #current-price {
   font-size: 14px;
   color: #000;
   font-weight: bold;
   /* position: absolute; */
-  top: -30px; /* Position above the slider */
-  left: 50%; /* Center it above the slider */
-  transform: translateX(-50%); /* Adjust for centering */
+  top: -30px; 
+  left: 50%;
+  transform: translateX(-50%);
 }
 
-/* Customizing the highlighted area (between the handle and max value) */
+
 #slider .ui-slider-range-min {
   background-color: #E9B9B9;
 }
@@ -210,7 +209,7 @@ a.active {
   background-color: #E9B9B9;
 }
 
-/* Customizing the price range text */
+
 #price-range {
   font-size: 16px;
   width: 180px;
@@ -274,9 +273,7 @@ a.active {
   display: inline;
 
 }
-/* #search-sort button:first-child{
-  margin-right: 10px;
-} */
+
 
 #search-sort .search-input {
   flex-grow: 1;
@@ -284,7 +281,7 @@ a.active {
 }
 
 #search-sort button:last-child {
-  flex-shrink: 0; /* Prevents "Sort By" button from shrinking */
+  flex-shrink: 0; /* to prevent Sort By button from shrinking */
   min-width: 100px;
 }
 
@@ -341,7 +338,7 @@ a.active {
   color: #37474f;
 }
 
-/* General Layout Styles */
+
 #books-container {
   position: relative;
   display: flex;
@@ -391,10 +388,10 @@ a.active {
   display: flex;
   flex-direction: row;
   /* gap: 50px; */
-  overflow: hidden; /* Prevent items from overflowing outside the carousel */
+  overflow: hidden;
   justify-content: flex-start;
 overflow-x: auto;
-  transition: transform 0.5s ease; /* Smooth transition for sliding */
+  transition: transform 0.5s ease;
 
 }
 
@@ -411,19 +408,19 @@ overflow-x: auto;
 /* Arrow Styles */
 .scroll-arrow {
   position: absolute;
-  top: 50%; /* Center arrows vertically */
+  top: 50%;
   transform: translateY(-50%);
   cursor: pointer;
   transition: opacity 0.3s ease;
-  z-index: 1; /* Ensure arrows appear above the books */
+  z-index: 1;
 }
 
 .left-arrow {
-  left: -130px; /* Position the left arrow to the side of the carousel */
+  left: -130px;
 }
 
 .right-arrow {
-  right: -15px; /* Position the right arrow to the side of the carousel */
+  right: -15px;
 }
 
 .scroll-arrow img {
@@ -432,7 +429,7 @@ overflow-x: auto;
 }
 
 .scroll-arrow:hover {
-  opacity: 0.8; /* Slight fade effect on hover */
+  opacity: 0.8;
 }
 
 
@@ -603,6 +600,8 @@ footer {
   z-index: 2;
   top: 20px;
 }
+
+/* MEDIA QUERIES */
 
 @media (max-width: 1157px) {
   .Book {

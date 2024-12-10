@@ -16,6 +16,13 @@ body {
   padding: 4px 10px;
   text-align: center;
 }
+@media (max-width: 1157px) {
+  .Book {
+    background-color: #c0dde5;
+  }
+}
+
+/* link in bread crumps */
 
 #books-link, #genre-link{
   text-decoration: none;
@@ -26,6 +33,7 @@ body {
   font-weight: bold;
 }
 
+/* chosen book details */
 #chosenBookSection{
   display: flex;
   flex-direction: row;
@@ -38,6 +46,7 @@ body {
 .bookMain{
   padding-left: 20%;
 }
+
 /* book img section */
 .bookImg{
   width: 200px;
@@ -152,10 +161,9 @@ gap: 30px;
   display: flex;
   flex-direction: row;
   /* gap: 50px; */
-  overflow: hidden; /* Prevent items from overflowing outside the carousel */
+  overflow: hidden;
   justify-content: flex-start;
-
-  transition: transform 0.5s ease; /* Smooth transition for sliding */
+  transition: transform 0.5s ease;
 
 }
 
@@ -176,7 +184,7 @@ gap: 30px;
   transform: translateY(-50%);
   cursor: pointer;
   transition: opacity 0.3s ease;
-  z-index: 1; /* Ensure arrows appear above the books */
+  z-index: 1; 
 }
 
 .left-arrow {
@@ -184,7 +192,7 @@ gap: 30px;
 }
 
 .right-arrow {
-  right: 120px; /* Position the right arrow to the side of the carousel */
+  right: 120px;
 }
 
 .scroll-arrow img {
@@ -193,7 +201,7 @@ gap: 30px;
 }
 
 .scroll-arrow:hover {
-  opacity: 0.8; /* Slight fade effect on hover */
+  opacity: 0.8;
 }
 
 /* Book Item Styles */
@@ -361,6 +369,8 @@ footer {
   top: 20px;
 }
 
+
+/* MEDIA QUERIES */
 @media (max-width: 1325px){
   #chosenBookSection{
     flex-direction: column;

@@ -2,6 +2,7 @@ $(document).ready(function () {
     // Retrieve the book data from localStorage
     const selectedBook = JSON.parse(localStorage.getItem('selectedBook'));
 
+    // filling in the html structure dynamically
     if (selectedBook) {
         $('#book-title').text(selectedBook.title);
         $('#book-author').html(`<span>By: </span>${selectedBook.author}`);
@@ -10,19 +11,19 @@ $(document).ready(function () {
         $('#book-price').text(`$${selectedBook.price}`);
         $('#book-description').text(selectedBook.summary);
 
-        // Update the breadcrumbs
+        // Updating the breadcrumbs
         const genre = selectedBook.genres[0]; // Assuming there's one genre per book
         $('#genre-link').text(genre).attr('href', `books.html?genre=${genre}`);
         $('#book-title-breadCrumbs').text(selectedBook.title);
 
-        // Update the book image
+        // book image
         $('#book-image').attr('src', selectedBook.img);
 
         // Load similar books
         $.getJSON("../data.json", function (data) {
             const allBooks = data.books;
 
-            // Filter books with similar genres excluding the current book
+            // Filtering books with similar genres excluding the current book
             const similarBooks = allBooks
                 .filter(book =>
                     book.id !== selectedBook.id &&
@@ -41,6 +42,7 @@ $(document).ready(function () {
     }
 
 
+    // similar books carousel
     function createBooksCarousel(similarBooks) {
         const $similarBooksContainer = $('#similar-books-container');
         const scrollLeft = $(`<div class="scroll-arrow left-arrow" style="display: none;">
@@ -51,7 +53,7 @@ $(document).ready(function () {
         </div>`);
         const booksList = $(`<div class="books-list carousel"></div>`);
 
-        $similarBooksContainer.empty(); // Clear any existing content
+        $similarBooksContainer.empty();
         $similarBooksContainer.append(scrollLeft, booksList, scrollRight);
 
         let currentIndex = 0;
@@ -65,14 +67,14 @@ $(document).ready(function () {
         }
 
         function displayBooks(direction) {
-            booksList.addClass('transition'); // Add transition class for sliding effect
+            booksList.addClass('transition'); // transition clas for sliding
             booksList.css('transform', `translateX(${direction === 'left' ? '100%' : '-100%'})`);
 
             setTimeout(() => {
-                booksList.removeClass('transition'); // Remove transition class after animation
-                booksList.css('transform', 'translateX(0)'); // Reset position
+                booksList.removeClass('transition');
+                booksList.css('transform', 'translateX(0)');
 
-                booksList.empty(); // Clear existing books
+                booksList.empty();
 
                 const booksPerView = getBooksPerView();
                 const booksToDisplay = similarBooks.slice(currentIndex, currentIndex + booksPerView);
@@ -104,7 +106,7 @@ $(document).ready(function () {
                 // Show or hide arrows
                 scrollLeft.toggle(currentIndex > 0);
                 scrollRight.toggle(currentIndex + booksPerView < similarBooks.length);
-            }, 300); // Match CSS transition duration
+            }, 300);
         }
 
         // Initial display
@@ -127,7 +129,7 @@ $(document).ready(function () {
             }
         });
 
-        // Add click event to redirect to a new book
+        // click event to redirect to a new book
         booksList.on('click', '.book', function () {
             const bookId = $(this).data('book-id');
             const bookData = similarBooks.find(book => book.id === bookId);
@@ -136,11 +138,9 @@ $(document).ready(function () {
             window.location.href = 'book.html';
         });
 
-        // Adjust books display on window resize
         $(window).resize(displayBooks);
     }
 
-    // Retrieve wishlist from localStorage or initialize it as an empty object
     const wishlist = JSON.parse(localStorage.getItem("wishData")) || {};
 
     // Add to wishlist functionality
@@ -153,20 +153,20 @@ $(document).ready(function () {
         if (isInWishlist) {
             // Remove from wishlist
             delete wishlist[bookId];
-            $heartIcon.removeClass("fas").addClass("far"); // Change to outlined heart
-            $heartIcon.css("color", ""); // Reset the color when removed from wishlist
+            $heartIcon.removeClass("fas").addClass("far");
+            $heartIcon.css("color", "");
         } else {
             // Add to wishlist
             wishlist[bookId] = selectedBook;
-            $heartIcon.removeClass("far").addClass("fas"); // Change to filled heart
-            $heartIcon.css("color", "#e9b9b9"); // Set the color when added to wishlist
+            $heartIcon.removeClass("far").addClass("fas");
+            $heartIcon.css("color", "#e9b9b9");
         }
 
         // Save the updated wishlist to localStorage
         localStorage.setItem("wishData", JSON.stringify(wishlist));
     });
 
-    // Retrieve cart from localStorage or initialize it as an empty object
+
     const cart = JSON.parse(localStorage.getItem("cartData")) || {};
 
     // Initialize quantity

@@ -13,12 +13,22 @@ body {
   top: 0;
   z-index: 999;
 }
+
+/* coloring about link in nav */
 .About{
   background-color: #f1eae4;
   border-radius: 25px;
   padding: 4px 10px;
   text-align: center;
 }
+
+
+@media (max-width: 1157px) {
+  .About {
+    background-color: #c0dde5;
+  }
+}
+
 
 /* LANDING STYLES */
 #LandingText{
@@ -205,15 +215,7 @@ footer {
   }
 
 
-  @media (max-width: 1157px) {
-    .About {
-      background-color: #c0dde5;
-    }
-  }
-
-
-
-/* Media Queries for Responsiveness */
+/* MEDIA QUERIES*/
 @media (max-width: 1240px){
 
   #landingSection img{
@@ -276,7 +278,6 @@ footer {
 }
 
 
-
 @media (max-width: 951px){
   #aboutUsSection{
     padding: 12%;
@@ -325,10 +326,6 @@ footer {
   }
 
 }
-
-
-
-
 
 
 

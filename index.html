@@ -1,293 +1,239 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Curl</title>
-    <!-- poppins font used on webpage  -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
-      rel="stylesheet"
-    />
-    <!-- New Class font found on webpage  -->
-    <link href="https://fonts.cdnfonts.com/css/new-class" rel="stylesheet" />
-    <!-- link to bootstrap  -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
-    />
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Curl</title>
+  <meta name="description"
+    content="Welcome to Curl Book and Coffee Shop, your cozy escape in the heart of Badaro, Lebanon. Enjoy expertly brewed coffee, a curated collection of books, and a warm atmosphere perfect for relaxing, reading, and connecting.">
+  <meta name="keywords"
+    content="Curl Book and Coffee Shop, Coffee shop in Badaro, Bookstore in Badaro, Cozy cafés in Beirut, Book and coffee lovers, Lebanese bookshops, Community spaces in Badaro, Relax and read in Beirut">
+  <!-- poppins font used on webpage  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+  <!-- New Class font found on webpage  -->
+  <link href="https://fonts.cdnfonts.com/css/new-class" rel="stylesheet" />
+  <!-- link to bootstrap  -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
 
-    <link rel="stylesheet" href="style.css" />
-  </head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 
-  <body>
-    <div id="header"></div>
+  <link rel="stylesheet" href="style.css" />
+</head>
 
-    <!-- welcome and about us sections -->
-    <div class="twoSections">
-      <div class="backgroudS1">
-        <img
-          src="designImages/Smoke in hompage.png"
-          class="backgroudCurves"
-          alt=""
-        />
-      </div>
+<body>
+  <div id="header"></div>
 
-      <div class="sectionsContent">
-        <!-- welcome section  -->
-        <section class="firstSection">
-          <img src="designImages/Girl Sitting.png" id="girlSitting" alt="" />
-          <div>
-            <h1>Curl</h1>
-            <p>A <b>good</b> book is always paired with <i>great</i> coffee.</p>
-            <button
-              id="welcomeBtn"
-              onclick="$(location).prop('href', 'books/books.html');"
-            >
-              Order Now
-            </button>
-          </div>
-        </section>
-
-        <!-- about us section  -->
-        <section class="secondSection">
-          <img src="designImages/Meow.png" alt="" id="meowImage" />
-          <div>
-            <h2 class="sectionHeader">About Us</h2>
-            <p>
-              A book and coffee shop to bring the community and book lovers
-              together with a love for pets, so don’t forget to bring your pet
-              with you!
-            </p>
-            <button
-              class="homePageBtn aboutBtn"
-              onclick="$(location).prop('href', 'about/about.html');"
-            >
-              View More
-            </button>
-          </div>
-          <img src="designImages/Cat with book.png" alt="" id="readingCat" />
-        </section>
-      </div>
+  <!-- welcome and about us sections -->
+  <div class="twoSections">
+    <div class="backgroudS1">
+      <img src="designImages/Smoke in hompage.png" class="backgroudCurves" alt="" />
     </div>
 
-    <!-- bestselling books section  -->
-    <section class="besellingBooksSection">
-      <h2 class="sectionHeader">Bestselling Books</h2>
-      <p>
-        You can find our best selling books here to enjoy and rely on as a great
-        recommendation.
-      </p>
-      <div class="carousel slide bookCarousel" id="bookCarousel">
-        <button
-          class="carousel-control-prev"
-          data-bs-slide="prev"
-          id="leftArrow"
-          data-bs-target="#bookCarousel"
-        >
-          <img src="designImages/ArrowLeft.png" class="arrows" alt="" />
-        </button>
-        <div class="booksDisplay carousel-inner" id="booksDisplay"></div>
-        <button
-          class="carousel-control-next"
-          data-bs-slide="next"
-          id="rightArrow"
-          data-bs-target="#bookCarousel"
-        >
-          <img src="designImages/ArrowRight.png" class="arrows" alt="" />
-        </button>
-      </div>
-    </section>
-
-    <!-- fortune section  -->
-    <section class="fortuneSection">
-      <h2 class="sectionHeader" id="fortuneHeader">Fortune of the Day</h2>
-      <div id="fortune-container">
-        <div id="cookie-structure">
-          <!-- <img src="designImages\FortuneCookie\fortuneBanner.png" alt="" id="fortuneBanner"> -->
-          <p></p>
-        </div>
-        <div id="fortuneText">
-          <div id="quoteDetails">
-            <p></p>
-          </div>
-          <button class="homePageBtn" id="generateQuoteBtn">
-            Give Me Another Fortune
+    <div class="sectionsContent">
+      <!-- welcome section  -->
+      <section class="firstSection">
+        <img src="designImages/Girl Sitting.png" id="girlSitting" alt="" />
+        <div>
+          <h1>Curl</h1>
+          <p>A <b>good</b> book is always paired with <i>great</i> coffee.</p>
+          <button id="welcomeBtn" onclick="$(location).prop('href', 'books/books.html');">
+            Order Now
           </button>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Events Section -->
-    <section class="eventsSection">
-      <img
-        src="designImages/Events_illustration.png"
-        alt="Events_illustration"
-        id="eventillu"
-      />
-      <div class="textOverlay">
-        <h2 class="sectionHeader">Events</h2>
-        <h3>Live unforgettable moments!</h3>
-        <p>
-          Be the first to get the new releases with <br />
-          fun merchandise!
-        </p>
-        <button class="homePageBtn">View Events</button>
-      </div>
-    </section>
-
-    <!-- Menu Section  -->
-    <section class="menuSection">
-      <div id="menu-header">
-        <h2 class="sectionHeader">Our Menu</h2>
-        <p>
-          With a mouth watering smell and an even better taste, browse our
-          variety of drinks, pastries, and sweets.
-        </p>
-      </div>
-      <div id="menu">
-        <div id="menu-items" class="scrollable-menu"></div>
-      </div>
-      <button
-        class="homePageBtn"
-        onclick="$(location).prop('href', 'menu/menu.html');"
-      >
-        <a href="menu/menu.html">View Menu</a>
-      </button>
-    </section>
-
-    <!-- Merch Section  -->
-    <section class="merchSection">
-      <h2 class="sectionHeader">Top Merch</h2>
-      <p>
-        Our merch is made with love to share with you the joy of Curl wherever
-        you go.
-      </p>
-      <div id="product-container" class="product-container"></div>
-      <button
-        class="homePageBtn"
-        onclick="$(location).prop('href', 'merch/merch.html');"
-      >
-        View Merch
-      </button>
-    </section>
-    <!-- Community Section  -->
-    <section class="communitySection">
-      <div id="community">
-        <h2 class="sectionHeader">Community</h2>
-        <p>
-          You’ll find your book lovers here to discuss the latest happenings.
-        </p>
+      <!-- about us section  -->
+      <section class="secondSection">
+        <img src="designImages/Meow.png" alt="" id="meowImage" />
         <div>
-          <button class="communityButton"><a href="community/community.html">Join a Room</a></button>
-          <button class="communityButton" id="createBtn" data-bs-toggle="modal" data-bs-target="#createRoomPopup"><a href="#">Create a Room</a></button>
+          <h2 class="sectionHeader">About Us</h2>
+          <p>
+            A book and coffee shop to bring the community and book lovers
+            together with a love for pets, so don’t forget to bring your pet
+            with you!
+          </p>
+          <button class="homePageBtn aboutBtn" onclick="$(location).prop('href', 'about/about.html');">
+            View More
+          </button>
         </div>
-      </div>
-    </section>
+        <img src="designImages/Cat with book.png" alt="" id="readingCat" />
+      </section>
+    </div>
+  </div>
 
-    <!-- Reviews Section  -->
-    <section class="reviewsSection">
-      <div id="Review">
-        <!-- Reviews -->
-      </div>
-    </section>
+  <!-- bestselling books section  -->
+  <section class="besellingBooksSection">
+    <h2 class="sectionHeader">Bestselling Books</h2>
+    <p>
+      You can find our best selling books here to enjoy and rely on as a great
+      recommendation.
+    </p>
+    <div class="carousel slide bookCarousel" id="bookCarousel">
+      <button class="carousel-control-prev" data-bs-slide="prev" id="leftArrow" data-bs-target="#bookCarousel">
+        <img src="designImages/ArrowLeft.png" class="arrows" alt="" />
+      </button>
+      <div class="booksDisplay carousel-inner" id="booksDisplay"></div>
+      <button class="carousel-control-next" data-bs-slide="next" id="rightArrow" data-bs-target="#bookCarousel">
+        <img src="designImages/ArrowRight.png" class="arrows" alt="" />
+      </button>
+    </div>
+  </section>
 
-    <!-- Footer -->
-    <footer>
-      <div class="footer-content">
-        <div class="logo">
-          <div class="logo-circle">
-            <img src="designImages/Logo[1].png" alt="" />
-          </div>
+  <!-- fortune section  -->
+  <section class="fortuneSection">
+    <h2 class="sectionHeader" id="fortuneHeader">Fortune of the Day</h2>
+    <div id="fortune-container">
+      <div id="cookie-structure">
+        <!-- <img src="designImages\FortuneCookie\fortuneBanner.png" alt="" id="fortuneBanner"> -->
+        <p></p>
+      </div>
+      <div id="fortuneText">
+        <div id="quoteDetails">
+          <p></p>
         </div>
-        <div class="about">
-          <h3>About us</h3>
-          <p>Bookstore/Coffee shop</p>
-          <p>Events</p>
-          <p>Community</p>
-          <p>Badaro St., Beirut, Lebanon</p>
-        </div>
-        <div class="contact">
-          <h3>Contact Us</h3>
-          <p>curlcoffee</p>
-          <p>Curl book & coffee shop</p>
-          <h3>Help</h3>
-          <p>hello@curlcoffee.com</p>
+        <button class="homePageBtn" id="generateQuoteBtn">
+          Give Me Another Fortune
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Events Section -->
+  <section class="eventsSection">
+    <img src="designImages/Events_illustration.png" alt="Events_illustration" id="eventillu" />
+    <div class="textOverlay">
+      <h2 class="sectionHeader">Events</h2>
+      <h3>Live unforgettable moments!</h3>
+      <p>
+        Be the first to get the new releases with <br />
+        fun merchandise!
+      </p>
+      <button class="homePageBtn">View Events</button>
+    </div>
+  </section>
+
+  <!-- Menu Section  -->
+  <section class="menuSection">
+    <div id="menu-header">
+      <h2 class="sectionHeader">Our Menu</h2>
+      <p>
+        With a mouth watering smell and an even better taste, browse our
+        variety of drinks, pastries, and sweets.
+      </p>
+    </div>
+    <div id="menu">
+      <div id="menu-items" class="scrollable-menu"></div>
+    </div>
+    <button class="homePageBtn" onclick="$(location).prop('href', 'menu/menu.html');">
+      <a href="menu/menu.html">View Menu</a>
+    </button>
+  </section>
+
+  <!-- Merch Section  -->
+  <section class="merchSection">
+    <h2 class="sectionHeader">Top Merch</h2>
+    <p>
+      Our merch is made with love to share with you the joy of Curl wherever
+      you go.
+    </p>
+    <div id="product-container" class="product-container"></div>
+    <button class="homePageBtn" onclick="$(location).prop('href', 'merch/merch.html');">
+      View Merch
+    </button>
+  </section>
+  <!-- Community Section  -->
+  <section class="communitySection">
+    <div id="community">
+      <h2 class="sectionHeader">Community</h2>
+      <p>
+        You’ll find your book lovers here to discuss the latest happenings.
+      </p>
+      <div>
+        <button class="communityButton"><a href="community/community.html">Join a Room</a></button>
+        <button class="communityButton" id="createBtn" data-bs-toggle="modal" data-bs-target="#createRoomPopup"><a
+            href="#">Create a Room</a></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews Section  -->
+  <section class="reviewsSection">
+    <div id="Review">
+      <!-- Reviews -->
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="logo">
+        <div class="logo-circle">
+          <img src="designImages/Logo[1].png" alt="" />
         </div>
       </div>
-      <p class="copyright">© Copyright</p>
-    </footer>
-    <!-- create room popup  -->
-    <div class="modal" tabindex="-1" id="createRoomPopup">
-      <div class="modal-dialog modal-lg modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-body">
-            <div>
-              <label for="roomName">Name:</label>
-              <input
-                type="text"
-                placeholder="The Mystery Crew"
-                name="roomName"
-              />
-            </div>
-            <div>
-              <label for="roomName">Room Description:</label>
-              <input
-                type="text"
-                placeholder="Discuss books related to the mystery section."
-              />
-            </div>
-            <div>
-              <label for="roomName">URL:</label>
-              <div>
-                <input
-                  type="text"
-                  placeholder="https://www.figma.com/design/cIqS9Wfyx0hUxD1iYwkxzd/Curl?node-id=719-978&node-type=frame&t=lsdEIbV71jia3HfG-0"
-                />
-                <button class="btn">
-                  <svg
-                    width="30"
-                    height="30"
-                    class="lickIcon"
-                    viewBox="0 0 34 34"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M13.983 18.51C14.6308 19.377 15.4573 20.0943 16.4065 20.6134C17.3556 21.1325 18.4052 21.4412 19.484 21.5185C20.5628 21.5959 21.6456 21.4401 22.659 21.0617C23.6723 20.6833 24.5925 20.0911 25.3572 19.3255L29.8827 14.7954C31.2567 13.3714 32.0169 11.4642 31.9997 9.48456C31.9825 7.50493 31.1893 5.61125 29.7908 4.21139C28.3924 2.81153 26.5006 2.01749 24.523 2.00029C22.5453 1.98308 20.6401 2.7441 19.2175 4.11942L16.6229 6.70158M20.017 15.49C19.3692 14.623 18.5427 13.9057 17.5935 13.3866C16.6444 12.8675 15.5948 12.5588 14.516 12.4815C13.4372 12.4041 12.3544 12.5599 11.341 12.9383C10.3277 13.3167 9.40748 13.9089 8.64283 14.6745L4.11729 19.2046C2.74335 20.6286 1.9831 22.5358 2.00029 24.5154C2.01747 26.4951 2.81071 28.3887 4.20917 29.7886C5.60762 31.1885 7.49939 31.9825 9.47703 31.9997C11.4547 32.0169 13.3599 31.2559 14.7825 29.8806L17.362 27.2984"
-                      stroke="#37474F"
-                      stroke-width="4"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </button>
-              </div>
-            </div>
-            <button class="btn">Make Room</button>
+      <div class="about">
+        <h3>About us</h3>
+        <p>Bookstore/Coffee shop</p>
+        <p>Events</p>
+        <p>Community</p>
+        <p>Badaro St., Beirut, Lebanon</p>
+      </div>
+      <div class="contact">
+        <h3>Contact Us</h3>
+        <p>curlcoffee</p>
+        <p>Curl book & coffee shop</p>
+        <h3>Help</h3>
+        <p>hello@curlcoffee.com</p>
+      </div>
+    </div>
+    <p class="copyright">© Copyright</p>
+  </footer>
+  <!-- create room popup  -->
+  <div class="modal" tabindex="-1" id="createRoomPopup">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div>
+            <label for="roomName">Name:</label>
+            <input type="text" placeholder="The Mystery Crew" name="roomName" />
           </div>
+          <div>
+            <label for="roomName">Room Description:</label>
+            <input type="text" placeholder="Discuss books related to the mystery section." />
+          </div>
+          <div>
+            <label for="roomName">URL:</label>
+            <div>
+              <input type="text"
+                placeholder="https://www.figma.com/design/cIqS9Wfyx0hUxD1iYwkxzd/Curl?node-id=719-978&node-type=frame&t=lsdEIbV71jia3HfG-0" />
+              <button class="btn">
+                <svg width="30" height="30" class="lickIcon" viewBox="0 0 34 34" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M13.983 18.51C14.6308 19.377 15.4573 20.0943 16.4065 20.6134C17.3556 21.1325 18.4052 21.4412 19.484 21.5185C20.5628 21.5959 21.6456 21.4401 22.659 21.0617C23.6723 20.6833 24.5925 20.0911 25.3572 19.3255L29.8827 14.7954C31.2567 13.3714 32.0169 11.4642 31.9997 9.48456C31.9825 7.50493 31.1893 5.61125 29.7908 4.21139C28.3924 2.81153 26.5006 2.01749 24.523 2.00029C22.5453 1.98308 20.6401 2.7441 19.2175 4.11942L16.6229 6.70158M20.017 15.49C19.3692 14.623 18.5427 13.9057 17.5935 13.3866C16.6444 12.8675 15.5948 12.5588 14.516 12.4815C13.4372 12.4041 12.3544 12.5599 11.341 12.9383C10.3277 13.3167 9.40748 13.9089 8.64283 14.6745L4.11729 19.2046C2.74335 20.6286 1.9831 22.5358 2.00029 24.5154C2.01747 26.4951 2.81071 28.3887 4.20917 29.7886C5.60762 31.1885 7.49939 31.9825 9.47703 31.9997C11.4547 32.0169 13.3599 31.2559 14.7825 29.8806L17.362 27.2984"
+                    stroke="#37474F" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <button class="btn">Make Room</button>
         </div>
       </div>
     </div>
+  </div>
 
-    <!-- cdn for jquery  -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <!-- cdn for bootstrap  -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
-    <!-- our js file  -->
-    <script src="main.js"></script>
-  </body>
+  <!-- cdn for jquery  -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <!-- cdn for bootstrap  -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <!-- our js file  -->
+  <script src="main.js"></script>
+</body>
+
 </html>
