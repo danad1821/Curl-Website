@@ -29,10 +29,10 @@ $(document).ready(function () {
             return Object.entries(cartData).reduce((total, [id, item]) => {
                 const product = allItems.find(p => p.id == id);
                 if (product) {
-                    return total + (product.price * item.quantity);
+                    total += product.price * item.quantity;
                 }
-                return total.toFixed(2);
-            }, 0);
+                return total;
+            }, 0).toFixed(2);
         }
 
         // Function to render the cart
@@ -40,13 +40,11 @@ $(document).ready(function () {
             cartContainer.empty(); // Clear existing content
             const cartItemsArray = Object.entries(cartData); // Convert cart data to array for easier iteration
 
-            // Loop through cart items and append them
             cartItemsArray.forEach(([id, item]) => {
                 const product = allItems.find(p => p.id == id);
                 if (product) {
-                    // Calculate total price for the item
-                    const totalPrice = (product.price * item.quantity);
-                    if(product?.categories?.includes("Drink") || product?.categories?.includes("Food")){
+                    const totalPrice = (product.price * item.quantity).toFixed(2);
+                    if (product?.categories?.includes("Drink") || product?.categories?.includes("Food")) {
                         const cartItem = `
                         <div class="cart-item">
                             <img src="${product.img}" alt="${product.name}" class="cart-img">
@@ -66,10 +64,9 @@ $(document).ready(function () {
                             </button>
                             <hr class="custom-hr">
                         </div>
-                    `;
-                    cartContainer.append(cartItem);
-                    }
-                    else if(product?.title){
+                        `;
+                        cartContainer.append(cartItem);
+                    } else if (product?.title) {
                         const cartItem = `
                         <div class="cart-item">
                             <img src="${product.img}" alt="${product.title}" class="cart-img">
@@ -89,22 +86,17 @@ $(document).ready(function () {
                             </button>
                             <hr class="custom-hr">
                         </div>
-                    `;
-                    cartContainer.append(cartItem);
-
+                        `;
+                        cartContainer.append(cartItem);
                     }
-                    
                 }
             });
 
-            // Update the total items count in the cart
             const totalItems = calculateTotalItems();
-            itemCountDisplay.text(totalItems); // Display the total quantity in the element
+            itemCountDisplay.text(totalItems); // Update total item count
 
-            // Calculate and display the total price
             const totalPrice = calculateTotalPrice();
             $("#total-price").html(`Total&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$${totalPrice}`);
-            
         }
 
         // Event listener for increase and decrease buttons
