@@ -1,7 +1,9 @@
 $(document).ready(function () {
+  //loads the header
   $("#header").load("../Header/header.html");
   let rooms = [];
   let roomsDisplay = $("#roomsDisplay");
+  //local storage variable for the room the user wants to access
   localStorage.setItem("room", "");
   $.ajax({
     url: "community.json",
@@ -15,13 +17,13 @@ $(document).ready(function () {
       console.error("Error loading data:", error);
     },
   });
-
+  // gets all rooms
   function getRooms(data) {
     for (const room of data.rooms) {
       rooms.push(room);
     }
   }
-
+  // displays all rooms 
   function generateRoomDisplay() {
     for (const room of rooms) {
       const roomDiv = $("<div>").addClass("roomDiv");
@@ -54,6 +56,7 @@ $(document).ready(function () {
       roomsDisplay.append(roomDiv);
     }
   }
+  // allows the create a room pop up to be displayed
   $("#createRoomPopup").on("shown.bs.modal", function () {
     $("#createBtn").focus();
   });

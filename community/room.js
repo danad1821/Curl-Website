@@ -12,7 +12,7 @@ $(document).ready(function () {
   $("#newPostModal").on("shown.bs.modal", function () {
     postBtn.focus();
   });
-
+  //reads the image file to put in the the div as a label
   function readURL(input) {
     console.log(input.files);
     if (input.files && input.files[0]) {
@@ -44,7 +44,7 @@ $(document).ready(function () {
   });
 
   let postsSection = $("#postsSection");
-
+  // checks if there are any posts for the specific rooms
   if (room.posts.length > 0) {
     for (const post of room.posts) {
       let posting = $("<div>").addClass("post");
@@ -81,9 +81,10 @@ $(document).ready(function () {
       postDiv.append(topPostSection, postMainSection);
 
       let commentsDiv = $("<div>").addClass("commentsDiv");
-
+      // checks if there are any comments for the post
       if (post.comments.length > 0) {
         for (const comment of post.comments) {
+          // adds a comment to the comments div
           let topCommentSection = $("<div>").addClass("topCommentSection");
           let topCommentSectionUser = $(
             "<div><img src='" +
@@ -111,11 +112,12 @@ $(document).ready(function () {
 
       posting.append(postDiv, commentsDiv);
       postsSection.append(posting);
-
+      //displays the new comment pop up 
       $("#commentModal").on("shown.bs.modal", function () {
         $(".commentIcon").focus();
       });
     }
+    // changes the heart icon of post when liked
     $(".heartPostIcon").click(function () {
       let likeIcon = $(this).siblings();
       let heart = $(this);
@@ -139,7 +141,7 @@ $(document).ready(function () {
       }
     });
   }
-
+  //clears inputs from popups
   $(".postPost").click(function () {
     $("#description").val("");
   });
@@ -151,8 +153,10 @@ $(document).ready(function () {
   $(".postReply").click(function () {
     $("#replyInput").val("");
   });
+
+  // changes the styling of the new post button on scroll
   let initialScrollPosition = $(window).scrollTop();
-console.log($(window).scrollTop())
+
   $(window).scroll(function () {
     // Debounce the scroll event handler
     if (this.scrollTimer) {
